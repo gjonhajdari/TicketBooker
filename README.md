@@ -5,7 +5,7 @@ A [university](https://fiek.uni-pr.edu) team project made by 5 students.
 
 #### Contributors
 - Gjon Hajdari
-- Getuar Kelmendi
+- Getuar Kelmendi(Gheto)
 - Gentrit Bytyçi
 - Klajdi Gashi
 - Kleda Gashi
