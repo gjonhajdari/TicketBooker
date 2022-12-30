@@ -7,5 +7,5 @@ A [university](https://fiek.uni-pr.edu) team project made by 5 students.
 - Gjon Hajdari
 - Getuar Kelmendi(Gheto)
 - Gentrit Bytyçi
-- Klajdi Gashi
+- Klajdi Gashi(Clyde)
 - Kleda Gashi
