@@ -1,0 +1,97 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    
+}
+.form{
+    height: 100vh;
+    background-color: #222222;
+    position: relative;
+    background-color: #222222;
+    
+        background-size: cover;
+        background-repeat: no-repeat;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+}
+.panel{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    width:inherit;
+    
+}
+.panel img{
+    justify-content:left;
+    margin: 0px 100px 0px 0px ;
+}
+#About a{
+    padding: 30px;
+    margin:20px 5px 20px 5px;
+    font-size: 1.5rem;    
+    margin:40px;
+}
+.panel #LogIn{  
+    justify-content: flex-end;
+    padding:10px;
+    margin:0px 5px 0px 200px;
+
+}
+.panel #SignUp{
+    justify-content: flex-end;
+    padding:10px;
+    margin: 0px -200px 0px 5px;
+}
+hr{
+    width:1500px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin-left: 190px;
+    display: flex;
+}
+
+#TicketSearch{
+    font-size: 2.5rem;
+    margin:45px;
+}
+
+#TicketSearch1{
+    font-size:1.5rem;
+    margin:45px;
+}
+.TicketSelection {
+    padding:10px;
+    border-radius: 9px;
+    width:170px;
+    height:50px;
+}
+.DateInput{
+    padding:10px;
+    border-radius: 9px;
+    width:170px;
+    height:50px;
+}
+.LocationSelection{
+    padding:10px;
+    border-radius: 9px;
+    width:170px;
+    height:50px;
+}
+
+.FindTicketButton{
+    margin:45px;
+    padding:10px;
+    border-radius: 9px;
+    width:170px;
+    height:50px;
+    background-color: rgb(72, 157, 186);
+}
+
+.MainSidePanel{
+    display: inline-block;
+}
