@@ -95,3 +95,9 @@ hr{
 .MainSidePanel{
     display: inline-block;
 }
+
+.title 
+{ 
+    text-align: right;
+    margin: 40px auto 30px;
+}
