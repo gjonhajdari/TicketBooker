@@ -4,7 +4,7 @@ TicketBooker is a (demo) site where you can purchase and manage all of your conc
 A [university](https://fiek.uni-pr.edu) team project made by 5 students.
 
 #### Contributors
-- Gjon Hajdari
+- Gjon Hajdari(chon)
 - Getuar Kelmendi(Gheto)
 - Gentrit Bytyçi
 - Klajdi Gashi(Clyde)
