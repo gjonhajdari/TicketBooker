@@ -167,8 +167,8 @@ main .btn:active {
 }
 
 main #tickets {
-	-webkit-animation: float 5s infinite;
-	animation: float 5s infinite;
+	-webkit-animation: float 4s infinite;
+	animation: float 4s infinite;
 }
 
 
@@ -191,6 +191,7 @@ footer #copyright {
 
 footer .icons img {
 	margin-right: 20px;
+	width: 20px;
 	cursor: pointer;
 	opacity: 0.5;
 	transition: 300ms;
@@ -313,7 +314,7 @@ Media queries -----------------------------------
 /* Phones */
 @media screen and (max-width: 500px) {
 	main {
-		margin: 0 2rem !important;
+		margin: 4rem 2rem !important;
 	}
 
 	main .options .selectors {
