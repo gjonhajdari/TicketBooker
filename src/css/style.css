@@ -1,8 +1,13 @@
+/*
+-------------------------------------------------
+General -----------------------------------------
+-------------------------------------------------
+*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-	--primary: #56C4A9;
-	--primary-transparent: #56C4A97F;
+	--primary: #72EACD;
+	--primary-transparent: #72EACD7F;
 	--red: #D14040;
 	--background: #222222;
 	--foreground: #333333;
@@ -22,8 +27,14 @@ body {
 	color: var(--text-primary);
 }
 
+
+/*
+-------------------------------------------------
+Navbar ------------------------------------------
+-------------------------------------------------
+*/
 .navbar {
-	padding: 0 5rem;
+	padding: 0 4rem;
 }
 
 .navbar-content {
@@ -72,6 +83,78 @@ a.link:hover {
 	opacity: 1;
 }
 
+
+/*
+-------------------------------------------------
+Main content ------------------------------------
+-------------------------------------------------
+*/
+main {
+	margin: 100px 4rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+main #title {
+	font-size: 2.75rem;
+	margin-bottom: 3rem;
+}
+
+main #accent {color: var(--primary);}
+
+main .options p {
+	color: var(--text-secondary);
+	font-size: 1.25rem;
+	margin-bottom: 10px;
+}
+
+main .selectors {
+	display: flex;
+	gap: 10px;
+}
+
+main .btn {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	padding: 1rem 4rem;
+	font-size: 1.25rem;
+	font-weight: 600;
+	border-radius: 1rem;
+	background-color: var(--primary);
+	margin-top: 2rem;
+	cursor: pointer;
+	transition: 300ms;
+}
+
+main .btn:hover {
+	gap: 40px;
+}
+
+main .btn:active {
+	transform: scale(0.9);
+}
+
+/*
+-------------------------------------------------
+Media queries -----------------------------------
+-------------------------------------------------
+*/
+
+/* Laptop */
+@media screen and (max-width: 1200px) {
+	main #tickets {
+		height: 400px;
+	}
+	main #title {
+		font-size: 2rem;
+	}
+}
+
+/* Tablet */
 @media screen and (max-width: 768px) {
 	.navbar {
 		padding: 0 2rem;
@@ -98,5 +181,11 @@ a.link:hover {
 	.right #login {
 		margin-left: 0 !important;
 		padding: 0.75rem 0 !important;
+	}
+	main {
+		margin: 5rem 2rem;
+	}
+	main #tickets {
+		display: none;
 	}
 }

@@ -28,7 +28,7 @@
 			</div>
 			<div class="right">
 				<a href="signup.html" class="link">Sign Up</a>
-				<a href="login.html" class="link" id="login">Log In</a>
+				<a href="#" class="link" id="login">Log In</a>
 			</div>
 			<i class="fa-solid fa-bars-staggered" id="burger-menu"></i>
 		</div>
@@ -36,7 +36,40 @@
 
 	<!-- Main content -->
 	<main>
+		<div class="content">
+			<h1 id="title">
+				Book tickets
+				<br>anywhere, all in <span id="accent">one place</span>
+			</h1>
 
+			<div class="options">
+				<p>What, when where?</p>
+
+				<div class="selectors">
+					<select name="what" id="select-what">
+						<option value="Movie">Movie</option>
+						<option value="Travel">Travel</option>
+						<option value="Concert">Concert</option>
+					</select>
+					<input type="date" name="when" id="select-when">
+					<select name="where" id="select-where">
+						<option value="Movie">Prishtinë</option>
+						<option value="Travel">Mitrovicë</option>
+						<option value="Concert">Pejë</option>
+						<option value="Concert">Prizren</option>
+						<option value="Concert">Ferizaj</option>
+						<option value="Concert">Gjilan</option>
+						<option value="Concert">Gjakovë</option>
+					</select>
+				</div>
+			</div>
+
+			<button class="btn">
+				Find tickets
+				<img src="../../assets/Arrow.svg" alt="Arrow" id="arrow">
+			</button>
+		</div>
+		<img src="../../assets/Tickets.png" alt="Tickets" id="tickets" height="500">
 	</main>
 
 	<!-- Footer -->
