@@ -166,6 +166,11 @@ main .btn:active {
 	transform: scale(0.9);
 }
 
+main #tickets {
+	-webkit-animation: float 5s infinite;
+	animation: float 5s infinite;
+}
+
 
 /*
 -------------------------------------------------
@@ -206,6 +211,23 @@ footer .links a:hover {
 	color: var(--primary);
 }
 
+
+/*
+-------------------------------------------------
+Keyframes ---------------------------------------
+-------------------------------------------------
+*/
+@-webkit-keyframes float {
+	0% {transform: translateY(0);}
+	50% {transform: translateY(-15px);}
+	100% {transform: translateY(0);}
+}
+
+@keyframes float {
+	0% {transform: translateY(0);}
+	50% {transform: translateY(-15px);}
+	100% {transform: translateY(0);}
+}
 
 /*
 -------------------------------------------------
