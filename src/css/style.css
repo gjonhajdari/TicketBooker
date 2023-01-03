@@ -25,6 +25,10 @@ General -----------------------------------------
 body {
 	background-color: var(--background);
 	color: var(--text-primary);
+	background-image: url(../../assets/Blob.svg);
+	background-repeat: no-repeat;
+	background-position: -300px -100px;
+	/* height: 100vh; */
 }
 
 
@@ -90,11 +94,17 @@ Main content ------------------------------------
 -------------------------------------------------
 */
 main {
-	margin: 100px 4rem;
+	margin: 5rem 4rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	/* 	Calculates minimum height for the main section so its always within the size of the monitor (not when in short heights)
+		100vh -> 100% of the available monitor height
+		103px -> height of the navbar
+		83px -> height of the footer
+	*/
+	min-height: calc(100vh - 103px - 83px);
 }
 
 main #title {
@@ -138,6 +148,47 @@ main .btn:active {
 	transform: scale(0.9);
 }
 
+
+/*
+-------------------------------------------------
+Footer ------------------------------------------
+-------------------------------------------------
+*/
+footer {
+	padding: 2rem 4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 14px;
+}
+
+footer #copyright {
+	color: var(--text-secondary);
+}
+
+footer .icons img {
+	margin-right: 20px;
+	cursor: pointer;
+	opacity: 0.5;
+	transition: 300ms;
+}
+
+footer .icons img:hover {
+	opacity: 1;
+}
+
+footer .links a {
+	text-decoration: none;
+	color: var(--text-primary);
+	transition: 300ms;
+	margin-left: 20px;
+}
+
+footer .links a:hover {
+	color: var(--primary);
+}
+
+
 /*
 -------------------------------------------------
 Media queries -----------------------------------
@@ -146,9 +197,14 @@ Media queries -----------------------------------
 
 /* Laptop */
 @media screen and (max-width: 1200px) {
+	main {
+		margin: 2rem 4rem;
+	}
+
 	main #tickets {
 		height: 400px;
 	}
+
 	main #title {
 		font-size: 2rem;
 	}
@@ -156,21 +212,29 @@ Media queries -----------------------------------
 
 /* Tablet */
 @media screen and (max-width: 768px) {
+	body {
+		background-position: -500px -100px;
+	}
+
 	.navbar {
 		padding: 0 2rem;
 	}
+	
 	#burger-menu {
 		display: block !important;
 		position: absolute;
 		top: 40px;
 		right: 35px;
 	}
+	
 	.navbar-content {
 		display: block;
 	}
+	
 	.middle, .right {
 		display: none;
 	}
+	
 	a.link {
 		display: block;
 		margin-left: 0 !important;
@@ -178,14 +242,42 @@ Media queries -----------------------------------
 		text-align: center;
 		padding: 1rem 0;
 	}
+	
 	.right #login {
 		margin-left: 0 !important;
 		padding: 0.75rem 0 !important;
 	}
+	
 	main {
 		margin: 5rem 2rem;
 	}
+	
 	main #tickets {
 		display: none;
+	}
+	
+	footer {
+		flex-direction: column;
+		gap: 40px;
+		padding: 2rem 2rem;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	footer .icons, footer .links {
+		display: flex;
+		gap: 20px;
+	}
+
+	footer .icons img, footer .links a {
+		margin: 0;
+		wid
+	}
+}
+
+/* For when the screen is taller than 850px */
+@media screen and (min-height: 850px) {
+	main {
+		margin: 0 4rem;
 	}
 }
