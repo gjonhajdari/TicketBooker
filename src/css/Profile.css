@@ -1,0 +1,87 @@
+/*
+-------------------------------------------------
+Navbar ------------------------------------------
+-------------------------------------------------
+*/
+.navbar {
+	padding: 0 4rem;
+}
+
+.navbar-content {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+	border-bottom: 1px solid var(--text-secondary);
+}
+
+.navbar .middle a {
+	margin-left: 50px;
+}
+
+a.link {
+	text-decoration: none;
+	color: var(--text-primary);
+	transition: 300ms;
+}
+
+a.link:hover {
+	color: var(--primary);
+}
+
+.navbar-content .right #login {
+	padding: 8px 20px;
+	border: 1px solid white;
+	border-radius: 8px;
+	margin-left: 1rem;
+}
+
+.navbar-content .right #login:hover {
+	background-color: var(--text-primary);
+}
+
+.navbar-content #burger-menu {
+	font-size: 24px;
+	transition: 300ms;
+	opacity: 0.5;
+	cursor: pointer;
+	display: none;
+}
+
+.navbar-content #burger-menu:hover {
+	opacity: 1;
+}
+footer {
+	padding: 2rem 4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 14px;
+}
+
+footer #copyright {
+	color: var(--text-secondary);
+}
+
+footer .icons img {
+	margin-right: 20px;
+	cursor: pointer;
+	opacity: 0.5;
+	transition: 300ms;
+}
+
+footer .icons img:hover {
+	opacity: 1;
+}
+
+footer .links a {
+	text-decoration: none;
+	color: var(--text-primary);
+	transition: 300ms;
+	margin-left: 20px;
+}
+
+footer .links a:hover {
+	color: var(--primary);
+}
