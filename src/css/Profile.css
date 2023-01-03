@@ -1,3 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+:root {
+	--primary: #72EACD;
+	--primary-transparent: #72EACD7F;
+	--red: #D14040;
+	--background: #222222;
+	--foreground: #333333;
+	--text-primary: #FFFFFF;
+	--text-secondary: #FFFFFF7F;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Inter', sans-serif;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--text-primary);
+
+	background-repeat: no-repeat;
+	background-position: -300px -100px;
+	/* height: 100vh; */
+}
+
+.Header{
+	margin:40px;
+}
+.Profile{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.Profile #Profile-Paragraph{
+	margin-top:20px;
+	color: var(--text-secondary);
+}
+.Profile #EditProfile-Button{
+	margin-top: 20px;
+}
+.Profile  button{
+	margin-bottom:50px;
+	padding:5px;
+	width: 135px;
+	height: 45px;
+	border-radius: 14px;
+	background-color: var(--foreground);
+	color: var(--text-primary);
+	border: 0px none;
+}
+.Profile-Picture button{
+	background-color: var(--red);
+}
+
+.Profile-Button{
+	margin:40px;
+}
+.Profile-Picture{
+	margin:40px;
+	margin-right:74px;
+}
+.Ticket-buttons{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	margin:30px;
+	gap:50px;
+}
+
+.Ticket-buttons #All-Tickets{
+	width: 300px;
+	height:50px;
+	border-radius: 13px;
+	background-color: #333333;
+	color: #FFFFFF;
+	border: 0px none;
+}
+.Ticket-buttons #All-Tickets img{
+	margin-left:15px ;
+	float:left;
+}
+
+.Ticket-buttons #All-Tickets:hover{
+	background-color: var(--primary);
+	cursor: pointer;
+	transform: scale(1.09);
+	transition: 300ms;
+	
+}
+
+.Ticket-buttons #All-Tickets:active{
+	background-color: var(--primary);
+	cursor: pointer;
+	transform: scale(0.9);
+	transition: 300ms;
+	transform: rotateY(-180deg);
+}
+
+.Ticket-buttons #Travels{
+	width: 300px;
+	height:50px;
+	border-radius: 13px;
+	background-color: #333333;
+	color: #FFFFFF;
+	border: 0px none;
+}
+
+.Ticket-buttons #Travels img{
+	margin-left:15px ;
+	float:left;
+}
+.Ticket-buttons  #Travels:hover{
+	background-color: var(--primary);
+	cursor: pointer;
+	transform: scale(1.09);
+	transition: 300ms;
+	
+}
+
+.Ticket-buttons #Movies {
+	width: 300px;
+	height:50px;
+	border-radius: 13px;
+	background-color: #333333;
+	color: #FFFFFF;
+	border: 0px none;
+}
+
+.Ticket-buttons #Movies img{
+	margin-left:15px ;
+	float:left;
+}
+.Ticket-buttons #Movies:hover{
+	background-color: var(--primary);
+	cursor: pointer;
+	transform: scale(1.09);
+	transition: 300ms;
+	
+}
+
+.Ticket-buttons #Concerts{
+	width: 300px;
+	height:50px;
+	border-radius: 13px;
+	background-color: #333333;
+	color: #FFFFFF;
+	border: 0px none;
+}
+
+.Ticket-buttons #Concerts img{
+	margin-left:15px ;
+	float:left;	
+}
+
+.Ticket-buttons #Concerts:hover{
+	background-color: var(--primary);
+	cursor: pointer;
+	transform: scale(1.09);
+	transition: 300ms;
+}
+
+
+
+
+
+
+
+
+
 /*
 -------------------------------------------------
 Navbar ------------------------------------------
