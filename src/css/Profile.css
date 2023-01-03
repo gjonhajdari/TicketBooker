@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 :root {
 	--primary: #72EACD;
 	--primary-transparent: #72EACD7F;
@@ -8,168 +9,6 @@
 	--text-primary: #FFFFFF;
 	--text-secondary: #FFFFFF7F;
 }
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Inter', sans-serif;
-}
-
-body {
-	background-color: var(--background);
-	color: var(--text-primary);
-
-	background-repeat: no-repeat;
-	background-position: -300px -100px;
-	/* height: 100vh; */
-}
-
-.Header{
-	margin:40px;
-}
-.Profile{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-.Profile #Profile-Paragraph{
-	margin-top:20px;
-	color: var(--text-secondary);
-}
-.Profile #EditProfile-Button{
-	margin-top: 20px;
-}
-.Profile  button{
-	margin-bottom:50px;
-	padding:5px;
-	width: 135px;
-	height: 45px;
-	border-radius: 14px;
-	background-color: var(--foreground);
-	color: var(--text-primary);
-	border: 0px none;
-}
-.Profile-Picture button{
-	background-color: var(--red);
-}
-
-.Profile-Button #EditProfile-Button:hover{
-	background-color: var(--primary);
-	cursor: pointer;
-	transform: scale(1.09);
-	transition: 300ms;
-}
-
-.Profile-Button{
-	margin:40px;
-}
-.Profile-Picture{
-	margin:40px;
-	margin-right:74px;
-}
-.Ticket-buttons{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	margin:30px;
-	gap:50px;
-}
-
-.Ticket-buttons #All-Tickets{
-	width: 300px;
-	height:50px;
-	border-radius: 13px;
-	background-color: #333333;
-	color: #FFFFFF;
-	border: 0px none;
-}
-.Ticket-buttons #All-Tickets img{
-	margin-left:15px ;
-	float:left;
-}
-
-.Ticket-buttons #All-Tickets:hover{
-	background-color: var(--primary);
-	cursor: pointer;
-	transform: scale(1.09);
-	transition: 300ms;
-	
-}
-
-
-
-.Ticket-buttons #Travels{
-	width: 300px;
-	height:50px;
-	border-radius: 13px;
-	background-color: #333333;
-	color: #FFFFFF;
-	border: 0px none;
-}
-
-.Ticket-buttons #Travels img{
-	margin-left:15px ;
-	float:left;
-}
-.Ticket-buttons  #Travels:hover{
-	background-color: var(--primary);
-	cursor: pointer;
-	transform: scale(1.09);
-	transition: 300ms;
-	
-}
-
-.Ticket-buttons #Movies {
-	width: 300px;
-	height:50px;
-	border-radius: 13px;
-	background-color: #333333;
-	color: #FFFFFF;
-	border: 0px none;
-}
-
-.Ticket-buttons #Movies img{
-	margin-left:15px ;
-	float:left;
-}
-.Ticket-buttons #Movies:hover{
-	background-color: var(--primary);
-	cursor: pointer;
-	transform: scale(1.09);
-	transition: 300ms;
-	
-}
-
-.Ticket-buttons #Concerts{
-	width: 300px;
-	height:50px;
-	border-radius: 13px;
-	background-color: #333333;
-	color: #FFFFFF;
-	border: 0px none;
-}
-
-.Ticket-buttons #Concerts img{
-	margin-left:15px ;
-	float:left;	
-}
-
-.Ticket-buttons #Concerts:hover{
-	background-color: var(--primary);
-	cursor: pointer;
-	transform: scale(1.09);
-	transition: 300ms;
-}
-
-
-
-
-
-
-
-
 
 /*
 -------------------------------------------------
@@ -225,6 +64,194 @@ a.link:hover {
 .navbar-content #burger-menu:hover {
 	opacity: 1;
 }
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Inter', sans-serif;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--text-primary);
+
+	background-repeat: no-repeat;
+	background-position: -300px -100px;
+	/* height: 100vh; */
+}
+
+.Header {
+	margin: 40px;
+}
+
+.Profile {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.Profile #Profile-Paragraph {
+	margin-top: 17px;
+	color: var(--text-secondary);
+}
+
+.Profile #EditProfile-Button {
+	margin-top: 40px;
+}
+
+.Profile button {
+	padding: 5px;
+	width: 135px;
+	height: 45px;
+	border-radius: 14px;
+	background-color: var(--foreground);
+	color: var(--text-primary);
+	border: 0px none;
+}
+
+.Profile-Picture button {
+	background-color: var(--red);
+}
+
+
+.Profile-Picture #LogOut-Profile {
+	margin-top: 40px;
+	margin-left: 50px;
+}
+
+.Profile-Picture #LogOut-Profile:hover {
+	transform: scale(1.09);
+	transition: 300ms;
+	cursor: pointer;
+}
+
+.Profile-Picture #LogOut-Profile:active {
+	transform: scale(0.9);
+	transform: 300ms;
+	cursor: pointer;
+}
+
+.Profile-Button #EditProfile-Button:hover {
+	background-color: var(--primary);
+	cursor: pointer;
+	transform: scale(1.09);
+	transition: 300ms;
+}
+
+.Profile-Button {
+	margin: 70px;
+}
+
+.Profile-Picture {
+	margin: 50px;
+	margin-right: 74px;
+}
+
+.Ticket-buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	margin: 30px;
+	gap: 50px;
+}
+
+.Ticket-buttons #All-Tickets {
+	width: 310px;
+	height: 50px;
+	border-radius: 13px;
+	background-color: #333333;
+	color: #FFFFFF;
+	border: 0px none;
+}
+
+.Ticket-buttons #All-Tickets img {
+	margin-left: 15px;
+	float: left;
+}
+
+.Ticket-buttons #All-Tickets:hover {
+	background-color: var(--primary);
+	cursor: pointer;
+	transform: scale(1.09);
+	transition: 300ms;
+
+}
+
+.Ticket-buttons #Travels {
+	width: 310px;
+	height: 50px;
+	border-radius: 13px;
+	background-color: #333333;
+	color: #FFFFFF;
+	border: 0px none;
+}
+
+.Ticket-buttons #Travels img {
+	margin-left: 15px;
+	float: left;
+}
+
+.Ticket-buttons #Travels:hover {
+	background-color: var(--primary);
+	cursor: pointer;
+	transform: scale(1.09);
+	transition: 300ms;
+
+}
+
+.Ticket-buttons #Movies {
+	width: 310px;
+	height: 50px;
+	border-radius: 13px;
+	background-color: #333333;
+	color: #FFFFFF;
+	border: 0px none;
+}
+
+.Ticket-buttons #Movies img {
+	margin-left: 15px;
+	float: left;
+}
+
+.Ticket-buttons #Movies:hover {
+	background-color: var(--primary);
+	cursor: pointer;
+	transform: scale(1.09);
+	transition: 300ms;
+
+}
+
+.Ticket-buttons #Concerts {
+	width: 310px;
+	height: 50px;
+	border-radius: 13px;
+	background-color: #333333;
+	color: #FFFFFF;
+	border: 0px none;
+}
+
+.Ticket-buttons #Concerts img {
+	margin-left: 15px;
+	float: left;
+}
+
+.Ticket-buttons #Concerts:hover {
+	background-color: var(--primary);
+	cursor: pointer;
+	transform: scale(1.09);
+	transition: 300ms;
+}
+
+.Ticket-buttons p {
+	float: left;
+	margin: 1px 1px 1px 10px;
+}
+
+
+
+
 footer {
 	padding: 2rem 4rem;
 	display: flex;
@@ -257,4 +284,46 @@ footer .links a {
 
 footer .links a:hover {
 	color: var(--primary);
+}
+
+.TicketBlocks {
+display: inline-flex;
+}
+
+.Block1 {
+	width: 400px;
+	height: 250px;
+	background-color: var(--foreground);
+
+}
+
+.Block2 {
+	height: 250px;
+	background-color: var(--foreground);
+}
+
+.Block3 {
+	width: 400px;
+	height: 250px;
+	background-color: var(--foreground);
+}
+
+.Block4 {
+	width: 400px;
+	height: 250px;
+	background-color: var(--foreground);
+
+}
+
+.Block5 {
+	width: 400px;
+	height: 250px;
+	background-color: var(--foreground);
+
+}
+
+.Block6 {
+	width: 400px;
+	height: 250px;
+	background-color: var(--foreground);
 }
