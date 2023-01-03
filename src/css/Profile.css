@@ -54,6 +54,13 @@ body {
 	background-color: var(--red);
 }
 
+.Profile-Button #EditProfile-Button:hover{
+	background-color: var(--primary);
+	cursor: pointer;
+	transform: scale(1.09);
+	transition: 300ms;
+}
+
 .Profile-Button{
 	margin:40px;
 }
@@ -91,13 +98,7 @@ body {
 	
 }
 
-.Ticket-buttons #All-Tickets:active{
-	background-color: var(--primary);
-	cursor: pointer;
-	transform: scale(0.9);
-	transition: 300ms;
-	transform: rotateY(-180deg);
-}
+
 
 .Ticket-buttons #Travels{
 	width: 300px;
