@@ -73,11 +73,14 @@ a.link:hover {
 }
 
 @media screen and (max-width: 768px) {
+	.navbar {
+		padding: 0 2rem;
+	}
 	#burger-menu {
 		display: block !important;
 		position: absolute;
 		top: 40px;
-		right: 80px;
+		right: 35px;
 	}
 	.navbar-content {
 		display: block;
