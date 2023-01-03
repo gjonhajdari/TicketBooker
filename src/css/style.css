@@ -125,6 +125,24 @@ main .selectors {
 	gap: 10px;
 }
 
+.selectors select, .selectors input {
+	padding: 10px 15px;
+	border-radius: 0.5rem;
+	border: none;
+	font-weight: 500;
+	background-color: var(--foreground);
+	color: var(--text-primary);
+}
+
+.selectors select {
+	cursor: pointer;
+}
+
+::-webkit-calendar-picker-indicator {
+	filter: invert(100%);
+	cursor: pointer;
+}
+
 main .btn {
 	display: flex;
 	justify-content: space-between;
@@ -248,10 +266,6 @@ Media queries -----------------------------------
 		padding: 0.75rem 0 !important;
 	}
 	
-	main {
-		margin: 5rem 2rem;
-	}
-	
 	main #tickets {
 		display: none;
 	}
@@ -271,7 +285,28 @@ Media queries -----------------------------------
 
 	footer .icons img, footer .links a {
 		margin: 0;
-		wid
+	}
+}
+
+/* Phones */
+@media screen and (max-width: 500px) {
+	main {
+		margin: 0 2rem !important;
+	}
+
+	main .options .selectors {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	main .btn {
+		padding: 0.75rem 2rem;
+		width: 100%;
+		justify-content: center;
+	}
+
+	main .btn img {
+		display: none;
 	}
 }
 
