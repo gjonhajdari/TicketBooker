@@ -96,7 +96,50 @@ a.link:hover {
     border-radius: 10px;
     background-color: #333333;
 }
+/*
+-------------------------------------------------
+Main ------------------------------------------
+-------------------------------------------------
+*/
+ h6{
+	color: var(--text-secondary);
+	font-size: 1rem;
+}
 
+h1{
+	margin-right: 180px;
+	font-size: 2.25rem;
+}
+h6{
+	margin-right: 300px;
+}
+#a{
+	text-decoration-line: none;
+	font-size: 1rem;
+	color: var(--primary-transparent);
+}
+
+ .btn {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	padding: 1rem 4rem;
+	font-size: 1.25rem;
+	font-weight: 600;
+	border-radius: 1rem;
+	background-color: var(--primary);
+	margin-top: 2rem;
+	cursor: pointer;
+}
+
+main .btn:hover {
+	gap: 40px;
+}
+
+main .btn:active {
+	transform: scale(0.9);
+}
 /*
 -------------------------------------------------
 Footer ------------------------------------------
