@@ -8,6 +8,7 @@
 	--foreground: #333333;
 	--text-primary: #FFFFFF;
 	--text-secondary: #FFFFFF7F;
+	--line-break: #5a5a5a;
 }
 
 * {
@@ -105,14 +106,14 @@ Profile ------------------------------------------
 }
 
 .Profile #EditProfile-Button {
-	margin-top: 40px;
+	margin-top: 87px;
 }
 
 .Profile button {
 	padding: 5px;
-	width: 135px;
+	width: 140px;
 	height: 45px;
-	border-radius: 14px;
+	border-radius: 10px;
 	background-color: var(--foreground);
 	color: var(--text-primary);
 	border: 0px none;
@@ -124,16 +125,15 @@ Profile ------------------------------------------
 
 
 .Profile-Picture #LogOut-Profile {
-	margin-top: 40px;
-	margin-left: 50px;
+	margin-top: 80px;
+	margin-left: 170px;
 }
 
-.Profile-Picture #Profile-Paragraph1{
-	margin:40px 5px 0px 0px;
-	float:right;
-
-
+.Profile-Picture #Profile-Paragraph1 {
+	margin: 0px 5px 0px 0px;
+	float: right
 }
+
 .Profile-Picture #LogOut-Profile:hover {
 	transform: scale(1.09);
 	transition: 300ms;
@@ -155,7 +155,7 @@ Profile ------------------------------------------
 }
 
 .Profile-Button {
-	margin: 70px;
+	margin: 60px;
 }
 
 .Profile-Picture {
@@ -168,11 +168,12 @@ Profile ------------------------------------------
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
-	margin: 30px;
-	gap: 50px;
+	margin: 40px;
+	gap:60px;
 }
-.Ticket-buttons button{
-	width: 300px;
+
+.Ticket-buttons button {
+	width: 320px;
 	height: 60px;
 	border-radius: 13px;
 	background-color: #333333;
@@ -263,20 +264,68 @@ TicketBlocks ------------------------------------------
 }
 
 .TicketBlocks hr {
-	width: 300px;
+	width: 390px;
 	margin: auto;
-	color: var(--foreground);
+	color: var(--line-break)
 }
 
 
 .Block {
-	width: 430px;
+	width: 450px;
 	height: 250px;
 	background-color: var(--foreground);
 	border-radius: 15px;
-	margin: 20px
+	margin:30px;
+	float:right;
 }
 
+
+.Block .TicketType {
+	font-size: 1.2rem;
+	display: flex;
+}
+
+.Block .TicketType img {
+	margin: 10px 0px 10px 18px;
+	float: left;
+	display: flex;
+}
+
+.Block .TicketType text {
+	margin: 10px 0px 10px 20px;
+	padding: 5px;
+}
+
+.TicketTitle {
+	margin: 20px 0px 20px 20px;
+}
+
+.Trash {
+	background-color: var(--red);
+	border-radius: 9px;
+	height: 15px;
+	width: 18px;
+
+}
+
+.TicketDate {
+	margin: 20px 0px 0px 20px;
+}
+
+.TicketTime {
+	color: var(--text-secondary);
+	margin: 5px 0px 15px 40px;
+}
+
+.TicketLocation {
+	margin: 5px 0px 15px 20px;
+}
+
+.TicketDate img {
+	margin-top: 10px;
+	float: left;
+	margin-right: 5px;
+}
 
 /*
 -------------------------------------------------
