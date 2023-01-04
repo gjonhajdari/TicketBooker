@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Log In </title>
+  <style type="text/css">
+form{
+    width: 300px;
+    margin: 200px auto;
+}
+div{
+    width: 280%;
+    margin: 15px auto;
+
+}
+label{ 
+    
+    display: block; 
+    padding: 15px;
+     font-size: 25px;   
+}
+input{
+    width: 25%;
+    padding:10px;
+    border: 1px solid  gray;
+    font-size:20 px;
+    margin-left: 20px; 
+    border-radius: 3px;
+}
+  </style>  
+</head>
+<body>
+
+<form action="swipe.html"method="POST">
+<div>
+
+<label for ="username">Username  </label>
+<input type="text" name="username" placeholder="Username" >
+<span> </span>
+
+<label for ="password">Password </label>
+<input type="password" name="password" placeholder="Password" >
+<span> </span>
+</div>
+<button id="Login">Log-in</button>
+
+</form>
+</body>
+</html>
