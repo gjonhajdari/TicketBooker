@@ -8,6 +8,23 @@
 	--foreground: #333333;
 	--text-primary: #FFFFFF;
 	--text-secondary: #FFFFFF7F;
+	--line-break: #5a5a5a;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Inter', sans-serif;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--text-primary);
+
+	background-repeat: no-repeat;
+	background-position: -300px -100px;
+	/* height: 100vh; */
 }
 
 /*
@@ -65,21 +82,13 @@ a.link:hover {
 	opacity: 1;
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Inter', sans-serif;
-}
 
-body {
-	background-color: var(--background);
-	color: var(--text-primary);
 
-	background-repeat: no-repeat;
-	background-position: -300px -100px;
-	/* height: 100vh; */
-}
+/*
+-------------------------------------------------
+Profile ------------------------------------------
+-------------------------------------------------
+*/
 
 .Header {
 	margin: 40px;
@@ -97,14 +106,14 @@ body {
 }
 
 .Profile #EditProfile-Button {
-	margin-top: 40px;
+	margin-top: 87px;
 }
 
 .Profile button {
 	padding: 5px;
-	width: 135px;
+	width: 140px;
 	height: 45px;
-	border-radius: 14px;
+	border-radius: 10px;
 	background-color: var(--foreground);
 	color: var(--text-primary);
 	border: 0px none;
@@ -116,8 +125,13 @@ body {
 
 
 .Profile-Picture #LogOut-Profile {
-	margin-top: 40px;
-	margin-left: 50px;
+	margin-top: 80px;
+	margin-left: 170px;
+}
+
+.Profile-Picture #Profile-Paragraph1 {
+	margin: 0px 5px 0px 0px;
+	float: right
 }
 
 .Profile-Picture #LogOut-Profile:hover {
@@ -132,6 +146,7 @@ body {
 	cursor: pointer;
 }
 
+
 .Profile-Button #EditProfile-Button:hover {
 	background-color: var(--primary);
 	cursor: pointer;
@@ -140,7 +155,7 @@ body {
 }
 
 .Profile-Button {
-	margin: 70px;
+	margin: 60px;
 }
 
 .Profile-Picture {
@@ -150,20 +165,30 @@ body {
 
 .Ticket-buttons {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-	flex-direction: row;
-	margin: 30px;
-	gap: 50px;
+	margin: 40px;
+	gap: 60px;
 }
 
-.Ticket-buttons #All-Tickets {
-	width: 310px;
-	height: 50px;
+.Ticket-buttons .tab-button {
+	max-width: 350px;
+	padding: 0.5rem 2rem 0.5rem 0.5rem;
 	border-radius: 13px;
 	background-color: #333333;
 	color: #FFFFFF;
 	border: 0px none;
+	font-size: 1.2rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+	font-weight: 500;
+}
+
+.tab-button.active {
+	background-color: var(--primary);
+	color: #333;
 }
 
 .Ticket-buttons #All-Tickets img {
@@ -179,14 +204,6 @@ body {
 
 }
 
-.Ticket-buttons #Travels {
-	width: 310px;
-	height: 50px;
-	border-radius: 13px;
-	background-color: #333333;
-	color: #FFFFFF;
-	border: 0px none;
-}
 
 .Ticket-buttons #Travels img {
 	margin-left: 15px;
@@ -201,15 +218,6 @@ body {
 
 }
 
-.Ticket-buttons #Movies {
-	width: 310px;
-	height: 50px;
-	border-radius: 13px;
-	background-color: #333333;
-	color: #FFFFFF;
-	border: 0px none;
-}
-
 .Ticket-buttons #Movies img {
 	margin-left: 15px;
 	float: left;
@@ -221,15 +229,6 @@ body {
 	transform: scale(1.09);
 	transition: 300ms;
 
-}
-
-.Ticket-buttons #Concerts {
-	width: 310px;
-	height: 50px;
-	border-radius: 13px;
-	background-color: #333333;
-	color: #FFFFFF;
-	border: 0px none;
 }
 
 .Ticket-buttons #Concerts img {
@@ -249,8 +248,91 @@ body {
 	margin: 1px 1px 1px 10px;
 }
 
+/*
+-------------------------------------------------
+TicketBlocks ------------------------------------------
+-------------------------------------------------
+*/
+
+.TicketBlocks {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	align-content: center;
+}
+
+.TicketBlocks hr {
+	width: 390px;
+	margin: auto;
+	color: var(--line-break)
+}
 
 
+.Block {
+	width: 450px;
+	height: 250px;
+	background-color: var(--foreground);
+	border-radius: 15px;
+	margin:30px;
+	float:right;
+}
+
+
+.Block .TicketType {
+	font-size: 1.2rem;
+	display: flex;
+}
+
+.Block .TicketType img {
+	margin: 10px 0px 10px 18px;
+	float: left;
+	display: flex;
+}
+
+.Block .TicketType text {
+	margin: 10px 0px 10px 20px;
+	padding: 5px;
+}
+
+.TicketTitle {
+	margin: 20px 0px 20px 20px;
+}
+
+.Trash {
+	background-color: var(--red);
+	border-radius: 9px;
+	height: 15px;
+	width: 18px;
+
+}
+
+.TicketDate {
+	margin: 20px 0px 0px 20px;
+}
+
+.TicketTime {
+	color: var(--text-secondary);
+	margin: 5px 0px 15px 40px;
+}
+
+.TicketLocation {
+	margin: 5px 0px 15px 20px;
+}
+
+.TicketDate img {
+	margin-top: 10px;
+	float: left;
+	margin-right: 5px;
+}
+
+
+/*
+-------------------------------------------------
+Footer ------------------------------------------
+-------------------------------------------------
+*/
 
 footer {
 	padding: 2rem 4rem;
@@ -284,46 +366,4 @@ footer .links a {
 
 footer .links a:hover {
 	color: var(--primary);
-}
-
-.TicketBlocks {
-display: inline-flex;
-}
-
-.Block1 {
-	width: 400px;
-	height: 250px;
-	background-color: var(--foreground);
-
-}
-
-.Block2 {
-	height: 250px;
-	background-color: var(--foreground);
-}
-
-.Block3 {
-	width: 400px;
-	height: 250px;
-	background-color: var(--foreground);
-}
-
-.Block4 {
-	width: 400px;
-	height: 250px;
-	background-color: var(--foreground);
-
-}
-
-.Block5 {
-	width: 400px;
-	height: 250px;
-	background-color: var(--foreground);
-
-}
-
-.Block6 {
-	width: 400px;
-	height: 250px;
-	background-color: var(--foreground);
 }

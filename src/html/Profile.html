@@ -23,8 +23,7 @@
 				<a href="contact.html" class="link">Contact</a>
 			</div>
 			<div class="right">
-				<a href="signup.html" class="link">Sign Up</a>
-				<a href="#" class="link" id="login">Log In</a>
+				<img src="../../assets/ProfilePicture.jpg" alt="" width="50" height="50" style="border-radius: 50px;">
 			</div>
 			<i class="fa-solid fa-bars-staggered" id="burger-menu"></i>
 		</div>
@@ -34,22 +33,27 @@
 
 			<div class="Profile-Button">
 				<h1 id="title">
-					Welcome back, Klajdi
+					<b>Welcome back </b>, Klajdi
 					<!-- to be fixed with javascript!-->
 					<br>
 				</h1>
 				<p id="Profile-Paragraph">
-					Take a look at all of your tickets.
+					<i> Take a look at all of your tickets. </i>
 				</p>
 				<button id="EditProfile-Button">
 					Edit Profile
 				</button>
 			</div>
 			<div class="Profile-Picture">
-				<img src="../../assets/Instagram.svg" alt="" width="100" height="100" style="border-radius:50px;" id="ImageProfile">
+				<img src="../../assets/ProfilePicture.jpg" alt="" width="100" height="100"
+					style="border-radius:50px; float:right" id="ImageProfile">
+				<br>
+				<br>
 				<p id="Profile-Paragraph1">
 					Klajdi Gashi
 				</p>
+				<br>
+				<p id="Profile-Paragraph1" style="color: var(--foreground);">@KlajdixGashii </p>
 				<!--Username-->
 				<!--profile-->
 				<br>
@@ -61,77 +65,191 @@
 
 		<center>
 			<div class="Ticket-buttons">
-				<button id="All-Tickets">
+				<button class="tab-button active" id="All-Tickets">
 					<img src="../../assets/Library.svg" alt="">
-					<p>
-						All tickets
-					</p>
-
+					<p>All tickets</p>
 				</button>
 
-				<button id="Travels">
+				<button class="tab-button" id="Travels">
 					<img src="../../assets/Location.svg" alt="">
-					<p>
-						Travels
-					</p>
-
+					<p>Travels</p>
 				</button>
 
-				<button id="Movies">
+				<button class="tab-button" id="Movies">
 					<img src="../../assets/Movie.svg" alt="">
-					<p>
-						Movies
-					</p>
+					<p>Movies</p>
 				</button>
 
-				<button id="Concerts">
+				<button class="tab-button" id="Concerts">
 					<img src="../../assets/Concert.svg" alt="">
-					<p>
-						Concerts
-					</p>
+					<p>Concerts</p>
 				</button>
 			</div>
 		</center>
 
 
-		<div class="TicketBlocks">
-			<hr style="width:1360px; margin:auto; color:var(--foreground);">
-			<div class="Block1">
-				<img src="../../assets/Concert.svg" alt="">
-				<hr>
-
-			</div>
-
-			<div class="Block2">
-				<img src="../../assets/Location.svg" alt="">
-				<hr>
-			</div>
-
-
-			<div class="Block3">
-				<img src="../../assets/Movie.svg" alt="">
-				<hr>
-			</div>
-
-			<div class="Block4">
-				<img src="../../assets/Concert.svg" alt="">
-				<hr>
-			</div>
-
-			<div class="Block5">
-				<img src="../../assets/Concert.svg" alt="">
-				<hr>
-			</div>
-
-			<div class="Block6">
-				<img src="../../assets/Location.svg" alt="">
-				<hr>
-			</div>
-
-		</div>
 	</main>
 
+	<hr style="width: 1450px; margin:auto; color:var(--foreground);">
 
+	<div class="TicketBlocks">
+		<div class="Block">
+			<p class="TicketType">
+				<img src="../../assets/Concert.svg" alt="">
+				<text>Concert Ticket</text>
+				<img src="../../assets/Trash.svg" alt="" class="Trash">
+			</p>
+			<hr>
+			<p class="TicketTitle">
+				Asgjë sikur dielli
+				<br>
+			</p>
+			<p class="TicketDate">
+				<img src="../../assets/Calendar.svg" alt="Calendar">
+				December 23,2022
+			<p id="Time" class="TicketTime">
+				11:00 PM -2:00 AM
+			</p>
+			</p>
+
+			<text class="TicketLocation">
+				<img src="../../assets/Location.svg" alt="">
+				Gërmia Park,Prishtinë XK</text>
+			</p>
+
+		</div>
+
+
+		<div class="Block">
+			<p class="TicketType">
+				<img src="../../assets/Location.svg" alt="">
+				<text> Travel Ticket </text>
+				<img src="../../assets/Trash.svg" alt="" class="Trash">
+			</p>
+
+			<hr>
+			<p class="TicketTitle">
+				Leeds,United Kingdom
+				<br>
+			</p>
+			<p class="TicketDate">
+				<img src="../../assets/Calendar.svg" alt="Calendar">
+				March 2,2023
+			<p id="Time" class="TicketTime">
+				11:30 AM
+			</p>
+			</p>
+			<text class="TicketLocation">
+				<img src="../../assets/Location.svg" alt="">
+				"Adem Jashiir" Airport,Prishtinë XK</text>
+			</p>
+
+		</div>
+
+
+		<div class="Block">
+			<p class="TicketType">
+				<img src="../../assets/Movie.svg" alt="">
+				<text> Movie Ticket </text>
+				<img src="../../assets/Trash.svg" alt="" class="Trash">
+			</p>
+			<hr>
+			<p class="TicketTitle">
+				Minions: The Rise of Gru
+				<br>
+			</p>
+			<p class="TicketDate">
+				<img src="../../assets/Calendar.svg" alt="Calendar">
+				December 27,2022
+			<p id="Time" class="TicketTime">
+				7:00 PM
+			</p>
+			</p>
+			<text class="TicketLocation">
+				<img src="../../assets/Location.svg" alt="">
+				Cineplexx Albi Mall,Prishtinë XK</text>
+			</p>
+		</div>
+	</div>
+
+
+	<div class="TicketBlocks">
+		<div class="Block">
+			<p class="TicketType">
+				<img src="../../assets/Concert.svg" alt="Concert">
+				<text>Concert Ticket </text>
+				<img src="../../assets/Trash.svg" alt="" class="Trash">
+			</p>
+			<hr>
+			<p class="TicketTitle">
+				Bladee x Ecco2k
+				<br>
+			</p>
+			<p class="TicketDate">
+
+			<p class="TicketDate">
+				<img src="../../assets/Concert.svg" alt="">
+				March 7,2023
+			<p id="Time" class="TicketTime">
+				9:00 PM - 1:00 AM
+			</p>
+			</p>
+			<text class="TicketLocation">
+				<img src="../../assets/Location.svg" alt="">
+				02 Academy Leeds,Leeds UK</text>
+			</p>
+		</div>
+
+
+		<div class="Block">
+			<p class="TicketType">
+				<img src="../../assets/Concert.svg" alt="">
+				<text> Concert Ticket </text>
+				<img src="../../assets/Trash.svg" alt="" class="Trash">
+			</p>
+			<hr>
+			<p class="TicketTitle">
+				Dua Lipa
+				<br>
+			</p>
+			<p class="TicketDate">
+				<img src="../../assets/Concert.svg" alt="Concert">
+				December 5, 2022
+			<p id="Time" class="TicketTime">10:30 PM - 1:30 AM</p>
+			</p>
+			<text class="TicketLocation">
+				<img src="../../assets/Location.svg" alt="">
+				Velvet Underground,Toronto CA</text>
+			</p>
+		</div>
+
+
+		<div class="Block">
+			<p class="TicketType">
+				<img src="../../assets/Travel.svg" alt="">
+				<text> Travel Ticket </text>
+				<img src="../../assets/Trash.svg" alt="" class="Trash">
+			</p>
+			<hr>
+			<p class="TicketTitle">
+				Toronto Canada
+			</p>
+			<p class="TicketDate">
+				<img src="../../assets/Location.svg" alt="">
+				January 4,2023
+			<p id="Time" class="TicketTime">11:30 AM</p>
+			</p>
+			<text class="TicketLocation">
+				<img src="../../assets/Location.svg" alt="">
+				"Adem Jashari"Airport,Prishtinë</text>
+			</p>
+		</div>
+
+
+	</div>
+
+
+	</div>
 
 	<!-- Footer -->
 	<footer>
