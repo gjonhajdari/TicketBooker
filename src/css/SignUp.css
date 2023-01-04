@@ -104,7 +104,7 @@ Main ------------------------------------------
 main{
 	margin-left: 35%;
 }
- h6{
+h6{
 	color: var(--text-secondary);
 	font-size: 1rem;
 }
@@ -119,7 +119,7 @@ h6{
 #a{
 	text-decoration-line: none;
 	font-size: 1rem;
-	color: var(--primary-transparent);
+	color: var(--primary);
 }
 
 .btn {
@@ -137,36 +137,40 @@ h6{
 }
 
 #name{
-	width: 200px;
-	height: 50px;
+	width: 253px;
+	height: 70px;
 	padding-left: 10px;
 	background-color: var(--foreground);
 	border-radius: 15px;
-	font-weight: 500;
+	font-size: 1.35rem;
+	border: 0 0 0 0;
 }
 
 #email{
 	padding-left: 10%;
-	width: 406px;
-	height: 50px;
+	width: 510px;
+	height: 70px;
 	padding-left: 10px;
 	background-color: var(--foreground);
+	font-size: 1.35rem;
 	border-radius: 15px;
 }
 #password{
 	padding-left: 10%;
-	width: 406px;
-	height: 50px;
+	width: 510px;
+	height: 70px;
 	padding-left: 10px;
 	background-color: var(--foreground);
+	font-size: 1.35rem;
 	border-radius: 15px;
 }
 #password1{
 	padding-left: 10%;
-	width: 406px;
-	height: 50px;
+	width: 510px;
+	height: 70px;
 	padding-left: 10px;
 	background-color: var(--foreground);
+	font-size: 1.35rem;
 	border-radius: 15px;
 }
 
