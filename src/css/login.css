@@ -9,6 +9,7 @@ form{
     margin: 200px auto;
 }
 div{
+  background-color:
     width: 280%;
     margin: 15px auto;
 
@@ -26,6 +27,19 @@ input{
     font-size:20 px;
     margin-left: 20px; 
     border-radius: 3px;
+}
+button{
+margin:20px;
+  padding:10px;
+  width:100px;
+  border:none;
+  outline:none;
+  cursor:pointer;
+  border-radius:5px;
+  font-size:20px;
+  font-weight:bold;
+  color: whitesmoke;
+ background: #2196F3  
 }
   </style>  
 </head>
