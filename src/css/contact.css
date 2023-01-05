@@ -133,11 +133,12 @@ a.link:hover {
     background-color: var(--foreground);
     border: none;
     border-radius: 3px;
-    height: 25%;
-    width: 25%;
+    height: 200%;
+    width: 26%;
     margin: 10px;
     padding: 10px;
     color: var(--text-secondary);
+    resize: none;
 
 }
 
