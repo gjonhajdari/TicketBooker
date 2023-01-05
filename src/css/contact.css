@@ -82,3 +82,41 @@ a.link:hover {
 	opacity: 1;
 }
 
+.InputMessage{
+    justify-content: center;
+    text-align: center;
+}
+
+.InputMessage p{
+    color:#FFFFFF;
+    font-weight: 400;
+    height:30px;
+    font-weight:500;
+}
+
+.InputMessage #id{
+    color:#333333;
+    font-weight: 300;
+
+}
+
+.InputMessage span{
+    color:#72EACD;
+}
+
+.form1 #fname, #femail, textarea{
+    background-color: var(--foreground);
+    border: none;
+    border-radius: 3px;
+    height:25px;
+    width: inherit;
+    color: var(--foreground);
+
+}
+
+
+textarea{
+    height:75%;
+    width:53%;
+    margin: 10px;
+}
