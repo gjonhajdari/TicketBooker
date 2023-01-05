@@ -261,3 +261,6 @@ footer .links a {
 footer .links a:hover {
 	color: var(--primary);
 }
+#checkbox{
+	color: var(--primary);	
+}

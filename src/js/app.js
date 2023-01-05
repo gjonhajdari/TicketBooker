@@ -27,14 +27,14 @@ function togglePw(){
 
 
 function togglepw(){
-	var password = document.querySelector('[name=password]');
+	var password = document.querySelector('[name=Password]');
 
-	if(password.getAttribute('type')==='password'){
+	if(password.getAttribute('type')==='Password'){
 		password.setAttribute('type', 'text');
-		document.getElementById("font").style.color='green';
+		document.getElementById("fonti").style.color='green';
 	}
 	else{
-		password.setAttribute('type', 'password');
-		document.getElementById("font").style.color='red';
+		password.setAttribute('type', 'Password');
+		document.getElementById("fonti").style.color='red';
 	}
 }
