@@ -108,7 +108,6 @@ h6{
 	color: var(--text-secondary);
 	font-size: 1rem;
 }
-
 h1{
 	margin-right: 180px;
 	font-size: 2.25rem;
@@ -123,11 +122,12 @@ h6{
 }
 
 .btn {
+	width: 515px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	gap: 20px;
-	padding: 1rem 4rem;
+	padding: 1rem 11rem;
 	font-size: 1.25rem;
 	font-weight: 600;
 	border-radius: 1rem;
@@ -137,6 +137,8 @@ h6{
 }
 
 #name{
+	border-bottom: none;
+	border-right: none;
 	width: 253px;
 	height: 70px;
 	padding-left: 10px;
@@ -146,7 +148,10 @@ h6{
 	border: 0 0 0 0;
 }
 
+
 #email{
+	border-bottom: none;
+	border-right: none;
 	padding-left: 10%;
 	width: 510px;
 	height: 70px;
@@ -156,6 +161,10 @@ h6{
 	border-radius: 15px;
 }
 #password{
+	border-bottom: none;
+	border-right: none;
+	border-bottom: none;
+	border-right: none;
 	padding-left: 10%;
 	width: 510px;
 	height: 70px;
@@ -165,6 +174,8 @@ h6{
 	border-radius: 15px;
 }
 #password1{
+	border-bottom: none;
+	border-right: none;
 	padding-left: 10%;
 	width: 510px;
 	height: 70px;
@@ -172,6 +183,12 @@ h6{
 	background-color: var(--foreground);
 	font-size: 1.35rem;
 	border-radius: 15px;
+}
+.check{
+	margin-left: 4%;
+}
+.check p {
+	display: inline;
 }
 
 main .btn:hover {

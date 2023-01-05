@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="../css/SignUp.css">
-    <title>Sign Up</title>
+     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="../js/app.js"></script>
+    <title>Sign Up - TicketBooker</title>
+   
+    <link rel='icon' type='image/x-icon' href='../../assets/Favicon.svg'>
 </head>
 <body>
     <nav class="navbar">
@@ -41,20 +45,28 @@
         </div>
         <br>
         <div class="Password">
-            <input type="password" name="Password" id="password" placeholder="Password">
-       
+            <input type="password" name="password" id="password" placeholder="Password">
+            <span>
+                <i class="fa fa-eye" id="font" onclick="togglePw()" aria-hidden="true"></i>
+            </span>
         </div>
         <br>
         <div class="Password">
-            <input type="password" name="Password1" id="password1" placeholder="Confirm Password">
+            <input type="password" name="password" id="password" placeholder="Confirm Password">
+            <span>
+                <i class="fa fa-eye" id="font" onclick="togglepw()" aria-hidden="true"></i>
+            </span>
         </div>
         <br>
         <div class="check">
+        
             <p>
                 <input type="checkbox" name="checkbox" id="checkbox"> I agree to the 
-                <a href="../../assets/PRIVACY_POLICY.pdf" target="_blank" class="footer-linkss">Privacy Policy</a>
+                <a href="../../assets/PRIVACY_POLICY.pdf" target="_blank" class="footer-linkss">Privacy Policy</a>&
                 <a href="../../assets/TERMS_AND_CONDITIONS.pdf" target="_blank" class="footer-links">Terms of Use</a>
             </p>
+            
+            
         </div>
         <button class="btn">
            Create account
