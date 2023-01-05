@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,28 +7,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/login.css">
     <title>Login</title>
-    <script src="C:\Users\Gentrit Bytyqi\Documents\GitHub\TicketBooker\src\js\Login.js"></script>
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </head>
 <body>
-    <h1 id="h1">Welcome back!</h1>
-    <h2 id="h2">Don't have an account? <a href="C:\Users\Gentrit Bytyqi\Documents\GitHub\TicketBooker\src\html\signup.html">Sign up.</a></h2>
 
-<form action="swipe.html"method="POST">
-   <div>  
-<label for="email"></label>
-<input type="email" name="email" placeholder="Email addres" >
-<span></span>
-<label for="password"></label>
-<br>
-<input type="password" name="password" placeholder="Password" >
-<span></span>
-<br>
-<label for="checkbox"></label>
-<input type="checkbox" id="checkbox" name="checkbox" >Remember me!
+    <nav class="navbar">
+		<div class="navbar-content">
+			<a href="index.html">
+				<img src="../../assets/Logo.svg" alt="TicketBooker logo" class="logo" width="35" height="35">
+			</a>
+			<div class="middle">
+				<a href="index.html" class="link">Home</a>
+				<a href="about.html" class="link">About</a>
+				<a href="contact.html" class="link">Contact</a>
+			</div>
+			<div class="right">
+				<a href="signup.html" class="link">Sign Up</a>
+				<a href="#" class="link" id="login">Log In</a>
+			</div>
+			<i class="fa-solid fa-bars-staggered" id="burger-menu"></i>
+		</div>
+	</nav>
 
-<button id="create">Create account</button>
+    <h1>Welcome back!</h1> <br>
+    <h2>Don't have an account?<a href="C:\Users\Gentrit Bytyqi\Semstri 3\Prjekti ne web\TicketBooker-1\src\html\signup.html"> Sign up.</a></h2>
+
+ <form action="swipe.html">
+<div id="emaili">
+    <label for="email"> </label>
+    <input type="email" name="email" required="required" placeholder="Email address">
+
 </div>
-</form>  
+<div id="passwordi">
+    <label for="password"> </label>
+    <input type="password" name="password" required="required"placeholder="Password">
+    <!-- <span><i class="fa-solid fa-eye" id="eye" onclick="toggle()"></i></span> -->
+</div>
+<br>
+<input type="checkbox"name="checkbox" id="check">Rembemer me
+<br>
+<br>
+
+<button id="button" name="button">Create account?</button>
+        </form>
+        <footer>
+            <p id="copyright">Copyright &copy; 2023 TicketBooker. All rights reserved</p>
+            <div class="icons">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../../assets/Instagram.svg" alt="Instagram" class="icon">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="../../assets/Twitter.svg" alt="Twitter" class="icon">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="../../assets/Linkedin.svg" alt="Linkedin" class="icon">
+                </a>
+            </div>
+            <div class="links">
+                <a href="../../assets/PRIVACY_POLICY.pdf" target="_blank" class="footer-link">Privacy Policy</a>
+                <a href="../../assets/TERMS_AND_CONDITIONS.pdf" target="_blank" class="footer-link">Terms of Use</a>
+            </div>
+        </footer>
+        
 </body>
 </html>
+
