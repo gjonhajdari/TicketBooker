@@ -93,12 +93,14 @@ a.link:hover {
     height:30px;
     font-weight:500;
     font-size: 25px;
+    text-align: center;
 }
 
 .InputMessage #id{
     color:#333333;
     font-weight: 300;
     font-size: 13px;
+    text-align: center;
 
 }
 
@@ -147,11 +149,14 @@ a.link:hover {
 
 .form3 #fsubmit{ 
   box-sizing: border-box;
-  background-color: var(--foreground);
-  color: var(--text-secondary);
+  background-color: var(--primary);
+  color: var(--background);
+  font-weight: 100;
   padding: 8px;
   height: 50%;
   width: 26%;
   cursor: pointer;
   position: center;
+  border:none;
+  border-radius: 4px;
 }
