@@ -38,3 +38,15 @@ function togglepw(){
 		document.getElementById("fonti").style.color='red';
 	}
 }
+/* ---------------------------------------
+-------Password hide and show ------------
+-----------------------------------------*/
+
+function myfunnction() {
+	var x = document.getElementById("myInput");
+	if (x.type === "password") {
+	  x.type = "text";
+	} else {
+	  x.type = "password";
+	}
+ }
