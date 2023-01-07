@@ -197,3 +197,18 @@ footer .icons img{
 footer .icons img:hover{
     opacity: 1;
 }
+
+footer .links a {
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: 300ms;
+    margin-left: 20px;
+}
+
+footer .links a:hover{
+    color:  var(--primary);
+}
+
+#checkbox{
+    color: var(--primary);
+}
