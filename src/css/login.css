@@ -47,7 +47,7 @@ Navbar ------------------------------------------
 }
 
 .navbar .middle a {
-	margin-left: 50px;
+	margin-left: 70px;
 }
 
 a.link {
@@ -151,6 +151,13 @@ font-weight: bold;
       margin-left:20px;
       text-decoration: none;
     }
+	span{
+		position:absolute;
+		right:620px;
+		transform: translate(0,-50%);
+		top:52%;
+		cursor: pointer;
+	}
 
 footer {
 	padding: 2rem 4rem;
