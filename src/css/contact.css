@@ -160,3 +160,24 @@ a.link:hover {
   border:none;
   border-radius: 4px;
 }
+
+/* ----------------------
+Footer ------------------
+-------------------------
+*/
+
+footer{ 
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+footer #copyright { 
+    color: var(--text-secondary);
+}
+
+footer .icons a{ 
+    text-decoration: none;
+}
