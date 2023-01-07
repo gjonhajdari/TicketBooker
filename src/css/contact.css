@@ -147,7 +147,7 @@ a.link:hover {
 }
 
 
-.form3 #fsubmit{ 
+.form3 #button{ 
   box-sizing: border-box;
   background-color: var(--primary);
   color: var(--background);
@@ -160,6 +160,22 @@ a.link:hover {
   border:none;
   border-radius: 4px;
 }
+
+.form3 #button:hover{ 
+    box-sizing: border-box;
+    background-color: var(--primary);
+    color: var(--background);
+    font-weight: 100;
+    padding: 8px;
+    height: 50%;
+    width: 26%;
+    cursor: pointer;
+    position: center;
+    border:none;
+    border-radius: 4px;
+}
+
+
 
 /* ----------------------
 Footer ------------------
