@@ -184,4 +184,8 @@ Media Queries -----------------------------------
 	footer .icons img, footer .links a {
 		margin: 0;
 	}
+
+	footer p, footer a {
+		font-size: 0.75rem;
+	}
 }
