@@ -49,14 +49,38 @@ form .input {
 	border: none;
 	background-color: var(--foreground);
 	font-size: 1.25rem;
-	margin-top: 15px;
-	width: 500px;
+	width: 100%;
 	color: var(--text-primary);
 }
 
-form .input:focus {
-	outline: 2px solid var(--primary);
+#password {
+	width: 500px;
+	display: flex;
+	margin-top: 15px;
 }
+
+#password input {
+	border-radius: 1rem 0 0 1rem;
+}
+
+#toggle-visibility {
+	background-color: var(--foreground);
+	border: none;
+	padding: 22px 20px;
+	border-radius: 0 1rem 1rem 0;
+	cursor: pointer;
+	font-size: 18px;
+	color: var(--text-secondary);
+}
+
+form .input:focus {
+	/* outline: 2px solid var(--primary); */
+	outline: none;
+}
+
+/* form .input:focus + #toggle-visibility {
+	outline: 2px solid var(--primary);
+} */
 
 form #checkbox {
 	display: flex;
@@ -109,7 +133,7 @@ form #checkbox {
 		width: 100%;
 	}
 	
-	form .input {
+	form #password {
 		width: 100%;
 	}
 }

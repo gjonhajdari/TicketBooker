@@ -4,6 +4,20 @@ $(document).ready(() => {
 		$(".middle").toggle();
 		$(".right").toggle();
 	});
+
+	
+	// Toggle password
+	const password = document.querySelector('#passwordInput');
+	const togglePassword = document.querySelector('#toggle-visibility');
+
+	togglePassword.addEventListener('click', function (e) {
+		e.preventDefault;
+		// toggle the type attribute
+		const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+		password.setAttribute('type', type);
+		// toggle the eye icon
+		this.classList.toggle('fa-eye');
+	});
 });
 
 /*
@@ -37,16 +51,3 @@ function togglepw(){
 		document.getElementById("fonti").style.color='red';
 	}
 }
-
-// /* ---------------------------------------
-// -------Password hide and show ------------
-// -----------------------------------------*/
-
-// function myfunnction() {
-// 	var x = document.getElementById("myInput");
-// 	if (x.type === "password") {
-// 	  x.type = "text";
-// 	} else {
-// 	  x.type = "password";
-// 	}
-//  }
