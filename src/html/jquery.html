@@ -19,6 +19,16 @@
             $("p").hide();
         });
         });
+
+
+        $(document).ready(function(){
+        $("#p1").hover(function(){
+            alert("You entered p1!");
+        },
+        function(){
+            alert("Bye! You now leave p1!");
+        }); 
+        });
     </script>
 
 </head>
@@ -39,8 +49,10 @@
 
         <button>Hide paragraphs</button>
     </div>
-	
-	
+	<br><br><br>
+	<div>
+        <p id="p1">This is a paragraph.</p>
+    </div>
 		
 
 </body>
