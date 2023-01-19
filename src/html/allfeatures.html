@@ -17,6 +17,7 @@
 
 		document.write("<h5>Array iteration with for loop</h5> " );
 		const num = [1,2,3,4,5];
+		
 		 for(let i=0; i < num.length; i++){
 			document.write(num[i] );
 		 }
@@ -116,11 +117,24 @@
 		let text = "The rain in SPAIN stays mainly in the plain";
 		document.write(text.match("ain"));
 
-
 		function myFunction() {
 		let text = document.getElementById("demo").innerHTML;
 		document.getElementById("demo").innerHTML =
 		text.replace("great","amazing");
+		}
+
+
+
+		document.write("<hr>");
+		document.write("<h5>TimeOut</h5> " );
+		const myTimeout = setTimeout(myGreeting, 2000);
+
+		function myGreeting() {
+		document.getElementById("demo2").innerHTML = "You're so slow"
+		}
+
+		function myStopFunction() {
+		clearTimeout(myTimeout);
 		}
 		
 
@@ -178,9 +192,21 @@
 </head>
 
 <body>
-	<p id="demo">This website is great</p>
-	<button onclick="myFunction()">Replace</button>
-
+	<div>
+		<p id="demo">This website is great</p>
+		<button onclick="myFunction()">Replace</button>
+	</div>
+	
+	<br>
+	<div>
+		<p id="demo2"></p>
+		<button onclick="myStopFunction()">Hit to Stop!</button>
+	</div>
+	<br>
+	<div>
+		<h2 onclick="this.innerHTML='Ooops!'">Click Me</h2>
+	</div>
+	
 	<nav aria-label="breadcrumb" class="p-2 ms-2">
 		<ol class="breadcrumb">
 		  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -331,20 +357,20 @@
 					<div class="row mb-3">
 						<div class="col">
 							<div class="form-floating">
-								<input type="text" class="form-control" id="floatingInput2" placeholder="Your email">
+								<input type="text" class="form-control" id="floatingInput2" required placeholder="Your email" autocomplete="off" readonly>
 								<label for="floatingInput2">Full name</label>
 							</div>
 						</div>
 						<div class="col">
 							<div class="form-floating">
-								<input type="email" class="form-control" id="floatingInput" placeholder="Your email">
+								<input type="email" class="form-control" id="floatingInput" placeholder="Your email" disabled size="50">
 								<label for="floatingInput">Email address</label>
 							</div>
 						</div>
 					</div>
 					
 					<div class="form-floating mb-3">
-						<textarea class="form-control" placeholder="Your message" id="floatingTextarea"></textarea>
+						<textarea class="form-control"  pattern="[A-Za-z]{3}" placeholder="Your message" id="floatingTextarea" list="browsers"></textarea>
 						<label for="form-floating">Your message</label>
 					</div>
 
