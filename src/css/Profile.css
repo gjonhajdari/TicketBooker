@@ -207,8 +207,11 @@ TicketBlocks ------------------------------------------
 .Trash {
 	background-color: var(--red);
 	border-radius: 9px;
-	height: 15px;
-	width: 18px;
+	height: 16px;
+	width: 16px;
+	display: flex;
+	flex-direction: column;
+	float: left;
 
 }
 
