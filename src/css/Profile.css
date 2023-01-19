@@ -28,11 +28,12 @@ Profile ------------------------------------------
 .Profile button {
 	padding: 5px;
 	width: 140px;
-	height: 45px;
+	height: 50px;
 	border-radius: 10px;
 	background-color: var(--foreground);
 	color: var(--text-primary);
 	border: 0px none;
+	font-size: 1.2rem;
 }
 
 .Profile-Picture button {
@@ -88,7 +89,7 @@ Profile ------------------------------------------
 }
 
 .Ticket-buttons .tab-button {
-	width:500px;
+	width:400px;
 	height: 60px;
 	padding: 0.5rem 2rem 0.5rem 0.5rem;
 	border-radius: 13px;
@@ -126,7 +127,9 @@ Profile ------------------------------------------
 	cursor: pointer;
 	transform: scale(1.09);
 	transition: 300ms;
-
+}
+.Ticket-buttons #Travels::after{
+	background-color:aqua;
 }
 
 .Ticket-buttons #Movies:hover {
@@ -172,7 +175,7 @@ TicketBlocks ------------------------------------------
 
 
 .Block {
-	width: 450px;
+	width: 427px;
 	height: 250px;
 	background-color: var(--foreground);
 	border-radius: 15px;
@@ -226,4 +229,4 @@ TicketBlocks ------------------------------------------
 	margin-top: 10px;
 	float: left;
 	margin-right: 5px;
-}
+}	
