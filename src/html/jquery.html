@@ -51,7 +51,40 @@
             $("#a5 ").fadeIn(2000);
         });
         });
+
+        //slide down
+        $(document).ready(function(){
+        $("#flip").click(function(){
+            $("#panel").slideDown("slow");
+        });
+        });
+
+        //animate
+        $(document).ready(function(){
+        $("#animate").click(function(){
+            $("div").animate({
+            left: '250px',
+            opacity: '0.5',
+            height: '150px',
+            width: '150px'
+            });
+        });
+        });
     </script>
+    <style> 
+        #panel, #flip {
+            width: 300px;
+          padding: 5px;
+          text-align: center;
+          background-color: #e5eecc;
+          border: solid 1px #c3c3c3;
+        }
+        
+        #panel {
+          padding: 50px;
+          display: none;
+        }
+        </style>
 
 </head>
 
@@ -91,6 +124,19 @@
         <p id="a3" style="display:none;">AAA</p>
         <p id="a4" style="display:none;">AA</p>
         <p id="a5" style="display:none;">A</p>
+    </div>
+
+    <br><br><br>
+    <div>
+        <div id="flip">Click to slide down panel</div>
+        <div id="panel">Hi everyone!</div>
+    </div>
+
+    <br><br><br>
+
+    <div>
+        <button id="animate">Start Animation</button>
+        <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
     </div>
 </body>
 
