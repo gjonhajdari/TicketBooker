@@ -14,20 +14,31 @@
 	<script src="../js/app.js"></script>
 	
     <script>
+        // hide by click
         $(document).ready(function(){
-        $("button").click(function(){
+        $("buton").click(function(){
             $("p").hide();
         });
         });
 
-
+        //hover event
         $(document).ready(function(){
-        $("#p1").hover(function(){
+        $("#p1").click(function(){
             alert("You entered p1!");
         },
         function(){
             alert("Bye! You now leave p1!");
         }); 
+        });
+
+        //hide and show buttons
+        $(document).ready(function(){
+        $("#hide").click(function(){
+            $("#asd").hide();
+        });
+        $("#show").click(function(){
+            $("#asd").show();
+        });
         });
     </script>
 
@@ -47,14 +58,19 @@
         <p>This is a paragraph.</p>
         <p>This is another paragraph.</p>
 
-        <button>Hide paragraphs</button>
+        <button id="buton">Hide paragraphs</button>
     </div>
 	<br><br><br>
 	<div>
-        <p id="p1">This is a paragraph.</p>
+        <p id="p1">click me!</p>
     </div>
 		
-
+    <br><br><br>
+    <div>
+        <p id="asd">If you click on the "Hide" button, I will disappear.</p>
+        <button id="hide">Hide</button>
+        <button id="show">Show</button>
+    </div>
 </body>
 
 </html>
