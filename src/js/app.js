@@ -51,3 +51,9 @@ function togglepw(){
 		document.getElementById("fonti").style.color='red';
 	}
 }
+
+//create account alert
+
+function error(){
+	alert("Can't create an account because there is no database")
+}
