@@ -20,12 +20,16 @@
 		 for(let i=0; i < num.length; i++){
 			document.write(num[i] );
 		 }
+
+
 		 document.write("<hr>");
 		 document.write("<h5>Data Types</h5> " );
 		 let x = 2;
 		 let y = 3;
 		 let sum = x+y;
 		 document.write(sum);
+
+
 		 document.write("<hr>");
 		 document.write("<h5>If...ELSE</h5> " );
 		 let number = 5;
@@ -35,6 +39,8 @@
 		 }else{
 			document.write("<p>number<5</p>");
 		 }
+
+
 		 document.write("<hr>");
 		 document.write("<h5>SWITCH</h5> " );
 		
@@ -65,7 +71,57 @@
 				document.write("Nuk perputhet me asnje");
 		 }
 
-		
+
+
+		 document.write("<hr>");
+		 document.write("<h5>Object</h5> " );
+		 const person = {
+			firstName: "User",
+			lastName: "Useruser",
+			age: 50,
+			eyeColor: "black"
+		};
+
+		document.write(person.firstName + " is " + person.age + " years old." )
+
+
+		document.write("<hr>");
+		document.write("<h5>Operators</h5> " );
+		let c = 5;
+		document.write(c+3 + "</br>");
+		document.write(c-3 + "</br>");
+		document.write(c++ + "</br>");
+		document.write(c-- + "</br>");
+		document.write(c*c + "</br>");
+
+
+		document.write("<hr>");
+		document.write("<h5>Number Properties</h5> " );
+		let max=Number.MAX_VALUE;
+		document.write(max);
+		document.write("<hr>");
+		let nan=Number.NaN;
+		document.write(nan);
+		document.write("<hr>");
+		let exc = 4;
+		document.write(exc.toExponential(2));
+		document.write("<hr>");
+		let str = 123;
+		document.write(str.toString());
+
+
+		document.write("<hr>");
+		document.write("<h5>Strings Match and Replace</h5> " );
+
+		let text = "The rain in SPAIN stays mainly in the plain";
+		document.write(text.match("ain"));
+
+
+		function myFunction() {
+		let text = document.getElementById("demo").innerHTML;
+		document.getElementById("demo").innerHTML =
+		text.replace("great","amazing");
+		}
 		
 
 	</script>
@@ -122,6 +178,8 @@
 </head>
 
 <body>
+	<p id="demo">This website is great</p>
+	<button onclick="myFunction()">Replace</button>
 
 	<nav aria-label="breadcrumb" class="p-2 ms-2">
 		<ol class="breadcrumb">
