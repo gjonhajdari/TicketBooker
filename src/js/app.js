@@ -57,3 +57,9 @@ function togglepw(){
 function error(){
 	alert("Can't create an account because there is no database")
 }
+
+//submiting form in contact us
+//  function submitForm(){
+//  var button = document.getElementById("#button");
+//   button.submit();
+//  }
