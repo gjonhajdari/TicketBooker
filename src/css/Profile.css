@@ -128,9 +128,8 @@ Profile ------------------------------------------
 	transform: scale(1.09);
 	transition: 300ms;
 }
-.Ticket-buttons #Travels::after{
-	background-color:aqua;
-}
+
+
 
 .Ticket-buttons #Movies:hover {
 	background-color: var(--primary);
@@ -230,3 +229,7 @@ TicketBlocks ------------------------------------------
 	float: left;
 	margin-right: 5px;
 }	
+
+.TicketType .TicketText{
+	color: var(--primary);
+}
