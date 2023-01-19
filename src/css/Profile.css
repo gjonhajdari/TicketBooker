@@ -3,7 +3,9 @@
 Profile ------------------------------------------
 -------------------------------------------------
 */
-
+*{
+	margin:3px;
+}
 .Header {
 	margin: 40px;
 }
@@ -86,7 +88,8 @@ Profile ------------------------------------------
 }
 
 .Ticket-buttons .tab-button {
-	max-width: 350px;
+	width:500px;
+	height: 60px;
 	padding: 0.5rem 2rem 0.5rem 0.5rem;
 	border-radius: 13px;
 	background-color: #333333;
@@ -105,11 +108,6 @@ Profile ------------------------------------------
 	color: #333;
 }
 
-.Ticket-buttons #All-Tickets img {
-	margin-left: 15px;
-	float: left;
-}
-
 .Ticket-buttons #All-Tickets:hover {
 	background-color: var(--primary);
 	cursor: pointer;
@@ -118,8 +116,7 @@ Profile ------------------------------------------
 
 }
 
-
-.Ticket-buttons #Travels img {
+.Ticket-buttons img {
 	margin-left: 15px;
 	float: left;
 }
@@ -132,22 +129,12 @@ Profile ------------------------------------------
 
 }
 
-.Ticket-buttons #Movies img {
-	margin-left: 15px;
-	float: left;
-}
-
 .Ticket-buttons #Movies:hover {
 	background-color: var(--primary);
 	cursor: pointer;
 	transform: scale(1.09);
 	transition: 300ms;
 
-}
-
-.Ticket-buttons #Concerts img {
-	margin-left: 15px;
-	float: left;
 }
 
 .Ticket-buttons #Concerts:hover {
