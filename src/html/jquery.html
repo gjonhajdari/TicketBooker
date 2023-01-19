@@ -40,6 +40,17 @@
             $("#asd").show();
         });
         });
+
+        //fade in efect
+        $(document).ready(function(){
+        $("#fadein").click(function(){
+            $("#a1").fadeIn();
+            $("#a2").fadeIn("slow");
+            $("#a3").fadeIn(2000);
+            $("#a4").fadeIn(2000);
+            $("#a5 ").fadeIn(2000);
+        });
+        });
     </script>
 
 </head>
@@ -70,6 +81,16 @@
         <p id="asd">If you click on the "Hide" button, I will disappear.</p>
         <button id="hide">Hide</button>
         <button id="show">Show</button>
+    </div>
+    <br><br><br>
+    <div>
+        <button id="fadein">Click to fade in boxes</button>
+        <br>
+        <p id="a1" style="display:none;">AAAAA</p>
+        <p id="a2" style="display:none;">AAAA</p>
+        <p id="a3" style="display:none;">AAA</p>
+        <p id="a4" style="display:none;">AA</p>
+        <p id="a5" style="display:none;">A</p>
     </div>
 </body>
 
