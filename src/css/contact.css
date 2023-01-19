@@ -1,180 +1,99 @@
-.title{ 
-    text-align:center;
-
-} 
-
-.flip-card{
-    width: 300px;
-    height: 450px;
-    margin: auto;
-
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
 }
 
-.flip-card-back{ 
-    background-color: #222222;
-    color: #ffffff;
-    transform: rotateY(180deg);
-    z-index: -1;
-}
-.flip-card-back .back-header{ 
-    height: 45%;
-    text-align:center;
-} 
-
-.flip-card-back .back-header img{ 
-    width: 50%;
-    margin-top:20px;
-}
-
-.flip-card-inner{
-    position: relative;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.flip-card-back, .flip-card-front{ 
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-}
-
-.flip-card:hover .flip-card-inner{ 
-    transform: rotateY(180deg);
-}
-
-.flip-card-back .back-footer{ 
-
-height: 100px;
-padding: 15px;
-}
-
-.contact{
-    position:relative;
-    min-height: 100;
-    padding: 50px 100px;
-    display:flex;
+.InputMessage{
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #222222;
-    background-size: cover;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-}
-
-.contact .content{
-    max-width: 800px;
     text-align: center;
 }
 
-.contact .content h2{
-    font-size:36px;
-    font-weight: 500;
-    color:#ffffff;
+.InputMessage p{
+    color:#FFFFFF;
+    font-weight: 400;
+    height:30px;
+    font-weight:500;
+    font-size: 25px;
+    text-align: center;
 }
 
-.contact .content h3{
-    font-size: 30px;
-    font-weighT:400px;
-    color: #56C4A9;
-}
-
-.contact .content p{
-    font-size:20px;
-    color:#ffffff;
-}
-
-.container{
-    width:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top:40px;
-    flex-direction: row;
-    
-    
-}
-
-.container .contactInfo{
-    width:50%;
-    display:flex;
-    flex-direction: column;
-    gap:40px;
-}
-
-.container .contactInfo .box{
-    position: relative;
-    padding: 20px 0;
-    display: flex;
-}
-
-.container .contactInfo .box .icon{ 
-    min-width: 60px;
-    height:60px;
-    background:#ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    font-size: 22px;
-}
-
-.container .contactInfo .box .text{
-    display:flex;
-    margin-left: 10px;
-    font-size:15px;
-    color:#fff;
-    flex-direction: column;
+.InputMessage #id{
+    color:#333333;
     font-weight: 300;
+    font-size: 13px;
+    text-align: center;
+
 }
 
-.container .contactInfo .box .text h3{ 
-    color:#56C4A9;
+.InputMessage span{
+    color:#72EACD;
 }
 
-.contactForm{ 
+.form1 #fname{
+    box-sizing: border-box;
+    background-color: var(--foreground);
+    border: none;
+    border-radius: 4px;
+    height:30%;
+    width: inherit;
+    padding: 8px;
+    color: var(--text-secondary);
 
-    width: 75%;
-    padding:45px;
-    background: #fff;
-}
-.contactForm h2{
-    color:#222222;
-    font-weight: 500;
-    font-size:20px;
-}
-
-.contactForm .inputBox{
-    position:relative;
-    width:100%;
-    margin-top: 10px;
 }
 
-.contactForm .inputBox input , textarea{
-   width:100%;
-   padding: 5px 0;
-   font-size:16px;
-   margin: 10px 0;
-   border:none;
-   border-bottom: 1px solid black;
-   outline:none;
-   resize:none;
+.form1 #femail{
+    box-sizing: border-box;
+    background-color: var(--foreground);
+    border: none;
+    border-radius: 4px;
+    height:30%;
+    width: inherit;
+    padding: 8px;
+    color: var(--text-secondary);
+
 }
 
-.contactForm .inputBox input:focus ~span{
-    color: #d14040;
-    font-size:12px;
-    transform:perspective(0.5);
-}
-
-.contactForm .inputBox input[type="submit"]{ 
-    width:100px;
-    background-color: #56C4A9;
-    color:#222222;
-    border:none;
-    cursor:pointer;
+.form2 textarea{
+    box-sizing: border-box;
+    background-color: var(--foreground);
+    border: none;
+    border-radius: 4px;
+    height: 200%;
+    width: 26%;
+    margin: 10px;
     padding: 10px;
+    color: var(--text-secondary);
+    resize: none;
 
+}
+
+
+.form3 #button{ 
+  box-sizing: border-box;
+  background-color: var(--primary);
+  color: var(--background);
+  font-weight: 100;
+  padding: 8px;
+  height: 50%;
+  width: 26%;
+  cursor: pointer;
+  position: center;
+  border:none;
+  border-radius: 4px;
+}
+
+.form3 #button:hover{ 
+    box-sizing: border-box;
+    background-color: var(--primary);
+    color: var(--background);
+    font-weight: 100;
+    padding: 8px;
+    height: 50%;
+    width: 26%;
+    cursor: pointer;
+    position: center;
+    border:none;
+    border-radius: 4px;
 }

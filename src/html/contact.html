@@ -1,103 +1,86 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
 
-<meta charset="utf-8">
-<meta name="viewport" content="" >
-<link rel="stylesheet" href="../css/contact.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+<head>
+	<title>Contact us</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/general.css">
+	<link rel="stylesheet" href="../css/contact.css">
+	<script src="https://kit.fontawesome.com/26e97bbe8d.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+	<script src="../js/app.js"></script>
 </head>
 
 <body>
 
+	<!-- Navigation bar -->
+	<nav class="navbar">
+		<div class="navbar-content">
+			<a href="index.html">
+				<img src="../../assets/Logo.svg" alt="TicketBooker logo" class="logo" width="35" height="35">
+			</a>
+			<div class="middle">
+				<a href="index.html" class="link">Home</a>
+				<a href="about.html" class="link">About</a>
+				<a href="contact.html" class="link">Contact</a>
+			</div>
+			<div class="right">
+				<a href="signup.html" class="link">Sign Up</a>
+				<a href="#" class="link" id="login">Log In</a>
+			</div>
+			<i class="fa-solid fa-bars-staggered" id="burger-menu"></i>
+		</div>
+	</nav>
 
-<div class="title">
-    <h1>Flip Card</h1>
-</div>
+	<!-- Main content -->
+	<div class="InputMessage">
+		<p>Got anything for us? Leave a <span> message! </span> </p>
+		<p id="id"> Or contact us via Instagram, Linkedin or Customer Support.</p>
+		<div class="InputForm">
+			<form>
+				<div class="form1">
+					<input type="text" id="fname" name="fname" placeholder="Full Name" target="_self" method="post"
+						autofocus required>
+					<input type="email" id="femail" name="femail" placeholder="Email address" target="_self"
+						method="post" required>
+				</div>
+				<div class="form2">
+					<textarea name="fmessage" id="fmessage"> Your message here </textarea>
+				</div>
+				<div class="form3">
+					<button name="button" id="button">
+						Send message
+						<img src="../../assets/Arrow.svg" width="15" height="15">
+					</button>
+				</div>
 
-<div class="flip-card">
-    <div class="flip-card-inner">
-        <div class="flip-card-front">
-            <img src="../../assets/Tickets.png" width="300">
-        </div>
-            <div class="flip-card-back">
+			</form>
 
-                <div class="back-header">
-                    <img src="../../assets/Tickets.png">
-                </div>
-                <div class="back-footer">
-                    <h2>Kosovo's most popular destination for online tickets.</h2> 
-                    <p>TicketBooker offers flight, concert and cinema tickets near you. </p>
-                </div>
-            </div>
-        </div>
-</div>
-
-<section class="contact"> 
-    <div class="content">
-        <h2>Contact</h2>
-        <h3>How can we help?</h3>
-        <p>
-          Have a question regarding Online Ticketing inquires, or need to make changes to your account?
-        </br>
-          Get quick assisstance by filling out the form below and one of our representatives will 
-          respond to you via email. 
-         </br>
-          For general support, please allow up to 72 hours to recieve an email response.
-        </p>
-    </div>
-    <div class="container">
-        <div class="contactInfo">
-            <div class="box">
-               <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i>
-               </div> 
-               <div class="text">
-                <h3>Address</h3>
-                <p> Pejton, rruga Sejdi Kryeziu, <br> Prishtina, <br> 10000</p>
-               </div>
-            </div>
-            <div class="box">
-                <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div> 
-                <div class="text">
-                 <h3>Phone</h3>
-                 <p> +383-44-555-777</p>
-                </div>
-             </div>
-             <div class="box">
-                <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div> 
-                <div class="text">
-                 <h3>Email</h3>
-                 <p> ticketbooker@info.com </p>
-                </div>
-             </div>
-             <div class="contactForm">
-                <form>
-                    <h2>Send Message</h2>
-                    <div class="inputBox">
-                        <input type="text" name="" required="required">
-                        <span>Full Name</span>
-                    </div>
-                        <div class="inputBox">
-                        <input type="text" name="" required="required">
-                        <span>Email</span>
-                        </input>
-                    </div>
-                        <textarea required="required"> </textarea>
-                        <span>Type your Message</span>
-                        <div class="inputBox">
-                        <input type="submit" name="" value="Send">
-                        </div>
-                    </div>
-                </form>
-             </div>
-        </div>
-    </div>
-</section>
+		</div>
+	</div>
 
 
-
-
-
+	<!-- Footer -->
+	<footer>
+		<p id="copyright">Copyright &copy; 2023 TicketBooker. All rights reserved</p>
+		<div class="icons">
+			<a href="https://www.instagram.com" target="_blank">
+				<img src="../../assets/Instagram.svg" alt="Instagram" class="icon">
+			</a>
+			<a href="https://www.twitter.com" target="_blank">
+				<img src="../../assets/Twitter.svg" alt="Twitter" class="icon">
+			</a>
+			<a href="https://www.linkedin.com" target="_blank">
+				<img src="../../assets/Linkedin.svg" alt="Linkedin" class="icon">
+			</a>
+		</div>
+		<div class="links">
+			<a href="../../assets/PRIVACY_POLICY.pdf" target="_blank" class="footer-link">Privacy Policy</a>
+			<a href="../../assets/TERMS_AND_CONDITIONS.pdf" target="_blank" class="footer-link">Terms of Use</a>
+		</div>
+	</footer>
 
 
 </body>
