@@ -47,8 +47,9 @@ Profile ------------------------------------------
 }
 
 .Profile-Picture #Profile-Paragraph1 {
-	margin: 0px 5px 0px 0px;
-	float: right
+	margin: 0px 14px 0px 0px;
+	float: right;
+	font-size: 1.2rem;
 }
 
 .Profile-Picture #LogOut-Profile:hover {
@@ -84,8 +85,8 @@ Profile ------------------------------------------
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 40px;
-	gap: 60px;
+	margin: 50px;
+	gap: 28px;
 }
 
 .Ticket-buttons .tab-button {
