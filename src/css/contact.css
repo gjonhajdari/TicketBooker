@@ -3,6 +3,7 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100vh;
+    box-sizing: border-box;
 }
 
 .InputMessage{
