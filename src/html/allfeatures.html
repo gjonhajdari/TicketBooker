@@ -138,66 +138,25 @@
 		}
 		
 		<!-- Per Drag & Drop -->
-		document.querySelectorAll(".drop-zone__input").forEach( inputElement => {
-const dropZoneElement = inputElement.closest(".drop-zone");
+		
 
+const draggableObject = document.getElementById("draggable-object");
 
-dropZoneElement.addEventListener("click", e=> {
-    inputElement.click();
+draggableObject.addEventListener("dragstart", function(event){
+    event.dataTransfer.setData("text",event.target.id);
 });
 
-inputElement.addEventListener("change", e=>{
-    if( inputElement.files.length){
-        updateThumbnail(dropZoneElement,inputElement.files[0]);
-        
-    }
-})
-
-dropZoneElement.addEventListener("dragover", e =>{
-  
-  e.preventDefault();
-    dropZoneElement.classList.add("drop-zone--over");
-
-   });
-
-   ["dragleave","dragend"].forEach(type =>{
-    dropZoneElement.addEventListener(type,e => {
-        dropZoneElement.classList.remove("drop-zone--over");    
-    })
-   });
-   dropZoneElement.addEventListener("drop",e =>{
-    e.preventDefault();
-    console.log(e.dataTransfer.files);
-
-    if(e.dataTransfer.files.length){
-        inputElement.files=e.dataTransfer.files;
-        updateThumbnail(dropZoneElement,e.dataTransfer.files[0]); 
-    console.log(inputElement.files);
-    }
-
-    dropZoneElement.classList.remove("drop-zone--over");
-   })
+dragDropArea.addEventListener("dragover", 
+function(event){
+event.preventDefault();
 });
 
-
-    function updateThumbnail(dropZoneElement,file){
-        let thumbnailElement =  dropZoneElement.querySelector(".drop-zone__thumb");
-        console.log(file);  
-        
-        if(dropZoneElement.querySelector(".drop-zone__prompt")){
-
-            dropZoneElement.querySelector(".drop-zone__prompt").remove();
-
-           }
-        if(!thumbnailElement){
-            thumbnailElement = document.createElement("div");
-            thumbnailElement.classList.add("drop-zone__thumb");
-            thumbnailElement.appendChild(thumbnailElement);
-
-        }
-
-        thumbnailElement.dataset.label=file.name;   
-}
+dragDropArea.addEventListener("drop",
+function (event){
+    event.preventDefault();
+const data = event.dataTransfer.getData("text");
+event.target.appendChild(document.getElementById(data));
+});
 		
 
 	</script>
@@ -250,6 +209,13 @@ dropZoneElement.addEventListener("dragover", e =>{
 		#demoP {
 			font-family: myFontFace;
 		}
+		#drag-drop-area{
+                       width: 200px;
+                       height: 200px;
+                       border: 1px solid black;
+                }
+
+		
 	</style>
 </head>
 
@@ -465,13 +431,9 @@ text-align: center;
 			</div>
 			
 			<!-- Drag and Drop -->
-			<div class="drop-zone">
-				
-                         <span class="drop-zone__prompt">Drop file here or Click it to upload </span> 
-                        
-				<input type="file" name="myFile" class="drop-zone__input">
-			</div>
-
+			<div id="drag-drop-area">
+                        <div id="draggable-object" draggable="true">Draggable Object</div>
+                        </div>
 			<!-- Forms -->
 			<div class="row mt-4">
 				<h5 class="mb-3">Forms</h5>
