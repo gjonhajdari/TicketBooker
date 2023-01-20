@@ -143,6 +143,7 @@ span{
 	color:var(--text-secondary);
 	text-align: left;
 	font-size:18px;
+	line-height: 1.5;
 }
 
 .globe img{
@@ -162,6 +163,7 @@ span{
 	color:var(--text-secondary);
 	text-align: left;
 	font-size:18px;
+	line-height: 1.5;
 }
 
 .increase img{
@@ -181,6 +183,7 @@ span{
 	color:var(--text-secondary);
 	text-align: left;
 	font-size:18px;
+	line-height: 1.5;
 }
 
 
