@@ -4,6 +4,8 @@ body {
 	justify-content: space-between;
 	height: 100vh;
     box-sizing: border-box;
+    text-align: center;
+
 }
 
 .InputMessage{
@@ -13,21 +15,23 @@ body {
 
 .InputMessage p{
     color:#FFFFFF;
-    font-weight: 400;
     height:30px;
     font-weight:500;
-    font-size: 25px;
+    font-size: 34px;
     text-align: center;
-    
+    margin-top: 50px;
+        
 }
 
 .InputMessage #id{
-    color:#333333;
+    color:var(--text-secondary);
     font-weight: 300;
-    font-size: 13px;
+    font-size: 15px;
+    text-align: left;
+    font-weight: 15px;
+    margin-top: 25px;
+    margin-bottom: 20px;
     text-align: center;
-    font-weight: 20px;
-
 }
 
 .InputMessage span{
@@ -43,6 +47,8 @@ body {
     width: 343px;
     padding: 8px;
     color: var(--text-secondary);
+    font-size: medium;
+    padding-left: 15px;
 
 }
 
@@ -56,6 +62,8 @@ body {
     padding: 8px;
     color: var(--text-secondary);
     margin-left:5px;
+    font-size: medium;
+    padding-left: 15px;
 
 }
 
@@ -70,7 +78,16 @@ body {
     padding: 10px;
     color: var(--text-secondary);
     resize: none;
+    font-size: medium;
+    padding-left: 15px;
 
+}
+
+.form3 img{
+    float:inline-start;
+    width: 30px;
+    height:13px;
+    
 }
 
 
@@ -86,6 +103,7 @@ body {
   position: center;
   border:none;
   border-radius: 9px;
+  font-size: large;
 }
 
 .form3 #button:hover{ 
@@ -100,3 +118,94 @@ body {
     position: center;
     border:none;
 }
+
+/*
+-------------------------------------------------
+Media queries -----------------------------------
+-------------------------------------------------
+*/
+
+@media screen and (max-width: 1200px) {
+	main{
+		margin-left: 30px;
+	}
+	#password{
+		display: block;
+		width: 253px;
+	}
+	#email{
+		width: 253px;
+	}
+	.btn{
+		width: 253px;
+		padding-left: 90px;
+	}
+	.footer-links{
+		margin-top: 20px;
+		margin-left: 142px;
+	}
+
+  }
+  @media screen and (max-width: 768px) {
+	main{
+		margin-left: 30px;
+	}
+	#password{
+		display: block;
+		width: 253px;
+	}
+	#email{
+		width: 253px;
+	}
+	.btn{
+		width: 253px;
+		padding-left: 90px;
+	}
+	.footer-links{
+		margin-top: 20px;
+		margin-left: 142px;
+	}
+
+  }
+  @media screen and (max-width: 500px) {
+	main{
+		margin-left: 30px;
+	}
+	#password{
+		display: block;
+		width: 253px;
+	}
+	#email{
+		width: 253px;
+	}
+	.btn{
+		width: 253px;
+		padding-left: 90px;
+	}
+	.footer-links{
+		margin-top: 20px;
+		margin-left: 142px;
+	}
+
+  }
+  @media screen and (max-width: 850px) {
+	main{
+		margin-left: 30px;
+	}
+	#password{
+		display: block;
+		width: 253px;
+	}
+	#email{
+		width: 253px;
+	}
+	.btn{
+		width: 253px;
+		padding-left: 90px;
+	}
+	.footer-links{
+		margin-top: 20px;
+		margin-left: 142px;
+	}
+
+  }

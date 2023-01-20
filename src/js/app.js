@@ -57,3 +57,5 @@ function togglepw(){
 function error(){
 	alert("Can't create an account because there is no database")
 }
+
+
