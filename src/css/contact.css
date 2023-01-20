@@ -16,19 +16,21 @@ body {
     font-weight: 400;
     height:30px;
     font-weight:500;
-    font-size: 30px;
-    text-align: center;
+    font-size: 34px;
+    text-align: left;
+    margin-left: 270px;
     
 }
 
 .InputMessage #id{
-    color:#333333;
+    color:var(--text-secondary);
     font-weight: 300;
     font-size: 15px;
-    text-align: center;
+    text-align: left;
     font-weight: 15px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 270px;
 
 }
 
