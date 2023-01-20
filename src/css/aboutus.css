@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+:root {
+	--primary: #72EACD;
+	--primary-transparent: #72EACD7F;
+	--red: #D14040;
+	--background: #222222;
+	--foreground: #333333;
+	--text-primary: #FFFFFF;
+	--text-secondary: #FFFFFF7F;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+}
+body {
+	background-color: var(--background);
+	color: var(--text-primary);
+	background-image: url(../../assets/Blob.svg);
+	background-repeat: no-repeat;
+	background-position: -300px -100px;
+	/* height: 100vh; */
+}
+/*
+-------------------------------------------------
+Navbar ------------------------------------------
+-------------------------------------------------
+*/
+.navbar {
+	padding: 0 4rem;
+}
+
+.navbar-content {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+	border-bottom: 1px solid var(--text-secondary);
+}
+
+.navbar .middle a {
+	margin-left: 50px;
+}
+
+a.link {
+	text-decoration: none;
+	color: var(--text-primary);
+	transition: 300ms;
+}
+
+a.link:hover {
+	color: var(--primary);
+}
+
+.navbar-content .right #login {
+	padding: 8px 20px;
+	border: 1px solid white;
+	border-radius: 8px;
+	margin-left: 1rem;
+}
+
+.navbar-content .right #login:hover {
+	background-color: var(--text-primary);
+}
+
+.navbar-content #burger-menu {
+	font-size: 24px;
+	transition: 300ms;
+	opacity: 0.5;
+	cursor: pointer;
+	display: none;
+}
+
+.navbar-content #burger-menu:hover {
+	opacity: 1;
+}
+
+.SignUp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items:center ;
+    align-items: center;
+    align-content: center;
+    height:500px;
+    width: 500px;
+    background-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
+.Email #email{
+    border-radius: 10px;
+    background-color: #333333;
+}
+/*
+-------------------------------------------------
+Main ------------------------------------------
+-------------------------------------------------
+*/
+
+body{
+	justify-content: center;
+	align-items: center;
+}
+.container{
+	padding:100px;
+}
+.tickets h3{
+	color: var(--text-primary);
+	font-size: 40px;
+}
+
+.top-img{
+	margin-top:30px;
+	margin-bottom: 40px;
+	
+}
+
+.tickets h3 span{
+	color:var(--primary);
+}
+
+span{
+	color:var(--text-primary);
+}
+
+.ticket img{
+   float:right;
+   width:120px;
+   height:120px;
+   margin-right:170px;
+   margin-left: 150px;
+}
+
+.t1{
+	margin-top: 50px;
+	justify-content: left;
+	margin-left: 150px;
+	color:var(--text-secondary);
+	text-align: left;
+	font-size:18px;
+	line-height: 1.5;
+}
+
+.globe img{
+   float:left;
+   width:120px;
+   height:120px;
+   margin-right:150px;
+   margin-top: 100px;
+   margin-left: 150px;
+}
+
+.t2{
+	margin-top: 100px;
+	margin-bottom: 100px;
+	margin-right:150px;
+	text-align-last: left;
+	color:var(--text-secondary);
+	text-align: left;
+	font-size:18px;
+	line-height: 1.5;
+}
+
+.increase img{
+   float:right;
+   width:120px;
+   height:120px;
+   margin-right:150px;
+   margin-left: 150px;
+}
+
+.t3{
+	margin-top: 100px;
+	margin-bottom: 100px;
+	margin-left: 150px;
+	margin-right:70px;
+	text-align-last: left;
+	color:var(--text-secondary);
+	text-align: left;
+	font-size:18px;
+	line-height: 1.5;
+}
+
+
+/*
+-------------------------------------------------
+Footer ------------------------------------------
+-------------------------------------------------
+*/
+
+footer {
+	padding: 2rem 4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 14px;
+}
+
+footer #copyright {
+	color: var(--text-secondary);
+}
+
+footer .icons a {
+	text-decoration: none;
+}
+
+footer .icons img {
+	margin-right: 20px;
+	width: 20px;
+	cursor: pointer;
+	opacity: 0.5;
+	transition: 300ms;
+}
+
+footer .icons img:hover {
+	opacity: 1;
+}
+
+footer .links a {
+	text-decoration: none;
+	color: var(--text-primary);
+	transition: 300ms;
+	margin-left: 20px;
+}
+
+footer .links a:hover {
+	color: var(--primary);
+}
+#checkbox{
+	color: var(--primary);	
+}
