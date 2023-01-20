@@ -58,3 +58,8 @@ function error(){
 	alert("Can't create an account because there is no database")
 }
 
+// 
+function error(){
+	alert("Please input valid information for the form to be submitted!");
+}
+
