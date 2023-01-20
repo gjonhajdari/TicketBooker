@@ -70,6 +70,38 @@
             });
         });
         });
+
+        //callback
+        // $(document).ready(function(){
+        // $("button").click(function(){
+        //     $("p").hide("slow", function(){
+        //     alert("The paragraph is now hidden");
+        //     });
+        // });
+        // });
+
+        //get
+        $(document).ready(function(){
+        $("#btn1").click(function(){
+            alert("Text: " + $("#test").text());
+        });
+        $("#btn2").click(function(){
+            alert("HTML: " + $("#test").html());
+        });
+        });
+
+        //set
+        $(document).ready(function(){
+        $("#btn5").click(function(){
+            $("#test1").text("Hello world!");
+        });
+        $("#btn6").click(function(){
+            $("#test2").html("<b>Hello world!</b>");
+        });
+        $("#btn7").click(function(){
+            $("#test3").val("Dolly Duck");
+        });
+        });
     </script>
     <style> 
         #panel, #flip {
@@ -137,6 +169,36 @@
     <div>
         <button id="animate">Start Animation</button>
         <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+    </div>
+
+    <br><br><br>
+    <br><br><br> <br><br><br>
+
+    <!-- <div>
+        <p>This is a paragraph with little content.</p>
+        <button>Hide</button>
+    </div> -->
+
+
+    <br><br><br>
+
+    <div>
+        <p id="test">This is some <b>bold</b> text in a paragraph.</p>
+        <button id="btn1">Show Text</button>
+        <button id="btn2">Show HTML</button>
+    </div>
+
+    <br><br><br>
+
+    <div>
+        <p id="test1">This is a paragraph.</p>
+        <p id="test2">This is another paragraph.</p>
+
+        <p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
+
+        <button id="btn5">Set Text</button>
+        <button id="btn6">Set HTML</button>
+        <button id="btn7">Set Value</button>
     </div>
 </body>
 
