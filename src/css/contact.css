@@ -16,7 +16,7 @@ body {
     font-weight: 400;
     height:30px;
     font-weight:500;
-    font-size: 25px;
+    font-size: 35px;
     text-align: center;
     
 }
@@ -24,9 +24,11 @@ body {
 .InputMessage #id{
     color:#333333;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 20px;
     text-align: center;
-    font-weight: 20px;
+    font-weight: 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 
 }
 
@@ -43,6 +45,8 @@ body {
     width: 343px;
     padding: 8px;
     color: var(--text-secondary);
+    font-size: medium;
+    padding-left: 15px;
 
 }
 
@@ -56,6 +60,8 @@ body {
     padding: 8px;
     color: var(--text-secondary);
     margin-left:5px;
+    font-size: medium;
+    padding-left: 15px;
 
 }
 
@@ -70,7 +76,16 @@ body {
     padding: 10px;
     color: var(--text-secondary);
     resize: none;
+    font-size: medium;
+    padding-left: 15px;
 
+}
+
+.form3 img{
+    float:inline-start;
+    width: 30px;
+    height:13px;
+    
 }
 
 
@@ -86,6 +101,7 @@ body {
   position: center;
   border:none;
   border-radius: 9px;
+  font-size: large;
 }
 
 .form3 #button:hover{ 
