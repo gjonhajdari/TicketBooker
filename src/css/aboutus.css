@@ -103,6 +103,27 @@ Main ------------------------------------------
 */
 
 
+.top{
+	display: flex;
+	flex-direction: row;
+}
+.top p{
+	font-size:2rem;
+	margin-top:20px;
+}
+
+.container .top #top-paragraph1{
+ color: var(--primary);
+}
+
+.block{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 1.2rem;
+	padding: 200px;
+}
+
 /*
 -------------------------------------------------
 Footer ------------------------------------------
