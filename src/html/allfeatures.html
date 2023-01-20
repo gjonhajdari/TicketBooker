@@ -14,6 +14,192 @@
 	<script src="../js/app.js"></script>
 	<script>
 		const year = new Date().getFullYear();
+
+		document.write("<h5>Array iteration with for loop</h5> " );
+		const num = [1,2,3,4,5];
+		
+		 for(let i=0; i < num.length; i++){
+			document.write(num[i] );
+		 }
+
+
+		 document.write("<hr>");
+		 document.write("<h5>Data Types</h5> " );
+		 let x = 2;
+		 let y = 3;
+		 let sum = x+y;
+		 document.write(sum);
+
+
+		 document.write("<hr>");
+		 document.write("<h5>If...ELSE</h5> " );
+		 let number = 5;
+
+		 if(number>5){
+			document.write("<p>number>5</p>");
+		 }else{
+			document.write("<p>number<5</p>");
+		 }
+
+
+		 document.write("<hr>");
+		 document.write("<h5>SWITCH</h5> " );
+		
+		 let dita = 1;
+		 switch(dita){
+			case 1:
+				document.write("E Hene");
+				break;
+			case 2:
+				document.write("E Marte");
+				break;
+			case 3:
+				document.write("E Merkure");
+				break;
+			case 4:
+				document.write("E Enjte");
+				break;
+			case 5:
+				document.write("E Premte");
+				break;
+			case 6:
+				document.write("E Shtunde");
+				break;
+			case 7:
+				document.write("E Diel");
+				break;
+			default:
+				document.write("Nuk perputhet me asnje");
+		 }
+
+
+
+		 document.write("<hr>");
+		 document.write("<h5>Object</h5> " );
+		 const person = {
+			firstName: "User",
+			lastName: "Useruser",
+			age: 50,
+			eyeColor: "black"
+		};
+
+		document.write(person.firstName + " is " + person.age + " years old." )
+
+
+		document.write("<hr>");
+		document.write("<h5>Operators</h5> " );
+		let c = 5;
+		document.write(c+3 + "</br>");
+		document.write(c-3 + "</br>");
+		document.write(c++ + "</br>");
+		document.write(c-- + "</br>");
+		document.write(c*c + "</br>");
+
+
+		document.write("<hr>");
+		document.write("<h5>Number Properties</h5> " );
+		let max=Number.MAX_VALUE;
+		document.write(max);
+		document.write("<hr>");
+		let nan=Number.NaN;
+		document.write(nan);
+		document.write("<hr>");
+		let exc = 4;
+		document.write(exc.toExponential(2));
+		document.write("<hr>");
+		let str = 123;
+		document.write(str.toString());
+
+
+		document.write("<hr>");
+		document.write("<h5>Strings Match and Replace</h5> " );
+
+		let text = "The rain in SPAIN stays mainly in the plain";
+		document.write(text.match("ain"));
+
+		function myFunction() {
+		let text = document.getElementById("demo").innerHTML;
+		document.getElementById("demo").innerHTML =
+		text.replace("great","amazing");
+		}
+
+
+
+		document.write("<hr>");
+		document.write("<h5>TimeOut</h5> " );
+		const myTimeout = setTimeout(myGreeting, 2000);
+
+		function myGreeting() {
+		document.getElementById("demo2").innerHTML = "You're so slow"
+		}
+
+		function myStopFunction() {
+		clearTimeout(myTimeout);
+		}
+		
+		<!-- Per Drag & Drop -->
+		document.querySelectorAll(".drop-zone__input").forEach( inputElement => {
+const dropZoneElement = inputElement.closest(".drop-zone");
+
+
+dropZoneElement.addEventListener("click", e=> {
+    inputElement.click();
+});
+
+inputElement.addEventListener("change", e=>{
+    if( inputElement.files.length){
+        updateThumbnail(dropZoneElement,inputElement.files[0]);
+        
+    }
+})
+
+dropZoneElement.addEventListener("dragover", e =>{
+  
+  e.preventDefault();
+    dropZoneElement.classList.add("drop-zone--over");
+
+   });
+
+   ["dragleave","dragend"].forEach(type =>{
+    dropZoneElement.addEventListener(type,e => {
+        dropZoneElement.classList.remove("drop-zone--over");    
+    })
+   });
+   dropZoneElement.addEventListener("drop",e =>{
+    e.preventDefault();
+    console.log(e.dataTransfer.files);
+
+    if(e.dataTransfer.files.length){
+        inputElement.files=e.dataTransfer.files;
+        updateThumbnail(dropZoneElement,e.dataTransfer.files[0]); 
+    console.log(inputElement.files);
+    }
+
+    dropZoneElement.classList.remove("drop-zone--over");
+   })
+});
+
+
+    function updateThumbnail(dropZoneElement,file){
+        let thumbnailElement =  dropZoneElement.querySelector(".drop-zone__thumb");
+        console.log(file);  
+        
+        if(dropZoneElement.querySelector(".drop-zone__prompt")){
+
+            dropZoneElement.querySelector(".drop-zone__prompt").remove();
+
+           }
+        if(!thumbnailElement){
+            thumbnailElement = document.createElement("div");
+            thumbnailElement.classList.add("drop-zone__thumb");
+            thumbnailElement.appendChild(thumbnailElement);
+
+        }
+
+        thumbnailElement.dataset.label=file.name;   
+}
+		
+
 	</script>
 	<style>
 		.button-accent {
@@ -68,10 +254,25 @@
 </head>
 
 <body>
-
+	<div>
+		<p id="demo">This website is great</p>
+		<button onclick="myFunction()">Replace</button>
+	</div>
+	
+	<br>
+	<div>
+		<p id="demo2"></p>
+		<button onclick="myStopFunction()">Hit to Stop!</button>
+	</div>
+	<br>
+	<div>
+		<h2 onclick="this.innerHTML='Ooops!'">Click Me</h2>
+	</div>
+	
 	<nav aria-label="breadcrumb" class="p-2 ms-2">
 		<ol class="breadcrumb">
 		  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+		  <li class="breadcrumb-item"><a href="jquery.html">Jquery</a></li>
 		  <li class="breadcrumb-item active" aria-current="page">All features</li>
 		</ol>
 	</nav>	  
@@ -84,6 +285,57 @@
 			Blend Arifaj in <cite title="Source title">ushtrime në Web I</cite>
 		</figcaption>
 	</figure>
+	
+	<!-- Per Drag & Drop -->
+	.drop-zone{
+max-width: 200px;
+height: 200px;
+padding: 25px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+font-family: "Quicksand", sans-serif;
+font-weight: 500;
+font-size: 20px;
+cursor: pointer;
+color: lightblue;
+border: 4px dashed gray;
+border-radius: 10px;
+
+}
+.drop-zone--over{
+    border-style: solid;
+}
+
+.drop-zone__input{
+    display: none;
+
+}
+.drop-zone__thumb{
+        width: 100%;
+        height:100%;
+        border-radius: 10px;
+        overflow:hidden;
+    background-color: #cccccc;
+    background-size: cover ;
+   position: relative;
+
+}
+
+.drop-zone__thumb::after{
+content: attr(data-label);
+position: absolute;
+bottom: 0;
+left: 0;
+width :100%;
+padding: 5 px 0;
+color: #ffffff;
+background: rgba(0,0,0,0.75);
+font-size: 14px;
+text-align: center;
+
+}
 
 
 	<!-- Kerkesat HTML -->
@@ -211,6 +463,14 @@
 					</tbody>
 				</table>
 			</div>
+			
+			<!-- Drag and Drop -->
+			<div class="drop-zone">
+				
+                         <span class="drop-zone__prompt">Drop file here or Click it to upload </span> 
+                        
+				<input type="file" name="myFile" class="drop-zone__input">
+			</div>
 
 			<!-- Forms -->
 			<div class="row mt-4">
@@ -219,20 +479,20 @@
 					<div class="row mb-3">
 						<div class="col">
 							<div class="form-floating">
-								<input type="text" class="form-control" id="floatingInput2" placeholder="Your email">
+								<input type="text" class="form-control" id="floatingInput2" required placeholder="Your email" autocomplete="off" readonly>
 								<label for="floatingInput2">Full name</label>
 							</div>
 						</div>
 						<div class="col">
 							<div class="form-floating">
-								<input type="email" class="form-control" id="floatingInput" placeholder="Your email">
+								<input type="email" class="form-control" id="floatingInput" placeholder="Your email" disabled size="50">
 								<label for="floatingInput">Email address</label>
 							</div>
 						</div>
 					</div>
 					
 					<div class="form-floating mb-3">
-						<textarea class="form-control" placeholder="Your message" id="floatingTextarea"></textarea>
+						<textarea class="form-control"  pattern="[A-Za-z]{3}" placeholder="Your message" id="floatingTextarea" list="browsers"></textarea>
 						<label for="form-floating">Your message</label>
 					</div>
 
