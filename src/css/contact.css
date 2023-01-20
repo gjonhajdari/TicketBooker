@@ -19,6 +19,8 @@ body {
     font-size: 34px;
     text-align: left;
     margin-left: 270px;
+    margin-top: 50px;
+    font-family: 'Inter', sans-serif;
     
 }
 
@@ -28,9 +30,10 @@ body {
     font-size: 15px;
     text-align: left;
     font-weight: 15px;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: 20px;
     margin-left: 270px;
+    font-family: 'Inter', sans-serif;
 
 }
 
