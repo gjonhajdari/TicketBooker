@@ -102,6 +102,24 @@
             $("#test3").val("Dolly Duck");
         });
         });
+
+        //add
+        $(document).ready(function(){
+        $("#btn8").click(function(){
+            $("#add").append(" <b>Appended text</b>.");
+        });
+
+        $("#btn9").click(function(){
+            $("ol").append("<li>Appended item</li>");
+        });
+        });
+
+        //remove
+        $(document).ready(function(){
+        $("#button5").click(function(){
+            $("#div12").remove();
+        });
+        });
     </script>
     <style> 
         #panel, #flip {
@@ -200,6 +218,32 @@
         <button id="btn6">Set HTML</button>
         <button id="btn7">Set Value</button>
     </div>
+
+    <br><br><br>
+    <div>
+        <p id="add">This is a paragraph.</p>
+        <p id="add">This is another paragraph.</p>
+
+        <ol>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        </ol>
+
+        <button id="btn8">Append text</button>
+        <button id="btn9">Append list items</button>
+    </div>
+
+    <br><br><br>
+
+    <div id="div12" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+
+        This is some text in the div.
+        <p>This is a paragraph in the div.</p>
+        <p>This is another paragraph in the div.</p>
+        
+    </div>
+    <button id="button5">Remove div element</button>
 </body>
 
 </html>
