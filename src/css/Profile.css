@@ -131,7 +131,6 @@ Profile ------------------------------------------
 }
 
 
-
 .Ticket-buttons #Movies:hover {
 	background-color: var(--primary);
 	cursor: pointer;
@@ -202,17 +201,6 @@ TicketBlocks ------------------------------------------
 
 .TicketTitle {
 	margin: 20px 0px 20px 20px;
-}
-
-.Trash {
-	background-color: var(--red);
-	border-radius: 9px;
-	height: 16px;
-	width: 16px;
-	display: flex;
-	flex-direction: column;
-	float: left;
-
 }
 
 .TicketDate {
