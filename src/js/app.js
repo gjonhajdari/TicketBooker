@@ -5,14 +5,11 @@ $(document).ready(() => {
 		$(".right").toggle();
 	});
 
-	
-	// Toggle password
-	const password = document.querySelector('#passwordInput');
-	const togglePassword = document.querySelector('#toggle-visibility');
 
-	togglePassword.addEventListener('click', function (e) {
+	// Toggle password function
+	$('#toggle-visibility').on('click', function(e) {
 		e.preventDefault;
-		// toggle the type attribute
+		const password = document.querySelector('#passwordInput');
 		const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
 		password.setAttribute('type', type);
 		// toggle the eye icon
