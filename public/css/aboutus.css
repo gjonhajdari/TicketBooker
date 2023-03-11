@@ -1,0 +1,84 @@
+/*
+-------------------------------------------------
+Main ------------------------------------------
+-------------------------------------------------
+*/
+.container {
+	margin: 100px 10%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 200px;
+}
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+}
+
+.hero h1 {
+	font-size: 2.5rem;
+}
+
+.accent {
+	color: var(--primary);
+}
+
+.section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	gap: 5rem;
+}
+
+.section p {
+	font-size: 1.15rem;
+	line-height: 2rem;
+	color: var(--text-secondary);
+	text-align: left;
+}
+
+p  span {
+	color: var(--text-primary);
+}
+
+/*
+-------------------------------------------------
+Media Queries -----------------------------------
+-------------------------------------------------
+*/
+
+/* Tablet screen - 768px and smaller */
+@media screen and (max-width: 768px) {
+	.hero h1 {
+		font-size: 1.75rem;
+		text-align: center;
+	}
+
+	.hero img {
+		width: 250px;
+	}
+
+	.container {
+		gap: 100px;
+	}
+
+	.section {
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.section img {
+		order: 0;
+		height: 100px;
+	}
+
+	.section p {
+		order: 1;
+		text-align: center;
+		font-size: 1rem;
+	}
+}
