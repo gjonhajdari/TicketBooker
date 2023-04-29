@@ -1,27 +1,14 @@
 <?php
-// Parametrat e databazes
-$servername = "localhost:3307";
-$username = "username";
-$password = "";
-$dbname = "TicketBooker";
+require_once('db.php');
 
-// // connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-// connection check
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-
-
-// $sql = "CREATE TABLE users (
+// $sql = "CREATE TABLE user (
 // id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-// first_name VARCHAR(30) NOT NULL,
-// last_name VARCHAR(30) NOT NULL,
+// first_name VARCHAR(20) NOT NULL,
+// last_name VARCHAR(20) NOT NULL,
 // email VARCHAR(50) NOT NULL,
 // confirm_email VARCHAR(50) NOT NULL,
-// password VARCHAR(50) NOT NULL,
-// confirm_password VARCHAR(50) NOT NULL
+// password VARCHAR(250) NOT NULL,
+// confirm_password VARCHAR(250) NOT NULL
 // )";
 
 // if (mysqli_query($conn, $sql)) {
@@ -40,7 +27,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
   if(isset($_POST['first_name']) && isset($_POST['last_name'])&& isset($_POST['email'])&& isset($_POST['email_confirm'])
      && isset($_POST['password'])&& isset($_POST['password_confirm'])){
       $first_name = $_POST['first_name'];
-      $last_name = $_POST['first_name'];
+      $last_name = $_POST['last_name'];
       $email = $_POST['email'];
       $email_confirm = $_POST['email_confirm'];
       $password = $_POST['password'];
@@ -54,7 +41,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
                $query = mysqli_query($conn, $sql);
 
                if($query){
-                echo 'Entry Successfull';
+                echo 'Registration Successfull';
                }
                else{
                 echo 'Error Ocurred';
