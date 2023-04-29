@@ -1,4 +1,4 @@
-<?php
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +42,7 @@
 		<h1>Create an account</h1> <br>
 		<h6>Already have one? <a href="login.html" id="a">Log in</a></h6>
 		<br>
-
+<form action="php/signupConnection.php" method="POST">
 		<div>
 			<input name="first_name" id="name" type="text" placeholder="First name" />
 			<input name="last_name" id="name" type="text" placeholder="Last name" />
@@ -85,7 +85,7 @@
 		</div>
 		<input type="submit" name="submit" id="submit" class="btn">
 		
-
+</form>
 	</main>
 	<br><br><br>
 
@@ -112,4 +112,3 @@
 </body>
 
 </html>
-?>			

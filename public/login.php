@@ -1,4 +1,3 @@
-<?php
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,7 +46,7 @@
 				</h2>
 			</div>
 	
-			<form action="">
+			<form action="php/loginConnection.php" method="POST">
 				<input type="email" name="email" required="required" placeholder="Email address" class="input">
 	
 				<div id="password">
@@ -60,8 +59,7 @@
 					<input type="checkbox" name="checkbox" id="check">
 					<p>Remember me</p>
 				</div>
-	
-				<button id="button" name="button">Log in</button>
+	          <input type="submit" name="submit" id="button"  class="btn">
 			</form>
 		</div>
 
@@ -90,4 +88,3 @@
 </body>
 
 </html>
-?>
