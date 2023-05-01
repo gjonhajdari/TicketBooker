@@ -6,20 +6,27 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
     if(isset($_POST['email']) && isset($_POST['password'])){
         $email = $_POST['email'];
         $password = $_POST['password'];
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 
-        $sql = "INSERT INTO `login_user`(`email`,`password`)
-                VALUES ('$email','$password')";
-        $query = mysqli_query($conn, $sql);
-    
-        if($query){
-            echo 'Entry Successfull';
-           }
-           else{
-            echo 'Error Ocurred';
-           }
+        $sql = "SELECT * FROM `login_user` WHERE 
+                email = '$email' AND password = '$password'";
+
+         $result = mysqli_query($conn, $sql);
+         if($result){
+            $num = mysqli_num_rows($result);
+            if($num>0){
+                echo "Login successful";
+                session_start();
+                $_SESSION['email'] = $email;
+                header('location:index.html');
+            }else {
+              echo "Invalid data";
+            }
+
     }
-}
+  }
+};
 
 
 
