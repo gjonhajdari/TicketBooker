@@ -36,18 +36,32 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
       $hashed_password = password_hash($password, PASSWORD_DEFAULT);
       $hashed_password_confirm = password_hash($password_confirm, PASSWORD_DEFAULT);
 
-      $sql = "INSERT INTO `signup_user`(`first_name`,`last_name`,`email`,`email_confirm`,`password`,`password_confirm`)
-               VALUES ('$first_name','$last_name','$email','$email_confirm','$hashed_password','$hashed_password_confirm')";
-               $query = mysqli_query($conn, $sql);
+      $sql = "SELECT * FROM `signup_user` WHERE
+      email ='$email'";
+      
+      $result = mysqli_query($conn, $sql);
+      if($result){
+        $num = mysqli_num_rows($result);
+        if($num>0){
+            echo "Email already used!";
+        }else {
+          $sql = "INSERT INTO `signup_user`(`first_name`,`last_name`,`email`,`email_confirm`,`password`,`password_confirm`)
+          VALUES ('$first_name','$last_name','$email','$email_confirm','$hashed_password','$hashed_password_confirm')";
+          $result = mysqli_query($conn, $sql);
+          if($result){
+            echo "Signup successful";
+          }else{
+            die(mysqli_error($conn));
+          }
+        }
+      }
+      
+      
+}
+}
 
-               if($query){
-                echo 'Registration Successfull';
-               }
-               else{
-                echo 'Error Ocurred';
-               }
-}
-}
+
+
 
 
 

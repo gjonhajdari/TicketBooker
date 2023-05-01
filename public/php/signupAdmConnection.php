@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
  
   if(isset($_POST['business_name']) && isset($_POST['email'])&& isset($_POST['email_confirm'])
      && isset($_POST['password'])&& isset($_POST['password_confirm'])){
-        echo "yesss";
+
       $business_name = $_POST['business_name'];
       $email = $_POST['email'];
       $email_confirm = $_POST['email_confirm'];
@@ -36,16 +36,25 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
 
       $hashed_password = password_hash($password, PASSWORD_DEFAULT);
       $hashed_password_confirm = password_hash($password_confirm, PASSWORD_DEFAULT);
-
-      $sql = "INSERT INTO `signup_administrator`(`business_name`,`email`,`email_confirm`,`password`,`password_confirm`)
-               VALUES ('$business_name','$email','$email_confirm','$hashed_password','$hashed_password_confirm')";
-               $query = mysqli_query($conn, $sql);
-
-               if($query){
-                echo 'Registration Successful';
-               }
-               else{
-                echo 'Error Ocurred';
+  
+               $sql = "SELECT * FROM `signup_administrator` WHERE
+               email ='$email'";
+               
+               $result = mysqli_query($conn, $sql);
+               if($result){
+                 $num = mysqli_num_rows($result);
+                 if($num>0){
+                     echo "Email already used!";
+                 }else {
+                  "INSERT INTO `signup_administrator`(`business_name`,`email`,`email_confirm`,`password`,`password_confirm`)
+                  VALUES ('$business_name','$email','$email_confirm','$hashed_password','$hashed_password_confirm')";
+                  $query = mysqli_query($conn, $sql);
+                   if($result){
+                     echo "Signup successful";
+                   }else{
+                     die(mysqli_error($conn));
+                   }
+                 }
                }
 }
 }
