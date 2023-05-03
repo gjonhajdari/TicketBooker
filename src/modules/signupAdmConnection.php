@@ -33,7 +33,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
 		$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 		$hashed_password_confirm = password_hash($password_confirm, PASSWORD_DEFAULT);
 	
-		$sql = "SELECT * FROM 'signup_administrator' WHERE
+		$sql = "SELECT * FROM `signup_administrator` WHERE
 		email ='$email'";
 		
 		$result = mysqli_query($conn, $sql);
@@ -42,7 +42,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
 			if ($num > 0) {
 				echo "Email already used!";
 			} else {
-				$sql = "INSERT INTO 'signup_administrator'('business_name','email','email_confirm','password','password_confirm')
+				$sql = "INSERT INTO `signup_administrator`(`business_name`,`email`,`email_confirm`,`password`,`password_confirm`)
 						VALUES('$business_name','$email','$email_confirm','$hashed_password','$hashed_password_confirm')";
 
 				$query = mysqli_query($conn, $sql);

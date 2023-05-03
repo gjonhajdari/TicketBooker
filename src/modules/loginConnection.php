@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 		$password = $_POST['password'];
 		$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-		$sql = "SELECT * FROM 'login_user' WHERE 
+		$sql = "SELECT * FROM `login_user` WHERE 
 				email = '$email' AND password = '$password'";
 		$result = mysqli_query($conn, $sql);
 

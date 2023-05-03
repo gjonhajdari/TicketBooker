@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 		$femail = $_POST['femail'];
 		$fmessage = $_POST['fmessage'];
 
-		$sql = "INSERT INTO 'contact'('name','email','message')
+		$sql = "INSERT INTO `contact`(`name`,`email`,`message`)
 				VALUES('$fname','$femail','$fmessage')";
 		$result = mysqli_query($conn, $sql);
 

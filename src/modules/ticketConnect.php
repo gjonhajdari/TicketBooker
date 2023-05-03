@@ -10,13 +10,13 @@ if(isset($_POST['submit'])){
     $description = $_POST['description'];
     $imagename = $_FILES['image']['name'];
     $imagetmpname = $_FILES['image']['tmp_name'];
-    $folder ='../imageUpload/';
+    $folder ='../../public/assets/images/';
 
     move_uploaded_file($imagetmpname,$folder.$imagename);
 }
 
 
-$sql = "INSERT INTO 'ticket'('option','name','date','time','location','description','image')
+$sql = "INSERT INTO `ticket`(`option`,`name`,`date`,`time`,`location`,`description`,`image`)
 		VALUES('$option','$name','$date','$time','$location','$description','$imagename')";
 
 $result = mysqli_query($conn, $sql);
