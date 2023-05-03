@@ -16,14 +16,16 @@ if(isset($_POST['submit'])){
 }
 
 
-$sql = "INSERT INTO `ticket`(`option`,`name`,`date`,`time`,`location`,`description`,`image`)
-          VALUES ('$option','$name','$date','$time','$location','$description','$imagename')";
-          $result = mysqli_query($conn, $sql);
-          if($result){
-            echo "Registred successfully";
-          }else{
-            die(mysqli_error($conn));
-          }
+$sql = "INSERT INTO 'ticket'('option','name','date','time','location','description','image')
+		VALUES('$option','$name','$date','$time','$location','$description','$imagename')";
 
+$result = mysqli_query($conn, $sql);
+if ($result) {
+	echo "Registred successfully";
+} else {
+	die(mysqli_error($conn));
+}
+
+mysqli_close($conn);
 
 ?>
