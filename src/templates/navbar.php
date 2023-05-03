@@ -1,8 +1,8 @@
 <!-- Navigation bar -->
-<nav class="navbar">
+<nav class="navbar <?php echo $isDark ? '' : 'navbar-light'; ?>">
 	<div class="navbar-content">
-		<a href="index.html">
-			<img src="./../public/assets/Logo.svg" alt="TicketBooker logo" class="logo" width="35" height="35">
+		<a class="navbar-logo" href="index.php">
+			<?php echo file_get_contents('assets/icons/Logo.svg') ?>
 		</a>
 		<div class="middle">
 			<a href="index.html" class="link">Home</a>
