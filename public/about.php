@@ -1,3 +1,5 @@
+<?php $isDark = true; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,9 +8,16 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=, initial-scale=1.0">
-	<link rel="stylesheet" href="css/general.css">
-	<link rel="stylesheet" href="css/aboutus.css">
 	<link rel='icon' type='image/x-icon' href='/assets/Favicon.svg'>
+	<?php
+		if ($isDark == true) {
+			echo "<link rel='stylesheet' href='css/palette-dark.css'>";
+		} else {
+			echo "<link rel='stylesheet' href='css/palette-light.css'>";
+		}
+	?>
+	<link rel="stylesheet" href="css/general.css">
+	<link rel="stylesheet" href="css/about.css">
 	<script src="https://kit.fontawesome.com/26e97bbe8d.js" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 	<script src="js/app.js"></script>
@@ -16,31 +25,15 @@
 
 <body>
 
-	<!-- Navigation bar -->
-	<nav class="navbar">
-		<div class="navbar-content">
-			<a href="index.html">
-				<img src="assets/icons/Logo.svg" alt="TicketBooker logo" class="logo" width="35" height="35">
-			</a>
-			<div class="middle">
-				<a href="index.html" class="link">Home</a>
-				<a href="aboutus.html" class="link">About</a>
-				<a href="contact.html" class="link">Contact</a>
-			</div>
-			<div class="right">
-				<a href="signup.html" class="link">Sign Up</a>
-				<a href="login.html" class="link" id="login">Log In</a>
-			</div>
-			<i class="fa-solid fa-bars-staggered" id="burger-menu"></i>
-		</div>
-	</nav>
+	<!-- Navigation Bar -->
+	<?php include('../src/templates/navbar.php') ?>
 
 	<!-- Main content -->
 	<div class="container">
 
 		<div class="hero">
 			<h1>So <span class="accent">who</span> are we exactly?</h1>
-			<img src="assets/icons/Path.svg">
+			<?php echo file_get_contents('assets/icons/Path.svg') ?>
 		</div>
 
 		<div class="section">
@@ -73,7 +66,7 @@
 				leading provider of payment services, for TicketBooker's European ticket 
 				booking services, allowing the company to <span>expand its presence</span> to 2,500+
 				Live Nation & AXS corporate clients as well as 20,000+ independent music 
-				venues and promoters. TicketBooker has recieve<span>d $1.3m </span>in funding from
+				venues and promoters. TicketBooker has recieve<span>d $1.3m </span>in fu	nding from
 				City Index Ventures in May 2014.
 			</p>
 
@@ -83,24 +76,7 @@
 	</div>
 
 	<!-- Footer -->
-	<footer>
-		<p id="copyright">Copyright &copy; 2023 TicketBooker. All rights reserved</p>
-		<div class="icons">
-			<a href="https://www.instagram.com" target="_blank">
-				<img src="assets/icons/Instagram.svg" alt="Instagram" class="icon">
-			</a>
-			<a href="https://www.twitter.com" target="_blank">
-				<img src="assets/icons/Twitter.svg" alt="Twitter" class="icon">
-			</a>
-			<a href="https://www.linkedin.com" target="_blank">
-				<img src="assets/icons/Linkedin.svg" alt="Linkedin" class="icon">
-			</a>
-		</div>
-		<div class="links">
-			<a href="assets/extra/PRIVACY_POLICY.pdf" target="_blank" class="footer-link">Privacy Policy</a>
-			<a href="assets/extra/TERMS_AND_CONDITIONS.pdf" target="_blank" class="footer-link">Terms of Use</a>
-		</div>
-	</footer>
+	<?php include('../src/templates/footer.php') ?>
 
 </body>
 

@@ -1,4 +1,3 @@
-<!-- Footer -->
 <footer>
 	<p id="copyright">Copyright &copy; 2023 TicketBooker. All rights reserved</p>
 	<div class="icons">

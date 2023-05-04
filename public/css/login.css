@@ -109,6 +109,7 @@ form #checkbox {
 	font-weight: 600;
 	cursor: pointer;
 	transition: 300ms;
+	color: var(--background	);
 }
 
 #button:hover {

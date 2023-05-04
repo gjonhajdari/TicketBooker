@@ -1,8 +1,8 @@
 <!-- Navigation bar -->
-<nav class="navbar">
+<nav class="navbar <?php echo $isDark ? '' : 'navbar-light'; ?>">
 	<div class="navbar-content">
-		<a href="index.html">
-			<img src="./../public/assets/Logo.svg" alt="TicketBooker logo" class="logo" width="35" height="35">
+		<a class="navbar-logo" href="index.html">
+			<?php echo file_get_contents('assets/icons/Logo.svg') ?>
 		</a>
 		<div class="middle">
 			<a href="index.html" class="link">Home</a>
@@ -10,7 +10,7 @@
 			<a href="contact.html" class="link">Contact</a>
 		</div>
 		<div class="right">
-			<img src="../../public/assets/images/ProfilePicture.jpg" alt="" width="50" height="50" style="border-radius: 50px;">
+			<img src="assets/images/ProfilePicture.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
 		</div>
 		<i class="fa-solid fa-bars-staggered" id="burger-menu"></i>
 	</div>

@@ -26,6 +26,7 @@
 
 <body>
 
+	<!-- Navigation Bar -->
 	<?php include('../src/templates/navbar.php') ?>
 
 	<!-- Main content -->
@@ -66,7 +67,9 @@
 		<img src="assets/images/Tickets.png" alt="Tickets" id="tickets" height="500">
 	</main>
 
+	<!-- Footer -->
 	<?php include('../src/templates/footer.php') ?>
+
 </body>
 
 </html>

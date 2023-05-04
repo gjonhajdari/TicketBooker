@@ -134,15 +134,9 @@ div a{
 	margin-left: 20px;
 	
 }
-.footer-links{
-	margin-left: 20px;
-}
-.footer-linkss{
-	margin-right: 20px;
-}
 
-#checkbox{
-	accent-color: var(--accent);	
+form input:not([type="submit"]) {
+	background-color: var(--foreground) !important;
 }
 
 /*

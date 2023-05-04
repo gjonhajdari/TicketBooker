@@ -17,6 +17,10 @@ body {
 	color: var(--text-primary);
 }
 
+.border-light input, .border-light textarea, .border-light input + i {
+	border: 1px solid var(--border) !important;
+}
+
 
 /*
 -------------------------------------------------
@@ -127,6 +131,7 @@ footer .links a {
 footer .links a:hover {
 	color: var(--accent);
 }
+
 
 /*
 -------------------------------------------------
