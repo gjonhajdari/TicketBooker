@@ -79,8 +79,9 @@ a.link:hover {
 	font-size: 24px;
 	transition: 300ms;
 	opacity: 0.5;
-	cursor: pointer;
+	cursor: pointer;	
 	display: none;
+	color: var(--text-primary);
 }
 
 .navbar-content #burger-menu:hover {

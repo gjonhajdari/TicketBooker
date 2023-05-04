@@ -1,0 +1,96 @@
+@import url(bootstrap-grid.min.css);
+
+.card {
+	background-color: var(--foreground);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 1.5rem;
+	border-radius: 1rem;
+	border: 1px solid var(--border);
+	color: var(--text-primary);
+}
+
+.card .icon-light svg path {
+	fill: var(--text-primary);
+}
+
+.card-light {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card-title {
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+
+.card-body {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.card-body .date, .card-body .location {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 20px;
+}
+
+.card-body .date .info {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.info .secondary {
+	color: var(--text-secondary);
+}
+
+.card hr {
+	border: none;
+	border-bottom: 1px solid var(--border);
+}
+
+.card .card-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card .card-bottom .type {
+	color: var(--accent);
+}
+
+.card .card-bottom .trash {
+	background-color: var(--accent);
+	width: 24px;
+	height: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+	transition: 300ms;
+}
+
+.card .card-bottom .trash:hover {
+	transform: scale(1.1);
+}
+
+.card .card-bottom .card-button {
+	background-color: var(--accent);
+	border: none;
+	border-radius: 0.25rem;
+	padding: 5px 15px;
+	color: #fff;
+	cursor: pointer;
+	transition: 300ms;
+	font-weight: 500;
+}
+
+.card .card-bottom .card-button:hover {
+	transform: scale(1.05);
+}
