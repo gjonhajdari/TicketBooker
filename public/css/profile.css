@@ -66,7 +66,7 @@ Profile ------------------------------------------
 
 
 .Profile-Button #EditProfile-Button:hover {
-	background-color: var(--primary);
+	background-color: var(--accent);
 	cursor: pointer;
 	transform: scale(1.09);
 	transition: 300ms;
@@ -106,12 +106,12 @@ Profile ------------------------------------------
 }
 
 .tab-button.active {
-	background-color: var(--primary);
+	background-color: var(--accent);
 	color: #333;
 }
 
 .Ticket-buttons #All-Tickets:hover {
-	background-color: var(--primary);
+	background-color: var(--accent);
 	cursor: pointer;
 	transform: scale(1.09);
 	transition: 300ms;
@@ -124,7 +124,7 @@ Profile ------------------------------------------
 }
 
 .Ticket-buttons #Travels:hover {
-	background-color: var(--primary);
+	background-color: var(--accent);
 	cursor: pointer;
 	transform: scale(1.09);
 	transition: 300ms;
@@ -132,7 +132,7 @@ Profile ------------------------------------------
 
 
 .Ticket-buttons #Movies:hover {
-	background-color: var(--primary);
+	background-color: var(--accent);
 	cursor: pointer;
 	transform: scale(1.09);
 	transition: 300ms;
@@ -140,7 +140,7 @@ Profile ------------------------------------------
 }
 
 .Ticket-buttons #Concerts:hover {
-	background-color: var(--primary);
+	background-color: var(--accent);
 	cursor: pointer;
 	transform: scale(1.09);
 	transition: 300ms;
@@ -223,5 +223,5 @@ TicketBlocks ------------------------------------------
 }	
 
 .TicketType .TicketText{
-	color: var(--primary);
+	color: var(--accent);
 }

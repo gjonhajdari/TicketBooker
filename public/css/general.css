@@ -5,16 +5,6 @@ General -----------------------------------------
 */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-:root {
-	--primary: #72EACD;
-	--primary-transparent: #72EACD7F;
-	--red: #D14040;
-	--background: #222222;
-	--foreground: #333333;
-	--text-primary: #FFFFFF;
-	--text-secondary: #FFFFFF7F;
-}
-
 * {
 	margin: 0;
 	padding: 0;
@@ -46,6 +36,15 @@ Navigation bar ----------------------------------
 	border-bottom: 1px solid var(--text-secondary);
 }
 
+.navbar .navbar-logo svg {
+	width: 35px;
+	height: 35px;
+}
+
+.navbar .navbar-logo svg path {
+	fill: var(--accent);
+}
+
 .navbar .middle a {
 	margin-left: 50px;
 }
@@ -57,18 +56,19 @@ a.link {
 }
 
 a.link:hover {
-	color: var(--primary);
+	color: var(--accent);
 }
 
 .navbar-content .right #login {
 	padding: 8px 20px;
-	border: 1px solid white;
+	border: 1px solid var(--text-primary);
 	border-radius: 8px;
 	margin-left: 1rem;
 }
 
 .navbar-content .right #login:hover {
 	background-color: var(--text-primary);
+	color: var(--accent);
 }
 
 .navbar-content #burger-menu {
@@ -105,7 +105,7 @@ footer .icons a {
 	text-decoration: none;
 }
 
-footer .icons img {
+footer .icons svg {
 	margin-right: 20px;
 	width: 20px;
 	cursor: pointer;
@@ -113,7 +113,7 @@ footer .icons img {
 	transition: 300ms;
 }
 
-footer .icons img:hover {
+footer .icons svg:hover {
 	opacity: 1;
 }
 
@@ -125,7 +125,7 @@ footer .links a {
 }
 
 footer .links a:hover {
-	color: var(--primary);
+	color: var(--accent);
 }
 
 /*

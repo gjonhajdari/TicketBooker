@@ -36,7 +36,7 @@ body {
 
 .headers a {
 	text-decoration: none;
-	color: var(--primary);
+	color: var(--accent);
 }
 
 .headers a:hover {
@@ -96,7 +96,7 @@ form #checkbox {
 	cursor: pointer;
 	border: none;
 	outline: none;
-	accent-color: var(--primary);
+	accent-color: var(--accent);
 }
 
 #button {
@@ -105,7 +105,7 @@ form #checkbox {
 	border: none;
 	border-radius: 1rem;
 	width: 100%;
-	background-color: var(--primary);
+	background-color: var(--accent);
 	font-weight: 600;
 	cursor: pointer;
 	transition: 300ms;

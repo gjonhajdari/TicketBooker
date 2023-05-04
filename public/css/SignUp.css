@@ -43,7 +43,7 @@ h6 {
 #a{
 	text-decoration-line: none;
 	font-size: 1rem;
-	color: var(--primary);
+	color: var(--accent);
 }
 
 .btn {
@@ -56,7 +56,7 @@ h6 {
 	font-size: 1.25rem;
 	font-weight: 600;
 	border-radius: 1rem;
-	background-color: var(--primary);
+	background-color: var(--accent);
 	margin-top: 2rem;
 	cursor: pointer;
 }
@@ -129,7 +129,7 @@ main .btn:active {
 }
 div a{
 	text-decoration: none;
-	color: var(--primary);
+	color: var(--accent);
 	transition: 300ms;
 	margin-left: 20px;
 	
@@ -142,7 +142,7 @@ div a{
 }
 
 #checkbox{
-	accent-color: var(--primary);	
+	accent-color: var(--accent);	
 }
 
 /*

@@ -3,13 +3,13 @@
 	<p id="copyright">Copyright &copy; 2023 TicketBooker. All rights reserved</p>
 	<div class="icons">
 		<a href="https://www.instagram.com" target="_blank">
-			<img src="assets/icons/Instagram.svg" alt="Instagram" class="icon">
+			<?php echo file_get_contents('assets/icons/Instagram.svg') ?>
 		</a>
 		<a href="https://www.twitter.com" target="_blank">
-			<img src="assets/icons/Twitter.svg" alt="Twitter" class="icon">
+			<?php echo file_get_contents('assets/icons/Twitter.svg') ?>
 		</a>
 		<a href="https://www.linkedin.com" target="_blank">
-			<img src="assets/icons/Linkedin.svg" alt="Linkedin" class="icon">
+			<?php echo file_get_contents('assets/icons/Linkedin.svg') ?>
 		</a>
 	</div>
 	<div class="links">

@@ -4,7 +4,7 @@ Main content ------------------------------------
 -------------------------------------------------
 */
 body {
-	background-image: url(../assets/Blob.svg);
+	background-image: url(../assets/icons/Blob.svg);
 	background-repeat: no-repeat;
 	background-position: -300px -100px;
 	/* height: 100vh; */
@@ -29,7 +29,7 @@ main #title {
 	margin-bottom: 3rem;
 }
 
-main #accent {color: var(--primary);}
+main #accent {color: var(--accent);}
 
 main .options p {
 	color: var(--text-secondary);
@@ -67,12 +67,18 @@ main .btn {
 	gap: 20px;
 	padding: 1rem 4rem;
 	font-size: 1.25rem;
-	font-weight: 600;
+	font-weight: 500;
 	border-radius: 1rem;
-	background-color: var(--primary);
+	border: none;
+	color: var(--background);
+	background-color: var(--accent);
 	margin-top: 2rem;
 	cursor: pointer;
 	transition: 300ms;
+}
+
+.btn svg {
+	fill: var(--background);
 }
 
 main .btn:hover {

@@ -23,7 +23,7 @@ Main ------------------------------------------
 }
 
 .accent {
-	color: var(--primary);
+	color: var(--accent);
 }
 
 .section {
