@@ -1,4 +1,4 @@
-@import url(bootstrap-grid.min.css);
+@import "bootstrap-grid.min.css";
 
 .card {
 	background-color: var(--foreground);
