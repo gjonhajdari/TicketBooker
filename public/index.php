@@ -27,7 +27,7 @@
 <body>
 
 	<!-- Navigation Bar -->
-	<?php include('../src/templates/navbar.php') ?>
+	<?php include "../src/templates/navbar.php"; ?>
 
 	<!-- Main content -->
 	<main>

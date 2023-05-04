@@ -28,7 +28,7 @@
 <body>
 	
 	<!-- Navigation Bar -->
-	<?php include('../src/templates/navbar.php') ?>
+	<?php include "../src/templates/navbar.php"; ?>
 
 	<main>
 		<div class="Profile">
@@ -249,7 +249,7 @@
 	</div>
 
 	<!-- Footer -->
-	<?php include('../src/templates/footer.php') ?>
+	<?php include "../src/templates/footer.php"; ?>
 
 </body>
 

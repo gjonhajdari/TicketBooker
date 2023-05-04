@@ -26,7 +26,7 @@
 <body>
 
 	<!-- Navigation Bar -->
-	<?php include('../src/templates/navbar.php') ?>
+	<?php include "../src/templates/navbar.php"; ?>
 
 	<!-- Main content -->
 	<div class="main">
@@ -60,7 +60,7 @@
 	</div>
 	
 	<!-- Footer -->
-	<?php include('../src/templates/footer.php') ?>
+	<?php include "../src/templates/footer.php"; ?>
 
 </body>
 
