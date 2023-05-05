@@ -7,7 +7,7 @@
     <title>FAQ</title>
 </head>
 <body>
-    <form action="php/FAQ.php" method="post">
+    <form action="../src/modules/FAQConnection.php" method="post">
         <input type="text" name="username_or_id" id="username_or_id" placeholder="Username or ID">
         <br>
         <input type="text" name="question" id="question" placeholder="Write your question">
