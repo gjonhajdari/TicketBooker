@@ -30,6 +30,9 @@ if (isset($_POST['submit'])) {
     mysqli_stmt_bind_param($stmt, "ss", $username_or_id, $question);
     mysqli_stmt_execute($stmt);
     
+
+
+    
     // Close the statement
     mysqli_stmt_close($stmt);
     
