@@ -8,24 +8,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 	if (isset($_POST['email']) && isset($_POST['password'])) {
 		$email = $_POST['email'];
 		$password = $_POST['password'];
-		$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-		$sql = "SELECT * FROM `login_user` WHERE 
-				email = '$email' AND password = '$password'";
+		$sql = "SELECT * FROM `signup` WHERE email = '$email'";
 		$result = mysqli_query($conn, $sql);
 
 		if ($result) {
-			$num = mysqli_num_rows($result);
-			if ($num > 0) {
+			$row = mysqli_fetch_assoc($result);
+			$hashed_password = $row['password'];
+			if (password_verify($password, $hashed_password)) {
 				echo "Login successful";
-				session_start();
-				$_SESSION['email'] = $email;
-				
-				header('location:index.html');
+				// session_start();
+				// $_SESSION['email'] = $email;
+				// header('location:index.html');
+				// //session_destroy();
 			} else {
 				echo "Invalid data";
 			}
+		} else {
+			echo "Error: " . mysqli_error($conn);
 		}
+
 	}
 };
 
