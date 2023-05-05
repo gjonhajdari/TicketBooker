@@ -19,7 +19,7 @@
 
   <?php
   
-  require_once('php/db.php');
+  require_once('../src/modules/db.php');
 
   $sql = "SELECT * FROM questions";
 $result = mysqli_query($conn, $sql);
