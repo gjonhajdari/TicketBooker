@@ -17,10 +17,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 			$hashed_password = $row['password'];
 			if (password_verify($password, $hashed_password)) {
 				echo "Login successful";
-				// session_start();
-				// $_SESSION['email'] = $email;
-				// header('location:index.html');
-				// //session_destroy();
+				session_start();
+				$_SESSION['email'] = $email;
+				header('location:../../public/index.php');
+				session_destroy();
 			} else {
 				echo "Invalid data";
 			}
