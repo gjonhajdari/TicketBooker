@@ -1,4 +1,4 @@
-<?php $isDark = true; ?>
+<?php $isDark = false; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,23 +29,26 @@
 	<?php include "../src/templates/navbar.php"; ?>
 
 	<!-- Main content -->
-	<div class="InputMessage">
-		<h1>Got anything for us? Leave a <span> message! </span> </h1>
-		<p id="id"> Or contact us via Instagram, Linkedin or Customer Support.</p>
-		<div class="InputForm">
+	<div class="main">
+		
+		<div class="content">
+			<div class="headers">
+				<h1>
+					Got anything for us?
+					<br class="hidden"> Leave a <span> message!</span>
+				</h1>
+				<p>Or contact us via Instagram, Linkedin or Customer Support.</p>
+			</div>
+
 			<form action="../src/modules/contactConnection.php" method="POST">
-				<div class="form1 <?php echo $isDark ? '' : 'border-light'; ?>">
-					<input type="text" id="fname" name="fname" placeholder="Full Name" target="_self" method="post"
-						autofocus required>
-					<input type="email" id="femail" name="femail" placeholder="Email address" target="_self"
-						method="post" required>
+				<div class="inputs <?php echo $isDark ? '' : 'border-light'; ?>">
+					<div class="info">
+						<input type="text" name="name" required="required" placeholder="Full name" class="input">
+						<input type="email" name="email" required="required" placeholder="Email address" class="input">
+					</div>
+					<textarea name="message" placeholder="Your message" cols="30" rows="10"></textarea>
 				</div>
-				<div class="form2 <?php echo $isDark ? '' : 'border-light'; ?>">
-					<textarea name="fmessage" id="fmessage" placeholder="Your message here"></textarea>
-				</div>
-				<div class="form3">
-					<input type="submit" name="submit" id="button" class="btn" value="Send message">
-				</div>
+				<input type="submit" name="submit" id="submit" class="btn" value="Send message">
 			</form>
 		</div>
 	</div>

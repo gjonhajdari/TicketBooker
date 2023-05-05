@@ -9,13 +9,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel='icon' type='image/x-icon' href='assets/icons/Favicon.svg'>
-	<?php
-		if ($isDark == true) {
-			echo "<link rel='stylesheet' href='css/palette-dark.css'>";
-		} else {
-			echo "<link rel='stylesheet' href='css/palette-light.css'>";
-		}
-	?>
+	<link rel='stylesheet' href='css/palette-dark.css'>
 	<link rel="stylesheet" href="css/general.css">
 	<link rel="stylesheet" href="css/login.css">
 	<script src="https://kit.fontawesome.com/26e97bbe8d.js" crossorigin="anonymous"></script>
@@ -36,17 +30,16 @@
 				<h1>Welcome back!</h1>
 				<p>
 					Don't have an account?
-					<a href="signup.html">Sign up</a>.
+					<a href="signup.php">Sign up</a>.
 				</h2>
 			</div>
 	
-			<form action="../src/modules/loginConnection.php" method="POST" class="<?php echo $isDark ? '' : 'border-light'; ?>">
+			<form action="../src/modules/loginConnection.php" method="POST">
 				<input type="email" name="email" required="required" placeholder="Email address" class="input">
 	
-				<div id="password">
+				<div class="password">
 					<input type="password" name="password" required="required" placeholder="Password" class="input" id="passwordInput">
-					<i class="fa-solid fa-eye-slash" id="toggle-visibility"></i>
-					<!-- <span><i class="fa-solid fa-eye" id="eye" onclick="myfunction()"></i></span>  -->
+					<i class="fa-solid fa-eye-slash toggle-visibility" id="toggle-visibility"></i>
 				</div>
 			
 				<div id="checkbox">

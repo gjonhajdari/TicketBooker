@@ -17,10 +17,13 @@ body {
 	color: var(--text-primary);
 }
 
-.border-light input, .border-light textarea, .border-light input + i {
+.border-light input:not([type="password"]), .border-light textarea {
 	border: 1px solid var(--border) !important;
 }
 
+.border-light .password {
+	border: 1px solid var(--border) !important;
+}
 
 /*
 -------------------------------------------------
@@ -40,9 +43,18 @@ Navigation bar ----------------------------------
 	border-bottom: 1px solid var(--text-secondary);
 }
 
+.navbar-light {
+	background-color: var(--foreground);
+	box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.navbar-light .navbar-content {
+	border: none;
+}
+
 .navbar .navbar-logo svg {
-	width: 35px;
-	height: 35px;
+	width: 30px;
+	height: 30px;
 }
 
 .navbar .navbar-logo svg path {
@@ -71,8 +83,9 @@ a.link:hover {
 }
 
 .navbar-content .right #login:hover {
-	background-color: var(--text-primary);
-	color: var(--accent);
+	background-color: var(--accent);
+	color: #fff;
+	border: 1px solid var(--accent);
 }
 
 .navbar-content #burger-menu {
@@ -116,6 +129,10 @@ footer .icons svg {
 	cursor: pointer;
 	opacity: 0.5;
 	transition: 300ms;
+}
+
+.footer-light .icons svg path{
+	fill: var(--text-primary);
 }
 
 footer .icons svg:hover {

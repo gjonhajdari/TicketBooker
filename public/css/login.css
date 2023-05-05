@@ -17,6 +17,10 @@ body {
 	margin: 100px 0;
 }
 
+.main .content {
+	width: 500px;
+}
+
 .main .headers {
 	display: flex;
 	flex-direction: column;
@@ -53,17 +57,25 @@ form .input {
 	color: var(--text-primary);
 }
 
-#password {
-	width: 500px;
+form .name {
 	display: flex;
-	margin-top: 15px;
+	justify-content: space-between;
+	gap: 15px;
+	margin-bottom: 15px;
 }
 
-#password input {
+.password {
+	width: 100%;
+	display: flex;
+	margin-top: 15px;
+	border-radius: 1rem;
+}
+
+.password input {
 	border-radius: 1rem 0 0 1rem;
 }
 
-#toggle-visibility {
+.toggle-visibility {
 	background-color: var(--foreground);
 	border: none;
 	padding: 22px 20px;
@@ -84,15 +96,18 @@ form .input:focus {
 
 form #checkbox {
 	display: flex;
+	align-items: center;
+	justify-content: flex-start;
 	gap: 15px;
 	color: var(--text-secondary);
-	font-size: 1rem;
+	font-size: 1.15rem;
 	margin: 2rem 0;
 }
 
 #checkbox input {
 	width: 20px;
 	border-radius: 1rem;
+	margin-left: 5px;
 	cursor: pointer;
 	border: none;
 	outline: none;
@@ -109,7 +124,7 @@ form #checkbox {
 	font-weight: 600;
 	cursor: pointer;
 	transition: 300ms;
-	color: var(--background	);
+	color: var(--background);
 }
 
 #button:hover {
@@ -122,6 +137,10 @@ form #checkbox {
 		margin-right: 10%;
 	}
 
+	.main .content {
+		width: 100%;
+	}
+
 	.headers h1 {
 		font-size: 2rem;
 	}
@@ -132,6 +151,10 @@ form #checkbox {
 
 	.content {
 		width: 100%;
+	}
+
+	form .name {
+		flex-direction: column;
 	}
 	
 	form #password {

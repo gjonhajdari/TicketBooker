@@ -1,179 +1,113 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-    box-sizing: border-box;
-    text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
 }
 
-.InputMessage h1 {
-    color: var(--text-primary);
-    font-size: 2.25rem;
-    text-align: center;
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 100px 0;
 }
 
-.InputMessage p {
-    color: var(--text-secondary);
-    font-size: 1.15rem;
-    text-align: left;
-    text-align: center;
-	margin: 5px 0 3.5rem 0;
+.main .headers {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: flex-start;
+	margin-bottom: 2rem;
 }
 
-.InputMessage span {
-    color: var(--accent);
+.headers h1 {
+	font-size: 2.5rem;
 }
 
-.form1 #fname {
-    box-sizing: border-box;
-    background-color: var(--foreground);
-    border: none;
-    border-radius: 9px;
-    height: 45px;
-    width: 343px;
-    padding: 8px;
-    color: var(--text-secondary);
-    font-size: medium;
-    padding-left: 15px;
+.headers span {
+	color: var(--accent);
 }
 
-.form1 #femail {
-    box-sizing: border-box;
-    background-color: var(--foreground);
-    border: none;
-    border-radius: 9px;
-    height: 45px;
-    width: 343px;
-    padding: 8px;
-    color: var(--text-secondary);
-    margin-left: 5px;
-    font-size: medium;
-    padding-left: 15px;
+.headers p {
+	color: var(--text-secondary);
+	font-size: 1.25rem;
 }
 
-.form2 textarea {
-    box-sizing: border-box;
-    background-color: var(--foreground);
-    border: none;
-    border-radius: 9px;
-    height: 150px;
-    width: 700px;
-    margin: 10px;
-    padding: 10px;
-    color: var(--text-secondary);
-    resize: none;
-    font-size: medium;
-    padding-left: 15px;
+form .input, form textarea {
+	padding: 1.25rem 1.5rem;
+	border-radius: 1rem;
+	border: none;
+	background-color: var(--foreground);
+	font-size: 1.25rem;
+	width: 100%;
+	color: var(--text-primary);
+	resize: none;
 }
 
-.form3 img {
-    float: inline-start;
-    width: 30px;
-    height: 13px;
+form .inputs {
+	margin-bottom: 2rem;
 }
 
-.form3 #button {
-    box-sizing: border-box;
-    background-color: var(--accent);
-    color: var(--background);
-	font-size: 1.15rem;
-	font-weight: 500;
-    padding: 15px 0;
-    width: 700px;
-    cursor: pointer;
-    border: none;
-    border-radius: 9px;
+form textarea {
+	overflow-y: scroll;
+}
+
+form .info {
+	display: flex;
+	gap: 15px;
+	margin-bottom: 15px;
+}
+
+form .btn {
+	padding: 1rem 2rem;
+	font-size: 1.25rem;
+	border: none;
+	border-radius: 1rem;
+	width: 100%;
+	background-color: var(--accent);
+	font-weight: 600;
+	cursor: pointer;
 	transition: 300ms;
+	color: var(--background);
 }
 
-.form3 #button:hover {
-    transform: scale(1.05);
+form .btn:hover {
+	transform: translateY(-5px);
 }
 
-/*
--------------------------------------------------
-Media queries -----------------------------------
--------------------------------------------------
-*/
-
-@media screen and (max-width: 1200px) {
-    main {
-        margin-left: 30px;
-    }
-    #password {
-        display: block;
-        width: 253px;
-    }
-    #email {
-        width: 253px;
-    }
-    .btn {
-        width: 253px;
-        padding-left: 90px;
-    }
-    .footer-links {
-        margin-top: 20px;
-        margin-left: 142px;
-    }
+.hidden {
+	display: none;
 }
+
 @media screen and (max-width: 768px) {
-    main {
-        margin-left: 30px;
-    }
-    #password {
-        display: block;
-        width: 253px;
-    }
-    #email {
-        width: 253px;
-    }
-    .btn {
-        width: 253px;
-        padding-left: 90px;
-    }
-    .footer-links {
-        margin-top: 20px;
-        margin-left: 142px;
-    }
+	.main {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	.main .content {
+		width: 100%;
+	}
+
+	.headers h1 {
+		font-size: 2rem;
+	}
+
+	.headers p {
+		font-size: 1rem;
+	}
+
+	.content {
+		width: 100%;
+	}
+
+	.hidden {
+		display: block;
+	}
 }
+
 @media screen and (max-width: 500px) {
-    main {
-        margin-left: 30px;
-    }
-    #password {
-        display: block;
-        width: 253px;
-    }
-    #email {
-        width: 253px;
-    }
-    .btn {
-        width: 253px;
-        padding-left: 90px;
-    }
-    .footer-links {
-        margin-top: 20px;
-        margin-left: 142px;
-    }
-}
-@media screen and (max-width: 850px) {
-    main {
-        margin-left: 30px;
-    }
-    #password {
-        display: block;
-        width: 253px;
-    }
-    #email {
-        width: 253px;
-    }
-    .btn {
-        width: 253px;
-        padding-left: 90px;
-    }
-    .footer-links {
-        margin-top: 20px;
-        margin-left: 142px;
-    }
+	form .info {
+		flex-direction: column;
+	}
 }

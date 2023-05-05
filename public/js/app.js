@@ -7,9 +7,18 @@ $(document).ready(() => {
 
 
 	// Toggle password function
-	$('#toggle-visibility').on('click', function(e) {
+	$('#toggle-visibility-1').on('click', function(e) {
 		e.preventDefault;
-		const password = document.querySelector('#passwordInput');
+		const password = document.querySelector('#passwordInput1');
+		const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+		password.setAttribute('type', type);
+		// toggle the eye icon
+		this.classList.toggle('fa-eye');
+	});
+	
+	$('#toggle-visibility-2').on('click', function(e) {
+		e.preventDefault;
+		const password = document.querySelector('#passwordInput2');
 		const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
 		password.setAttribute('type', type);
 		// toggle the eye icon
