@@ -1,6 +1,6 @@
 <?php
 // Connect to the MySQL database
-require_once('db.php');
+require_once('../src/modules/db.php');
 
 // Check if the form has been submitted
 if(isset($_POST['submit'])) {
