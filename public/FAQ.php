@@ -1,19 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ</title>
-</head>
-<body>
-    <form action="C:\Users\valtr\OneDrive\Desktop\TicketBooker-main\public\php\FAQ.php" method="post">
-        <input type="text" name="username_or_id" id="username_or_id" placeholder="Username or ID">
-        <br>
-        <input type="text" name="question" id="question" placeholder="Write your question">
-        <br>
-        <input type="submit" name="submit" id="button" class="btn">
-    </form>
+<?php
+// Connect to the MySQL database
+require_once('db.php');
+
+// // Check if the form has been submitted
+// if (isset($_POST['submit'])) {
+//     // Get the user's input
+//     $username_or_id = $_POST['username_or_id'];
+//     $question = $_POST['question'];
     
-</body>
-</html>
+//     // Insert the question into the database
+//     $stmt = mysqli_prepare($conn, "INSERT INTO questions (username_or_id, question) VALUES (?, ?)");
+//     mysqli_stmt_bind_param($stmt, "ss", $username_or_id, $question);
+//     mysqli_stmt_execute($stmt);
+    
+//     // Close the statement
+//     mysqli_stmt_close($stmt);
+    
+//     // Show a success message to the user
+//     echo "Your question has been submitted. Thank you!";
+// }
+
+if (isset($_POST['submit'])) {
+    // Get the user's input
+    $username_or_id = $_POST['username_or_id'];
+    $question = $_POST['question'];
+    
+    // Insert the question into the database
+    $stmt = mysqli_prepare($conn, "INSERT INTO questions (username_or_id, question) VALUES (?, ?)");
+    mysqli_stmt_bind_param($stmt, "ss", $username_or_id, $question);
+    mysqli_stmt_execute($stmt);
+    
+
+
+    
+    // Close the statement
+    mysqli_stmt_close($stmt);
+    
+    // Show a success message to the user
+    echo "Your question has been submitted. Thank you!";
+}
+?>
