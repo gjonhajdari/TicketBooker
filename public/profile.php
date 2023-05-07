@@ -9,7 +9,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel='icon' type='image/x-icon' href='assets/icons/Favicon.svg'>
+	<link rel='icon' type='image/x-icon' href='assets/icons/favicon.svg'>
 	<?php
 		if ($isDark == true) {
 			echo "<link rel='stylesheet' href='css/palette-dark.css'>";
@@ -70,12 +70,12 @@
 		<center>
 			<div class="Ticket-buttons">
 				<button class="tab-button active" id="All-Tickets">
-					<img src="assets/icons/Library.svg" alt="">
+					<img src="assets/icons/library.svg" alt="">
 					<p>All tickets</p>
 				</button>
 
 				<button class="tab-button" id="Travels">
-					<img src="assets/icons/Location.svg" alt="">
+					<img src="assets/icons/location.svg" alt="">
 					<p>Travels</p>
 				</button>
 
@@ -109,7 +109,7 @@
 				<br>
 			</p>
 			<p class="TicketDate">
-				<img src="assets/icons/Calendar.svg" alt="Calendar">
+				<img src="assets/icons/calendar.svg" alt="Calendar">
 				December 23,2022
 				<p id="Time" class="TicketTime">
 					11:00 PM -2:00 AM
@@ -117,7 +117,7 @@
 			</p>
 
 			<text class="TicketLocation">
-				<img src="assets/icons/Location.svg" alt="">
+				<img src="assets/icons/location.svg" alt="">
 				Gërmia Park,Prishtinë XK</text>
 			</p>
 
@@ -126,7 +126,7 @@
 
 		<div class="Block">
 			<p class="TicketType">
-				<img src="assets/icons/Location.svg" alt="">
+				<img src="assets/icons/location.svg" alt="">
 				<text class="TicketText"> Travel Ticket </text>
 			</p>
 
@@ -136,14 +136,14 @@
 				<br>
 			</p>
 			<p class="TicketDate">
-				<img src="assets/icons/Calendar.svg" alt="Calendar">
+				<img src="assets/icons/calendar.svg" alt="Calendar">
 				March 2,2023
 				<p id="Time" class="TicketTime">
 					11:30 AM
 				</p>
 			</p>
 			<text class="TicketLocation">
-				<img src="assets/icons/Location.svg" alt="">
+				<img src="assets/icons/location.svg" alt="">
 				"Adem Jashari" Airport,Prishtinë XK</text>
 			</p>
 
@@ -161,14 +161,14 @@
 				<br>
 			</p>
 			<p class="TicketDate">
-				<img src="assets/icons/Calendar.svg" alt="Calendar">
+				<img src="assets/icons/calendar.svg" alt="Calendar">
 				December 27,2022
 				<p id="Time" class="TicketTime">
 					7:00 PM
 				</p>
 			</p>
 			<text class="TicketLocation">
-				<img src="assets/icons/Location.svg" alt="">
+				<img src="assets/icons/location.svg" alt="">
 				Cineplexx Albi Mall,Prishtinë XK</text>
 			</p>
 		</div>
@@ -196,7 +196,7 @@
 					</p>
 				</p>
 				<text class="TicketLocation">
-					<img src="assets/icons/Location.svg" alt="">
+					<img src="assets/icons/location.svg" alt="">
 					02 Academy Leeds,Leeds UK</text>
 			</p>
 		</div>
@@ -218,7 +218,7 @@
 				<p id="Time" class="TicketTime">10:30 PM - 1:30 AM</p>
 			</p>
 			<text class="TicketLocation">
-				<img src="assets/icons/Location.svg" alt="">
+				<img src="assets/icons/location.svg" alt="">
 				Velvet Underground,Toronto CA</text>
 			</p>
 		</div>
@@ -234,12 +234,12 @@
 				Toronto Canada
 			</p>
 			<p class="TicketDate">
-				<img src="assets/icons/Location.svg" alt="">
+				<img src="assets/icons/location.svg" alt="">
 				January 4,2023
 				<p id="Time" class="TicketTime">11:30 AM</p>
 			</p>
 			<text class="TicketLocation">
-				<img src="assets/icons/Location.svg" alt="">
+				<img src="assets/icons/location.svg" alt="">
 				"Adem Jashari"Airport,Prishtinë</text>
 			</p>
 		</div>

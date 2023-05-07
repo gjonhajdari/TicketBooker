@@ -33,7 +33,7 @@
 
 		<div class="hero">
 			<h1>So <span class="accent">who</span> are we exactly?</h1>
-			<?php echo file_get_contents('assets/icons/Path.svg') ?>
+			<?php echo file_get_contents('assets/icons/path.svg') ?>
 		</div>
 
 		<div class="section">
@@ -45,11 +45,11 @@
 				are charged at the point of purchase or after your event has ended.
 			</p>
 
-			<img src="assets/icons/Ticket.svg" alt="Ticket icon">
+			<img src="assets/icons/ticket.svg" alt="Ticket icon">
 		</div>
 
 		<div class="section">
-			<img src="assets/icons/World.svg" alt="World icon">
+			<img src="assets/icons/world.svg" alt="World icon">
 
 			<p>
 				TicketBooker operates in all <span> EU countries, Iceland, Norway and Switzerland.</span> 
@@ -70,7 +70,7 @@
 				City Index Ventures in May 2014.
 			</p>
 
-			<img src="assets/icons/Increase.svg" alt="Ticket icon">
+			<img src="assets/icons/increase.svg" alt="Ticket icon">
 		</div>
 
 	</div>

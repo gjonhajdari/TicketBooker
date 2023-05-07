@@ -5,14 +5,14 @@
 	
 		<div class="card-body">
 			<div class="date <?php echo $isDark ? '' : 'icon-light'; ?>">
-				<?php echo file_get_contents('assets/icons/Calendar.svg') ?>
+				<?php echo file_get_contents('assets/icons/calendar.svg') ?>
 				<div class="info">
 					<p class="primary">Date</p>
 					<p class="secondary">Start time - end time</p>
 				</div>
 			</div>
 			<div class="location <?php echo $isDark ? '' : 'icon-light'; ?>">
-				<?php echo file_get_contents('assets/icons/Location.svg') ?>
+				<?php echo file_get_contents('assets/icons/location.svg') ?>
 				<div class="info">
 					<p class="primary">Location</p>
 				</div>

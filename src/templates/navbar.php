@@ -1,7 +1,7 @@
 <nav class="navbar <?php echo $isDark ? '' : 'navbar-light'; ?>">
 	<div class="navbar-content">
 		<a class="navbar-logo" href="index.php">
-			<?php echo file_get_contents('assets/icons/Logo.svg') ?>
+			<?php echo file_get_contents('assets/icons/logo.svg') ?>
 		</a>
 		<div class="middle">
 			<a href="index.php" class="link">Home</a>

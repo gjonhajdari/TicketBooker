@@ -4,10 +4,14 @@ Main content ------------------------------------
 -------------------------------------------------
 */
 body {
-	background-image: url(../assets/icons/Blob.svg);
+	background-image: url(../assets/icons/blob.svg);
 	background-repeat: no-repeat;
 	background-position: -300px -100px;
 	/* height: 100vh; */
+}
+
+.body-light {
+	background-image: url(../assets/icons/blob-light.svg);
 }
 
 main {
@@ -77,8 +81,12 @@ main .btn {
 	transition: 300ms;
 }
 
-.btn svg {
+.btn svg path {
 	fill: var(--background);
+}
+
+.btn-light svg path {
+	fill: var(--foreground);
 }
 
 main .btn:hover {
