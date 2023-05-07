@@ -1,4 +1,12 @@
-<php $isDark = true; ?>
+<?php 
+
+	$isDark = true;
+	$isLoggedIn = true;
+	$avatar = 10;
+	$first_name = 'Gjon';
+	$last_name = 'Hajdari';
+
+?>
 
 
 <!DOCTYPE html>
@@ -28,7 +36,7 @@
 <body>
 	
 	<!-- Navigation Bar -->
-	<?php include "../src/templates/navbar.php"; ?>
+	<?php include "../src/templates/navbarLoggedin.php"; ?>
 
 	<main>
 		<div class="Profile">

@@ -1,4 +1,12 @@
-<?php $isDark = true; ?>
+<?php 
+
+	$isDark = true;
+	$isLoggedIn = false;
+	$avatar = 10;
+	$first_name = 'Gjon';
+	$last_name = 'Hajdari';
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,8 +15,8 @@
 	<title>About - TicketBooker</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=, initial-scale=1.0">
-	<link rel='icon' type='image/x-icon' href='/assets/Favicon.svg'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel='icon' type='image/x-icon' href='assets/icons/favicon.svg'>
 	<?php
 		if ($isDark == true) {
 			echo "<link rel='stylesheet' href='css/palette-dark.css'>";
@@ -26,7 +34,7 @@
 <body>
 
 	<!-- Navigation Bar -->
-	<?php include('../src/templates/navbar.php') ?>
+	<?php $isLoggedIn ? include "../src/templates/navbarLoggedin.php" : include "../src/templates/navbar.php"; ?>
 
 	<!-- Main content -->
 	<div class="container">

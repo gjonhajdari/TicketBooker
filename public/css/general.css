@@ -260,7 +260,7 @@ Media Queries -----------------------------------
 		margin-top: 20px;
 	}
 	
-	.navbar .middle, .navbar-logged .navbar-content .right {
+	.navbar .middle, .navbar .right, .navbar-logged .right {
 		display: none;
 	}
 

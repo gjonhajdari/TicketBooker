@@ -5,13 +5,13 @@
 						echo !$isLoggedIn ? '' : ' navbar-logged';
 					?>">
 	<div class="navbar-content">
-		<a class="navbar-logo" href="index.html">
+		<a class="navbar-logo" href="index.php">
 			<?php echo file_get_contents('assets/icons/logo.svg') ?>
 		</a>
 		<div class="middle">
-			<a href="index.html" class="link">Home</a>
-			<a href="aboutus.html" class="link">About</a>
-			<a href="contact.html" class="link">Contact</a>
+			<a href="index.php" class="link">Home</a>
+			<a href="about.php" class="link">About</a>
+			<a href="contact.php" class="link">Contact</a>
 		</div>
 		<div class="right">
 			<img id="profile-picture" src="assets/images/profiles/profile-picture-<?php echo $avatar; ?>.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
