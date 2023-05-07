@@ -3,8 +3,13 @@ $(document).ready(() => {
 	$("#burger-menu").click(() => {
 		$(".middle").toggle();
 		$(".right").toggle();
+		$('.dropdown').hide();
 	});
 
+	// Profile options dropdown
+	$('.navbar-logged .right').click(() => {
+		$('.dropdown').toggle();
+	});
 
 	// Toggle password function
 	$('#toggle-visibility-1').on('click', function(e) {

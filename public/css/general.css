@@ -75,6 +75,11 @@ a.link:hover {
 	color: var(--accent);
 }
 
+.navbar-logged .navbar-content .right .name {
+	display: none;
+	margin-top: 10px;
+}
+
 .navbar-content .right #login {
 	padding: 8px 20px;
 	border: 1px solid var(--text-primary);
@@ -86,6 +91,10 @@ a.link:hover {
 	background-color: var(--accent);
 	color: #fff;
 	border: 1px solid var(--accent);
+}
+
+.navbar-logged .right {
+	cursor: pointer;
 }
 
 .navbar-content #burger-menu {
@@ -101,6 +110,79 @@ a.link:hover {
 	opacity: 1;
 }
 
+.navbar .dropdown {
+	background-color: var(--foreground);
+	border: 1px solid var(--border);
+	border-radius: 1rem;
+	width: 250px;
+	padding: 1rem 0;
+	gap: 15px;
+	position: absolute;
+	right: 4rem;
+	top: 85px;
+	display: none;
+}
+
+.dropdown .top {
+	padding: 0 1.5rem;
+	margin-bottom: 15px;
+}
+
+.navbar .dropdown .info {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 15px;
+	margin-bottom: 15px;
+}
+
+.navbar .dropdown hr {
+	border: none;
+	border-bottom: 1px solid var(--border);
+}
+
+.navbar .dropdown .options {
+	display: flex;
+	flex-direction: column;
+}
+
+.navbar-light .dropdown svg path {
+	stroke: var(--text-primary);
+}
+
+.navbar-light .dropdown #gear path {
+	fill: var(--text-primary);
+	stroke: none;
+}
+
+.navbar .dropdown .options .option {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 15px;
+	padding: 10px 1.5rem;
+	cursor: pointer;
+	text-decoration: none;
+	color: var(--text-primary);
+}
+
+.dropdown .option:visited {
+	color: var(--text-primary);
+}
+
+.navbar .dropdown .options .option:hover {
+	background-color: var(--accent);
+	color: var(--background);
+}
+
+.navbar .dropdown .options .option:hover svg path {
+	stroke: var(--background);
+}
+
+.navbar .dropdown .options .option:hover #gear path {
+	fill: var(--background);
+	stroke: none;
+}
 
 /*
 -------------------------------------------------
@@ -173,22 +255,74 @@ Media Queries -----------------------------------
 	.navbar-content {
 		display: block;
 	}
+
+	.navbar .middle {
+		margin-top: 20px;
+	}
 	
-	.navbar .middle, .right {
+	.navbar .middle, .navbar-logged .navbar-content .right {
 		display: none;
+	}
+
+	.navbar-logged .navbar-content .right .name {
+		display: block;
+	}	
+
+	.navbar-logged .right {
+		margin-top: 5px;
 	}
 	
 	.navbar a.link {
 		display: block;
 		margin-left: 0 !important;
 		width: 100%;
-		text-align: center;
+		text-align: left;
 		padding: 1rem 0;
 	}
 	
 	.navbar .right #login {
 		margin-left: 0 !important;
 		padding: 0.75rem 0 !important;
+		border: none;
+	}
+
+	.navbar .right #login:hover {
+		background-color: transparent;
+		border: none;
+		color: var(--accent);
+	}
+
+	.navbar .dropdown {
+		position: inherit;
+		background-color: transparent;
+		width: 100%;
+		border: none;
+	}
+
+	.dropdown .option, .option svg path {
+		transition: 300ms;
+	}
+
+	.navbar .dropdown .options .option {
+		padding: 15px 1.5rem;
+	}
+
+	.navbar .dropdown .top {
+		display: none;
+	}
+
+	.navbar .dropdown .options .option:hover {
+		background-color: transparent;
+		color: var(--accent);
+	}
+
+	.navbar .dropdown .options .option:hover svg path {
+		stroke: var(--accent);
+	}
+	
+	.navbar .dropdown .options .option:hover #gear path {
+		fill: var(--accent);
+		stroke: none;
 	}
 	
 	footer {

@@ -1,8 +1,12 @@
 <!-- Navigation bar -->
-<nav class="navbar <?php echo $isDark ? '' : 'navbar-light'; ?>">
+<nav 
+	class="navbar <?php
+						echo $isDark ? '' : ' navbar-light';
+						echo !$isLoggedIn ? '' : ' navbar-logged';
+					?>">
 	<div class="navbar-content">
 		<a class="navbar-logo" href="index.html">
-			<?php echo file_get_contents('assets/icons/Logo.svg') ?>
+			<?php echo file_get_contents('assets/icons/logo.svg') ?>
 		</a>
 		<div class="middle">
 			<a href="index.html" class="link">Home</a>
@@ -10,8 +14,37 @@
 			<a href="contact.html" class="link">Contact</a>
 		</div>
 		<div class="right">
-			<img src="assets/images/ProfilePicture.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+			<img id="profile-picture" src="assets/images/profiles/profile-picture-<?php echo $avatar; ?>.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+			<p class="name"><?php echo $first_name . " " . $last_name; ?></p>
 		</div>
+
+		<div class="dropdown">
+			<div class="top">
+				<div class="info">
+					<img src="assets/images/profiles/profile-picture-<?php echo $avatar; ?>.jpg" alt="" width="50" height="50" style="border-radius: 50%;">
+					<?php echo $first_name . " " . $last_name; ?>
+				</div>
+		
+				<hr>
+			</div>
+	
+			<div class="options">
+				<a href="profile.php" class="option">
+					<?php echo file_get_contents('assets/icons/profile.svg') ?>
+					<p>Profile</p>
+				</a>
+				<a href="editProfile.php" class="option">
+					<?php echo file_get_contents('assets/icons/settings.svg') ?>
+					<p>Settings</p>
+				</a>
+				<a href="#" class="option">
+					<?php echo file_get_contents('assets/icons/logout.svg') ?>
+					<p>Log out</p>
+				</a>
+			</div>
+		</div>
+		
 		<i class="fa-solid fa-bars-staggered" id="burger-menu"></i>
 	</div>
+
 </nav>
