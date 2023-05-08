@@ -1,10 +1,10 @@
-<?php 
+<?php
 
-	$isDark = true;
-	$isLoggedIn = true;
-	$avatar = 10;
-	$first_name = 'Gjon';
-	$last_name = 'Hajdari';
+$isDark = true;
+$isLoggedIn = true;
+$avatar = 10;
+$first_name = 'Gjon';
+$last_name = 'Hajdari';
 
 ?>
 
@@ -19,11 +19,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel='icon' type='image/x-icon' href='assets/icons/favicon.svg'>
 	<?php
-		if ($isDark == true) {
-			echo "<link rel='stylesheet' href='css/palette-dark.css'>";
-		} else {
-			echo "<link rel='stylesheet' href='css/palette-light.css'>";
-		}
+	if ($isDark == true) {
+		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
+	} else {
+		echo "<link rel='stylesheet' href='css/palette-light.css'>";
+	}
 	?>
 	<link rel="stylesheet" href="css/general.css">
 	<link rel="stylesheet" href="css/profile.css">
@@ -34,7 +34,7 @@
 </head>
 
 <body>
-	
+
 	<!-- Navigation Bar -->
 	<?php include "../src/templates/navbarLoggedin.php"; ?>
 
@@ -60,7 +60,7 @@
 				<br>
 				<br>
 				<p id="Profile-Paragraph1">
-					  Klajdi Gashi
+					Klajdi Gashi
 				</p>
 				<br>
 				<p id="Profile-Paragraph1" style="color: var(--foreground);">@KlajdixGashii </p>
@@ -68,10 +68,10 @@
 				<!--profile-->
 				<br>
 				<a href="login.html">
-				<button id="LogOut-Profile">
-					Log Out
-				</button>
-			</a>
+					<button id="LogOut-Profile">
+						Log Out
+					</button>
+				</a>
 			</div>
 		</div>
 
@@ -109,7 +109,7 @@
 			<p class="TicketType">
 				<img src="assets/icons/Concert.svg" alt="">
 				<text class="TicketText">Concert Ticket</text>
-				
+
 			</p>
 			<hr>
 			<p class="TicketTitle">
@@ -119,9 +119,9 @@
 			<p class="TicketDate">
 				<img src="assets/icons/calendar.svg" alt="Calendar">
 				December 23,2022
-				<p id="Time" class="TicketTime">
-					11:00 PM -2:00 AM
-				</p>
+			<p id="Time" class="TicketTime">
+				11:00 PM -2:00 AM
+			</p>
 			</p>
 
 			<text class="TicketLocation">
@@ -146,9 +146,9 @@
 			<p class="TicketDate">
 				<img src="assets/icons/calendar.svg" alt="Calendar">
 				March 2,2023
-				<p id="Time" class="TicketTime">
-					11:30 AM
-				</p>
+			<p id="Time" class="TicketTime">
+				11:30 AM
+			</p>
 			</p>
 			<text class="TicketLocation">
 				<img src="assets/icons/location.svg" alt="">
@@ -171,9 +171,9 @@
 			<p class="TicketDate">
 				<img src="assets/icons/calendar.svg" alt="Calendar">
 				December 27,2022
-				<p id="Time" class="TicketTime">
-					7:00 PM
-				</p>
+			<p id="Time" class="TicketTime">
+				7:00 PM
+			</p>
 			</p>
 			<text class="TicketLocation">
 				<img src="assets/icons/location.svg" alt="">
@@ -196,16 +196,16 @@
 			</p>
 			<p class="TicketDate">
 
-				<p class="TicketDate">
-					<img src="assets/icons/Concert.svg" alt="">
-					March 7,2023
-					<p id="Time" class="TicketTime">
-						9:00 PM - 1:00 AM
-					</p>
-				</p>
-				<text class="TicketLocation">
-					<img src="assets/icons/location.svg" alt="">
-					02 Academy Leeds,Leeds UK</text>
+			<p class="TicketDate">
+				<img src="assets/icons/Concert.svg" alt="">
+				March 7,2023
+			<p id="Time" class="TicketTime">
+				9:00 PM - 1:00 AM
+			</p>
+			</p>
+			<text class="TicketLocation">
+				<img src="assets/icons/location.svg" alt="">
+				02 Academy Leeds,Leeds UK</text>
 			</p>
 		</div>
 
@@ -223,7 +223,7 @@
 			<p class="TicketDate">
 				<img src="assets/icons/Concert.svg" alt="Concert">
 				December 5, 2022
-				<p id="Time" class="TicketTime">10:30 PM - 1:30 AM</p>
+			<p id="Time" class="TicketTime">10:30 PM - 1:30 AM</p>
 			</p>
 			<text class="TicketLocation">
 				<img src="assets/icons/location.svg" alt="">
@@ -244,7 +244,7 @@
 			<p class="TicketDate">
 				<img src="assets/icons/location.svg" alt="">
 				January 4,2023
-				<p id="Time" class="TicketTime">11:30 AM</p>
+			<p id="Time" class="TicketTime">11:30 AM</p>
 			</p>
 			<text class="TicketLocation">
 				<img src="assets/icons/location.svg" alt="">
