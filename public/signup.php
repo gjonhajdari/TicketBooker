@@ -68,6 +68,13 @@ if (isset($_SESSION["user"])) {
 
 
 		<?php 
+		use PHPMailer\PHPMailer\PHPMailer;
+
+		require_once '../phpmailer/src/Exception.php';
+		require_once '../phpmailer/src/PHPMailer.php';
+		require_once '../phpmailer/src/SMTP.php';
+		
+		
 require_once('../src/modules/db.php');
 if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 	$conn or die("Connection failed: ".mysqli_connect_error());
@@ -111,6 +118,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
                 echo "<div class='alert alert-danger w-50 p-3'>$error</div>";
             }
            }else{
+			if(isset($_POST["submit"])){
+				$mail = new PHPMailer(true);
+					
+				$mail -> isSMTP();
+				$mail ->Host = 'smtp.gmail.com';
+				$mail ->SMTPAuth = true;
+				$mail -> Username = 'vera.llugiqi03@gmail.com';
+				$mail ->Password = 'egjqnnlylmrxujoh';
+				$mail -> SMTPSecure = 'ssl';
+				$mail->Port = 465;
+			
+				$mail -> setFrom('vera.llugiqi03@gmail.com');
+				$mail -> addAddress($_POST["email"]);
+			
+				$mail->Subject = "Registration Succesful";
+				$mail ->Body = "Thank you for joining the TicketBooker site. ";
+			
+				$mail ->send();
+			
+			  
+			}
 
             $user_adm = $_POST['user_adm'];
 			$checkbox = $_POST['checkbox'];
@@ -128,38 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 	}	  
  mysqli_close($conn);
 ?>
-<?php  
 
-use PHPMailer\PHPMailer\PHPMailer;
-
-require_once '../phpmailer/src/Exception.php';
-require_once '../phpmailer/src/PHPMailer.php';
-require_once '../phpmailer/src/SMTP.php';
-
-
-if(isset($_POST["submit"])){
-    $mail = new PHPMailer(true);
-		
-    $mail -> isSMTP();
-    $mail ->Host = 'smtp.gmail.com';
-    $mail ->SMTPAuth = true;
-    $mail -> Username = 'vera.llugiqi03@gmail.com';
-    $mail ->Password = 'egjqnnlylmrxujoh';
-    $mail -> SMTPSecure = 'ssl';
-    $mail->Port = 465;
-
-    $mail -> setFrom('vera.llugiqi03@gmail.com');
-    $mail -> addAddress($_POST["email"]);
-
-    $mail->Subject = "Registration Succesful";
-    $mail ->Body = "Thank you for joining the TicketBooker site ";
-
-    $mail ->send();
-
-  
-}
-
-?>
 
 
 		<!-- ../src/modules/signupConnection.php -->
