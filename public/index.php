@@ -1,6 +1,6 @@
 <?php 
 
-	$isDark = true;
+	$isDark = false;
 	$isLoggedIn = true;
 	$avatar = 10;
 	$first_name = 'Gjon';
@@ -48,7 +48,7 @@
 			<div class="options">
 				<p>What, when, where?</p>
 
-				<div class="selectors">
+				<div class="selectors <?php echo $isDark ? '' : 'border-light'; ?>">
 					<select name="what" id="select-what">
 						<option value="Movie">Movie</option>
 						<option value="Travel">Travel</option>

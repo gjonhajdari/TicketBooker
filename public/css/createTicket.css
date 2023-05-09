@@ -1,0 +1,103 @@
+/*
+-------------------------------------------------
+Main content ------------------------------------
+-------------------------------------------------
+*/
+body {
+	height: 100vh;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.content {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.header {
+	font-size: 2.5rem;
+}
+
+.content .inputs {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.inputs .input-field .description {
+	font-size: 1.15rem;
+	color: var(--text-secondary);
+	margin-bottom: 15px;
+	font-weight: 400;
+}
+
+.input-field .selectors {
+	display: flex;
+	gap: 15px;
+	width: auto;
+}
+
+.input-field select, .input-field input, .input-field textarea{
+	padding: 0.75rem 1rem;
+	background-color: var(--foreground);
+	color: var(--text-primary);
+	border-radius: 0.75rem;
+	border: none;
+	font-size: 1.15rem;
+}
+
+input::placeholder, textarea::placeholder, select::placeholder {
+	color: var(--border);
+}
+
+.input-field input[type=text] {
+	width: 350px;
+}
+
+.input-field textarea {
+	width: 750px;
+	overflow-y: hidden;
+}
+
+::-webkit-calendar-picker-indicator {
+	filter: invert(100%);
+	cursor: pointer;
+}
+
+.inputs #button {
+	padding: 0.75rem 1rem;
+	background-color: var(--accent);
+	color: var(--background);
+	border-radius: 0.75rem;
+	border: none;
+	font-size: 1.15rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: 300ms;
+}
+
+.inputs #button:hover {
+	transform: translateY(-5px);
+}
+
+@media screen and (max-width: 767px) {
+	.container {
+		display: block;
+	}
+
+	.inputs {
+		width: 100%;
+	}
+
+	.input-field input, .input-field textarea, .input-field select {
+		width: 100% !important;
+	}
+}
