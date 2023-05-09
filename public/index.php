@@ -1,10 +1,10 @@
 <?php 
 
-	$isDark = false;
+	$isDark = true;
 	$isLoggedIn = true;
-	$avatar = 10;
-	$first_name = 'Gjon';
-	$last_name = 'Hajdari';
+	$avatar = 5;
+	$first_name = 'Zana';
+	$last_name = 'Misini';
 
 ?>
 
