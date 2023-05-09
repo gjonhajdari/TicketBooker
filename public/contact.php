@@ -48,7 +48,7 @@
 				<p>Or contact us via Instagram, Linkedin or Customer Support.</p>
 			</div>
 
-			<form action="../src/modules/contactConnection.php" method="POST">
+			<form action="../src/modules/contactFunction.php" method="POST">
 				<div class="inputs <?php echo $isDark ? '' : 'border-light'; ?>">
 					<div class="info">
 						<input type="text" name="name" required="required" placeholder="Full name" class="input">
