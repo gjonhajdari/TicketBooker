@@ -4,10 +4,10 @@ $isDark = true;
 $isLoggedIn = true;
 $isChecked = false;
 $avatar = 4;
-$full_name = 'Gjon Hajdari';
-$first_name = 'Gjon';
-$last_name = 'Hajdari';
-$email = 'gjonhajdari1@gmail.com'
+$full_name = 'Zana Misini';
+$first_name = 'Zana';
+$last_name = 'Misini';
+$email = 'zaanamisinii@gmail.com'
 
 ?>
 
