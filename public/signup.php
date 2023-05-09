@@ -16,7 +16,7 @@ if (isset($_SESSION["user"])) {
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=, initial-scale=1.0">
-	<link rel='icon' type='image/x-icon' href="assets/favicon.svg'>
+	<link rel='icon' type='image/x-icon' href='../assets/Favicon.svg'>
 	<?php
 	if ($isDark == true) {
 		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
@@ -128,7 +128,38 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 	}	  
  mysqli_close($conn);
 ?>
+<?php  
 
+use PHPMailer\PHPMailer\PHPMailer;
+
+require_once '../phpmailer/src/Exception.php';
+require_once '../phpmailer/src/PHPMailer.php';
+require_once '../phpmailer/src/SMTP.php';
+
+
+if(isset($_POST["submit"])){
+    $mail = new PHPMailer(true);
+		
+    $mail -> isSMTP();
+    $mail ->Host = 'smtp.gmail.com';
+    $mail ->SMTPAuth = true;
+    $mail -> Username = 'vera.llugiqi03@gmail.com';
+    $mail ->Password = 'egjqnnlylmrxujoh';
+    $mail -> SMTPSecure = 'ssl';
+    $mail->Port = 465;
+
+    $mail -> setFrom('vera.llugiqi03@gmail.com');
+    $mail -> addAddress($_POST["email"]);
+
+    $mail->Subject = "Registration Succesful";
+    $mail ->Body = "Thank you for joining the TicketBooker site ";
+
+    $mail ->send();
+
+  
+}
+
+?>
 
 
 		<!-- ../src/modules/signupConnection.php -->
