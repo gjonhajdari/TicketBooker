@@ -3,8 +3,7 @@
 	$isDark = true;
 	$isLoggedIn = false;
 	$avatar = 10;
-	$first_name = 'Gjon';
-	$last_name = 'Hajdari';
+	$first_name = 'Gjon Hajdari';
 
 ?>
 
