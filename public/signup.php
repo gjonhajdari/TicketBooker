@@ -211,59 +211,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 	</main>
 	<br><br><br>
 
-	<!-- INTEGRATE THIS PART OF THE OLD FRONT END -->
-	<!-- Main content -->
-	<!--
-	<div class="main">
-
-		<div class="content">
-			<div class="headers">
-				<h1>Create an account</h1>
-				<p>
-					Already have one?
-					<a href="login.php">Log in</a>.
-				</h2>
-			</div>
-
-			<form action="../src/modules/signupFunction.php" method="POST">
-
-				<div class="user-type">
-					<label>
-						<input type="radio" name="user-type" value="INDIVIDUAL">
-						Individual
-					</label>
-					<label>
-						<input type="radio" name="user-type" value="BUSINESS">
-						Business
-					</label>
-				</div>
-
-				<input type="text" name="name" required="required" placeholder="Name" class="input">
-
-				<input type="email" name="email" required="required" placeholder="Email address" class="input">
-
-				<div class="password <?php # echo $isDark ? '' : 'border-light'; ?>">
-					<input type="password" name="password" required="required" placeholder="Password" class="input" id="passwordInput1">
-					<i class="fa-solid fa-eye-slash toggle-visibility" id="toggle-visibility-1"></i>
-				</div>
-				
-				<div class="password <?php # echo $isDark ? '' : 'border-light'; ?>">
-					<input type="password" name="password-confirm" required="required" placeholder="Confirm password" class="input" id="passwordInput2">
-					<i class="fa-solid fa-eye-slash toggle-visibility" id="toggle-visibility-2"></i>
-				</div>
-			
-				<div id="checkbox">
-					<input type="checkbox" name="checkbox" id="check">
-					<p>
-						I agree to the <a href="assets/extra/TERMS_AND_CONDITIONS.pdf">Terms of Use</a> & <a href="assets/extra/PRIVACY_POLICY.pdf	">Privacy Policy</a>
-					</p>
-				</div>
-			<input type="submit" name="submit" id="button"  class="btn">
-			</form>
-		</div>
-
-	</div> -->
-
 	<!-- Footer -->
 	<?php include "../src/templates/footer.php"; ?>
 
