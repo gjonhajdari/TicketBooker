@@ -133,7 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 				$mail -> addAddress($_POST["email"]);
 			
 				$mail->Subject = "Registration Succesful";
-				$mail ->Body = "Thank you for joining the TicketBooker site. ";
+				$mail ->Body = "Thank you ". $_POST["name_buss"] ." for joining the TicketBooker site. ";
 			
 				$mail ->send();
 			
