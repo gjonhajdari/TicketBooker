@@ -11,6 +11,9 @@ $full_name = 'Gjon Hajdari';
 <html lang="en">
 
 <head>
+    <!-- Navigation bar -->
+    <?php include "../src/templates/navbarLoggedin.php"; ?>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,6 +85,9 @@ $full_name = 'Gjon Hajdari';
   
   ?> 
   -->
+
+    <?php include "../src/templates/footer.php"; ?>
+
 </body>
 
 </html>
