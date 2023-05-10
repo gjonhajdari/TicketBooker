@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 			if (password_verify($password, $user["password"])) {
 				session_start();
 				$_SESSION["user"] = "yes";
-				header('location:../../public/index.php');
+				header('location:index.php');
 				die();
 			}
 		}else{
