@@ -5,8 +5,6 @@ $isLoggedIn = true;
 $isChecked = false;
 $avatar = 4;
 $full_name = 'Zana Misini';
-$first_name = 'Zana';
-$last_name = 'Misini';
 $email = 'zaanamisinii@gmail.com'
 
 ?>
@@ -74,12 +72,8 @@ $email = 'zaanamisinii@gmail.com'
 					</div>
 					<div class="inputs">
 						<div class="input-field">
-							<label>First Name</label>
-							<input type="text" class="input" value="<?php echo $first_name; ?>">
-						</div>
-						<div class="input-field">
-							<label>Last Name</label>
-							<input type="text" class="input" value="<?php echo $last_name; ?>">
+							<label>Name</label>
+							<input type="text" class="input" value="<?php echo $full_name; ?>">
 						</div>
 						<div class="input-field">
 							<label>Email address</label>
