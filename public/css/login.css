@@ -47,6 +47,31 @@ body {
 	text-decoration: underline;
 }
 
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.user-type {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.user-type label {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: var(--text-secondary);
+	font-size: 1.15rem;
+}
+
+.user-type label input {
+	width: 20px;
+	height: 20px;
+}
+
 form .input {
 	padding: 1.25rem 1.5rem;
 	border-radius: 1rem;
@@ -57,17 +82,10 @@ form .input {
 	color: var(--text-primary);
 }
 
-form .name {
-	display: flex;
-	justify-content: space-between;
-	gap: 15px;
-	margin-bottom: 15px;
-}
-
 .password {
 	width: 100%;
 	display: flex;
-	margin-top: 15px;
+	/* margin-top: 15px; */
 	border-radius: 1rem;
 }
 
@@ -106,12 +124,22 @@ form #checkbox {
 
 #checkbox input {
 	width: 20px;
+	height: 20px;
 	border-radius: 1rem;
 	margin-left: 5px;
 	cursor: pointer;
 	border: none;
 	outline: none;
 	accent-color: var(--accent);
+}
+
+#checkbox a {
+	text-decoration: none;
+	color: var(--accent);
+}
+
+#checkbox a:hover {
+	text-decoration: underline;
 }
 
 #button {
@@ -159,5 +187,14 @@ form #checkbox {
 	
 	form #password {
 		width: 100%;
+	}
+
+	#checkbox input {
+		width: 15px;
+		height: 15px;
+	}
+
+	#checkbox p {
+		font-size: 0.75rem;
 	}
 }
