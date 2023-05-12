@@ -23,7 +23,7 @@ if (isset($_SESSION["user"])) {
 	} else {
 		echo "<link rel='stylesheet' href='css/palette-light.css'>";
 	}
-	?>
+	?> 
 	<link rel="stylesheet" href="css/general.css">
 	<link rel="stylesheet" href="css/signup.css">
 	<script src="https://kit.fontawesome.com/26e97bbe8d.js" crossorigin="anonymous"></script>
