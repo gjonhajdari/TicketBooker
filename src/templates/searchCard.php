@@ -1,6 +1,6 @@
 <div class="col-12 col-12 col-md-6 col-lg-4">
 
-	<div class="card">
+	<div class="card <?php echo $isDark ? '' : 'card-light'; ?>">
 		<h1 class="card-title">Card title</h1>
 	
 		<div class="card-body">

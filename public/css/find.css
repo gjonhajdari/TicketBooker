@@ -1,0 +1,218 @@
+main {
+    margin: 100px 0;
+}
+
+.container .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.container .top h1 {
+    font-size: 2.5rem;
+}
+
+.top .filters {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.top .filters p {
+    font-size: 1.15rem;
+}
+
+.top .filters .name {
+    color: var(--text-secondary);
+}
+
+.top .filters .labels {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.labels .label {
+    padding: 5px 15px;
+    border-radius: 0.5rem;
+    background-color: var(--foreground);
+    color: var(--text-primary);
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+    font-size: 1.15rem;
+    margin-bottom: 30px;
+}
+
+.search .results p {
+    color: var(--text-secondary);
+}
+
+.search .results #amount {
+    color: var(--text-primary);
+}
+
+.search .btn {
+    background-color: var(--accent);
+    color: var(--background);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 8px 15px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 300ms;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.search .btn:hover {
+    gap: 25px;
+}
+
+.btn-light svg path {
+    stroke: var(--foreground);
+}
+
+/*
+-------------------------------------------------
+Modal -------------------------------------------
+-------------------------------------------------
+*/
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: var(--background);
+    border-radius: 1.5rem;
+    border: 1px solid var(--border);
+    gap: 30px;
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    top: -500px;
+    transform: translateX(-50%);
+    width: 550px;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.1);
+    transition: 200ms;
+}
+
+.modal-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.modal-top h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.modal-top .close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.close svg path {
+    fill: var(--accent);
+}
+
+.close:hover {
+    transform: scale(1.1);
+}
+
+.modal .options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.options select, .options input {
+    padding: 8px 15px;
+    background-color: var(--foreground);
+    border-radius: 0.5rem;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.15rem;
+}
+
+::-webkit-calendar-picker-indicator {
+	filter: invert(100%);
+	cursor: pointer;
+}
+
+.border-light ::-webkit-calendar-picker-indicator {
+    filter: invert(0);
+}
+
+.modal #find {
+    padding: 10px 50px;
+    background-color: var(--accent);
+    color: var(--foreground);
+    border-radius: 0.75rem;
+    border: none;
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.modal #find:hover {
+    transform: scale(1.05);
+}
+
+.blurred {
+    opacity: 0.2;
+    filter: blur(5px);
+}
+
+@media screen and (max-width: 767px) {
+    .container .top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .container .top .filters {
+        align-items: flex-start;
+    }
+
+    .modal {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .modal-top h1 {
+        font-size: 1.25rem;
+    }
+
+    .modal .options {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .modal #find {
+        width: 100%;
+    }
+}

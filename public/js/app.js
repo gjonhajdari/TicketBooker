@@ -29,6 +29,18 @@ $(document).ready(() => {
 		// toggle the eye icon
 		this.classList.toggle('fa-eye');
 	});
+
+	// Open the modal
+	$('#search').click(() => {
+		$('.container').addClass('blurred');
+		$('#modal').css('top', '200px');
+	});
+
+	// Close the modal
+	$('#close').click(() => {
+		$('.container').removeClass('blurred');
+		$('#modal').css('top', '-600px');
+	});
 });
 
 /*
