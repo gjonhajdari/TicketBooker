@@ -15,7 +15,7 @@ if (isset($_SESSION["user"])) {
 	<title>Sign Up - TicketBooker</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel='icon' type='image/x-icon' href='../assets/Favicon.svg'>
 	<?php
 	if ($isDark == true) {
@@ -29,7 +29,7 @@ if (isset($_SESSION["user"])) {
 	<script src="https://kit.fontawesome.com/26e97bbe8d.js" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 	<script src="js/app.js"></script>
-
+	<link rel="stylesheet" href="css/login.css">
 	<style>
 	.alert {
   padding: 0.75rem 1.25rem;
@@ -79,9 +79,9 @@ require_once('../src/modules/db.php');
 if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 	$conn or die("Connection failed: ".mysqli_connect_error());
 		
-		$name_buss = $_POST['name_buss'];
+		$name = $_POST['name'];
 		$email = $_POST['email'];
-		$email_confirm = $_POST['email_confirm'];
+	//	$email_confirm = $_POST['email_confirm'];
 		$password = $_POST['password'];
 		$password_confirm = $_POST['password_confirm'];
 
@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 		
 		$errors = array();
            
-		 if (empty($_POST['user_adm']) || empty($_POST['name_buss']) || empty($_POST['email']) || empty($_POST['email_confirm']) || empty($_POST['password']) || empty($_POST['password_confirm']) || empty($_POST['checkbox']) ) {
+		 if (empty($_POST['user_type']) || empty($_POST['name']) || empty($_POST['email']) /*|| empty($_POST['email_confirm'])*/ || empty($_POST['password']) || empty($_POST['password_confirm']) || empty($_POST['checkbox']) ) {
 			
 			//echo "<div class='alert alert-danger w-50 p-3'>All fields are required</div>";
              array_push($errors,"All fields are required");
@@ -100,9 +100,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
            if (strlen($password)<8) {
             array_push($errors,"Password must be at least 8 charactes long");
            }
-		   if ($email!==$email_confirm) {
-            array_push($errors,"Password does not match");
-           }
+		//    if ($email!==$email_confirm) {
+        //     array_push($errors,"Password does not match");
+        //    }
            if ($password!==$password_confirm) {
             array_push($errors,"Password does not match");
            }
@@ -133,20 +133,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 				$mail -> addAddress($_POST["email"]);
 			
 				$mail->Subject = "Registration Succesful";
-				$mail ->Body = "Thank you ". $_POST["name_buss"] ." for joining the TicketBooker site. ";
+				$mail ->Body = "Thank you ". $_POST["name"] ." for joining the TicketBooker site. ";
 			
 				$mail ->send();
 			
 			  
 			}
 
-            $user_adm = $_POST['user_adm'];
+            $user_type = $_POST['user_type'];
 			$checkbox = $_POST['checkbox'];
-            $sql = "INSERT INTO user (user_adm, name_buss, email, password, checkbox) VALUES ( ?, ?,?, ? ,?)";
+            $sql = "INSERT INTO user (user_type, name, email, password, checkbox) VALUES ( ?, ?,?, ? ,?)";
             $statemant = mysqli_stmt_init($conn);
             $prepareStatemant = mysqli_stmt_prepare($statemant,$sql);
             if ($prepareStatemant) {
-                mysqli_stmt_bind_param($statemant,"sssss", $user_adm,$name_buss, $email, $hashed_password, $checkbox);
+                mysqli_stmt_bind_param($statemant,"sssss", $user_type,$name, $email, $hashed_password, $checkbox);
                 mysqli_stmt_execute($statemant);
                 echo "<div class='alert alert-success w-50 p-3'>You are registered successfully.</div>";
             }else{
@@ -160,7 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 
 
 		<!-- ../src/modules/signupConnection.php -->
-		<form action="" method="POST" class="<?php echo $isDark ? '' : 'border-light'; ?>">
+		<!-- <form action="" method="POST" class="<?php echo $isDark ? '' : 'border-light'; ?>">
 		<div>
 		<input type="radio" name="user_adm" value="ADMINISTRATOR"/>Administrator</td> 
 		<input type="radio" name="user_adm" value="USER"/>User</td> 
@@ -182,14 +182,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 			<div class="Password">
 				<input type="password" name="password" id="password" placeholder="Password">
 				<span>
-					<!-- <i class="fa fa-eye" id="font" onclick="togglePw()" aria-hidden="true"></i> -->
+					
 				</span>
 			</div>
 			<br>
 			<div class="Password">
 				<input type="password" name="password_confirm" id="password" placeholder="Confirm Password">
 				<span>
-					<!-- <i class="fa fa-eye" id="fonti" onclick="togglepw()" aria-hidden ="true">  </i> -->
+					
 				</span>
 			</div>
 
@@ -209,13 +209,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 
 		</form>
 	</main>
-	<br><br><br>
+	<br><br><br> -->
 
 
 
 	<!-- Main content -->
-	<!--
-	<div class="main">
+	
+	<!-- <div class="main">
 
 		<div class="content">
 			<div class="headers">
@@ -224,17 +224,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 					Already have one?
 					<a href="login.php">Log in</a>.
 				</h2>
-			</div>
+			</div> -->
 
-			<form action="../src/modules/signupFunction.php" method="POST">
+			<form action="" method="POST" class="<?php echo $isDark ? '' : 'border-light'; ?>">
 
 				<div class="user-type">
 					<label>
-						<input type="radio" name="user-type" value="INDIVIDUAL">
+						<input type="radio" name="user_type" value="INDIVIDUAL">
 						Individual
 					</label>
 					<label>
-						<input type="radio" name="user-type" value="BUSINESS">
+						<input type="radio" name="user_type" value="BUSINESS">
 						Business
 					</label>
 				</div>
@@ -249,7 +249,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 				</div>
 				
 				<div class="password <?php echo $isDark ? '' : 'border-light'; ?>">
-					<input type="password" name="password-confirm" required="required" placeholder="Confirm password" class="input" id="passwordInput2">
+					<input type="password" name="password_confirm" required="required" placeholder="Confirm password" class="input" id="passwordInput2">
 					<i class="fa-solid fa-eye-slash toggle-visibility" id="toggle-visibility-2"></i>
 				</div>
 			
@@ -263,7 +263,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 			</form>
 		</div>
 
-	</div> -->
+	</div>
 
 	<!-- Footer -->
 	<?php include "../src/templates/footer.php"; ?>
