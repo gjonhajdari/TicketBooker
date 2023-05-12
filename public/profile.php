@@ -87,12 +87,12 @@ $full_name = 'Gjon Hajdari';
 				</button>
 
 				<button class="tab-button" id="Movies">
-					<img src="assets/icons/Movie.svg" alt="">
+					<img src="assets/icons/movie.svg" alt="">
 					<p>Movies</p>
 				</button>
 
 				<button class="tab-button" id="Concerts">
-					<img src="assets/icons/Concert.svg" alt="">
+					<img src="assets/icons/concert.svg" alt="">
 					<p>Concerts</p>
 				</button>
 			</div>
@@ -106,7 +106,7 @@ $full_name = 'Gjon Hajdari';
 	<div class="TicketBlocks">
 		<div class="Block">
 			<p class="TicketType">
-				<img src="assets/icons/Concert.svg" alt="">
+				<img src="assets/icons/concert.svg" alt="">
 				<text class="TicketText">Concert Ticket</text>
 
 			</p>
@@ -159,7 +159,7 @@ $full_name = 'Gjon Hajdari';
 
 		<div class="Block">
 			<p class="TicketType">
-				<img src="assets/icons/Movie.svg" alt="">
+				<img src="assets/icons/movie.svg" alt="">
 				<text class="TicketText"> Movie Ticket </text>
 			</p>
 			<hr>
@@ -185,7 +185,7 @@ $full_name = 'Gjon Hajdari';
 	<div class="TicketBlocks">
 		<div class="Block">
 			<p class="TicketType">
-				<img src="assets/icons/Concert.svg" alt="Concert">
+				<img src="assets/icons/concert.svg" alt="Concert">
 				<text class="TicketText">Concert Ticket </text>
 			</p>
 			<hr>
@@ -196,7 +196,7 @@ $full_name = 'Gjon Hajdari';
 			<p class="TicketDate">
 
 			<p class="TicketDate">
-				<img src="assets/icons/Concert.svg" alt="">
+				<img src="assets/icons/concert.svg" alt="">
 				March 7,2023
 			<p id="Time" class="TicketTime">
 				9:00 PM - 1:00 AM
@@ -211,7 +211,7 @@ $full_name = 'Gjon Hajdari';
 
 		<div class="Block">
 			<p class="TicketType">
-				<img src="assets/icons/Concert.svg" alt="">
+				<img src="assets/icons/concert.svg" alt="">
 				<text class="TicketText"> Concert Ticket </text>
 			</p>
 			<hr>
@@ -220,7 +220,7 @@ $full_name = 'Gjon Hajdari';
 				<br>
 			</p>
 			<p class="TicketDate">
-				<img src="assets/icons/Concert.svg" alt="Concert">
+				<img src="assets/icons/concert.svg" alt="Concert">
 				December 5, 2022
 			<p id="Time" class="TicketTime">10:30 PM - 1:30 AM</p>
 			</p>
