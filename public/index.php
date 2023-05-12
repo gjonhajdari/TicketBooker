@@ -48,20 +48,20 @@
 				<p>What, when, where?</p>
 
 				<div class="selectors <?php echo $isDark ? '' : 'border-light'; ?>">
-					<select name="what" id="select-what">
+					<select name="type" id="select-what">
 						<option value="Movie">Movie</option>
 						<option value="Travel">Travel</option>
 						<option value="Concert">Concert</option>
 					</select>
 					<input type="date" name="when" id="select-when">
-					<select name="where" id="select-where">
-						<option value="Movie">Prishtinë</option>
-						<option value="Travel">Mitrovicë</option>
-						<option value="Concert">Pejë</option>
-						<option value="Concert">Prizren</option>
-						<option value="Concert">Ferizaj</option>
-						<option value="Concert">Gjilan</option>
-						<option value="Concert">Gjakovë</option>
+					<select name="location" id="select-where">
+						<option value="prishtine">Prishtinë</option>
+						<option value="mitrovice">Mitrovicë</option>
+						<option value="peje">Pejë</option>
+						<option value="prizren">Prizren</option>
+						<option value="ferizaj">Ferizaj</option>
+						<option value="gjilan">Gjilan</option>
+						<option value="gjakove">Gjakovë</option>
 					</select>
 				</div>
 			</div>
