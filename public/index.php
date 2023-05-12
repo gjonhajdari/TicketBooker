@@ -49,12 +49,14 @@
 
 				<div class="selectors <?php echo $isDark ? '' : 'border-light'; ?>">
 					<select name="type" id="select-what">
+						<option value="" disabled selected>Type</option>
 						<option value="Movie">Movie</option>
 						<option value="Travel">Travel</option>
 						<option value="Concert">Concert</option>
 					</select>
 					<input type="date" name="when" id="select-when">
 					<select name="location" id="select-where">
+						<option value="" disabled selected>Location</option>
 						<option value="prishtine">Prishtinë</option>
 						<option value="mitrovice">Mitrovicë</option>
 						<option value="peje">Pejë</option>

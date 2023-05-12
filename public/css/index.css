@@ -53,6 +53,7 @@ main .selectors {
 	font-weight: 500;
 	background-color: var(--foreground);
 	color: var(--text-primary);
+	font-size: 1.15rem;
 }
 
 .selectors select {
@@ -75,7 +76,7 @@ main .btn {
 	gap: 20px;
 	padding: 1rem 4rem;
 	font-size: 1.25rem;
-	font-weight: 500;
+	font-weight: 600;
 	border-radius: 1rem;
 	border: none;
 	color: var(--background);
