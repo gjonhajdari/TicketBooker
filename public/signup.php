@@ -15,7 +15,7 @@ if (isset($_SESSION["user"])) {
 	<title>Sign Up - TicketBooker</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel='icon' type='image/x-icon' href='../assets/Favicon.svg'>
 	<?php
 	if ($isDark == true) {
@@ -29,7 +29,7 @@ if (isset($_SESSION["user"])) {
 	<script src="https://kit.fontawesome.com/26e97bbe8d.js" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 	<script src="js/app.js"></script>
-
+	<link rel="stylesheet" href="css/login.css">
 	<style>
 	.alert {
   padding: 0.75rem 1.25rem;
@@ -160,7 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 
 
 		<!-- ../src/modules/signupConnection.php -->
-		<form action="" method="POST" class="<?php echo $isDark ? '' : 'border-light'; ?>">
+		<!-- <form action="" method="POST" class="<?php echo $isDark ? '' : 'border-light'; ?>">
 		<div>
 		<input type="radio" name="user_adm" value="ADMINISTRATOR"/>Administrator</td> 
 		<input type="radio" name="user_adm" value="USER"/>User</td> 
@@ -182,14 +182,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 			<div class="Password">
 				<input type="password" name="password" id="password" placeholder="Password">
 				<span>
-					<!-- <i class="fa fa-eye" id="font" onclick="togglePw()" aria-hidden="true"></i> -->
+					
 				</span>
 			</div>
 			<br>
 			<div class="Password">
 				<input type="password" name="password_confirm" id="password" placeholder="Confirm Password">
 				<span>
-					<!-- <i class="fa fa-eye" id="fonti" onclick="togglepw()" aria-hidden ="true">  </i> -->
+					
 				</span>
 			</div>
 
@@ -209,13 +209,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 
 		</form>
 	</main>
-	<br><br><br>
+	<br><br><br> -->
 
 
 
 	<!-- Main content -->
-	<!--
-	<div class="main">
+	
+	<!-- <div class="main">
 
 		<div class="content">
 			<div class="headers">
@@ -224,9 +224,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 					Already have one?
 					<a href="login.php">Log in</a>.
 				</h2>
-			</div>
+			</div> -->
 
-			<form action="../src/modules/signupFunction.php" method="POST">
+			<form action="../src/modules/signupFunction.php" method="POST" class="<?php echo $isDark ? '' : 'border-light'; ?>">
 
 				<div class="user-type">
 					<label>
@@ -263,7 +263,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 			</form>
 		</div>
 
-	</div> -->
+	</div>
 
 	<!-- Footer -->
 	<?php include "../src/templates/footer.php"; ?>
