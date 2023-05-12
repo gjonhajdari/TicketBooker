@@ -215,7 +215,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 
 	<!-- Main content -->
 	
-	<!-- <div class="main">
+	<div class="main">
 
 		<div class="content">
 			<div class="headers">
@@ -224,7 +224,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 					Already have one?
 					<a href="login.php">Log in</a>.
 				</h2>
-			</div> -->
+			</div>
 
 			<form action="" method="POST" class="<?php echo $isDark ? '' : 'border-light'; ?>">
 
@@ -242,6 +242,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 				<input type="text" name="name" required="required" placeholder="Name" class="input">
 
 				<input type="email" name="email" required="required" placeholder="Email address" class="input">
+				
+				<input type="email" name="email_confirm" required="required" placeholder="Confirm email" class="input">
 
 				<div class="password <?php echo $isDark ? '' : 'border-light'; ?>">
 					<input type="password" name="password" required="required" placeholder="Password" class="input" id="passwordInput1">
