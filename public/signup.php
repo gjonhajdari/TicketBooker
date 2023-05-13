@@ -36,7 +36,7 @@ if (isset($_SESSION["user"])) {
   margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-  width: 50%;
+  width: 100%;
   
   margin-right: auto;
 }
@@ -60,11 +60,16 @@ if (isset($_SESSION["user"])) {
 
 
 	<!-- Main content -->
-	<main>
-		<br><br><br>
-		<h1>Create an account</h1> <br>
-		<h6>Already have one? <a href="login.html" id="a">Log in</a></h6>
-		<br>
+	<div class="main">
+
+		<div class="content">
+			<div class="headers">
+				<h1>Create an account</h1>
+				<p>
+					Already have one?
+					<a href="login.php">Log in</a>.
+				</h2>
+			</div>	
 
 
 		<?php 
@@ -159,72 +164,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 
 
 
-		<!-- ../src/modules/signupConnection.php -->
-		<!-- <form action="" method="POST" class="<?php echo $isDark ? '' : 'border-light'; ?>">
-		<div>
-		<input type="radio" name="user_adm" value="ADMINISTRATOR"/>Administrator</td> 
-		<input type="radio" name="user_adm" value="USER"/>User</td> 
-		</div>	
-		
-		<div>
-				<input name="name_buss" id="email" type="text" placeholder="First name or Business name" />
-			</div>
-
-			<br>
-			<div class="Email">
-				<input type="email" name="email" id="email" placeholder="Email address">
-			</div>
-			<br>
-			<div class="Email">
-				<input type="email" name="email_confirm" id="email" placeholder="Confirm email address">
-			</div>
-			<br>
-			<div class="Password">
-				<input type="password" name="password" id="password" placeholder="Password">
-				<span>
-					
-				</span>
-			</div>
-			<br>
-			<div class="Password">
-				<input type="password" name="password_confirm" id="password" placeholder="Confirm Password">
-				<span>
-					
-				</span>
-			</div>
-
-			<br>
-
-			<div class="check">
-
-				<p id="agree">
-					<input type="checkbox" name="checkbox" id="checkbox" value="AGREE"> I agree to the
-					<a href="../assets/PRIVACY_POLICY.pdf" target="_blank" class="footer-linkss">Privacy Policy</a>&
-					<a href="../assets/TERMS_AND_CONDITIONS.pdf" target="_blank" class="footer-links">Terms of Use</a>
-				</p>
-
-
-			</div>
-			<input type="submit" name="submit" id="submit" class="btn">
-
-		</form>
-	</main>
-	<br><br><br> -->
-
-
-
-	<!-- Main content -->
 	
-	<div class="main">
+	
 
-		<div class="content">
-			<div class="headers">
-				<h1>Create an account</h1>
-				<p>
-					Already have one?
-					<a href="login.php">Log in</a>.
-				</h2>
-			</div>
 
 			<form action="" method="POST" class="<?php echo $isDark ? '' : 'border-light'; ?>">
 
@@ -266,6 +208,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 		</div>
 
 	</div>
+	</main>
 
 	<!-- Footer -->
 	<?php include "../src/templates/footer.php"; ?>
