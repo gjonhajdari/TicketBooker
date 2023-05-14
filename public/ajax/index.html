@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title> AJAX- TicketBooker</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel='icon' type='image/x-icon' href='/public/assets/icons/favicon.svg'>
+
+    <script>
+        function showTickets(string){
+            if(string == ""){
+                document.getElementById("#info").innerHTML="";
+                return;
+            }
+            else{
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function () {
+                    if (this.readyState == 3 && this.status == 200){
+                        document.getElementById("info").innerHTML = this.responseText;
+                    }
+                  };
+                  xmlhttp.open("GET", "ajax.php?q="+string, true);
+                  xmlhttp.send();
+            }
+        }
+    
+    </script>
+
+
+</head>
+<body>
+
+<form>
+    <select name="tickets" onchange="showTickets(this.value)"> 
+        <option value="">Select a ticket:</option>
+        <option value="1">Movie</option>
+        <option value="2">Travel</option>
+        <option value="3">Concert</option>
+    </select>
+</form>
+<br>
+<div id="info">Your tickets info will be listed here...</div>
+
+</body>
+
+
+</html>
