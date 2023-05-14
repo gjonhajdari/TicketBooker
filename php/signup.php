@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Parametrat e databazes
 $servername = "localhost";
 $username = "username";

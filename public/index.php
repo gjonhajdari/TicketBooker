@@ -1,5 +1,5 @@
 <?php 
-
+	//TODO consult group if sessions are needed in index.php
 	$isDark = true;
 	$isLoggedIn = true;
 	$avatar = 5;

@@ -1,5 +1,5 @@
 <?php
-
+//TODO write code for sessions in FAQ
 $isDark = true;
 $isLoggedIn = true;
 $avatar = 10;

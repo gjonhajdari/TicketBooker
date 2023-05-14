@@ -1,4 +1,7 @@
 <?php
+//TODO write code for sessions in FAQAdmin
+
+
 // Connect to the MySQL database
 require_once('../src/modules/db.php');
 
