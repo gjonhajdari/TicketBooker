@@ -1,6 +1,7 @@
 <!-- Navigation bar -->
 <?php
-
+//TODO add users variables in the project using sessions
+//TODO link logout page
 // require('signup.php');
 // if(!empty($_SESSION['id'])){
 // 	$id = $_SESSION["id"];

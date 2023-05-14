@@ -1,5 +1,5 @@
 <?php 
-
+	//TODO consult the group if sessions are needed in about
 	$isDark = true;
 	$isLoggedIn = false;
 	$avatar = 10;

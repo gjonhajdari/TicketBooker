@@ -1,5 +1,11 @@
 <?php
 
+//TODO session variables for users resources
+//TODO write code for changing passwords using sessions
+//TODO write code to change light/dark mode using session
+//TODO write code to change profile avatar using sessions
+//TODO add submit button to make the changes??
+//TODO write code to change username and email (if needed)
 
 // require('signup.php');
 // if(!empty($_SESSION['id'])){

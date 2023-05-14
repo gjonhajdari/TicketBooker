@@ -1,5 +1,8 @@
 <?php
 
+//TODO session variables for users resources
+
+
 // require('signup.php');
 // if(!empty($_SESSION['id'])){
 // 	$id = $_SESSION["id"];
