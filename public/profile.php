@@ -1,5 +1,7 @@
 <?php
 
+
+
 $isDark = true;
 $isLoggedIn = true;
 $avatar = 10;
