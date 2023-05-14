@@ -1,11 +1,19 @@
 <?php
 
+// require('signup.php');
+// if(!empty($_SESSION['id'])){
+// 	$id = $_SESSION["id"];
+// 	$result = mysqli_query($conn, "SELECT * FROM  users WHERE id = $id");
+// 	$row = mysqli_fetch_assoc($result);
 
+// }else{
+// 	header("Location: login.php");
+// }
 
 $isDark = true;
 $isLoggedIn = true;
 $avatar = 10;
-$full_name = 'Klajdi Gashi';
+$full_name = 'Zana Misini';
 $username = "KlajdixGashi";
 $location = "Parku Qytetit,Prishtine";
 $date = "2/27/2024";
