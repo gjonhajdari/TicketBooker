@@ -42,8 +42,10 @@ $full_name = 'Gjon Hajdari';
 
 			<div class="Profile-Button">
 				<h1 id="title">
-					<b>Welcome back </b>, Klajdi
-					<!-- to be fixed with javascript!-->
+					<b>Welcome back,
+						<?php echo $full_name ?>
+					</b>
+
 					<br>
 				</h1>
 				<p id="Profile-Paragraph">
@@ -59,10 +61,12 @@ $full_name = 'Gjon Hajdari';
 				<br>
 				<br>
 				<p id="Profile-Paragraph1">
-					Klajdi Gashi
+					<?php echo $full_name ?>
 				</p>
 				<br>
-				<p id="Profile-Paragraph1" style="color: var(--foreground);">@KlajdixGashii </p>
+				<p id="Profile-Paragraph1" style="color: var(--foreground);">
+					<?php echo @$username ?>
+				</p>
 				<!--Username-->
 				<!--profile-->
 				<br>
