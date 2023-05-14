@@ -11,6 +11,7 @@ $time_start = 8;
 $time_end = 1;
 $ticket_type = 'Concert';
 $title = 'Dua Lipa';
+$image = "../public/assets/icons/";
 
 
 ?>
@@ -18,6 +19,7 @@ $title = 'Dua Lipa';
 
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
 	<title>TicketBooker - Profile</title>
@@ -192,7 +194,7 @@ $title = 'Dua Lipa';
 				<img src="assets/icons/calendar.svg" alt="Calendar">
 				<?php echo $date ?>
 			<p id="Time" class="TicketTime">
-				<?php echo $time_start - $time_end ?>
+				<?php echo "Start:" . " " . $time_start . "--" . "End: " . " " . $time_end ?>
 			</p>
 			</p>
 			<text class="TicketLocation">
@@ -218,7 +220,6 @@ $title = 'Dua Lipa';
 				<br>
 			</p>
 			<p class="TicketDate">
-
 			<p class="TicketDate">
 				<img src="assets/icons/concert.svg" alt="">
 				<?php echo $date ?>
@@ -250,7 +251,7 @@ $title = 'Dua Lipa';
 				<img src="assets/icons/concert.svg" alt="Concert">
 				<?php echo $date ?>
 			<p id="Time" class="TicketTime">
-				<?php echo $time_start - $time_end ?>
+				<?php echo "Start:" . " " . $time_start . "--" . "End: " . " " . $time_end ?>
 			</p>
 			</p>
 			<text class="TicketLocation">
@@ -276,11 +277,11 @@ $title = 'Dua Lipa';
 				<img src="assets/icons/location.svg" alt="">
 				<?php echo $date ?>
 			<p id="Time" class="TicketTime">
-				<?php echo $time_start - $time_end ?>
+				<?php echo "Start:" . " " . $time_start . "--" . "End: " . " " . $time_end ?>
 			</p>
 			</p>
 			<text class="TicketLocation">
-				<img src="assets/icons/location.svg" alt="">
+				<img src="/public/icon/" alt="">
 				<?php echo $location ?>
 			</text>
 			</p>
