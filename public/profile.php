@@ -3,7 +3,15 @@
 $isDark = true;
 $isLoggedIn = true;
 $avatar = 10;
-$full_name = 'Gjon Hajdari';
+$full_name = 'Klajdi Gashi';
+$username = "KlajdixGashi";
+$location = "Parku Qytetit,Prishtine";
+$date = "2/27/2024";
+$time_start = 8;
+$time_end = 1;
+$ticket_type = 'Concert';
+$title = 'Dua Lipa';
+
 
 ?>
 
@@ -65,7 +73,7 @@ $full_name = 'Gjon Hajdari';
 				</p>
 				<br>
 				<p id="Profile-Paragraph1" style="color: var(--foreground);">
-					<?php echo @$username ?>
+					<?php echo "@" . $username ?>
 				</p>
 				<!--Username-->
 				<!--profile-->
@@ -111,25 +119,28 @@ $full_name = 'Gjon Hajdari';
 		<div class="Block">
 			<p class="TicketType">
 				<img src="assets/icons/concert.svg" alt="">
-				<text class="TicketText">Concert Ticket</text>
+				<text class="TicketText">
+					<?php echo $ticket_type ?>
+				</text>
 
 			</p>
 			<hr>
 			<p class="TicketTitle">
-				Asgjë sikur dielli
+				<?php echo $title ?>
 				<br>
 			</p>
 			<p class="TicketDate">
 				<img src="assets/icons/calendar.svg" alt="Calendar">
-				December 23,2022
+				<?php echo $date ?>
 			<p id="Time" class="TicketTime">
-				11:00 PM -2:00 AM
+				<?php echo "Start:" . " " . $time_start . "--" . "End: " . " " . $time_end ?>
 			</p>
 			</p>
 
 			<text class="TicketLocation">
 				<img src="assets/icons/location.svg" alt="">
-				Gërmia Park,Prishtinë XK</text>
+				<?php echo $location ?>
+			</text>
 			</p>
 
 		</div>
@@ -138,24 +149,27 @@ $full_name = 'Gjon Hajdari';
 		<div class="Block">
 			<p class="TicketType">
 				<img src="assets/icons/location.svg" alt="">
-				<text class="TicketText"> Travel Ticket </text>
+				<text class="TicketText">
+					<?php echo $ticket_type ?>
+				</text>
 			</p>
 
 			<hr>
 			<p class="TicketTitle">
-				Leeds,United Kingdom
+				<?php echo $title ?>
 				<br>
 			</p>
 			<p class="TicketDate">
 				<img src="assets/icons/calendar.svg" alt="Calendar">
-				March 2,2023
+				<?php echo $date ?>
 			<p id="Time" class="TicketTime">
-				11:30 AM
+				<?php echo "Start:" . " " . $time_start . "--" . "End: " . " " . $time_end ?>
 			</p>
 			</p>
 			<text class="TicketLocation">
 				<img src="assets/icons/location.svg" alt="">
-				"Adem Jashari" Airport,Prishtinë XK</text>
+				<?php echo $location ?>
+			</text>
 			</p>
 
 		</div>
@@ -164,23 +178,27 @@ $full_name = 'Gjon Hajdari';
 		<div class="Block">
 			<p class="TicketType">
 				<img src="assets/icons/movie.svg" alt="">
-				<text class="TicketText"> Movie Ticket </text>
+				<text class="TicketText"> <text class="TicketText">
+						<?php echo $ticket_type ?>
+					</text>
+				</text>
 			</p>
 			<hr>
 			<p class="TicketTitle">
-				Minions: The Rise of Gru
+				<?php echo $title ?>
 				<br>
 			</p>
 			<p class="TicketDate">
 				<img src="assets/icons/calendar.svg" alt="Calendar">
-				December 27,2022
+				<?php echo $date ?>
 			<p id="Time" class="TicketTime">
-				7:00 PM
+				<?php echo $time_start - $time_end ?>
 			</p>
 			</p>
 			<text class="TicketLocation">
 				<img src="assets/icons/location.svg" alt="">
-				Cineplexx Albi Mall,Prishtinë XK</text>
+				<?php echo $location ?>
+			</text>
 			</p>
 		</div>
 	</div>
@@ -190,25 +208,28 @@ $full_name = 'Gjon Hajdari';
 		<div class="Block">
 			<p class="TicketType">
 				<img src="assets/icons/concert.svg" alt="Concert">
-				<text class="TicketText">Concert Ticket </text>
+				<text class="TicketText">
+					<?php echo $ticket_type ?>
+				</text>
 			</p>
 			<hr>
 			<p class="TicketTitle">
-				Bladee x Ecco2k
+				<?php echo $title ?>
 				<br>
 			</p>
 			<p class="TicketDate">
 
 			<p class="TicketDate">
 				<img src="assets/icons/concert.svg" alt="">
-				March 7,2023
+				<?php echo $date ?>
 			<p id="Time" class="TicketTime">
-				9:00 PM - 1:00 AM
+				<?php echo "Start:" . " " . $time_start . "--" . "End: " . " " . $time_end ?>
 			</p>
 			</p>
 			<text class="TicketLocation">
 				<img src="assets/icons/location.svg" alt="">
-				02 Academy Leeds,Leeds UK</text>
+				<?php echo $location ?>
+			</text>
 			</p>
 		</div>
 
@@ -216,21 +237,26 @@ $full_name = 'Gjon Hajdari';
 		<div class="Block">
 			<p class="TicketType">
 				<img src="assets/icons/concert.svg" alt="">
-				<text class="TicketText"> Concert Ticket </text>
+				<text class="TicketText">
+					<?php echo $ticket_type ?>
+				</text>
 			</p>
 			<hr>
 			<p class="TicketTitle">
-				Dua Lipa
+				<?php echo $title ?>
 				<br>
 			</p>
 			<p class="TicketDate">
 				<img src="assets/icons/concert.svg" alt="Concert">
-				December 5, 2022
-			<p id="Time" class="TicketTime">10:30 PM - 1:30 AM</p>
+				<?php echo $date ?>
+			<p id="Time" class="TicketTime">
+				<?php echo $time_start - $time_end ?>
+			</p>
 			</p>
 			<text class="TicketLocation">
 				<img src="assets/icons/location.svg" alt="">
-				Velvet Underground,Toronto CA</text>
+				<?php echo $location ?>
+			</text>
 			</p>
 		</div>
 
@@ -238,20 +264,25 @@ $full_name = 'Gjon Hajdari';
 		<div class="Block">
 			<p class="TicketType">
 				<img src="assets/icons/Travel.svg" alt="">
-				<text class="TicketText"> Travel Ticket </text>
+				<text class="TicketText">
+					<?php echo $ticket_type ?>
+				</text>
 			</p>
 			<hr>
 			<p class="TicketTitle">
-				Toronto Canada
+				<?php echo $title ?>
 			</p>
 			<p class="TicketDate">
 				<img src="assets/icons/location.svg" alt="">
-				January 4,2023
-			<p id="Time" class="TicketTime">11:30 AM</p>
+				<?php echo $date ?>
+			<p id="Time" class="TicketTime">
+				<?php echo $time_start - $time_end ?>
+			</p>
 			</p>
 			<text class="TicketLocation">
 				<img src="assets/icons/location.svg" alt="">
-				"Adem Jashari"Airport,Prishtinë</text>
+				<?php echo $location ?>
+			</text>
 			</p>
 		</div>
 
