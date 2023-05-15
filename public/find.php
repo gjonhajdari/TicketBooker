@@ -1,8 +1,8 @@
 <?php
-
+session_start();
 $isDark = true;
 $isLoggedIn = true;
-$avatar = 3;
+$avatar = 10;
 $full_name = 'Gjon Hajdari';
 
 ?>

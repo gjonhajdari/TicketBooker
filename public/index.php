@@ -1,8 +1,10 @@
 <?php 
-	//TODO consult group if sessions are needed in index.php
+	// if (session_status() === PHP_SESSION_NONE) {
+	// 	session_start();
+	//   }
 	$isDark = true;
 	$isLoggedIn = true;
-	$avatar = 5;
+	$avatar = 10;
 	$full_name = 'Gjon Hajdari';
 
 ?>
@@ -34,7 +36,7 @@
 <body class="<?php echo $isDark ? '' : 'body-light'; ?>">
 
 	<!-- Navigation Bar -->
-	<?php $isLoggedIn ? include "../src/templates/navbarLoggedin.php" : include "../src/templates/navbar.php"; ?>
+	<?php $isLoggedIn ?  include "../src/templates/navbarLoggedin.php" : include "../src/templates/navbar.php"   ?>
 
 	<!-- Main content -->
 	<main>

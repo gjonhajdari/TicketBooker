@@ -1,5 +1,4 @@
 <?php
-
 //TODO session variables for users resources
 //TODO write code for changing passwords using sessions
 //TODO write code to change light/dark mode using session
@@ -7,21 +6,11 @@
 //TODO add submit button to make the changes??
 //TODO write code to change username and email (if needed)
 
-// require('signup.php');
-// if(!empty($_SESSION['id'])){
-// 	$id = $_SESSION["id"];
-// 	$result = mysqli_query($conn, "SELECT * FROM  users WHERE id = $id");
-// 	$row = mysqli_fetch_assoc($result);
-
-// }else{
-// 	header("Location: login.php");
-// }
-
 
 $isDark = false;
 $isLoggedIn = true;
 $isChecked = false;
-$avatar = 4;
+$avatar = 10;
 $full_name = 'Zana Misini';
 $email = 'zaanamisinii@gmail.com';
 $userType = 'BUSINESS';
@@ -61,7 +50,7 @@ $userType = 'BUSINESS';
 	<div class="container">
 
 		<h1 class="path"><span>
-				<?php echo $full_name ?> /
+				<?php echo $_SESSION["name"] ?> /
 			</span>Edit profile</h1>
 		<div class="main">
 			<div class="left">
@@ -94,11 +83,11 @@ $userType = 'BUSINESS';
 					<div class="inputs">
 						<div class="input-field">
 							<label>Name</label>
-							<input type="text" class="input" value="<?php echo $full_name; ?>">
+							<input type="text" class="input" value="<?php echo $_SESSION["name"]; ?>">
 						</div>
 						<div class="input-field">
 							<label>Email address</label>
-							<input type="text" class="input" value="<?php echo $email; ?>">
+							<input type="text" class="input" value="<?php echo $_SESSION["email"]; ?>">
 						</div>
 					</div>
 				</div>

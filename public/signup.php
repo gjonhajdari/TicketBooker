@@ -1,10 +1,10 @@
 <?php $isDark = false; ?>
 
 <?php
-session_start();
-if (isset($_SESSION["user"])) {
-   header("Location: index.php");
-}
+// session_start();
+// if (isset($_SESSION["user"])) {
+//    header("Location: index.php");
+// }
 ?>
 
 
@@ -154,6 +154,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
                 mysqli_stmt_bind_param($statemant,"sssss", $user_type,$name, $email, $hashed_password, $checkbox);
                 mysqli_stmt_execute($statemant);
                 echo "<div class='alert alert-success w-50 p-3'>You are registered successfully.</div>";
+				header('location: login.php');
             }else{
                 die("Something went wrong");
             }

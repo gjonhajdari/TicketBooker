@@ -1,15 +1,9 @@
 <?php
 
-//TODO write code for destorying session
-
-require('signup.php');
+require('C:\XAMPP\htdocs\TicketBooker\src\modules\db.php');
 $_SESSION = [];
 session_unset();
 session_destroy();
 header("Location: login.php");
-//Done
-
-//TODO logout design
-
 
 ?>

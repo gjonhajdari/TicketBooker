@@ -1,6 +1,6 @@
 <?php 
 
-//session_start()
+session_start();
 
 $isDark = true; ?>
 
@@ -14,6 +14,8 @@ $isDark = true; ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel='icon' type='image/x-icon' href='assets/icons/favicon.svg'>
 	<?php
+		// if(_$SESSION["login"]){
+		// }
 		if ($isDark == true) {
 			echo "<link rel='stylesheet' href='css/palette-dark.css'>";
 		} else {
@@ -79,8 +81,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 		$user = mysqli_fetch_array($result, MYSQLI_ASSOC);
 		if ($user) {
 			if (password_verify($password, $user["password"])) {
-				session_start();
 				$_SESSION["user"] = "yes";
+				$_SESSION["login"] = true;
+				$_SESSION["id"] = $user["id"];
+				$_SESSION["user_type"] = $user["user_type"];
+				$_SESSION["name"] = $user["name"];
+				$_SESSION["email"] = $user["email"];
+				$_SESSION["password"] = $user["password"];
+				$_SESSION["checkbox"] = $user["checkbox"];
+				$_SESSION["avatar"] = $user["avatar"];
+				$_SESSION["dark_mode"] = $user["dark_mode"];
 				header('location:index.php');
 				die();
 			}

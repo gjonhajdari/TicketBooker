@@ -1,7 +1,9 @@
 <?php 
-	//TODO consult the group if sessions are needed in about
+	// if (session_status() === PHP_SESSION_NONE) {
+	// 	session_start();
+	//   }
 	$isDark = true;
-	$isLoggedIn = false;
+	$isLoggedIn = true;
 	$avatar = 10;
 	$first_name = 'Gjon Hajdari';
 

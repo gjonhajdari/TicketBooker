@@ -1,17 +1,8 @@
 <?php
 
-//TODO session variables for users resources
-
-
-// require('signup.php');
-// if(!empty($_SESSION['id'])){
-// 	$id = $_SESSION["id"];
-// 	$result = mysqli_query($conn, "SELECT * FROM  users WHERE id = $id");
-// 	$row = mysqli_fetch_assoc($result);
-
-// }else{
-// 	header("Location: login.php");
-// }
+	// if (session_status() === PHP_SESSION_NONE) {
+	// 	session_start();
+	//   }
 
 $isDark = true;
 $isLoggedIn = true;
@@ -63,7 +54,7 @@ $title = 'Dua Lipa';
 	<main class="container">
 
 		<div class="top">
-			<h1>Welcome back, <?php echo $full_name; ?></h1>
+			<h1>Welcome back, <?php echo $_SESSION["name"]; ?></h1>
 			<p>Take a look at all your tickets.</p>
 		</div>
 
