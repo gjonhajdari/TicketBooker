@@ -31,7 +31,7 @@
 			<p class="name"><?php echo $full_name; ?></p>
 		</div>
 
-		<div class="dropdown">
+		<div class="dropdown"   style= "z-index: 2;">
 			<div class="top">
 				<div class="info">
 					<img src="assets/images/profiles/profile-picture-<?php echo $avatar; ?>.jpg" alt="" width="50" height="50" style="border-radius: 50%;">
