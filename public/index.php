@@ -1,7 +1,5 @@
 <?php 
-	// if (session_status() === PHP_SESSION_NONE) {
-	// 	session_start();
-	//   }
+	session_start();
 	$isDark = true;
 	$isLoggedIn = true;
 	$avatar = 10;
@@ -36,7 +34,7 @@
 <body class="<?php echo $isDark ? '' : 'body-light'; ?>">
 
 	<!-- Navigation Bar -->
-	<?php $isLoggedIn ?  include "../src/templates/navbarLoggedin.php" : include "../src/templates/navbar.php"   ?>
+	<?php ($_SESSION["login"]==true) ?  include "../src/templates/navbarLoggedin.php" : include "../src/templates/navbar.php"   ?>
 
 	<!-- Main content -->
 	<main>

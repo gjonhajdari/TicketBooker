@@ -1,7 +1,5 @@
 <?php 
-	// if (session_status() === PHP_SESSION_NONE) {
-	// 	session_start();
-	//   }
+	session_start();
 	$isDark = true;
 	$isLoggedIn = true;
 	$avatar = 10;
