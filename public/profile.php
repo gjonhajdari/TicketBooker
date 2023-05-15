@@ -17,7 +17,6 @@ $isDark = true;
 $isLoggedIn = true;
 $avatar = 10;
 $full_name = 'Klajdi Gashi';
-$username = "KlajdixGashi";
 $location = "Parku Qytetit,Prishtine";
 $date = "2/27/2024";
 $time_start = 8;
@@ -88,7 +87,7 @@ $image = "public/images/Profiles/profile-picture-1.jpg";
 				</p>
 				<br>
 				<p id="Profile-Paragraph1" style="color: var(--foreground);">
-					<?php echo "@" . $username ?>
+
 				</p>
 				<!--Username-->
 				<!--profile-->
