@@ -7,6 +7,40 @@
 
 ?>
 
+
+<?php
+
+require_once('../src/modules/db.php');
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
+	$conn or die("Connection failed: ".mysqli_connect_error());
+
+	if (isset($_POST['name']) && isset($_POST['email'])&& isset($_POST['message'])) {
+		$fname = $_POST['name'];
+		$femail = $_POST['email'];
+		$fmessage = $_POST['message'];
+
+		$sql = "INSERT INTO `contact`(`name`,`email`,`message`)
+				VALUES(?,?,?)";
+		$stm = mysqli_stmt_init($conn);
+            $prepareStm = mysqli_stmt_prepare($stm,$sql);
+            if ($prepareStm) {
+                mysqli_stmt_bind_param($stm,"sss", $fname,$femail, $fmessage);
+                mysqli_stmt_execute($stm);
+                
+            }else{
+                die("Something went wrong");
+            }
+
+		
+	}
+}
+mysqli_close($conn);
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,7 +81,7 @@
 				<p>Or contact us via Instagram, Linkedin or Customer Support.</p>
 			</div>
 
-			<form action="../src/modules/contactFunction.php" method="POST">
+			<form action="" method="POST">
 				<div class="inputs <?php echo $isDark ? '' : 'border-light'; ?>">
 					<div class="info">
 						<input type="text" name="name" required="required" placeholder="Full name" class="input">
