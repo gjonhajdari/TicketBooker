@@ -33,7 +33,7 @@
 <body>
 
 	<!-- Navigation Bar -->
-	<?php $isLoggedIn ? include "../src/templates/navbarLoggedin.php" : include "../src/templates/navbar.php"; ?>
+	<?php $_SESSION["login"] ? include "../src/templates/navbarLoggedin.php" : include "../src/templates/navbar.php"; ?>
 
 	<!-- Main content -->
 	<div class="container">

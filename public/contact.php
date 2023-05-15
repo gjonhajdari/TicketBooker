@@ -1,5 +1,5 @@
 <?php 
-	//TODO consult the group if sessions are needed in conact
+	session_start();
 	$isDark = true;
 	$isLoggedIn = true;
 	$avatar = 10;
@@ -67,7 +67,7 @@ mysqli_close($conn);
 <body>
 
 	<!-- Navigation Bar -->
-	<?php $isLoggedIn ? include "../src/templates/navbarLoggedin.php" : include "../src/templates/navbar.php"; ?>
+	<?php $_SESSION["login"] ? include "../src/templates/navbarLoggedin.php" : include "../src/templates/navbar.php"; ?>
 
 	<!-- Main content -->
 	<div class="main">
