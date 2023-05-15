@@ -16,7 +16,7 @@
 $isDark = true;
 $isLoggedIn = true;
 $avatar = 10;
-$full_name = 'Zana Misini';
+$full_name = 'Klajdi Gashi';
 $username = "KlajdixGashi";
 $location = "Parku Qytetit,Prishtine";
 $date = "2/27/2024";
