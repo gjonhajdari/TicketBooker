@@ -94,7 +94,7 @@ $image = "../public/assets/icons/";
 				<!--profile-->
 				<br>
 				<a href="login.html">
-					<button id="LogOut-Profile">
+					<button id="LogOut-Profile" style="background-color:red">
 						Log Out
 					</button>
 				</a>
