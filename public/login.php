@@ -97,9 +97,9 @@ mysqli_close($conn);
 			<form action="login.php" method="POST" class="<?php echo $isDark ? '' : 'border-light'; ?>">
 				<input type="email" name="email" required="required" placeholder="Email address" class="input">
 	
-				<div id="password">
-					<input type="password" name="password" required="required" placeholder="Password" class="input" id="passwordInput">
-					<i class="fa-solid fa-eye-slash" id="toggle-visibility"></i>
+				<div class="password">
+					<input type="password" name="password" required="required" placeholder="Password" class="input" id="passwordInput1">
+					<i class="fa-solid fa-eye-slash toggle-visibility" id="toggle-visibility-1"></i>
 					<!-- <span><i class="fa-solid fa-eye" id="eye" onclick="myfunction()"></i></span>  -->
 				</div>
 			
