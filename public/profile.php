@@ -19,7 +19,7 @@ $avatar = 10;
 $full_name = 'Klajdi Gashi';
 $location = "Parku Qytetit,Prishtine";
 $date = "2/27/2024";
-$time_start = 8;
+$time_start = 20;
 $time_end = 1;
 $ticket_type = 'Concert';
 $title = 'Dua Lipa';
@@ -73,31 +73,10 @@ $image = "public/images/Profiles/profile-picture-1.jpg";
 				<p id="Profile-Paragraph">
 					<i> Take a look at all of your tickets. </i>
 				</p>
-				<button id="EditProfile-Button">
-					Edit Profile
-				</button>
-			</div>
-			<div class="Profile-Picture">
-				<img src="<?php $image ?>" alt="" width="100" height="100" style="border-radius:50px; float:right"
-					id="ImageProfile">
-				<br>
-				<br>
-				<p id="Profile-Paragraph1">
-					<?php echo $full_name ?>
-				</p>
-				<br>
-				<p id="Profile-Paragraph1" style="color: var(--foreground);">
 
-				</p>
-				<!--Username-->
-				<!--profile-->
-				<br>
-				<a href="login.html">
-					<button id="LogOut-Profile" style="background-color:red">
-						Log Out
-					</button>
-				</a>
 			</div>
+		</div>
+
 		</div>
 
 		<center>
@@ -131,14 +110,6 @@ $image = "public/images/Profiles/profile-picture-1.jpg";
 
 	<div class="TicketBlocks">
 		<div class="Block">
-			<p class="TicketType">
-				<img src="assets/icons/concert.svg" alt="">
-				<text class="TicketText">
-					<?php echo $ticket_type ?>
-				</text>
-
-			</p>
-			<hr>
 			<p class="TicketTitle">
 				<?php echo $title ?>
 				<br>
@@ -156,19 +127,23 @@ $image = "public/images/Profiles/profile-picture-1.jpg";
 				<?php echo $location ?>
 			</text>
 			</p>
+			<br>
+			<br>
 
-		</div>
-
-
-		<div class="Block">
+			<hr class=TicketBlock-Hr>
 			<p class="TicketType">
-				<img src="assets/icons/location.svg" alt="">
 				<text class="TicketText">
 					<?php echo $ticket_type ?>
 				</text>
 			</p>
 
-			<hr>
+
+
+		</div>
+
+
+		<div class="Block">
+
 			<p class="TicketTitle">
 				<?php echo $title ?>
 				<br>
@@ -184,49 +159,60 @@ $image = "public/images/Profiles/profile-picture-1.jpg";
 				<img src="assets/icons/location.svg" alt="">
 				<?php echo $location ?>
 			</text>
+			<br>
+			<br>
+			<br>
+
+			<hr class=TicketBlock-Hr>
+			<p class="TicketType">
+				<text class="TicketText">
+					<?php echo $ticket_type ?>
+				</text>
+			</p>
+
+
 			</p>
 
 		</div>
 
 
 		<div class="Block">
-			<p class="TicketType">
-				<img src="assets/icons/movie.svg" alt="">
-				<text class="TicketText"> <text class="TicketText">
+
+			<p class="TicketTitle">
+			<h4>
+				<?php echo $title ?>
+				<br>
+				</h3>
+				</p>
+				<p class="TicketDate">
+					<img src="assets/icons/calendar.svg" alt="Calendar">
+					<?php echo $date ?>
+				<p id="Time" class="TicketTime">
+					<?php echo "Start:" . " " . $time_start . "--" . "End: " . " " . $time_end ?>
+				</p>
+				</p>
+				<text class="TicketLocation">
+					<img src="assets/icons/location.svg" alt="">
+					<?php echo $location ?>
+				</text>
+				</p>
+				<br>
+				<br>
+
+				<hr class=TicketBlock-Hr style="color:var(--accent)">
+				<p class="TicketType">
+					<text class="TicketText">
 						<?php echo $ticket_type ?>
 					</text>
-				</text>
-			</p>
-			<hr>
-			<p class="TicketTitle">
-				<?php echo $title ?>
-				<br>
-			</p>
-			<p class="TicketDate">
-				<img src="assets/icons/calendar.svg" alt="Calendar">
-				<?php echo $date ?>
-			<p id="Time" class="TicketTime">
-				<?php echo "Start:" . " " . $time_start . "--" . "End: " . " " . $time_end ?>
-			</p>
-			</p>
-			<text class="TicketLocation">
-				<img src="assets/icons/location.svg" alt="">
-				<?php echo $location ?>
-			</text>
-			</p>
+				</p>
+
+
 		</div>
 	</div>
 
 
 	<div class="TicketBlocks">
 		<div class="Block">
-			<p class="TicketType">
-				<img src="assets/icons/concert.svg" alt="Concert">
-				<text class="TicketText">
-					<?php echo $ticket_type ?>
-				</text>
-			</p>
-			<hr>
 			<p class="TicketTitle">
 				<?php echo $title ?>
 				<br>
@@ -244,17 +230,19 @@ $image = "public/images/Profiles/profile-picture-1.jpg";
 				<?php echo $location ?>
 			</text>
 			</p>
-		</div>
+			<br>
+			<br>
 
-
-		<div class="Block">
+			<hr class=TicketBlock-Hr>
 			<p class="TicketType">
-				<img src="assets/icons/concert.svg" alt="">
 				<text class="TicketText">
 					<?php echo $ticket_type ?>
 				</text>
 			</p>
-			<hr>
+		</div>
+
+
+		<div class="Block">
 			<p class="TicketTitle">
 				<?php echo $title ?>
 				<br>
@@ -271,17 +259,22 @@ $image = "public/images/Profiles/profile-picture-1.jpg";
 				<?php echo $location ?>
 			</text>
 			</p>
-		</div>
+			</p>
+			<br>
+			<br>
 
-
-		<div class="Block">
+			<hr class=TicketBlock-Hr>
 			<p class="TicketType">
-				<img src="assets/icons/Travel.svg" alt="">
 				<text class="TicketText">
 					<?php echo $ticket_type ?>
 				</text>
 			</p>
-			<hr>
+
+
+		</div>
+
+
+		<div class="Block">
 			<p class="TicketTitle">
 				<?php echo $title ?>
 			</p>
@@ -297,6 +290,18 @@ $image = "public/images/Profiles/profile-picture-1.jpg";
 				<?php echo $location ?>
 			</text>
 			</p>
+			</p>
+			<br>
+			<br>
+
+			<hr class=TicketBlock-Hr>
+			<p class="TicketType">
+				<text class="TicketText">
+					<?php echo $ticket_type ?>
+				</text>
+			</p>
+
+
 		</div>
 
 	</div>

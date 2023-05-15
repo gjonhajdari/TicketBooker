@@ -21,14 +21,11 @@ Profile ------------------------------------------
 	color: var(--text-secondary);
 }
 
-.Profile #EditProfile-Button {
-	margin-top: 87px;
-}
 
 .Profile button {
 	padding: 5px;
 	width: 140px;
-	height: 50px;
+	height: 40px;
 	border-radius: 10px;
 	background-color: var(--foreground);
 	color: var(--text-primary);
@@ -41,40 +38,16 @@ Profile ------------------------------------------
 }
 
 
-.Profile-Picture #LogOut-Profile {
-	margin-top: 80px;
-	margin-left: 170px;
-
-}
 
 .Profile-Picture #Profile-Paragraph1 {
 	margin: 0px 14px 0px 0px;
 	float: right;
-	font-size: 1.2rem;
+	font-size: 2rem;
 }
 
-.Profile-Picture #LogOut-Profile:hover {
-	transform: scale(1.09);
-	transition: 300ms;
-	cursor: pointer;
-}
-
-.Profile-Picture #LogOut-Profile:active {
-	transform: scale(0.9);
-	transform: 300ms;
-	cursor: pointer;
-}
-
-
-.Profile-Button #EditProfile-Button:hover {
-	background-color: var(--accent);
-	cursor: pointer;
-	transform: scale(1.09);
-	transition: 300ms;
-}
 
 .Profile-Button {
-	margin: 60px;
+	margin: 20px;
 }
 
 .Profile-Picture {
@@ -165,18 +138,14 @@ TicketBlocks ------------------------------------------
 	justify-items: center;
 	align-items: center;
 	align-content: center;
+	
 }
 
-.TicketBlocks hr {
-	width: 390px;
-	margin: auto;
-	color: var(--line-break)
-}
 
 
 .Block {
-	width: 427px;
-	height: 250px;
+	width: 800px;
+	height: 200px;
 	background-color: var(--foreground);
 	border-radius: 15px;
 	margin:30px;
@@ -225,4 +194,10 @@ TicketBlocks ------------------------------------------
 
 .TicketType .TicketText{
 	color: var(--accent);
+
 }
+
+.Block hr{
+	color:var(--accent);
+}
+
