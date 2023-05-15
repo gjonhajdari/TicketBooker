@@ -17,6 +17,7 @@ $isDark = true;
 $isLoggedIn = true;
 $avatar = 10;
 $full_name = 'Klajdi Gashi';
+$userType = 'BUSINESS';
 $count = 5;
 $location = "Prishtinë";
 $date = "2/27/2024";

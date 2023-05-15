@@ -5,6 +5,7 @@ $isDark = true;
 $isLoggedIn = true;
 $avatar = 10;
 $full_name = 'Gjon Hajdari';
+$userType = 'BUSINESS';
 
 ?>
 

@@ -46,10 +46,12 @@
 					<?php echo file_get_contents('assets/icons/profile.svg') ?>
 					<p>Profile</p>
 				</a>
+				<?php if ($userType == 'BUSINESS'): ?>
 				<a href="createTicket.php" class="option">
 					<?php echo file_get_contents('assets/icons/create.svg') ?>
 					<p>Create Ticket</p>
 				</a>
+				<?php endif; ?>
 				<a href="editProfile.php" class="option">
 					<?php echo file_get_contents('assets/icons/settings.svg') ?>
 					<p>Settings</p>
