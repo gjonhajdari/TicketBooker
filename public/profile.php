@@ -17,15 +17,13 @@ $isDark = true;
 $isLoggedIn = true;
 $avatar = 10;
 $full_name = 'Klajdi Gashi';
-$username = "KlajdixGashi";
-$location = "Parku Qytetit,Prishtine";
+$userType = 'BUSINESS';
+$count = 5;
+$location = "Prishtinë";
 $date = "2/27/2024";
-$time_start = 8;
-$time_end = 1;
-$ticket_type = 'Concert';
+$time = '12:30';
+$type = 'Concert';
 $title = 'Dua Lipa';
-$image = "public/images/Profiles/profile-picture-1.jpg";
-
 
 ?>
 
@@ -47,7 +45,9 @@ $image = "public/images/Profiles/profile-picture-1.jpg";
 		echo "<link rel='stylesheet' href='css/palette-light.css'>";
 	}
 	?>
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="css/general.css">
+	<link rel="stylesheet" href="css/card.css">
 	<link rel="stylesheet" href="css/profile.css">
 	<script src="https://kit.fontawesome.com/26e97bbe8d.js" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js"
@@ -60,249 +60,67 @@ $image = "public/images/Profiles/profile-picture-1.jpg";
 	<!-- Navigation Bar -->
 	<?php include "../src/templates/navbarLoggedin.php"; ?>
 
-	<main>
-		<div class="Profile">
+	<main class="container">
 
-			<div class="Profile-Button">
-				<h1 id="title">
-					<b>Welcome back,
-						<?php echo $full_name ?>
-					</b>
-
-					<br>
-				</h1>
-				<p id="Profile-Paragraph">
-					<i> Take a look at all of your tickets. </i>
-				</p>
-				<button id="EditProfile-Button">
-					Edit Profile
-				</button>
-			</div>
-			<div class="Profile-Picture">
-				<img src="<?php $image ?>" alt="" width="100" height="100" style="border-radius:50px; float:right"
-					id="ImageProfile">
-				<br>
-				<br>
-				<p id="Profile-Paragraph1">
-					<?php echo $full_name ?>
-				</p>
-				<br>
-				<p id="Profile-Paragraph1" style="color: var(--foreground);">
-					<?php echo "@" . $username ?>
-				</p>
-				<!--Username-->
-				<!--profile-->
-				<br>
-				<a href="login.html">
-					<button id="LogOut-Profile" style="background-color:red">
-						Log Out
-					</button>
-				</a>
-			</div>
+		<div class="top">
+			<h1>Welcome back, <?php echo $full_name; ?></h1>
+			<p>Take a look at all your tickets.</p>
 		</div>
 
-		<center>
-			<div class="Ticket-buttons">
-				<button class="tab-button active" id="All-Tickets">
-					<img src="assets/icons/library.svg" alt="">
-					<p>All tickets</p>
-				</button>
+		<div class="tabs row g-4">
+			<label class="tab col-md-6 col-lg-3">
+				<input type="radio" name="type" value="all" checked>
+				<div class="content <?php echo $isDark ? '' : 'border-light'; ?>">
+					<div class="left">
+						<?php echo file_get_contents("assets/icons/all.svg") ?>
+						<p>All tickets</p>
+					</div>	
+					<p><?php echo $count; ?></p>
+				</div>
+			</label>
+			<label class="tab col-md-6 col-lg-3">
+				<input type="radio" name="type" value="travel">
+				<div class="content <?php echo $isDark ? '' : 'border-light'; ?>">
+					<div class="left">
+						<?php echo file_get_contents("assets/icons/travel.svg") ?>
+						<p>Travel</p>
+					</div>	
+					<p><?php echo $count; ?></p>
+				</div>
+			</label>
+			<label class="tab col-md-6 col-lg-3">
+				<input type="radio" name="type" value="movie">
+				<div class="content <?php echo $isDark ? '' : 'border-light'; ?>">
+					<div class="left">
+						<?php echo file_get_contents("assets/icons/movie.svg") ?>
+						<p>Movies</p>
+					</div>	
+					<p><?php echo $count; ?></p>
+				</div>
+			</label>
+			<label class="tab col-md-6 col-lg-3">
+				<input type="radio" name="type" value="concert">
+				<div class="content <?php echo $isDark ? '' : 'border-light'; ?>">
+					<div class="left">
+						<?php echo file_get_contents("assets/icons/concert.svg") ?>
+						<p>Concerts</p>
+					</div>	
+					<p><?php echo $count; ?></p>
+				</div>
+			</label>
+		</div>
 
-				<button class="tab-button" id="Travels">
-					<img src="assets/icons/location.svg" alt="">
-					<p>Travels</p>
-				</button>
+		<hr class="divider">
 
-				<button class="tab-button" id="Movies">
-					<img src="assets/icons/movie.svg" alt="">
-					<p>Movies</p>
-				</button>
-
-				<button class="tab-button" id="Concerts">
-					<img src="assets/icons/concert.svg" alt="">
-					<p>Concerts</p>
-				</button>
-			</div>
-		</center>
-
+		<div class="tickets row g-4">
+			<?php
+				for ($i = 0; $i < 6; $i++) {
+					include "../src/templates/profileCard.php";
+				}
+			?>
+		</div>
 
 	</main>
-
-	<hr style="width: 1400px; margin:auto; color:var(--foreground);">
-
-	<div class="TicketBlocks">
-		<div class="Block">
-			<p class="TicketType">
-				<img src="assets/icons/concert.svg" alt="">
-				<text class="TicketText">
-					<?php echo $ticket_type ?>
-				</text>
-
-			</p>
-			<hr>
-			<p class="TicketTitle">
-				<?php echo $title ?>
-				<br>
-			</p>
-			<p class="TicketDate">
-				<img src="assets/icons/calendar.svg" alt="Calendar">
-				<?php echo $date ?>
-			<p id="Time" class="TicketTime">
-				<?php echo "Start:" . " " . $time_start . "--" . "End: " . " " . $time_end ?>
-			</p>
-			</p>
-
-			<text class="TicketLocation">
-				<img src="assets/icons/location.svg" alt="">
-				<?php echo $location ?>
-			</text>
-			</p>
-
-		</div>
-
-
-		<div class="Block">
-			<p class="TicketType">
-				<img src="assets/icons/location.svg" alt="">
-				<text class="TicketText">
-					<?php echo $ticket_type ?>
-				</text>
-			</p>
-
-			<hr>
-			<p class="TicketTitle">
-				<?php echo $title ?>
-				<br>
-			</p>
-			<p class="TicketDate">
-				<img src="assets/icons/calendar.svg" alt="Calendar">
-				<?php echo $date ?>
-			<p id="Time" class="TicketTime">
-				<?php echo "Start:" . " " . $time_start . "--" . "End: " . " " . $time_end ?>
-			</p>
-			</p>
-			<text class="TicketLocation">
-				<img src="assets/icons/location.svg" alt="">
-				<?php echo $location ?>
-			</text>
-			</p>
-
-		</div>
-
-
-		<div class="Block">
-			<p class="TicketType">
-				<img src="assets/icons/movie.svg" alt="">
-				<text class="TicketText"> <text class="TicketText">
-						<?php echo $ticket_type ?>
-					</text>
-				</text>
-			</p>
-			<hr>
-			<p class="TicketTitle">
-				<?php echo $title ?>
-				<br>
-			</p>
-			<p class="TicketDate">
-				<img src="assets/icons/calendar.svg" alt="Calendar">
-				<?php echo $date ?>
-			<p id="Time" class="TicketTime">
-				<?php echo "Start:" . " " . $time_start . "--" . "End: " . " " . $time_end ?>
-			</p>
-			</p>
-			<text class="TicketLocation">
-				<img src="assets/icons/location.svg" alt="">
-				<?php echo $location ?>
-			</text>
-			</p>
-		</div>
-	</div>
-
-
-	<div class="TicketBlocks">
-		<div class="Block">
-			<p class="TicketType">
-				<img src="assets/icons/concert.svg" alt="Concert">
-				<text class="TicketText">
-					<?php echo $ticket_type ?>
-				</text>
-			</p>
-			<hr>
-			<p class="TicketTitle">
-				<?php echo $title ?>
-				<br>
-			</p>
-			<p class="TicketDate">
-			<p class="TicketDate">
-				<img src="assets/icons/concert.svg" alt="">
-				<?php echo $date ?>
-			<p id="Time" class="TicketTime">
-				<?php echo "Start:" . " " . $time_start . "--" . "End: " . " " . $time_end ?>
-			</p>
-			</p>
-			<text class="TicketLocation">
-				<img src="assets/icons/location.svg" alt="">
-				<?php echo $location ?>
-			</text>
-			</p>
-		</div>
-
-
-		<div class="Block">
-			<p class="TicketType">
-				<img src="assets/icons/concert.svg" alt="">
-				<text class="TicketText">
-					<?php echo $ticket_type ?>
-				</text>
-			</p>
-			<hr>
-			<p class="TicketTitle">
-				<?php echo $title ?>
-				<br>
-			</p>
-			<p class="TicketDate">
-				<img src="assets/icons/concert.svg" alt="Concert">
-				<?php echo $date ?>
-			<p id="Time" class="TicketTime">
-				<?php echo "Start:" . " " . $time_start . "--" . "End: " . " " . $time_end ?>
-			</p>
-			</p>
-			<text class="TicketLocation">
-				<img src="assets/icons/location.svg" alt="">
-				<?php echo $location ?>
-			</text>
-			</p>
-		</div>
-
-
-		<div class="Block">
-			<p class="TicketType">
-				<img src="assets/icons/Travel.svg" alt="">
-				<text class="TicketText">
-					<?php echo $ticket_type ?>
-				</text>
-			</p>
-			<hr>
-			<p class="TicketTitle">
-				<?php echo $title ?>
-			</p>
-			<p class="TicketDate">
-				<img src="assets/icons/location.svg" alt="">
-				<?php echo $date ?>
-			<p id="Time" class="TicketTime">
-				<?php echo "Start:" . " " . $time_start . "--" . "End: " . " " . $time_end ?>
-			</p>
-			</p>
-			<text class="TicketLocation">
-				<img src="/public/icon/" alt="">
-				<?php echo $location ?>
-			</text>
-			</p>
-		</div>
-
-	</div>
-
-	</div>
 
 	<!-- Footer -->
 	<?php include "../src/templates/footer.php"; ?>

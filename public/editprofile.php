@@ -23,9 +23,10 @@ $isLoggedIn = true;
 $isChecked = false;
 $avatar = 4;
 $full_name = 'Zana Misini';
-$email = 'zaanamisinii@gmail.com'
+$email = 'zaanamisinii@gmail.com';
+$userType = 'BUSINESS';
 
-	?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
