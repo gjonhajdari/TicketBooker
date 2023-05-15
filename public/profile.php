@@ -24,7 +24,7 @@ $time_start = 8;
 $time_end = 1;
 $ticket_type = 'Concert';
 $title = 'Dua Lipa';
-$image = "../public/assets/icons/";
+$image = "public/images/Profiles/profile-picture-1.jpg";
 
 
 ?>
@@ -79,8 +79,8 @@ $image = "../public/assets/icons/";
 				</button>
 			</div>
 			<div class="Profile-Picture">
-				<img src="assets/icons/ProfilePicture.jpg" alt="" width="100" height="100"
-					style="border-radius:50px; float:right" id="ImageProfile">
+				<img src="<?php $image ?>" alt="" width="100" height="100" style="border-radius:50px; float:right"
+					id="ImageProfile">
 				<br>
 				<br>
 				<p id="Profile-Paragraph1">
