@@ -1,203 +1,65 @@
-/*
--------------------------------------------------
-Profile ------------------------------------------
--------------------------------------------------
-*/
-*{
-	margin:3px;
-}
-.Header {
-	margin: 40px;
+.container {
+	margin-top: 100px;
+	margin-bottom: 100px;
 }
 
-.Profile {
+.top {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	flex-direction: column;
+	gap: 15px;
+	margin-bottom: 70px;
 }
 
-.Profile #Profile-Paragraph {
-	margin-top: 17px;
+.top h1 {
+	font-size: 2.5rem;
+
+}
+
+.top p {
+	font-size: 1.15rem;
 	color: var(--text-secondary);
 }
 
-
-.Profile button {
-	padding: 5px;
-	width: 140px;
-	height: 40px;
-	border-radius: 10px;
-	background-color: var(--foreground);
-	color: var(--text-primary);
-	border: 0px none;
-	font-size: 1.2rem;
+.tab input[type='radio'] {
+	position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
-.Profile-Picture button {
-	background-color: var(--red);
-}
-
-
-
-.Profile-Picture #Profile-Paragraph1 {
-	margin: 0px 14px 0px 0px;
-	float: right;
-	font-size: 2rem;
-}
-
-
-.Profile-Button {
-	margin: 20px;
-}
-
-.Profile-Picture {
-	margin: 50px;
-	margin-right: 74px;
-}
-
-.Ticket-buttons {
+.tab input[type='radio'] + .content {
+	cursor: pointer;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 50px;
-	gap: 28px;
-}
-
-.Ticket-buttons .tab-button {
-	width:400px;
-	height: 60px;
-	padding: 0.5rem 2rem 0.5rem 0.5rem;
-	border-radius: 13px;
-	background-color: #333333;
-	color: #FFFFFF;
-	border: 0px none;
-	font-size: 1.2rem;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	gap: 10px;
-	font-weight: 500;
-}
-
-.tab-button.active {
-	background-color: var(--accent);
-	color: #333;
-}
-
-.Ticket-buttons #All-Tickets:hover {
-	background-color: var(--accent);
-	cursor: pointer;
-	transform: scale(1.09);
-	transition: 300ms;
-
-}
-
-.Ticket-buttons img {
-	margin-left: 15px;
-	float: left;
-}
-
-.Ticket-buttons #Travels:hover {
-	background-color: var(--accent);
-	cursor: pointer;
-	transform: scale(1.09);
-	transition: 300ms;
-}
-
-
-.Ticket-buttons #Movies:hover {
-	background-color: var(--accent);
-	cursor: pointer;
-	transform: scale(1.09);
-	transition: 300ms;
-
-}
-
-.Ticket-buttons #Concerts:hover {
-	background-color: var(--accent);
-	cursor: pointer;
-	transform: scale(1.09);
-	transition: 300ms;
-}
-
-.Ticket-buttons p {
-	float: left;
-	margin: 1px 1px 1px 10px;
-}
-
-/*
--------------------------------------------------
-TicketBlocks ------------------------------------------
--------------------------------------------------
-*/
-
-.TicketBlocks {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	justify-items: center;
-	align-items: center;
-	align-content: center;
-	
-}
-
-
-
-.Block {
-	width: 800px;
-	height: 200px;
+	font-size: 1.15rem;
 	background-color: var(--foreground);
-	border-radius: 15px;
-	margin:30px;
-	float:right;
+	padding: 1rem 1.25rem;
+	border-radius: 0.75rem;
 }
 
+.tab input[type='radio']:checked + .content {
+	background-color: var(--accent);
+	color: var(--background);
+}
 
-.Block .TicketType {
-	font-size: 1.2rem;
+.tab input[type='radio']:checked + .content svg path {
+	fill: var(--background);
+}
+
+.tab .content .left {
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 15px;
+}
+.content svg path {
+	fill: var(--text-primary);
 }
 
-.Block .TicketType img {
-	margin: 10px 0px 10px 18px;
-	float: left;
-	display: flex;
+.divider {
+	border: none;
+	border-bottom: 1px solid var(--border);
+	margin: 35px 0;
+	border-radius: 1px;
 }
-
-.Block .TicketType text {
-	margin: 10px 0px 10px 20px;
-	padding: 5px;
-}
-
-.TicketTitle {
-	margin: 20px 0px 20px 20px;
-}
-
-.TicketDate {
-	margin: 20px 0px 0px 20px;
-}
-
-.TicketTime {
-	color: var(--text-secondary);
-	margin: 5px 0px 15px 40px;
-}
-
-.TicketLocation {
-	margin: 5px 0px 15px 20px;
-}
-
-.TicketDate img {
-	margin-top: 10px;
-	float: left;
-	margin-right: 5px;
-}	
-
-.TicketType .TicketText{
-	color: var(--accent);
-
-}
-
-.Block hr{
-	color:var(--accent);
-}
-

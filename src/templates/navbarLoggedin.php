@@ -1,4 +1,3 @@
-<!-- Navigation bar -->
 <?php
 //TODO add users variables in the project using sessions
 //TODO link logout page
@@ -46,6 +45,10 @@
 				<a href="profile.php" class="option">
 					<?php echo file_get_contents('assets/icons/profile.svg') ?>
 					<p>Profile</p>
+				</a>
+				<a href="createTicket.php" class="option">
+					<?php echo file_get_contents('assets/icons/create.svg') ?>
+					<p>Create Ticket</p>
 				</a>
 				<a href="editProfile.php" class="option">
 					<?php echo file_get_contents('assets/icons/settings.svg') ?>
