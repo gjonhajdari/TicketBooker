@@ -45,10 +45,6 @@ $full_name = 'Gjon Hajdari';
     </form>
 
 
-
-  
-  
-  
   
   
   <?php
