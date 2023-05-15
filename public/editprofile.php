@@ -1,4 +1,22 @@
-<?php 
+<?php
+
+//TODO session variables for users resources
+//TODO write code for changing passwords using sessions
+//TODO write code to change light/dark mode using session
+//TODO write code to change profile avatar using sessions
+//TODO add submit button to make the changes??
+//TODO write code to change username and email (if needed)
+
+// require('signup.php');
+// if(!empty($_SESSION['id'])){
+// 	$id = $_SESSION["id"];
+// 	$result = mysqli_query($conn, "SELECT * FROM  users WHERE id = $id");
+// 	$row = mysqli_fetch_assoc($result);
+
+// }else{
+// 	header("Location: login.php");
+// }
+
 
 $isDark = false;
 $isLoggedIn = true;
@@ -7,7 +25,7 @@ $avatar = 4;
 $full_name = 'Zana Misini';
 $email = 'zaanamisinii@gmail.com'
 
-?>
+	?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,28 +37,31 @@ $email = 'zaanamisinii@gmail.com'
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel='icon' type='image/x-icon' href='assets/icons/favicon.svg'>
 	<?php
-		if ($isDark == true) {
-			echo "<link rel='stylesheet' href='css/palette-dark.css'>";
-		} else {
-			echo "<link rel='stylesheet' href='css/palette-light.css'>";
-		}
+	if ($isDark == true) {
+		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
+	} else {
+		echo "<link rel='stylesheet' href='css/palette-light.css'>";
+	}
 	?>
 	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="css/general.css">
 	<link rel="stylesheet" href="css/editprofile.css">
 	<script src="https://kit.fontawesome.com/26e97bbe8d.js" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+		integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 	<script src="js/app.js"></script>
 </head>
 
 <body>
-	
+
 	<!-- Navigation bar -->
 	<?php include "../src/templates/navbarLoggedin.php"; ?>
 
 	<div class="container">
 
-		<h1 class="path"><span><?php echo $full_name ?> / </span>Edit profile</h1>
+		<h1 class="path"><span>
+				<?php echo $full_name ?> /
+			</span>Edit profile</h1>
 		<div class="main">
 			<div class="left">
 
@@ -50,16 +71,15 @@ $email = 'zaanamisinii@gmail.com'
 					</div>
 					<div class="avatars">
 						<?php
-							for ($i = 1; $i < 13; $i++) {
-								if ($i == $avatar) {
-									$selected = true;
-									include "../src/templates/avatar.php";
-								}
-								else {
-									$selected = false;
-									include "../src/templates/avatar.php";
-								}
+						for ($i = 1; $i < 13; $i++) {
+							if ($i == $avatar) {
+								$selected = true;
+								include "../src/templates/avatar.php";
+							} else {
+								$selected = false;
+								include "../src/templates/avatar.php";
 							}
+						}
 						?>
 					</div>
 				</div>
@@ -109,8 +129,7 @@ $email = 'zaanamisinii@gmail.com'
 					<div class="switch-field">
 						<p>Dark mode</p>
 						<label class="switch">
-							<input type="checkbox" name="appearance"
-								<?php echo $isChecked ? 'checked' : ''; ?>>
+							<input type="checkbox" name="appearance" <?php echo $isChecked ? 'checked' : ''; ?>>
 							<span class="slider"></span>
 						</label>
 					</div>
@@ -119,7 +138,7 @@ $email = 'zaanamisinii@gmail.com'
 		</div>
 
 	</div>
-	
+
 	<!-- Footer -->
 	<?php include "../src/templates/footer.php"; ?>
 

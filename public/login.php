@@ -1,4 +1,8 @@
-<?php $isDark = true; ?>
+<?php 
+
+//session_start()
+
+$isDark = true; ?>
 
 <!DOCTYPE html>
 <html lang="en">

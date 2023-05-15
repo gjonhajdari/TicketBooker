@@ -1,5 +1,6 @@
 <?php
-
+	//TODO consult group about the number of tickets (what if you're sold out?!)
+	//If yes, add sessions for tickets
 $isDark = true;
 $isLoggedIn = true;
 $avatar = 10;
