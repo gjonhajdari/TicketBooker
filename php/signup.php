@@ -3,8 +3,8 @@ session_start();
 // Parametrat e databazes
 $servername = "localhost";
 $username = "username";
-$password = "password";
-$dbname = "TicketBooker";
+$password = "";
+$dbname = "ticketbooker";
 
 // connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
