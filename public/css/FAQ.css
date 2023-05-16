@@ -4,6 +4,11 @@
 	align-items: center;
 	justify-content: center;
 }
+.ContainerParagraph #Paragraph1{
+	margin-left: 60px;
+	color:gray;
+	font-size:1.2rem;
+}
 .Accordion{
 	width: 750px;
 	height: 60px;

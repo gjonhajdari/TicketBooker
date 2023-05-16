@@ -44,17 +44,16 @@ $full_name = 'Gjon Hajdari';
 
   <div class="Container">
     <div class="ContainerParagraph">
-      <p style="font-size:20;">
-        Frequently Asked Questions
+      <p style="font-size:2.5rem; padding-top:80px; padding-bottom:10px;" >
+        <b> Frequently Asked Questions </b>
 
         <br>
-      <p>
-        Got another question for us?
-      <p style="color:red"> Contact us via email!
+      <p id="Paragraph1">
+           Got another question for us? <txt style="color: var(--accent)"> Contact us </txt> via email!
       </p>
       </p>
     </div>
-    br
+    <br>
     <div class="Accordion">
       <hr class="AccordionHr">
       <div class="AccordionText">
@@ -63,6 +62,7 @@ $full_name = 'Gjon Hajdari';
       </div>
       <hr class="AccordionHr">
     </div>
+
     <div class="Accordion">
       <hr class="AccordionHr">
       <div class="AccordionText">
@@ -70,6 +70,7 @@ $full_name = 'Gjon Hajdari';
       </div>
       <hr class="AccordionHr">
     </div>
+
     <div class="Accordion">
       <hr class="AccordionHr">
       <div class="AccordionText">
@@ -77,6 +78,7 @@ $full_name = 'Gjon Hajdari';
       </div>
       <hr class="AccordionHr">
     </div>
+
     <div class="Accordion">
       <hr class="AccordionHr">
       <div class="AccordionText">
@@ -84,6 +86,7 @@ $full_name = 'Gjon Hajdari';
       </div>
       <hr class="AccordionHr">
     </div>
+
     <div class="Accordion">
       <hr class="AccordionHr">
       <div class="AccordionText">
