@@ -7,16 +7,13 @@
 
 session_start();
 $isDark = true;
-$isLoggedIn = $_SESSION["login"];
 $isChecked = false;
 $avatar = 10;
 $full_name = 'Zana Misini';
 $email = 'zaanamisinii@gmail.com';
 $userType = 'BUSINESS';
 
-if ($isLoggedIn == false) {
-	header('Location: login.php');
-}
+
 
 ?>
 
@@ -24,6 +21,17 @@ if ($isLoggedIn == false) {
 <html lang="en">
 
 <head>
+<?php
+		if ($_SESSION["dark_mode"] == "null") {
+			echo "<link rel='stylesheet' href='css/palette-light.css'>";
+	} else {
+		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
+	}
+	?>
+<link rel='stylesheet' href='css/palette-light.css' id="light-theme">
+<link rel='stylesheet' href='css/palette-dark.css' id="dark-theme">
+
+
 	<style>
 		#button {
 		padding: 1rem 2rem;
@@ -69,13 +77,6 @@ if ($isLoggedIn == false) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel='icon' type='image/x-icon' href='assets/icons/favicon.svg'>
 
-	<?php
-	if ($isDark == true) {
-		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
-	} else {
-		echo "<link rel='stylesheet' href='css/palette-light.css'>";
-	}
-	?>
 	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="css/general.css">
 	<link rel="stylesheet" href="css/editprofile.css">
@@ -105,7 +106,7 @@ if ($isLoggedIn == false) {
 					<div class="avatars">
 						<?php
 						for ($i = 1; $i < 13; $i++) {
-							if ($i == $avatar) {
+							if ($i == $_SESSION["avatar"]) {
 								$selected = true;
 								include "../src/templates/avatar.php";
 							} else {
@@ -118,7 +119,7 @@ if ($isLoggedIn == false) {
 				</div>
 			</div>
 
-			<div class="right <?php echo $isDark ? '' : 'border-light-2'; ?>">
+			<div class="right <?php echo $_SESSION['dark_mode']!="null" ? '' : 'border-light-2'; ?>">
 				<div class="field">
 					<div class="field-name">
 						<h1>User info</h1>
@@ -165,9 +166,9 @@ if ($isLoggedIn == false) {
 						<h1>Appearance</h1>
 					</div>
 					<div class="switch-field">
-						<p>Dark mode</p>
+						<p id="p">Light/Dark Mode</p>
 						<label class="switch">
-							<input type="checkbox" name="appearance" <?php echo $isDark ? 'checked' : ''; ?>>
+							<input type="checkbox" name="appearance" id="mode-switch">
 							<span class="slider"></span>
 						</label>
 					</div>
@@ -176,10 +177,53 @@ if ($isLoggedIn == false) {
 		</div>
 
 	</div>
+	<script>
+	
+		// Get the mode switch checkbox and the light/dark theme links
+		var modeSwitch = document.getElementById("mode-switch");
+		var lightTheme = document.getElementById("light-theme");
+		var darkTheme = document.getElementById("dark-theme");
+
+// When the mode switch is toggled, update the theme based on the checkbox state
+modeSwitch.addEventListener("change", function() {
+  if (modeSwitch.checked) {
+    // Dark mode selected, update the theme to the dark palette
+    lightTheme.disabled = true;
+    darkTheme.disabled = false;
+    document.getElementById('p').innerText = "Dark Mode";
+  } else {
+    // Light mode selected, update the theme to the light palette
+    lightTheme.disabled = false;
+    darkTheme.disabled = true;
+    document.getElementById('p').innerText = "Light Mode";
+  }
+  
+  // Use AJAX to update the user preference in the server-side database
+  fetch("preference.php", {
+    method: "POST",
+    body: "mode=" + (modeSwitch.checked ? "1" : "null"),
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded"
+    }
+  })
+  .then(function(response) {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+  })
+  .catch(function(error) {
+    console.error("Error updating user preference:", error);
+  });
+});
+
+	</script>
+
 
 	<!-- Footer -->
 	<?php include "../src/templates/footer.php"; ?>
 
+
+	
 </body>
 
 </html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <!-- Include the CSS palette links for light and dark modes -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.0/cerulean/bootstrap.min.css" id="light-theme">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.0/darkly/bootstrap.min.css" id="dark-theme">
+
+<!-- Add the checkbox for toggling light/dark mode -->
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" id="mode-switch">
+  <label class="form-check-label" for="mode-switch">Dark Mode</label>
+</div>
+
+<!-- Add some example content -->
+<div class="container">
+  <h1>Light/Dark Mode Example</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus varius quam ac nulla fringilla, vitae varius arcu facilisis. Morbi auctor posuere nibh, sit amet vehicula mauris commodo vel. Donec lobortis ante a velit gravida placerat.</p>
+</div>
+
+<script>
+    // Get the mode switch checkbox and the light/dark theme links
+var modeSwitch = document.getElementById("mode-switch");
+var lightTheme = document.getElementById("light-theme");
+var darkTheme = document.getElementById("dark-theme");
+
+// When the mode switch is toggled, update the theme based on the checkbox state
+modeSwitch.addEventListener("change", function() {
+  if (modeSwitch.checked) {
+    // Dark mode selected, update the theme to the dark palette
+    lightTheme.disabled = true;
+    darkTheme.disabled = false;
+    modeSwitch.labels[0].innerText = "Light Mode";
+  } else {
+    // Light mode selected, update the theme to the light palette
+    lightTheme.disabled = false;
+    darkTheme.disabled = true;
+    modeSwitch.labels[0].innerText = "Dark Mode";
+  }
+  
+  // Use AJAX to update the user preference in the server-side database
+  fetch("/path/to/update/preference.php", {
+    method: "POST",
+    body: "mode=" + (modeSwitch.checked ? "dark" : "light"),
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded"
+    }
+  })
+  .then(function(response) {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+  })
+  .catch(function(error) {
+    console.error("Error updating user preference:", error);
+  });
+});
+
+</script>
+</html>

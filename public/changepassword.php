@@ -1,5 +1,5 @@
 <?php
-				require_once('../src/modules/db.php');
+				require('../src/modules/db.php');
 	
 				if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 					$conn or die("Connection failed: ".mysqli_connect_error());

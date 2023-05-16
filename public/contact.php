@@ -51,10 +51,12 @@ mysqli_close($conn);
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel='icon' type='image/x-icon' href='assets/icons/favicon.svg'>
 	<?php
-		if ($isDark == true) {
+		if (($_SESSION["login"]==true) && ($_SESSION['dark_mode'] != "null")) {
 			echo "<link rel='stylesheet' href='css/palette-dark.css'>";
-		} else {
+		} else if(($_SESSION["login"]==true) && ($_SESSION['dark_mode'] == "null")){
 			echo "<link rel='stylesheet' href='css/palette-light.css'>";
+		}else{
+			echo "<link rel='stylesheet' href='css/palette-dark.css'>";
 		}
 	?>
 	<link rel="stylesheet" href="css/general.css">

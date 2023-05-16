@@ -14,13 +14,13 @@ $isDark = true; ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel='icon' type='image/x-icon' href='assets/icons/favicon.svg'>
 	<?php
-		// if(_$SESSION["login"]){
-		// }
-		if ($isDark == true) {
-			echo "<link rel='stylesheet' href='css/palette-dark.css'>";
-		} else {
-			echo "<link rel='stylesheet' href='css/palette-light.css'>";
-		}
+	if (($_SESSION["login"]==true) && ($_SESSION['dark_mode'] == "null")) {
+		echo "<link rel='stylesheet' href='css/palette-light.css'>";
+	} else if(($_SESSION["login"]==true) && ($_SESSION['dark_mode'] != "null")){
+		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
+	}else{
+		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
+	}
 	?>
 	<link rel="stylesheet" href="css/general.css">
 	<link rel="stylesheet" href="css/login.css">
@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 				$_SESSION["email"] = $user["email"];
 				$_SESSION["password"] = $user["password"];
 				$_SESSION["checkbox"] = $user["checkbox"];
-				$_SESSION["avatar"] = $user["avatar"];
+				$_SESSION["avatar"] = 1;
 				$_SESSION["dark_mode"] = $user["dark_mode"];
 				header('location:index.php');
 				die();

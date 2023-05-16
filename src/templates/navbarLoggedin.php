@@ -5,7 +5,7 @@
 ?>
 <nav 
 	class="navbar <?php
-						echo $isDark ? '' : ' navbar-light';
+						echo $_SESSION["dark_mode"] ? '' : ' navbar-light';
 						echo !$_SESSION["login"] ? '' : ' navbar-logged';
 					?>">
 	<div class="navbar-content">
@@ -18,14 +18,14 @@
 			<a href="contact.php" class="link">Contact</a>
 		</div>
 		<div class="right">
-			<img id="profile-picture" src="assets/images/profiles/profile-picture-<?php echo $avatar; ?>.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+			<img id="profile-picture" src="assets/images/profiles/profile-picture-<?php echo $_SESSION["avatar"]; ?>.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
 			<p class="name"><?php echo $_SESSION["name"]; ?></p>
 		</div>
 
 		<div class="dropdown"   style= "z-index: 2;">
 			<div class="top">
 				<div class="info">
-					<img src="assets/images/profiles/profile-picture-<?php echo $avatar; ?>.jpg" alt="" width="50" height="50" style="border-radius: 50%;">
+					<img src="assets/images/profiles/profile-picture-<?php echo $_SESSION["avatar"]; ?>.jpg" alt="" width="50" height="50" style="border-radius: 50%;">
 					<?php echo $_SESSION["name"]; ?>
 				</div>
 		
