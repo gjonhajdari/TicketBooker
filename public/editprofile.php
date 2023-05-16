@@ -6,7 +6,7 @@
 //TODO write code to change username and email (if needed)
 
 session_start();
-$isDark = false;
+$isDark = true;
 $isLoggedIn = true;
 $isChecked = false;
 $avatar = 10;
@@ -118,7 +118,7 @@ $userType = 'BUSINESS';
 					<div class="switch-field">
 						<p>Dark mode</p>
 						<label class="switch">
-							<input type="checkbox" name="appearance" <?php echo $isChecked ? 'checked' : ''; ?>>
+							<input type="checkbox" name="appearance" <?php echo $isDark ? 'checked' : ''; ?>>
 							<span class="slider"></span>
 						</label>
 					</div>

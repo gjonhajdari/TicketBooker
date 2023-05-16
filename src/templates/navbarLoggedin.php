@@ -47,7 +47,7 @@
 					<?php echo file_get_contents('assets/icons/settings.svg') ?>
 					<p>Settings</p>
 				</a>
-				<a href="logout.php" class="option">
+				<a href="../src/modules/logout.php" class="option">
 					<?php echo file_get_contents('assets/icons/logout.svg') ?>
 					<p>Log out</p>
 				</a>
