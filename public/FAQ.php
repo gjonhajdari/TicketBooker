@@ -56,9 +56,9 @@ $(document).ready(function() {
 
     });
   });
-  
-  </script>
 
+  </script>
+<!-- WILL BE FIXED TE MERKUREN!!-->
   <div class="Container">
     <div class="ContainerParagraph">
       <p style="font-size:2.5rem; padding-top:80px; padding-bottom:10px;" >
