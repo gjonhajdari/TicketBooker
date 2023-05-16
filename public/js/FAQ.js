@@ -1,8 +1,8 @@
 <script>
 
-    $(document).ready(function() {
+    $(document).ready(function(){
         $(".AccordionText").click(function () {
-            $(".AccordionHiddenText").show();
+            $(".AccordionHiddenText").slideDown("slow");
         })
     })
 

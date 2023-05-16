@@ -38,7 +38,19 @@ $full_name = 'Gjon Hajdari';
   <script src="js/app.js"></script>
   <script src="js/FAQ.js"></script>
 
+  <script>
+    $(document).ready(function(){
+      $("#AccordionTextid1").click(function(){
+        $("")
+      })
+    })
 
+
+
+
+
+
+</script>
 </head>
 
 <body>
@@ -57,9 +69,9 @@ $full_name = 'Gjon Hajdari';
     <br>
     <div class="Accordion">
       <hr class="AccordionHr">
-      <div class="AccordionText">
+      <div class="AccordionText" id="AccordionTextid1">
         What is TicketBooker?
-        <div class="AccordionHiddentext ">
+        <div class="AccordionHiddenText" id="AccordionHiddenText1">
         TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
         </div>
         <img src="assets/icons/" alt="">
@@ -68,9 +80,9 @@ $full_name = 'Gjon Hajdari';
     </div>
     <div class="Accordion">
       <hr class="AccordionHr">
-      <div class="AccordionText">
+      <div class="AccordionText" id="AccordionTextid2">
         what kind of tickets can i buy?
-        <div class="AccordionHiddentext ">
+        <div class="AccordionHiddenText " id="AccordionHiddenText2">
          TicketBooker focuses mostly on movies,concerts and travel tickets but 
          if there are any type of tickets that can help us inprove our page contact us!
         </div>
@@ -80,9 +92,9 @@ $full_name = 'Gjon Hajdari';
 
     <div class="Accordion">
       <hr class="AccordionHr">
-      <div class="AccordionText">
+      <div class="AccordionText" id="AccordionTextid3">
         is there a return policy?
-        <div class="AccordionHiddentext ">
+        <div class="AccordionHiddenText " id="AccordionHiddenText3">
         TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
         </div>
       </div>
@@ -91,16 +103,23 @@ $full_name = 'Gjon Hajdari';
 
     <div class="Accordion">
       <hr class="AccordionHr">
-      <div class="AccordionText">
+      <div class="AccordionText" id="AccordionTextid3">
         Question #4
+        <div class="AccordionHiddenText " id="AccordionHiddenText3">
+        TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+        </div>
+        
       </div>
       <hr class="AccordionHr">
     </div>
 
     <div class="Accordion">
       <hr class="AccordionHr">
-      <div class="AccordionText">
+      <div class="AccordionText" id="AccordionTextid4">
         Question #5
+        <div class="AccordionHiddenText " id="AccordionHiddenText4">
+        TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+        </div>
       </div>
       <hr class="AccordionHr">
     </div>
