@@ -52,6 +52,8 @@ $(document).ready(function() {
       var LocateFigure=$(this).find('.DropDown');
       LocateFigure.toggleClass('Rotate');
       Locate.animate();
+     
+
     });
   });
   
@@ -83,7 +85,6 @@ $(document).ready(function() {
       </div>
       <hr class="AccordionHr">
     </div>
-    
     <div class="Accordion">
       <hr class="AccordionHr">
       <div class="AccordionText"  id="AccordionTextid">

@@ -9,16 +9,22 @@
 	margin-left: 60px;
 	color:gray;
 	font-size:1.2rem;
+	margin-bottom:25px;
 }
 .Accordion{
 	position:relative;
 	display: inline-block;
 	width: 750px;
 	height: 70px;
+	background-color: var(--background);
+	
+
 	
 }
 .AccordionText{
 	padding: 25px;
+	font-style:bold;
+	font-size:1.3rem;
 	
 }
 
@@ -58,4 +64,8 @@
   }
   .SpaceCreator {
     margin-bottom: 40px;
+  }
+
+  .AccordionHr{
+	border-color: gray;
   }
