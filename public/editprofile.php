@@ -33,7 +33,7 @@ $userType = 'BUSINESS';
 
 
 	<style>
-		#button {
+		#button, #button1 {
 		padding: 1rem 2rem;
 		font-size: 1.25rem;
 		border: none;
@@ -47,7 +47,7 @@ $userType = 'BUSINESS';
 		margin-top: 30px;
 		}
 
-		#button:hover {
+		#button:hover, #button1:hover {
 		transform: translateY(-5px);
 		}
 		.alert {
@@ -98,7 +98,7 @@ $userType = 'BUSINESS';
 			</span>Edit profile</h1>
 		<div class="main">
 			<div class="left">
-
+			<form method="POST" enctype="multipart/form-data">
 				<div class="field">
 					<div class="field-name">
 						<h1>Avatar</h1>
@@ -115,10 +115,26 @@ $userType = 'BUSINESS';
 							}
 						}
 						?>
+
 					</div>
 				</div>
-			</div>
+				<input type="submit" name="change_avatar" id="button1" class="btn" value="Change Avatar">
+				<?php
+				if (isset($_POST['change_avatar'])) {
+				$selected_avatar = $_POST['avatar'];
+				require('../src/modules/db.php');
+				$user_id = $_SESSION['id'];
+				$stmt = $conn->prepare("UPDATE `user` SET `avatar` = ? WHERE `id` = ?");
+				$stmt->bind_param('si', $selected_avatar, $user_id);
+				$stmt->execute();
+				$_SESSION['avatar'] = $selected_avatar;
 
+				}
+				?>
+			</form>
+			
+			</div>
+		
 			<div class="right <?php echo $_SESSION['dark_mode']!="null" ? '' : 'border-light-2'; ?>">
 				<div class="field">
 					<div class="field-name">
@@ -136,7 +152,7 @@ $userType = 'BUSINESS';
 					</div>
 				</div>
 				
-				<form method="POST">
+				<form method="POST" enctype="multipart/form-data">
 				<div class="field">
 					
 					<div class="field-name">
@@ -158,7 +174,7 @@ $userType = 'BUSINESS';
 							<input type="password" class="input" name="confirmpassword">
 						</div>
 					</div>
-					<input type="submit" name="submit" id="button" class="btn" value="Change Password">
+					<input type="submit" name="change_password" id="button" class="btn" value="Change Password">
 				</div>
 				</form>
 				<div class="field">
