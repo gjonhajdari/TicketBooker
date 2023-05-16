@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 				$_SESSION["email"] = $user["email"];
 				$_SESSION["password"] = $user["password"];
 				$_SESSION["checkbox"] = $user["checkbox"];
-				$_SESSION["avatar"] = 1;
+				$_SESSION["avatar"] = $user["avatar"];
 				$_SESSION["dark_mode"] = $user["dark_mode"];
 				header('location:index.php');
 				die();

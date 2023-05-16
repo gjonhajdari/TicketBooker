@@ -101,6 +101,7 @@ $userType = 'BUSINESS';
 			<form method="POST" enctype="multipart/form-data">
 				<div class="field">
 					<div class="field-name">
+					<?php include "changeavatar.php"; ?>
 						<h1>Avatar</h1>
 					</div>
 					<div class="avatars">
@@ -119,18 +120,7 @@ $userType = 'BUSINESS';
 					</div>
 				</div>
 				<input type="submit" name="change_avatar" id="button1" class="btn" value="Change Avatar">
-				<?php
-				if (isset($_POST['change_avatar'])) {
-				$selected_avatar = $_POST['avatar'];
-				require('../src/modules/db.php');
-				$user_id = $_SESSION['id'];
-				$stmt = $conn->prepare("UPDATE `user` SET `avatar` = ? WHERE `id` = ?");
-				$stmt->bind_param('si', $selected_avatar, $user_id);
-				$stmt->execute();
-				$_SESSION['avatar'] = $selected_avatar;
-
-				}
-				?>
+				
 			</form>
 			
 			</div>
