@@ -33,7 +33,7 @@ $userType = 'BUSINESS';
 
 
 	<style>
-		#button {
+		#button, #button1 {
 		padding: 1rem 2rem;
 		font-size: 1.25rem;
 		border: none;
@@ -47,7 +47,7 @@ $userType = 'BUSINESS';
 		margin-top: 30px;
 		}
 
-		#button:hover {
+		#button:hover, #button1:hover {
 		transform: translateY(-5px);
 		}
 		.alert {
@@ -98,9 +98,10 @@ $userType = 'BUSINESS';
 			</span>Edit profile</h1>
 		<div class="main">
 			<div class="left">
-
+			<form method="POST" enctype="multipart/form-data">
 				<div class="field">
 					<div class="field-name">
+					<?php include "changeavatar.php"; ?>
 						<h1>Avatar</h1>
 					</div>
 					<div class="avatars">
@@ -115,10 +116,15 @@ $userType = 'BUSINESS';
 							}
 						}
 						?>
+
 					</div>
 				</div>
+				<input type="submit" name="change_avatar" id="button1" class="btn" value="Change Avatar">
+				
+			</form>
+			
 			</div>
-
+		
 			<div class="right <?php echo $_SESSION['dark_mode']!="null" ? '' : 'border-light-2'; ?>">
 				<div class="field">
 					<div class="field-name">
@@ -136,7 +142,7 @@ $userType = 'BUSINESS';
 					</div>
 				</div>
 				
-				<form method="POST">
+				<form method="POST" enctype="multipart/form-data">
 				<div class="field">
 					
 					<div class="field-name">
@@ -158,7 +164,7 @@ $userType = 'BUSINESS';
 							<input type="password" class="input" name="confirmpassword">
 						</div>
 					</div>
-					<input type="submit" name="submit" id="button" class="btn" value="Change Password">
+					<input type="submit" name="change_password" id="button" class="btn" value="Change Password">
 				</div>
 				</form>
 				<div class="field">
