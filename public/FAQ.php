@@ -14,6 +14,7 @@ $full_name = 'Gjon Hajdari';
   <!-- Navigation bar -->
   <?php include "../src/templates/navbarLoggedin.php"; ?>
 
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,74 +34,100 @@ $full_name = 'Gjon Hajdari';
   <script src="https://kit.fontawesome.com/26e97bbe8d.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="js/app.js"></script>
+
+
 </head>
 
 <body>
 
-  <div class="Question-Blocks">
-    <div class="Block">
-      <p>
-        Question1
-      </p>
+  <div class="Container">
+    <div class="ContainerParagraph">
+      <p style="font-size:20;">
+        Frequently Asked Questions
 
-    </div>
-    <div class="Block">
+        <br>
       <p>
-        Question2
+        Got another question for us?
+      <p style="color:red"> Contact us via email!
+      </p>
       </p>
     </div>
-    <div class="Block">
-      <p>
-        Question3
-      </p>
+    br
+    <div class="Accordion">
+      <hr class="AccordionHr">
+      <div class="AccordionText">
+        What is TicketBooker?
+        <img src="assets/icons/" alt="">
+      </div>
+      <hr class="AccordionHr">
     </div>
-    <div class="Block">
-      <p>
-        Question4
-      </p>
+    <div class="Accordion">
+      <hr class="AccordionHr">
+      <div class="AccordionText">
+        what kind of tickets can i buy?
+      </div>
+      <hr class="AccordionHr">
     </div>
-    <div class="Block">
-      <p>
-        Question5
-      </p>
+    <div class="Accordion">
+      <hr class="AccordionHr">
+      <div class="AccordionText">
+        is there a return policy?
+      </div>
+      <hr class="AccordionHr">
     </div>
-
+    <div class="Accordion">
+      <hr class="AccordionHr">
+      <div class="AccordionText">
+        Question #4
+      </div>
+      <hr class="AccordionHr">
+    </div>
+    <div class="Accordion">
+      <hr class="AccordionHr">
+      <div class="AccordionText">
+        Question #5
+      </div>
+      <hr class="AccordionHr">
+    </div>
 
   </div>
 
 
-  <?php
 
-  //   require_once('../src/modules/db.php');
+
+
+  <?php
+  // require_once('../src/modules/db.php');
   
-  //   $sql = "SELECT * FROM questions";
-// $result = mysqli_query($conn, $sql);
+  // $sql = "SELECT * FROM questions";
+  // $result = mysqli_query($conn, $sql);
   
   // // Loop through the results and display each question and answer
-// if (mysqli_num_rows($result) > 0) {
-//     while ($row = mysqli_fetch_assoc($result)) {
-//         echo "<div class='question'>";
-//         echo "<h3>" . $row['question'] . "</h3>";
+  // if (mysqli_num_rows($result) > 0) {
+  // while ($row = mysqli_fetch_assoc($result)) {
+  // echo "<div class='question'>";
+  // echo "<h3>" . $row['question'] . "</h3>";
   
-  //         // Display the answer if it exists
-//         if ($row['answer']) {
-//             echo "<div class='answer'>";
-//             echo "<p>" . $row['answer'] . "</p>";
-//             echo "</div>";
-//         }
+  // // Display the answer if it exists
+  // if ($row['answer']) {
+  // echo "<div class='answer'>";
+  // echo "<p>" . $row['answer'] . "</p>";
+  // echo "</div>";
+  // }
   
-  //         echo "</div>";
-//     }
-// } else {
-//     echo "No questions found.";
-// } 
+  // echo "</div>";
+  // }
+  // } else {
+  // echo "No questions found.";
+  // }
   
-  //     Close the statement
-//     mysqli_stmt_close($stmt);
-//     mysqli_close($conn);
-//     Show a success message to the user
-//     echo "Your question has been submitted. Thank you!";
+  // Close the statement
+  // mysqli_stmt_close($stmt);
+  // mysqli_close($conn);
+  // Show a success message to the user
+  // echo "Your question has been submitted. Thank you!";
   
   ?>
 

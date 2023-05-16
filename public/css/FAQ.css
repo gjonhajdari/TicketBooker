@@ -1,11 +1,20 @@
-body {
-	height: 100vh;
+.Container{
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	align-items: center;
+	justify-content: center;
+}
+.Accordion{
+	width: 750px;
+	height: 60px;
+	
+}
+.AccordionText{
+	padding: 20px;
 }
 
-.Question-Block{
-    display: flex;
-    flex-direction: row;
+.Accordion .AccordionHr{
+	color:gray;
+	line-height: 1px;
+	border-style:outset;
 }
