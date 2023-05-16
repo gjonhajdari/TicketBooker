@@ -16,6 +16,7 @@
 }
 .AccordionText{
 	padding: 25px;
+	
 }
 
 .Accordion .AccordionHr{
@@ -25,6 +26,9 @@
 }
 .AccordionHiddenText{
 	display: none;
+	padding: 10px;
+    margin-top: 10px;
+    background-color: #f2f2f2;
 }
 
 .AccordionText:hover{
@@ -32,3 +36,11 @@
 	transition:300ms;
 	transform: scale(1.009);
 }
+
+.AccordionText{
+	display: flex;
+	justify-content: space-between;
+}
+.rotate {
+	transform: rotate(180deg);
+  }
