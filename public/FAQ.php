@@ -47,14 +47,14 @@ $full_name = 'Gjon Hajdari';
 
 $(document).ready(function() {
     $('.AccordionText').click(function() {
-      var Locate = $(this).find('.AccordionHiddenText');
-      Locate.slideToggle();
+      var DropDownElement = $(this).find('.AccordionHiddenText');
+      DropDownElement.slideToggle();
       var LocateFigure=$(this).find('.DropDown');
-      LocateFigure.toggleClass('rotate');
-      Locate.animate()
-
+      LocateFigure.toggleClass('Rotate');
+      Locate.animate();
     });
   });
+  
   </script>
 
   <div class="Container">
@@ -83,6 +83,7 @@ $(document).ready(function() {
       </div>
       <hr class="AccordionHr">
     </div>
+    
     <div class="Accordion">
       <hr class="AccordionHr">
       <div class="AccordionText"  id="AccordionTextid">

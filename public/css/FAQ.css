@@ -3,6 +3,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	margin:20px;
 }
 .ContainerParagraph #Paragraph1{
 	margin-left: 60px;
@@ -32,13 +33,14 @@
     left: 0;
     padding: 10px;
     display: none;
-    
 	top:100%;
+	
 }
 .AccordionDropDown{
 	display: block;
     padding: 5px;
     text-decoration: none;
+	
 }
 
 .AccordionText:hover{
@@ -51,6 +53,9 @@
 	display: flex;
 	justify-content: space-between;
 }
-.rotate {
+.Rotate {
 	transform: rotate(180deg);
+  }
+  .SpaceCreator {
+    margin-bottom: 40px;
   }
