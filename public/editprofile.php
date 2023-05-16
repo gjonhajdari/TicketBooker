@@ -24,11 +24,51 @@ if ($isLoggedIn == false) {
 <html lang="en">
 
 <head>
+	<style>
+		#button {
+		padding: 1rem 2rem;
+		font-size: 1.25rem;
+		border: none;
+		border-radius: 1rem;
+		width: 100%;
+		background-color: var(--accent);
+		font-weight: 600;
+		cursor: pointer;
+		transition: 300ms;
+		color: var(--background);
+		margin-top: 30px;
+		}
+
+		#button:hover {
+		transform: translateY(-5px);
+		}
+		.alert {
+ 		 padding: 0.75rem 1.25rem;
+ 		 margin-bottom: 1rem;
+  		border: 1px solid transparent;
+  		border-radius: 0.25rem;
+  		width: 100%;
+  		margin-right: auto;
+		}
+
+		.alert-success {
+  		color: #155724;
+  		background-color: #d4edda;
+  		border-color: #c3e6cb;
+		}
+
+		.alert-danger {
+  		color: #721c24;
+  		background-color: #f8d7da;
+ 		border-color: #f5c6cb;
+		}
+	</style>
 	<title>Edit profile - TicketBooker</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel='icon' type='image/x-icon' href='assets/icons/favicon.svg'>
+
 	<?php
 	if ($isDark == true) {
 		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
@@ -94,27 +134,32 @@ if ($isLoggedIn == false) {
 						</div>
 					</div>
 				</div>
-
+				
+				<form method="POST">
 				<div class="field">
+					
 					<div class="field-name">
 						<h1>Password</h1>
+						
 					</div>
 					<div class="inputs">
 						<div class="input-field">
+						<?php include "changepassword.php"; ?>
 							<label>Old password</label>
-							<input type="password" class="input">
+							<input type="password" class="input" name="oldpassword">
 						</div>
 						<div class="input-field">
 							<label>New password</label>
-							<input type="password" class="input">
+							<input type="password" class="input" name="newpassword">
 						</div>
 						<div class="input-field">
 							<label>Confirm new password</label>
-							<input type="password" class="input">
+							<input type="password" class="input" name="confirmpassword">
 						</div>
 					</div>
+					<input type="submit" name="submit" id="button" class="btn" value="Change Password">
 				</div>
-
+				</form>
 				<div class="field">
 					<div class="field-name">
 						<h1>Appearance</h1>
