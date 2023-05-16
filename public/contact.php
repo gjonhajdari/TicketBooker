@@ -83,18 +83,41 @@ mysqli_close($conn);
 				<p>Or contact us via Instagram, Linkedin or Customer Support.</p>
 			</div>
 
-			<form action="" method="POST">
+			<form action="#" method="POST">
 				<div class="inputs <?php echo $isDark ? '' : 'border-light'; ?>">
 					<div class="info">
-						<input type="text" name="name" required="required" placeholder="Full name" class="input">
-						<input type="email" name="email" required="required" placeholder="Email address" class="input">
+						<input type="text" name="name" id="name" required="required" placeholder="Full name" class="input">
+						<input type="email" name="email" id="email" required="required" placeholder="Email address" class="input">
 					</div>
-					<textarea name="message" placeholder="Your message" cols="30" rows="10"></textarea>
+					<textarea name="message"  id="message" placeholder="Your message" cols="30" rows="10"></textarea>
 				</div>
-				<input type="submit" name="submit" id="submit" class="btn" value="Send message">
+				<input type="submit" name="submit" id="submit" class="btn" onclick="check();" value="Send message">
 			</form>
 		</div>
 	</div>
+
+	<script>
+		function check(){
+			var name = document.getElementById('#name').value();
+			var email = document.getElementById('#email').value();
+			var message = document.getElementById('#message').value();
+
+			$.ajax({
+				type: 'POST',
+				url: 'pro.php',
+				data: { name: name, email: email, message: message },
+				success: function(response){
+					$('#result').html(response);
+					if(response == 'go')
+					{
+						alert(response);
+					}
+				}
+			});
+
+		}
+
+	</script>
 
 	<!-- Footer -->
 	<?php include "../src/templates/footer.php"; ?>

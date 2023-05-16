@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel='icon' type='image/x-icon' href='/public/assets/icons/favicon.svg'>
-    <title>Display data in real time</title>
-    <script src="https://kit.fontawesome.com/26e97bbe8d.js" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-	<script src="js/app.js"></script>
-
+    <link rel='icon' type='image/x-icon' href='/public/assets/icons/favicon.svg'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"> </script>
+    <title></title>
 </head>
+<body>
+    <table class="table table-striped table-hover">
+        <tr>
+            <th>Ticket ID</th>
+            <th>Option</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Location</th>
+            <th>Description</th>
+            <th>Image</th>
+        </tr>
+        <tbody id="mydata">
 
-<body onload="table();">
-    <script type="text/javascript">
-        function table() {
-            const xhttp = new XMLHttpRequest();
-            xhttp.onload = function(){
-                document.getElementById("table").innerHTML = this.responseText;
-            }
-            xhttp.open("GET", "system.php");
-            xhttp.send();
-          }
-          setInterval(function(){
-                table();
-          },1)
+
+        </tbody>
+    </table>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"> </script>
+    <script>
+        $(document).ready(function () { 
+
+            $.ajax({
+                type: "GET",
+                url: "data.php",
+                dataType: "html",
+                success: function(data){
+                    $('#mydata').html(data);
+                }
+            });
+
+         });
 
     </script>
-    <div id="table">
-
-    </div>
-
-
+    
 
 
 </body>
