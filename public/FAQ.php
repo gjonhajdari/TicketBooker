@@ -51,6 +51,7 @@ $(document).ready(function() {
       Locate.slideToggle();
       var LocateFigure=$(this).find('.DropDown');
       LocateFigure.toggleClass('rotate');
+      Locate.animate()
 
     });
   });
@@ -103,8 +104,12 @@ $(document).ready(function() {
       <div class="AccordionText"  id="AccordionTextid">
         is there a return policy?
         <div class="AccordionHiddenText " id="AccordionHiddenTextid3">
-        TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+        <div class="AccordionDropDown">
+
+          TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+        
         </div>
+      </div>
 
         <div class="DropDown" id="DropDown3">
           <img src="assets/icons/dropdown.svg" alt="" class="Dropdown">
@@ -118,8 +123,12 @@ $(document).ready(function() {
       <div class="AccordionText" id="AccordionTextid">
         Question #4
         <div class="AccordionHiddenText " id="AccordionHiddenTextid4">
-        TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+        <div class="AccordionDropDown">
+          
+          TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+          
         </div>
+      </div>
 
         <div class="DropDown" id="DropDown4">
           <img src="assets/icons/dropdown.svg" alt="" class="Dropdown">
@@ -133,8 +142,12 @@ $(document).ready(function() {
       <div class="AccordionText"  id="AccordionTextid">
         Question #5
         <div class="AccordionHiddenText " id="AccordionHiddenTextid5">
-        TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
-        </div>
+        <div class="AccordionDropDown">
+          
+          TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+          
+        </div>  
+      </div>
 
         <div class="DropDown" id="DropDown5">
           <img src="assets/icons/dropdown.svg" alt="" class="Dropdown">
@@ -148,7 +161,11 @@ $(document).ready(function() {
       <div class="AccordionText"  id="AccordionTextid">
         Question #6
         <div class="AccordionHiddenText "id="AccordionHiddenTextid6">
-        TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+        <div class="AccordionDropDown">
+        
+          TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+        
+        </div>
         </div>
 
         <div class="DropDown" id="DropDown6">
@@ -163,8 +180,12 @@ $(document).ready(function() {
       <div class="AccordionText"  id="AccordionTextid">
         Question #7
         <div class="AccordionHiddenText " id="AccordionHiddenTextid7">
-        TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+       <div class="AccordionDropDown">
+
+         TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+         
         </div>
+      </div>
 
         <div class="DropDown" id="DropDown7">
           <img src="assets/icons/dropdown.svg" alt="" class="Dropdown">
@@ -178,7 +199,11 @@ $(document).ready(function() {
       <div class="AccordionText"  id="AccordionTextid">
         Question #8
         <div class="AccordionHiddenText " id="AccordionHiddenTextid8">
+        <div class="AccordionDropDown">
+         
         TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+        
+      </div>
         </div>
 
         <div class="DropDown" id="DropDown8">
@@ -193,7 +218,11 @@ $(document).ready(function() {
       <div class="AccordionText"  id="AccordionTextid">
         Question #9
         <div class="AccordionHiddenText " id="AccordionHiddenTextid9">
-        TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+          <div class="AccordionDropDown">
+
+            TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+          
+          </div>
         </div>
 
         <div class="DropDown" id="DropDown9">
@@ -208,7 +237,11 @@ $(document).ready(function() {
       <div class="AccordionText"  id="AccordionTextid">
         Question #10
         <div class="AccordionHiddenText " id="AccordionHiddenTextid10">
-        TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+          <div class="AccordionDropDown">
+           
+          TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+          
+        </div>
         </div>
 
         <div class="DropDown" id="DropDown10">
@@ -224,8 +257,7 @@ $(document).ready(function() {
 
 
 
-
-
+   
   <?php
   // require_once('../src/modules/db.php');
   

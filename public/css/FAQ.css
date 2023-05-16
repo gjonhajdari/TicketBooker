@@ -10,6 +10,8 @@
 	font-size:1.2rem;
 }
 .Accordion{
+	position:relative;
+	display: inline-block;
 	width: 750px;
 	height: 70px;
 	
@@ -25,10 +27,18 @@
 	border-style:outset;
 }
 .AccordionHiddenText{
-	display: none;
-	padding: 10px;
-    margin-top: 10px;
-    background-color: #f2f2f2;
+	position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+    display: none;
+    
+	top:100%;
+}
+.AccordionDropDown{
+	display: block;
+    padding: 5px;
+    text-decoration: none;
 }
 
 .AccordionText:hover{
