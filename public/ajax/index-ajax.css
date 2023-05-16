@@ -1,0 +1,206 @@
+
+body {
+	background-image: url(../assets/icons/blob.svg);
+	background-repeat: no-repeat;
+	background-position: -300px -100px;
+	/* height: 100vh; */
+}
+
+.body-light {
+	background-image: url(../assets/icons/blob-light.svg);
+}
+
+main #title {
+	font-size: 2.75rem;
+	margin-bottom: 3rem;
+}
+
+main p {
+	color: var(--text-secondary);
+	font-size: 1.25rem;
+}
+
+main #accent { color: var(--accent);}
+
+.btn svg path {
+	fill: var(--background);
+}
+
+.btn-light svg path {
+	fill: var(--foreground);
+}
+
+
+::-webkit-calendar-picker-indicator {
+	filter: invert(100%);
+	cursor: pointer;
+}
+
+.border-light ::-webkit-calendar-picker-indicator {
+    filter: invert(0);
+}
+
+
+/*
+-------------------------------------------------
+Footer ------------------------------------------
+-------------------------------------------------
+*/
+
+footer {
+	padding: 2rem 4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 14px;
+}
+
+footer #copyright {
+	color: var(--text-secondary);
+}
+
+footer .icons a {
+	text-decoration: none;
+}
+
+footer .icons svg {
+	margin-right: 20px;
+	width: 20px;
+	cursor: pointer;
+	opacity: 0.5;
+	transition: 300ms;
+}
+
+.footer-light .icons svg path{
+	fill: var(--text-primary);
+}
+
+footer .icons svg:hover {
+	opacity: 1;
+}
+
+footer .links a {
+	text-decoration: none;
+	color: var(--text-primary);
+	transition: 300ms;
+	margin-left: 20px;
+}
+
+footer .links a:hover {
+	color: var(--accent);
+}
+
+
+/*
+-------------------------------------------------
+Media Queries -----------------------------------
+-------------------------------------------------
+*/
+
+/* Tablet screen - 768px and smaller */
+@media screen and (max-width: 767px) {
+	.navbar {
+		padding: 0 2rem;
+	}
+	
+	.navbar #burger-menu {
+		display: block !important;
+		position: absolute;
+		top: 40px;
+		right: 35px;
+	}
+	
+	.navbar-content {
+		display: block;
+	}
+
+	.navbar .middle {
+		margin-top: 20px;
+	}
+	
+	.navbar .middle, .navbar .right, .navbar-logged .right {
+		display: none;
+	}
+
+	.navbar-logged .navbar-content .right .name {
+		display: block;
+	}	
+
+	.navbar-logged .right {
+		margin-top: 5px;
+	}
+	
+	.navbar a.link {
+		display: block;
+		margin-left: 0 !important;
+		width: 100%;
+		text-align: left;
+		padding: 1rem 0;
+	}
+	
+	.navbar .right #login {
+		margin-left: 0 !important;
+		padding: 0.75rem 0 !important;
+		border: none;
+	}
+
+	.navbar .right #login:hover {
+		background-color: transparent;
+		border: none;
+		color: var(--accent);
+	}
+
+	.navbar .dropdown {
+		position: inherit;
+		background-color: transparent;
+		width: 100%;
+		border: none;
+	}
+
+	.dropdown .option, .option svg path {
+		transition: 300ms;
+	}
+
+	.navbar .dropdown .options .option {
+		padding: 15px 1.5rem;
+	}
+
+	.navbar .dropdown .top {
+		display: none;
+	}
+
+	.navbar .dropdown .options .option:hover {
+		background-color: transparent;
+		color: var(--accent);
+	}
+
+	.navbar .dropdown .options .option:hover svg path {
+		stroke: var(--accent);
+	}
+	
+	.navbar .dropdown .options .option:hover #gear path {
+		fill: var(--accent);
+		stroke: none;
+	}
+	
+	footer {
+		flex-direction: column;
+		gap: 40px;
+		padding: 2rem 2rem;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	footer .icons, footer .links {
+		display: flex;
+		gap: 20px;
+	}
+
+	footer .icons img, footer .links a {
+		margin: 0;
+	}
+
+	footer p, footer a {
+		font-size: 0.75rem;
+	}
+}
