@@ -1,11 +1,21 @@
 <?php
-	//TODO consult group about the number of tickets (what if you're sold out?!)
-	//If yes, add sessions for tickets
+//TODO consult group about the number of tickets (what if you're sold out?!)
+//If yes, add sessions for tickets
 $isDark = true;
 $isLoggedIn = true;
 $avatar = 10;
 $full_name = 'Gjon Hajdari';
 $userType = 'BUSINESS';
+
+$dbhost = 'localhost:3307';
+$dbbuser = 'root';
+$dbpass = '';
+$db = 'ticketbooker';
+
+$conn = mysqli_connect($dbhost, $dbbuser, $dbpass, $db);
+if ($conn->connect_error) {
+	die("Connection failed: " . $conn->connect_error);
+}
 
 ?>
 
@@ -19,17 +29,18 @@ $userType = 'BUSINESS';
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel='icon' type='image/x-icon' href='assets/icons/favicon.svg'>
 	<?php
-		if ($_SESSION["dark_mode"] === null) {
-			echo "<link rel='stylesheet' href='css/palette-dark.css'>";
-		} else {
-			echo "<link rel='stylesheet' href='css/palette-light.css'>";
-		}
+	if ($_SESSION["dark_mode"] === null) {
+		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
+	} else {
+		echo "<link rel='stylesheet' href='css/palette-light.css'>";
+	}
 	?>
 	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="css/general.css">
 	<link rel="stylesheet" href="css/createTicket.css">
 	<script src="https://kit.fontawesome.com/26e97bbe8d.js" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+		integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 	<script src="js/app.js"></script>
 </head>
 
@@ -82,8 +93,9 @@ $userType = 'BUSINESS';
 					<p class="description">Event description</p>
 					<textarea name="description" cols="30" rows="12" placeholder="Description"></textarea>
 				</div>
-				
+
 				<input type="submit" id="button" name="submit" value="Create ticket">
+
 			</form>
 
 		</div>

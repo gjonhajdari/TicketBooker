@@ -1,7 +1,7 @@
 <?php
 				require('../src/modules/db.php');
 	
-				if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
+				if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['change_password'])) {
 					$conn or die("Connection failed: ".mysqli_connect_error());
 					$oldpassword = $_POST['oldpassword'];
 					$confirmpassword = $_POST['confirmpassword'];
