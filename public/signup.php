@@ -1,10 +1,9 @@
-<?php $isDark = false; ?>
-
 <?php
-// session_start();
-// if (isset($_SESSION["user"])) {
-//    header("Location: index.php");
-// }
+	$isDark = true;
+	session_start();
+	if ($_SESSION["login"] == true) {
+		header('Location: index.php');
+	}
 ?>
 
 

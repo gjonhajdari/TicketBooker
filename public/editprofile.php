@@ -7,12 +7,16 @@
 
 session_start();
 $isDark = true;
-$isLoggedIn = true;
+$isLoggedIn = $_SESSION["login"];
 $isChecked = false;
 $avatar = 10;
 $full_name = 'Zana Misini';
 $email = 'zaanamisinii@gmail.com';
 $userType = 'BUSINESS';
+
+if ($isLoggedIn == false) {
+	header('Location: login.php');
+}
 
 ?>
 
