@@ -187,3 +187,5 @@ input:checked + .slider:before {
 		grid-row-gap: 10px;
 	}
 }
+
+
