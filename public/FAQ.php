@@ -36,6 +36,7 @@ $full_name = 'Gjon Hajdari';
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/FAQ.js"></script>
 
 
 </head>
@@ -58,15 +59,21 @@ $full_name = 'Gjon Hajdari';
       <hr class="AccordionHr">
       <div class="AccordionText">
         What is TicketBooker?
+        <div class="AccordionHiddentext ">
+        TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+        </div>
         <img src="assets/icons/" alt="">
       </div>
       <hr class="AccordionHr">
     </div>
-
     <div class="Accordion">
       <hr class="AccordionHr">
       <div class="AccordionText">
         what kind of tickets can i buy?
+        <div class="AccordionHiddentext ">
+         TicketBooker focuses mostly on movies,concerts and travel tickets but 
+         if there are any type of tickets that can help us inprove our page contact us!
+        </div>
       </div>
       <hr class="AccordionHr">
     </div>
@@ -75,6 +82,9 @@ $full_name = 'Gjon Hajdari';
       <hr class="AccordionHr">
       <div class="AccordionText">
         is there a return policy?
+        <div class="AccordionHiddentext ">
+        TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+        </div>
       </div>
       <hr class="AccordionHr">
     </div>

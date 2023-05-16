@@ -11,15 +11,24 @@
 }
 .Accordion{
 	width: 750px;
-	height: 60px;
+	height: 70px;
 	
 }
 .AccordionText{
-	padding: 20px;
+	padding: 25px;
 }
 
 .Accordion .AccordionHr{
 	color:gray;
 	line-height: 1px;
 	border-style:outset;
+}
+.AccordionHiddentext{
+	display: none;
+}
+
+.AccordionText:hover{
+	cursor: pointer;
+	transition:300ms;
+	transform: scale(1.009);
 }
