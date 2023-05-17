@@ -292,22 +292,22 @@ $(document).ready(function() {
       </div>
 
     </div>
-    <hr class="questionhr">
   </div>
     <div class="questiondropdown">
         TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
 
     </div>
-
+    
 
 
 
   </div>
-
+    
   
 
 
 
+  
    
   <?php
   // require_once('../src/modules/db.php');
