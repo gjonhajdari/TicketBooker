@@ -1,6 +1,5 @@
 <?php
-//TODO consult group about the number of tickets (what if you're sold out?!)
-//If yes, add sessions for tickets
+session_start();
 $isDark = true;
 $isLoggedIn = true;
 $avatar = 10;
@@ -29,10 +28,10 @@ if ($conn->connect_error) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel='icon' type='image/x-icon' href='assets/icons/favicon.svg'>
 	<?php
-	if ($_SESSION["dark_mode"] === null) {
-		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
-	} else {
+	if ($_SESSION["dark_mode"] == "null") {
 		echo "<link rel='stylesheet' href='css/palette-light.css'>";
+	} else {
+		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
 	}
 	?>
 	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
@@ -58,7 +57,7 @@ if ($conn->connect_error) {
 			<form action="../src/modules/createFunction.php" class="inputs">
 				<div class="input-field">
 					<p class="description">Type and location</p>
-					<div class="selectors <?php echo $isDark ? '' : 'border-light'; ?>">
+					<div class="selectors <?php echo $_SESSION["dark_mode"]!="null" ? '' : 'border-light'; ?>">
 						<select name="what" id="select-what">
 							<option value="Movie">Movie</option>
 							<option value="Travel">Travel</option>
@@ -78,18 +77,18 @@ if ($conn->connect_error) {
 
 				<div class="input-field">
 					<p class="description">Date and time</p>
-					<div class="selectors <?php echo $isDark ? '' : 'border-light'; ?>">
+					<div class="selectors <?php echo $_SESSION["dark_mode"]!="null" ? '' : 'border-light'; ?>">
 						<input type="date" name="when-date" id="select-when">
 						<input type="time" name="when-time" id="select-when">
 					</div>
 				</div>
 
-				<div class="input-field <?php echo $isDark ? '' : 'border-light'; ?>">
+				<div class="input-field <?php echo $_SESSION["dark_mode"]!="null" ? '' : 'border-light'; ?>">
 					<p class="description">Event title</p>
 					<input type="text" name="title" placeholder="Title">
 				</div>
 
-				<div class="input-field <?php echo $isDark ? '' : 'border-light'; ?>">
+				<div class="input-field <?php echo $_SESSION["dark_mode"]!="null" ? '' : 'border-light'; ?>">
 					<p class="description">Event description</p>
 					<textarea name="description" cols="30" rows="12" placeholder="Description"></textarea>
 				</div>

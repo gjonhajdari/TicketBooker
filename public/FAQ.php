@@ -14,7 +14,6 @@ $full_name = 'Gjon Hajdari';
   <!-- Navigation bar -->
   <?php include "../src/templates/navbarLoggedin.php"; ?>
 
-
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,10 +35,6 @@ $full_name = 'Gjon Hajdari';
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/app.js"></script>
- 
-  
-
-  
 </head>
 
 <body>
@@ -54,8 +49,6 @@ $(document).ready(function() {
       LocateFigure.animate();
       $(this).toggleClass('bg');
       
-     
-
     });
   });
 

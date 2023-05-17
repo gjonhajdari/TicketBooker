@@ -1,9 +1,4 @@
 <?php
-//TODO write code for changing passwords using sessions
-//TODO write code to change light/dark mode using session
-//TODO write code to change profile avatar using sessions
-//TODO add submit button to make the changes??
-//TODO write code to change username and email (if needed)
 
 session_start();
 $isDark = true;

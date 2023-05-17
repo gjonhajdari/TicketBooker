@@ -49,7 +49,7 @@
 			<div class="options">
 				<p>What, when, where?</p>
 
-				<div class="selectors <?php echo $isDark ? '' : 'border-light'; ?>">
+				<div class="selectors <?php echo $_SESSION["dark_mode"]!="null" ? '' : 'border-light'; ?>">
 					<select name="type" id="select-what">
 						<option value="" disabled selected>Type</option>
 						<option value="Movie">Movie</option>
@@ -70,7 +70,7 @@
 				</div>
 			</div>
 
-			<button class="btn <?php echo $isDark ? '' : 'btn-dark'; ?>">
+			<button class="btn <?php echo $_SESSION["dark_mode"]=="null" ? '' : 'btn-dark'; ?>">
 				Find tickets
 				<?php echo file_get_contents('assets/icons/arrow.svg') ?>
 			</button>
