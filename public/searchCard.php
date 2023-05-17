@@ -1,10 +1,9 @@
 <?php
 	require('../src/modules/db.php');
-    // Retrieve the data from the database
     $query = "SELECT * FROM ticket";
     $result = mysqli_query($conn, $query);
-
-    // Loop through the result set and display the data on the web page
+    $counter = mysqli_num_rows($result);
+    $_SESSION["counter"] = $counter;
     while ($row = mysqli_fetch_assoc($result)) {
     ?>
         <div class="col-md-6 col-lg-4">
@@ -12,14 +11,14 @@
                 <h1 class="card-title"><?php echo $row['name']?></h1>
             
                 <div class="card-body">
-                    <div class="date <?php echo $isDark ? '' : 'icon-light'; ?>">
+                    <div class="date <?php echo $_SESSION["dark_mode"]!="null" ? '' : 'icon-light'; ?>">
                         <?php echo file_get_contents('assets/icons/calendar.svg') ?>
                         <div class="info">
                             <p class="primary">Date</p>
                             <p class="secondary"><?php echo $row['date']?></p>
                         </div>
                     </div>
-                    <div class="location <?php echo $isDark ? '' : 'icon-light'; ?>">
+                    <div class="location <?php echo $_SESSION["dark_mode"]!="null" ? '' : 'icon-light'; ?>">
                         <?php echo file_get_contents('assets/icons/location.svg') ?>
                         <div class="info">
                             <p class="primary"><?php echo $row['location']?></p>
@@ -30,7 +29,7 @@
                 <hr>
             
                 <div class="card-bottom">
-                    <p class="type"><?php echo $row['optionn']?></p>
+                    <p class="type"><?php echo $row['option']?></p>
                     <button class="card-button">Add</button>
                 </div>
             </div>

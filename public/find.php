@@ -55,7 +55,7 @@ if ($_SESSION['id']) {
 			<h1>Find tickets</h1>
 			<div class="filters">
 				<p class="name">Filters</p>
-				<div class="labels <?php echo $isDark ? '' : 'border-light'; ?>">
+				<div class="labels <?php echo $_SESSION["dark_mode"]!="null" ? '' : 'border-light'; ?>">
 					<p class="label">Movie</p>
 					<p class="label">23/12/2022</p>
 					<p class="label">Prishtinë</p>
@@ -64,9 +64,9 @@ if ($_SESSION['id']) {
 		</div>
 		<div class="search">
 			<div class="results">
-				<p><span id="amount">6</span> results found</p>
+				<p><span id="amount"><?php echo $_SESSION["counter"] ?> </span> results found</p>
 			</div>
-			<button class="btn <?php echo $isDark ? '' : 'btn-light'; ?>" id="search">
+			<button class="btn <?php echo $_SESSION["dark_mode"] ? '' : 'btn-light'; ?>" id="search">
 				<?php echo file_get_contents('assets/icons/search.svg'); ?>
 				<p>Search again</p>
 			</button>
@@ -87,7 +87,7 @@ if ($_SESSION['id']) {
 			</button>
 		</div>
 		<form action="" class="modal-search">
-			<div class="options <?php echo $isDark ? '' : 'border-light'; ?>">
+			<div class="options <?php echo $_SESSION["dark_mode"]!="null" ? '' : 'border-light'; ?>">
 				<select name="type" id="select-what">
 					<option value="" disabled selected>Type</option>
 					<option value="Movie">Movie</option>

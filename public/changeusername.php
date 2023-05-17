@@ -8,7 +8,6 @@
 					$errors = array();
 	
 					require_once "../src/modules/db.php";
-					// Retrieve user data based on username or email
 					$stmt = $conn->prepare("SELECT * FROM `user` WHERE email = ?");
 					$stmt->bind_param('s', $_SESSION["email"]);
 					$stmt->execute();
