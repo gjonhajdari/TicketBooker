@@ -85,7 +85,7 @@ $(document).ready(function() {
       </div>
 
       <div class="questionimg">
-        <img src="../public/assets/icons/dropdown.svg" alt="">
+      <?php echo file_get_contents("assets/icons/dropdown.svg") ?>
       </div>
 
     </div>
@@ -107,7 +107,7 @@ $(document).ready(function() {
       </div>
 
       <div class="questionimg">
-        <img src="../public/assets/icons/dropdown.svg" alt="">
+      <?php echo file_get_contents("assets/icons/dropdown.svg") ?>
       </div>
 
     </div>
@@ -131,7 +131,7 @@ $(document).ready(function() {
       </div>
 
       <div class="questionimg">
-        <img src="../public/assets/icons/dropdown.svg" alt="">
+      <?php echo file_get_contents("assets/icons/dropdown.svg") ?>
       </div>
 
     </div>
@@ -155,7 +155,7 @@ $(document).ready(function() {
       </div>
 
       <div class="questionimg">
-        <img src="../public/assets/icons/dropdown.svg" alt="">
+      <?php echo file_get_contents("assets/icons/dropdown.svg") ?>
       </div>
 
     </div>
@@ -178,7 +178,7 @@ $(document).ready(function() {
       </div>
 
       <div class="questionimg">
-        <img src="../public/assets/icons/dropdown.svg" alt="">
+      <?php echo file_get_contents("assets/icons/dropdown.svg") ?>
       </div>
 
     </div>
@@ -200,7 +200,7 @@ $(document).ready(function() {
       </div>
 
       <div class="questionimg">
-        <img src="../public/assets/icons/dropdown.svg" alt="">
+      <?php echo file_get_contents("assets/icons/dropdown.svg") ?>
       </div>
 
     </div>
@@ -221,7 +221,7 @@ $(document).ready(function() {
       </div>
 
       <div class="questionimg">
-        <img src="../public/assets/icons/dropdown.svg" alt="">
+      <?php echo file_get_contents("assets/icons/dropdown.svg") ?>
       </div>
 
     </div>
@@ -244,7 +244,7 @@ $(document).ready(function() {
       </div>
 
       <div class="questionimg">
-        <img src="../public/assets/icons/dropdown.svg" alt="">
+      <?php echo file_get_contents("assets/icons/dropdown.svg") ?>
       </div>
 
     </div>
@@ -266,7 +266,7 @@ $(document).ready(function() {
       </div>
 
       <div class="questionimg">
-        <img src="../public/assets/icons/dropdown.svg" alt="">
+      <?php echo file_get_contents("assets/icons/dropdown.svg") ?>
       </div>
 
     </div>
@@ -288,7 +288,7 @@ $(document).ready(function() {
       </div>
 
       <div class="questionimg">
-        <img src="../public/assets/icons/dropdown.svg" alt="">
+      <?php echo file_get_contents("assets/icons/dropdown.svg") ?>
       </div>
 
     </div>
