@@ -34,12 +34,13 @@
 </head>
 
 <body class="<?php echo $isDark ? '' : 'body-light'; ?>">
-		
+<form action="../src/modules/ticketfinder.php" method="POST" enctype="multipart/form-data">
 	<!-- Navigation Bar -->
 	<?php ($_SESSION["login"]==true) ?  include "../src/templates/navbarLoggedin.php" : include "../src/templates/navbar.php"   ?>
 
 	<!-- Main content -->
 	<main>
+		
 		<div class="content">
 			<h1 id="title">
 				Book tickets
@@ -70,7 +71,7 @@
 				</div>
 			</div>
 
-			<button class="btn <?php echo $_SESSION["dark_mode"]=="null" ? '' : 'btn-dark'; ?>">
+			<button class="btn"  <?php echo $_SESSION["dark_mode"]=="null" ? '' : 'btn-dark'; ?> >
 				Find tickets
 				<?php echo file_get_contents('assets/icons/arrow.svg') ?>
 			</button>
