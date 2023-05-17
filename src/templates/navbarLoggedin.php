@@ -7,8 +7,9 @@ if (session_status() == PHP_SESSION_NONE) {
 <nav 
 	class="navbar <?php
 						echo $_SESSION["dark_mode"]!="null" ? '' : ' navbar-light';
-						echo !$_SESSION["login"]? '' : ' navbar-logged';
-					?>">
+						echo !$_SESSION["login"]? '' : ' navbar-logged'; 
+						?>
+						">
 	<div class="navbar-content">
 		<a class="navbar-logo" href="index.php">
 			<?php echo file_get_contents('assets/icons/logo.svg') ?>
