@@ -4,7 +4,6 @@ session_start();
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -120,6 +119,6 @@ session_start();
     
 
 </body>
-
-
 </html>
+
+ <!-- index-ajax.php connected with data.php--> 
