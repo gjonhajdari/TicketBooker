@@ -1,36 +1,67 @@
-.Container{
+.container{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	margin:20px;
 }
-.ContainerParagraph #Paragraph1{
+.containerparagraph #Paragraph1{
 	margin-left: 60px;
 	color:gray;
 	font-size:1.2rem;
 	margin-bottom:25px;
 }
 
-.QuestionBlock{
+.questionoverlayer{
 	display:flex;
 	justify-content: space-between;
 
 }
-.QuestionHolder{
+.questionholder{
 	width: 750px;
+	height:50px;
+	padding: 15px;
+	margin:2px;
+	font-size:1.2rem;
+}
+.questionhr{
+	border-color: var(--foreground);
+	border-style: outset;
+}
+.questionimg{
+	padding:15px;
+}
+
+.questionholder:hover{
+	transform: scale(1.009);
+	cursor: pointer;
+}
+.questionholder:active{
+	cursor:wait;
+}
+.questiondropdown{
+	width:720px;
+	justify-content: center;
+	align-items: center;
+	display:flex;
+	padding:15px;
+	display: none;
+	color:var(--text-secondary);
 }
 
 
-
-.Rotate {
+.rotate {
 	transform: rotate(180deg);
+	
   }
+.bg{
+	background-color: var(--foreground);
+}
 
-  .AccordionHr{
+  .accordionhr{
 	border-color: gray;
   }
 
-  .QuestionDropDown{
+  .auestiondropdown{
 	display:none;
   }

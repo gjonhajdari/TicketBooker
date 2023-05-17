@@ -46,21 +46,23 @@ $full_name = 'Gjon Hajdari';
 <script >
 
 $(document).ready(function() {
-    $('.QuestionBlock').click(function() {
-      var DropDownElement = $(this).find('.QuestionDropDown');
+    $('.questionblock').click(function() {
+      var DropDownElement = $(this).next('.questiondropdown');
       DropDownElement.slideToggle();
-      var LocateFigure=$(this).find('.DropDown');
-      LocateFigure.toggleClass('Rotate');
-      Locate.animate();
+      var LocateFigure=$(this).find('.questionimg');
+      LocateFigure.toggleClass('rotate');
+      LocateFigure.animate();
+      $(this).toggleClass('bg');
+      
      
 
     });
   });
 
   </script>
-<!-- WILL BE FIXED TE MERKUREN!!-->
-  <div class="Container">
-    <div class="ContainerParagraph">
+  <div class="container">
+
+    <div class="containerparagraph">
       <p style="font-size:2.5rem; padding-top:80px; padding-bottom:10px;" >
         <b> Frequently Asked Questions </b>
 
@@ -72,34 +74,237 @@ $(document).ready(function() {
     </div>
     <br>
    
-    <div class="QuestionBlock">
-      <hr class="QuestionHr">
-    
-    <div class="QuestionHolder">
+    <div class="questionblock">
+    <hr class="questionhr">
+    <div class="questionoverlayer">
+      <div class="questionholder">
+        <p class="textparagraph">
+          What is TicketBooker?
+        </p>
+        
+      </div>
 
-    <p>
-      Question #1
-    </p>
-    
-    </div>
-
-      <div class="QuestionImg">
+      <div class="questionimg">
         <img src="../public/assets/icons/dropdown.svg" alt="">
       </div>
 
-    <hr class="QuestionHr">
+    </div>
+  </div>
+    <div class="questiondropdown">
+        TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
 
     </div>
 
 
-    <div class="QuestionDropDown">
+    <div class="questionblock">
+    <hr class="questionhr">
+    <div class="questionoverlayer">
+      <div class="questionholder">
+        <p class="textparagraph">
+          What kind of questions can i buy?
+        </p>
+        
+      </div>
+
+      <div class="questionimg">
+        <img src="../public/assets/icons/dropdown.svg" alt="">
+      </div>
+
+    </div>
+  </div>
+    <div class="questiondropdown">
+       you can buy tickets  from any concert,travel,movie that is avaliable in Kosovo.
+       If you have any other ideas that can help and make the page better, you can contact 
+       us at the contact forum!
+
+    </div>
+
+
+    <div class="questionblock">
+    <hr class="questionhr">
+    <div class="questionoverlayer">
+      <div class="questionholder">
+        <p class="textparagraph">
+          Is there a return policy?
+        </p>
+        
+      </div>
+
+      <div class="questionimg">
+        <img src="../public/assets/icons/dropdown.svg" alt="">
+      </div>
+
+    </div>
+  </div>
+    <div class="questiondropdown">
+        Yes there is a return policy that alows you to return any ticket that you have bought 
+        in the last week that you have changed your mind on.
+        Otherwise you cannot.
+
+    </div>
+
+
+    <div class="questionblock">
+    <hr class="questionhr">
+    <div class="questionoverlayer">
+      <div class="questionholder">
+        <p class="textparagraph">
+          Can i type any price that i want on the tickets im selling?
+        </p>
+        
+      </div>
+
+      <div class="questionimg">
+        <img src="../public/assets/icons/dropdown.svg" alt="">
+      </div>
+
+    </div>
+  </div>
+    <div class="questiondropdown">
+      Yes you technically can, but if the price is way above the market price of that ticket it will get taken down 
+      and with a few warnings of ticket overpricing may cause an account ban.  
+
+    </div>
+
+
+    <div class="questionblock">
+    <hr class="questionhr">
+    <div class="questionoverlayer">
+      <div class="questionholder">
+        <p class="textparagraph">
+          How much tickets can i create and sell at the same time?
+        </p>
+        
+      </div>
+
+      <div class="questionimg">
+        <img src="../public/assets/icons/dropdown.svg" alt="">
+      </div>
+
+    </div>
+  </div>
+    <div class="questiondropdown">
+        You can create as many tickets as you want and sell them at the same time if you want to,
+        we dont prefer it because there might be some database problems.
+    </div>
+
+
+    <div class="questionblock">
+    <hr class="questionhr">
+    <div class="questionoverlayer">
+      <div class="questionholder">
+        <p class="textparagraph">
+          Which type of tickets are  created the most ?
+        </p>
+        
+      </div>
+
+      <div class="questionimg">
+        <img src="../public/assets/icons/dropdown.svg" alt="">
+      </div>
+
+    </div>
+  </div>
+    <div class="questiondropdown">
+      Our users mostly create and sell movie and travel tickets, 
+      but that doesnt mean concert tickets arent sold just not as much as the other two. 
+    </div>
+
+    <div class="questionblock">
+    <hr class="questionhr">
+    <div class="questionoverlayer">
+      <div class="questionholder">
+        <p class="textparagraph">
+          Do costumers get any disscounts from buying more than 2-3 tickets?
+        </p>
+        
+      </div>
+
+      <div class="questionimg">
+        <img src="../public/assets/icons/dropdown.svg" alt="">
+      </div>
+
+    </div>
+  </div>
+    <div class="questiondropdown">
+        Yes our loyal costumers get 10% or more discount depending
+         on how many tickets they have bought in the past year or so.
+
+    </div>
+
+
+    <div class="questionblock">
+    <hr class="questionhr">
+    <div class="questionoverlayer">
+      <div class="questionholder">
+        <p class="textparagraph">
+          What is TicketBooker?
+        </p>
+        
+      </div>
+
+      <div class="questionimg">
+        <img src="../public/assets/icons/dropdown.svg" alt="">
+      </div>
+
+    </div>
+  </div>
+    <div class="questiondropdown">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex commodi numquam ad veritatis vitae, velit 
+        rem error ipsum aperiam tempore delectus possimus dolores totam, aliquam tempora necessitatibus aut laborum culpa!
+    </div>
+
+
+    <div class="questionblock">
+    <hr class="questionhr">
+    <div class="questionoverlayer">
+      <div class="questionholder">
+        <p class="textparagraph">
+          What is TicketBooker?
+        </p>
+        
+      </div>
+
+      <div class="questionimg">
+        <img src="../public/assets/icons/dropdown.svg" alt="">
+      </div>
+
+    </div>
+  </div>
+    <div class="questiondropdown">
+      Lorem ipsum dolor sit amet,
+       consectetur adipisicing elit. Alias officiis suscipit, a fugit similique neque, beatae est nostrum facere, nam error ut numquam architecto repudiandae? Eius vel ducimus repellat in.
+    </div>
+
+
+    <div class="questionblock">
+    <hr class="questionhr">
+    <div class="questionoverlayer">
+      <div class="questionholder">
+        <p class="textparagraph">
+          What is TicketBooker?
+        </p>
+        
+      </div>
+
+      <div class="questionimg">
+        <img src="../public/assets/icons/dropdown.svg" alt="">
+      </div>
+
+    </div>
+    <hr class="questionhr">
+  </div>
+    <div class="questiondropdown">
         TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
 
     </div>
 
 
 
+
   </div>
+
+  
 
 
 
