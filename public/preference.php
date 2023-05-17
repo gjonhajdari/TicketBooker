@@ -11,9 +11,9 @@ $stmt->execute();
 
 $_SESSION["dark_mode"] = $dark_mode;
 
-// //bon edhe pa kto
-// http_response_code(200); // OK status code
-// echo json_encode(array("status" => "success"));
+//bon edhe pa kto
+http_response_code(200); // OK status code
+echo json_encode(array("status" => "success"));
 
 // Return the updated preference value to the client
 echo $dark_mode;

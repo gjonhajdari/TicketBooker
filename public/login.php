@@ -92,6 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 				$_SESSION["checkbox"] = $user["checkbox"];
 				$_SESSION["avatar"] = $user["avatar"];
 				$_SESSION["dark_mode"] = $user["dark_mode"];
+				include "fetchtickets.php";
 				header('location:index.php');
 				die();
 			}

@@ -73,9 +73,7 @@ if ($_SESSION['id']) {
 		</div>
 		<div class="tickets row g-4">
 			<?php
-			for ($i = 0; $i < 6; $i++) {
-				include "../src/templates/searchCard.php";
-			}
+			include "searchCard.php";
 			?>
 		</div>
 

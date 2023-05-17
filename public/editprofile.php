@@ -16,8 +16,8 @@ $userType = 'BUSINESS';
 <html lang="en">
 
 <head>
-<link rel='stylesheet' href='css/palette-light.css' id="light-theme">
-<link rel='stylesheet' href='css/palette-dark.css' id="dark-theme">
+		<link rel='stylesheet' href='css/palette-light.css' id='light-theme'>"
+		<link rel='stylesheet' href='css/palette-dark.css' id='dark-theme'>"
 <?php
 		if ($_SESSION["dark_mode"] == "null") {
 			echo "<link rel='stylesheet' href='css/palette-light.css'>";
@@ -190,10 +190,12 @@ $userType = 'BUSINESS';
 	</div>
 	<script>
 	
+		var id1 = "light-theme";
+		var id2="dark-theme";
 		// Get the mode switch checkbox and the light/dark theme links
 		var modeSwitch = document.getElementById("mode-switch");
-		var lightTheme = document.getElementById("light-theme");
-		var darkTheme = document.getElementById("dark-theme");
+		var lightTheme = document.getElementById(id1);
+		var darkTheme = document.getElementById(id2);
 
 // When the mode switch is toggled, update the theme based on the checkbox state
 modeSwitch.addEventListener("change", function() {
