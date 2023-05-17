@@ -12,7 +12,15 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel='icon' type='image/x-icon' href='/public/assets/icons/favicon.svg'>
-	
+	<?php
+		if (($_SESSION["login"]==true) && ($_SESSION['dark_mode'] != "null")) {
+			echo "<link rel='stylesheet' href='css/palette-dark.css'>";
+		} else if(($_SESSION["login"]==true) && ($_SESSION['dark_mode'] == "null")){
+			echo "<link rel='stylesheet' href='css/palette-light.css'>";
+		}else{
+			echo "<link rel='stylesheet' href='css/palette-dark.css'>";
+		}
+	?>
 
 	<link rel="stylesheet" href="/public/ajax/index-ajax.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
