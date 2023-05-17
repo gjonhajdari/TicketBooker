@@ -8,38 +8,6 @@
 ?>
 
 
-<?php
-
-require_once('../src/modules/db.php');
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
-	$conn or die("Connection failed: ".mysqli_connect_error());
-
-	if (isset($_POST['name']) && isset($_POST['email'])&& isset($_POST['message'])) {
-		$fname = $_POST['name'];
-		$femail = $_POST['email'];
-		$fmessage = $_POST['message'];
-
-		$sql = "INSERT INTO `contact`(`name`,`email`,`message`)
-				VALUES(?,?,?)";
-		$stm = mysqli_stmt_init($conn);
-            $prepareStm = mysqli_stmt_prepare($stm,$sql);
-            if ($prepareStm) {
-                mysqli_stmt_bind_param($stm,"sss", $fname,$femail, $fmessage);
-                mysqli_stmt_execute($stm);
-                
-            }else{
-                die("Something went wrong");
-            }
-
-		
-	}
-}
-mysqli_close($conn);
-?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -64,6 +32,21 @@ mysqli_close($conn);
 	<script src="https://kit.fontawesome.com/26e97bbe8d.js" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 	<script src="js/app.js"></script>
+	<style>
+		.alert {
+  		padding: 0.75rem 1.25rem;
+ 		margin-bottom: 1rem;
+  		border: 1px solid transparent;
+  		border-radius: 0.25rem;
+  		width: 100%;
+  		margin-right: auto;
+		}
+		.alert-success {
+		color: #155724;
+  		background-color: #d4edda;
+  		border-color: #c3e6cb;
+		}
+	</style>
 </head>
 
 <body>
@@ -76,6 +59,40 @@ mysqli_close($conn);
 		
 		<div class="content">
 			<div class="headers">
+				
+
+<?php
+
+require_once('../src/modules/db.php');
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
+	$conn or die("Connection failed: ".mysqli_connect_error());
+
+	if (isset($_POST['name']) && isset($_POST['email'])&& isset($_POST['message'])) {
+		$fname = $_POST['name'];
+		$femail = $_POST['email'];
+		$fmessage = $_POST['message'];
+
+		$sql = "INSERT INTO `contact`(`name`,`email`,`message`)
+				VALUES(?,?,?)";
+		$stm = mysqli_stmt_init($conn);
+            $prepareStm = mysqli_stmt_prepare($stm,$sql);
+            if ($prepareStm) {
+                mysqli_stmt_bind_param($stm,"sss", $fname,$femail, $fmessage);
+                mysqli_stmt_execute($stm);
+				echo "<div class='alert alert-success w-50 p-3'>Thank you for contacting us!</div>";
+
+            }else{
+                die("Something went wrong");
+            }
+
+		
+	}
+}
+mysqli_close($conn);
+?>
+
+
 				<h1>
 					Got anything for us?
 					<br class="hidden"> Leave a <span> message!</span>

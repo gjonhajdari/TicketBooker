@@ -11,6 +11,14 @@ $full_name = 'Gjon Hajdari';
 <html lang="en">
 
 <head>
+  <style>
+    a{
+      text-decoration: none;
+    }
+    a:visited {
+    color: inherit;
+    }
+  </style>
   <!-- Navigation bar -->
   <?php include "../src/templates/navbarLoggedin.php"; ?>
 
@@ -61,7 +69,7 @@ $(document).ready(function() {
 
         <br>
       <p id="Paragraph1">
-           Got another question for us? <txt style="color: var(--accent)"> Contact us </txt> via email!
+           Got any other questions? <txt style="color: var(--accent)"><a href="contact.php"> Contact us</a> </txt>
       </p>
       </p>
     </div>
