@@ -60,7 +60,7 @@ $isDark = true; ?>
 		<div class="content">
 			<div class="headers">
 				<!--TODO mos me thon welcome back secilen here-->
-				<h1>Welcome back!</h1>
+				<h1>Login</h1>
 				<p>
 					Don't have an account?
 					<a href="signup.php">Sign up</a>.
