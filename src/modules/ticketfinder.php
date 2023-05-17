@@ -1,10 +1,11 @@
 <?php
 include_once ('db.php');
 
-
+if (isset($_POST['submit'])) {
     $type = $_POST['type'];
     $date = $_POST['when'];
     $place = $_POST['location'];
+}
 
 
     $sql = "SELECT ticket_type, date, location FROM `tickets` WHERE ticket_type =$type AND date =$date AND location =$place";
@@ -15,9 +16,10 @@ include_once ('db.php');
         header("Location: find.php");
         echo "The variables exist in the database.";
     } else {
-        echo "The ticket you were searching for doesnt exist!";
+        // No rows found, do something else
+        echo "This type of  Ticket does not exist .";
     }
-    
+
 
 
 
