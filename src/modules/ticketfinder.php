@@ -1,11 +1,10 @@
 <?php
 include_once ('db.php');
 
-if (isset($_POST['submit'])) {
+
     $type = $_POST['type'];
     $date = $_POST['when'];
     $place = $_POST['location'];
-}
 
 
     $sql = "SELECT ticket_type, date, location FROM `tickets` WHERE ticket_type =$type AND date =$date AND location =$place";

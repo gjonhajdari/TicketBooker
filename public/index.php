@@ -71,7 +71,7 @@
 				</div>
 			</div>
 
-			<button class="btn"  <?php echo $_SESSION["dark_mode"]=="null" ? '' : 'btn-dark'; ?> type="submit" name="submit">
+			<button class="btn"  <?php echo $_SESSION["dark_mode"]=="null" ? '' : 'btn-dark'; ?> >
 				Find tickets
 				<?php echo file_get_contents('assets/icons/arrow.svg') ?>
 			</button>
