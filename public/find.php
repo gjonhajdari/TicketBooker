@@ -1,9 +1,21 @@
 <?php
+include '../src/modules/db.php';
 session_start();
-$isDark = true;
-$isLoggedIn = true;
-$avatar = 10;
-$full_name = 'Gjon Hajdari';
+
+if ($_SESSION['id']) {
+	$id = $_SESSION['id'];
+	$sql = "SELECT * FROM `user` WHERE id = '$id'";
+	$result = mysqli_query($conn, $sql);
+	$user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+	$isDark = $user['dark_mode'];
+	$avatar = $user['avatar'];
+	$full_name = $user['name'];
+	$user_type = $user['user_type'];
+	$isLoggedIn = true;
+} else {
+	$isDark = true;
+	$isLoggedIn = false;
+}
 
 ?>
 
@@ -17,8 +29,8 @@ $full_name = 'Gjon Hajdari';
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel='icon' type='image/x-icon' href='assets/icons/favicon.svg'>
 	<?php
-		if ($_SESSION["dark_mode"] === null) {
-			echo "<link rel='stylesheet' href='css/palette-dark.css'>";
+	if ($isDark) {
+		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
 	} else {
 		echo "<link rel='stylesheet' href='css/palette-light.css'>";
 	}
@@ -35,7 +47,7 @@ $full_name = 'Gjon Hajdari';
 <body>
 
 	<!-- Navigation Bar -->
-	<?php $_SESSION['login'] ? include "../src/templates/navbarLoggedin.php" : include "../src/templates/navbar.php"; ?>
+	<?php $isLoggedIn ? include "../src/templates/navbarLoggedin.php" : include "../src/templates/navbar.php"; ?>
 
 	<!-- Main content -->
 	<main class="container">
@@ -61,14 +73,14 @@ $full_name = 'Gjon Hajdari';
 		</div>
 		<div class="tickets row g-4">
 			<?php
-				for ($i = 0; $i < 6; $i++) {
-					include "../src/templates/searchCard.php";
-				}
+			for ($i = 0; $i < 6; $i++) {
+				include "../src/templates/searchCard.php";
+			}
 			?>
 		</div>
 
 	</main>
-	
+
 	<div class="modal" id="modal">
 		<div class="modal-top">
 			<h1>Search for a new ticket</h1>
