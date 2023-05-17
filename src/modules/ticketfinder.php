@@ -16,8 +16,7 @@ if (isset($_POST['submit'])) {
         header("Location: find.php");
         echo "The variables exist in the database.";
     } else {
-        // No rows found, do something else
-        echo "This type of  Ticket does not exist .";
+        echo "The ticket you were searching for doesnt exist!";
     }
     
 
