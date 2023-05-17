@@ -21,6 +21,8 @@ $userType = 'BUSINESS';
 <html lang="en">
 
 <head>
+<link rel='stylesheet' href='css/palette-light.css' id="light-theme">
+<link rel='stylesheet' href='css/palette-dark.css' id="dark-theme">
 <?php
 		if ($_SESSION["dark_mode"] == "null") {
 			echo "<link rel='stylesheet' href='css/palette-light.css'>";
@@ -28,12 +30,11 @@ $userType = 'BUSINESS';
 		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
 	}
 	?>
-<link rel='stylesheet' href='css/palette-light.css' id="light-theme">
-<link rel='stylesheet' href='css/palette-dark.css' id="dark-theme">
+
 
 
 	<style>
-		#button, #button1 {
+		#button, #button1, #button2 {
 		padding: 1rem 2rem;
 		font-size: 1.25rem;
 		border: none;
@@ -47,7 +48,7 @@ $userType = 'BUSINESS';
 		margin-top: 30px;
 		}
 
-		#button:hover, #button1:hover {
+		#button:hover, #button1:hover, #button2:hover {
 		transform: translateY(-5px);
 		}
 		.alert {
@@ -126,21 +127,30 @@ $userType = 'BUSINESS';
 			</div>
 		
 			<div class="right <?php echo $_SESSION['dark_mode']!="null" ? '' : 'border-light-2'; ?>">
+			<form method="POST" enctype="multipart/form-data">
 				<div class="field">
 					<div class="field-name">
+
 						<h1>User info</h1>
 					</div>
 					<div class="inputs">
+					<?php include "changeusername.php"; ?>
 						<div class="input-field">
-							<label>Name</label>
+							<label>Username</label>
 							<input type="text" class="input" value="<?php echo $_SESSION["name"]; ?>">
+						</div>
+						<div class="input-field">
+							<label>Change Username</label>
+							<input type="text" class="input" name="newusername">
 						</div>
 						<div class="input-field">
 							<label>Email address</label>
 							<input type="text" class="input" value="<?php echo $_SESSION["email"]; ?>">
 						</div>
 					</div>
+					<input type="submit" name="change_username" id="button2" class="btn" value="Change Username">
 				</div>
+					</form>
 				
 				<form method="POST" enctype="multipart/form-data">
 				<div class="field">

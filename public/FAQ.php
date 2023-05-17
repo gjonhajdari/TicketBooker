@@ -21,10 +21,10 @@ $full_name = 'Gjon Hajdari';
   <link rel="Bootstrap" href="Bootstrap">
   <title>FAQ</title>
   <?php
-  if ($isDark == true) {
-    echo "<link rel='stylesheet' href='css/palette-dark.css'>";
-  } else {
+  if ($_SESSION["dark_mode"] == "null") {
     echo "<link rel='stylesheet' href='css/palette-light.css'>";
+  } else {
+    echo "<link rel='stylesheet' href='css/palette-dark.css'>";
   }
   ?>
   <link rel="stylesheet" href="css/bootstrap.css">
