@@ -11,61 +11,26 @@
 	font-size:1.2rem;
 	margin-bottom:25px;
 }
-.Accordion{
-	position:relative;
-	display: inline-block;
-	width: 750px;
-	height: 70px;
-	background-color: var(--background);
-	
 
-	
-}
-.AccordionText{
-	padding: 25px;
-	font-style:bold;
-	font-size:1.3rem;
-	
-}
-
-.Accordion .AccordionHr{
-	color:gray;
-	line-height: 1px;
-	border-style:outset;
-}
-.AccordionHiddenText{
-	position: absolute;
-    top: 100%;
-    left: 0;
-    padding: 10px;
-    display: none;
-	top:100%;
-	
-}
-.AccordionDropDown{
-	display: block;
-    padding: 5px;
-    text-decoration: none;
-	
-}
-
-.AccordionText:hover{
-	cursor: pointer;
-	transition:300ms;
-	transform: scale(1.009);
-}
-
-.AccordionText{
-	display: flex;
+.QuestionBlock{
+	display:flex;
 	justify-content: space-between;
+
 }
+.QuestionHolder{
+	width: 750px;
+}
+
+
+
 .Rotate {
 	transform: rotate(180deg);
-  }
-  .SpaceCreator {
-    margin-bottom: 40px;
   }
 
   .AccordionHr{
 	border-color: gray;
+  }
+
+  .QuestionDropDown{
+	display:none;
   }

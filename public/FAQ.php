@@ -46,8 +46,8 @@ $full_name = 'Gjon Hajdari';
 <script >
 
 $(document).ready(function() {
-    $('.AccordionText').click(function() {
-      var DropDownElement = $(this).find('.AccordionHiddenText');
+    $('.QuestionBlock').click(function() {
+      var DropDownElement = $(this).find('.QuestionDropDown');
       DropDownElement.slideToggle();
       var LocateFigure=$(this).find('.DropDown');
       LocateFigure.toggleClass('Rotate');
@@ -71,189 +71,33 @@ $(document).ready(function() {
       </p>
     </div>
     <br>
-    <div class="Accordion">
-      <hr class="AccordionHr">
-      <div class="AccordionText" id="AccordionTextid">
-        What is TicketBooker?
-        <div class="AccordionHiddenText" id="AccordionHiddenTextid1">
+   
+    <div class="QuestionBlock">
+      <hr class="QuestionHr">
+    
+    <div class="QuestionHolder">
+
+    <p>
+      Question #1
+    </p>
+    
+    </div>
+
+      <div class="QuestionImg">
+        <img src="../public/assets/icons/dropdown.svg" alt="">
+      </div>
+
+    <hr class="QuestionHr">
+
+    </div>
+
+
+    <div class="QuestionDropDown">
         TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
-        </div>
 
-        <div class="DropDown" id="DropDown1">
-          <img src="assets/icons/dropdown.svg" alt="" class="Dropdown">
-        </div>
-      </div>
-      <hr class="AccordionHr">
-    </div>
-    <div class="Accordion">
-      <hr class="AccordionHr">
-      <div class="AccordionText"  id="AccordionTextid">
-        what kind of tickets can i buy?
-        <div class="AccordionHiddenText " id="AccordionHiddenTextid2">
-         TicketBooker focuses mostly on movies,concerts and travel tickets but 
-         if there are any type of tickets that can help us inprove our page contact us!
-        </div>
-
-        <div class="DropDown" id="DropDown2">
-          <img src="assets/icons/dropdown.svg" alt="" class="Dropdown">
-        </div>
-      </div>
-      <hr class="AccordionHr">
     </div>
 
-    <div class="Accordion">
-      <hr class="AccordionHr">
-      <div class="AccordionText"  id="AccordionTextid">
-        is there a return policy?
-        <div class="AccordionHiddenText " id="AccordionHiddenTextid3">
-        <div class="AccordionDropDown">
 
-          TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
-        
-        </div>
-      </div>
-
-        <div class="DropDown" id="DropDown3">
-          <img src="assets/icons/dropdown.svg" alt="" class="Dropdown">
-        </div>
-      </div>
-      <hr class="AccordionHr">
-    </div>
-
-    <div class="Accordion">
-      <hr class="AccordionHr">
-      <div class="AccordionText" id="AccordionTextid">
-        Question #4
-        <div class="AccordionHiddenText " id="AccordionHiddenTextid4">
-        <div class="AccordionDropDown">
-          
-          TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
-          
-        </div>
-      </div>
-
-        <div class="DropDown" id="DropDown4">
-          <img src="assets/icons/dropdown.svg" alt="" class="Dropdown">
-        </div>
-      </div>
-      <hr class="AccordionHr">
-    </div>
-
-    <div class="Accordion">
-      <hr class="AccordionHr">
-      <div class="AccordionText"  id="AccordionTextid">
-        Question #5
-        <div class="AccordionHiddenText " id="AccordionHiddenTextid5">
-        <div class="AccordionDropDown">
-          
-          TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
-          
-        </div>  
-      </div>
-
-        <div class="DropDown" id="DropDown5">
-          <img src="assets/icons/dropdown.svg" alt="" class="Dropdown">
-        </div>
-      </div>
-      <hr class="AccordionHr">
-    </div>
-
-    <div class="Accordion">
-      <hr class="AccordionHr">
-      <div class="AccordionText"  id="AccordionTextid">
-        Question #6
-        <div class="AccordionHiddenText "id="AccordionHiddenTextid6">
-        <div class="AccordionDropDown">
-        
-          TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
-        
-        </div>
-        </div>
-
-        <div class="DropDown" id="DropDown6">
-          <img src="assets/icons/dropdown.svg" alt="" class="Dropdown">
-        </div>
-      </div>
-      <hr class="AccordionHr">
-    </div>
-
-    <div class="Accordion">
-      <hr class="AccordionHr">
-      <div class="AccordionText"  id="AccordionTextid">
-        Question #7
-        <div class="AccordionHiddenText " id="AccordionHiddenTextid7">
-       <div class="AccordionDropDown">
-
-         TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
-         
-        </div>
-      </div>
-
-        <div class="DropDown" id="DropDown7">
-          <img src="assets/icons/dropdown.svg" alt="" class="Dropdown">
-        </div>
-      </div>
-      <hr class="AccordionHr">
-    </div>
-    
-    <div class="Accordion">
-      <hr class="AccordionHr">
-      <div class="AccordionText"  id="AccordionTextid">
-        Question #8
-        <div class="AccordionHiddenText " id="AccordionHiddenTextid8">
-        <div class="AccordionDropDown">
-         
-        TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
-        
-      </div>
-        </div>
-
-        <div class="DropDown" id="DropDown8">
-          <img src="assets/icons/dropdown.svg" alt="" class="Dropdown">
-        </div>
-      </div>
-      <hr class="AccordionHr">
-    </div>
-
-    <div class="Accordion">
-      <hr class="AccordionHr">
-      <div class="AccordionText"  id="AccordionTextid">
-        Question #9
-        <div class="AccordionHiddenText " id="AccordionHiddenTextid9">
-          <div class="AccordionDropDown">
-
-            TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
-          
-          </div>
-        </div>
-
-        <div class="DropDown" id="DropDown9">
-          <img src="assets/icons/dropdown.svg" alt="" class="Dropdown">
-        </div>
-      </div>
-      <hr class="AccordionHr">
-    </div>
-    
-    <div class="Accordion">
-      <hr class="AccordionHr">
-      <div class="AccordionText"  id="AccordionTextid">
-        Question #10
-        <div class="AccordionHiddenText " id="AccordionHiddenTextid10">
-          <div class="AccordionDropDown">
-           
-          TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
-          
-        </div>
-        </div>
-
-        <div class="DropDown" id="DropDown10">
-          <img src="assets/icons/dropdown.svg" alt="" class="Dropdown">
-        </div>
-      </div>
-      <hr class="AccordionHr">
-    </div>
-
-    
 
   </div>
 
