@@ -17,6 +17,23 @@ body {
 	margin-bottom: 70px;
 }
 
+.btn {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	padding: 1rem 4rem;
+	font-size: 1.25rem;
+	font-weight: 600;
+	border-radius: 1rem;
+	border: none;
+	color: var(--background);
+	background-color: var(--accent);
+	margin-top: 2rem;
+	cursor: pointer;
+	transition: 300ms;
+}
+
 .top h1 {
 	font-size: 2.5rem;
 

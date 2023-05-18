@@ -52,9 +52,28 @@ $title = 'Dua Lipa';
 	<main class="container">
 
 		<div class="top">
+
 			<h1>Welcome back, <?php echo $_SESSION["name"]; ?></h1>
 			<p>Take a look at all your tickets.</p>
+	
+
+			<div class='bottom'>
+			
+			<button class="btn"  <?php
+			if($_SESSION["login"])
+			 echo $_SESSION["dark_mode"]=="null" ? '' : 'btn-dark';
+			 else
+			 echo 'btn-dark'; 
+			 ?> >
+				Your tickets
+				<?php echo file_get_contents('assets/icons/arrow.svg') ?>
+			</button>
+
+			</div>
+			
 		</div>
+
+
 
 		<div class="tabs row g-4">
 			<label class="tab col-md-6 col-lg-3">

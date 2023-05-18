@@ -2,7 +2,7 @@
 
 sleep(1);
 
-include("condata.php");
+include("configdata.php");
 if(isset($_POST['request'])){
 
     $request = $_POST['request'];
@@ -56,7 +56,8 @@ if(isset($_POST['request'])){
             <td><?php echo $row['time_start']?></td>
             <td><?php echo $row['time_end']?></td>
             <td><?php echo $row['location'] ?></td>
-            <td><img src="<?php echo $row['description'] ?>" class="img-responsive img-thumbnail" width="150"> </td>
+            <td><?php echo $row['description'] ?></td>
+            <td><img src="<?php echo $row['image'] ?>" class="img-responsive img-thumbnail" width="150"> </td>
         </tr>
 
         <?php 
@@ -64,8 +65,7 @@ if(isset($_POST['request'])){
         }
 
         ?>
-    </tbody>
-     
+    </tbody>   
 </table>
 <?php 
 

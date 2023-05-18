@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php include("condata.php"); ?>
+<?php include("configdata.php"); ?>
 
 
 <!DOCTYPE html>
@@ -22,7 +22,13 @@
 	<link rel="stylesheet" href="/public/ajax/index-ajax.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"> </script>
-    
+    <style>
+
+
+
+
+
+    </style> 
 </head>
 
 <body>
@@ -72,7 +78,8 @@
                 <td><?php echo $row['time_start']?></td>
                 <td><?php echo $row['time_end']?></td>
                 <td><?php echo $row['location'] ?></td>
-                <td><img src="<?php echo $row['description'] ?>" class="img-responsive img-thumbnail" width="150"> </td>
+                <td><?php echo $row['description'] ?></td>
+                <td><img src="<?php echo $row['image'] ?>" class="img-responsive img-thumbnail" width="150"> </td>
              </tr>
              <?php
              }
@@ -85,15 +92,15 @@
 
     <script>
         $(document).ready(function(){
-            $("#fetchdata").on('change',function () {
+            $("#fetchdata").on('change',function(){
                 var value = $(this).val();
                 //alert(value);
 
                 $.ajax({
-                    url: "condata.php",
+                    url: "fetchdata.php",
                     type: "POST",
                     data: 'request=' + value,
-                    beforeSend: function (){
+                    beforeSend: function(){
                         $(".container").html("<span>Working...</span>"); 
                     },
                     success:function(data){
