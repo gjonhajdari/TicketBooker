@@ -8,12 +8,13 @@ if (isset($_POST['submit'])) {
 }
 
 
-    $sql = "SELECT ticket_type, date, location FROM `tickets` WHERE ticket_type =$type AND date =$date AND location =$place";
+    $sql = "SELECT `option`, `date`, `location` FROM `ticket` WHERE `option` =  '$type' AND `date`  like '$date' 
+            AND `location` like '%$place%'";
 
     $result = mysqli_query($conn, $sql);
 
     if ($result > 0) {
-        header("Location: find.php");
+        header("Location: ../../public/find.php");
         echo "The variables exist in the database.";
     } else {
         // No rows found, do something else
