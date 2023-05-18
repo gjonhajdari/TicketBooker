@@ -51,10 +51,10 @@
 				<p>What, when, where?</p>
 
 				<div class="selectors <?php 
-				if($_SESSION['login'])
-				echo $_SESSION["dark_mode"]!="null" ? '' : 'border-light'; 
-				else
-				echo '';
+					if($_SESSION['login'])
+					echo $_SESSION["dark_mode"]!="null" ? '' : 'border-light'; 
+					else
+					echo '';
 				?>">
 					<select name="type" id="select-what">
 						<option value="" disabled selected>Type</option>

@@ -28,8 +28,12 @@
 	border-color: var(--foreground);
 	border-style: outset;
 }
-.questionimg{
+.questionimg {
 	padding:15px;
+}
+
+.questionimgslight{
+	color:black;
 }
 
 .questionholder:hover{
@@ -62,6 +66,7 @@
 	border-color: gray;
   }
 
-  .auestiondropdown{
+  .questiondropdown{
 	display:none;
   }
+

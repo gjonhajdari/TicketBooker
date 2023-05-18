@@ -1,9 +1,21 @@
 <?php
-//TODO write code for sessions in FAQ
-$isDark = true;
-$isLoggedIn = true;
-$avatar = 10;
-$full_name = 'Gjon Hajdari';
+include '../src/modules/db.php';
+session_start();
+
+if ($_SESSION['id']) {
+	$id = $_SESSION['id'];
+	$sql = "SELECT * FROM `user` WHERE id = '$id'";
+	$result = mysqli_query($conn, $sql);
+	$user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+	$isDark = $user['dark_mode'];
+	$avatar = $user['avatar'];
+	$full_name = $user['name'];
+	$user_type = $user['user_type'];
+	$isLoggedIn = true;
+} else {
+	$isDark = true;
+	$isLoggedIn = false;
+}
 
 ?>
 
@@ -85,7 +97,7 @@ $(document).ready(function() {
         
       </div>
 
-      <div class="questionimg">
+      <div class="questionimg <?php echo $_SESSION["dark_mode"] ? '' : 'questionimg-light'; ?>" >
       <?php echo file_get_contents("assets/icons/dropdown.svg") ?>
       </div>
 
@@ -274,7 +286,9 @@ $(document).ready(function() {
   </div>
     <div class="questiondropdown">
       Lorem ipsum dolor sit amet,
-       consectetur adipisicing elit. Alias officiis suscipit, a fugit similique neque, beatae est nostrum facere, nam error ut numquam architecto repudiandae? Eius vel ducimus repellat in.
+      consectetur adipisicing elit.
+      Alias officiis suscipit, a fugit similique neque,
+      beatae est nostrum facere, nam error ut numquam architecto repudiandae? Eius vel ducimus repellat in.
     </div>
 
 
@@ -295,7 +309,9 @@ $(document).ready(function() {
     </div>
   </div>
     <div class="questiondropdown">
-        TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus soluta quisquam assumenda rem 
+        totam excepturi a ipsam mollitia similique! Molestiae dolorum 
+        commodi officia unde. Facilis hic explicabo voluptatum asperiores ipsum!
 
     </div>
     
