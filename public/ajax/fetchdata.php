@@ -13,24 +13,26 @@ if(isset($_POST['request'])){
 
 ?>
 
-<table class="tabela">
+<table class="table table-hover table-borderless table-light">
     <?php 
     
         if ($count){
     
     ?>
-    <thead>
+    <thead class="table-light">
     <tr>
-        <td>Ticket ID</td>
-        <td>Creator ID</td>
-        <td>Ticket type</td>
-        <td>Title</td>
-        <td>Date</td>
-        <td>Time Start</td>
-        <td>Time End</td>
-        <td>Location</td>
-        <td>Description</td>
-        <td>Image</td>
+     <div class="d-flex align-items-center">
+        <td scope="col" class="table-secondary">Ticket ID</td>
+        <td scope="col" class="table-secondary">Creator ID</td>
+        <td scope="col" class="table-secondary">Ticket type</td>
+        <td scope="col" class="table-secondary">Title</td>
+        <td scope="col" class="table-secondary">Date</td>
+        <td scope="col" class="table-secondary">Time Start</td>
+        <td scope="col" class="table-secondary">Time End</td>
+        <td scope="col" class="table-secondary">Location</td>
+        <td scope="col" class="table-secondary">Description</td>
+        <td scope="col" class="table-secondary">Image</td>
+     </div>    
     </tr>
             
     <?php 
@@ -48,7 +50,7 @@ if(isset($_POST['request'])){
         
          ?>   
         <tr>
-            <td><?php echo $row['ticket_id'] ?></td>
+            <td ><?php echo $row['ticket_id'] ?></td>
             <td><?php echo $row['creator_id'] ?></td>
             <td><?php echo $row['ticket_type'] ?></td>
             <td><?php echo $row['title'] ?></td>
