@@ -23,20 +23,63 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"> </script>
     <style>
+        body {
+        background-color: #222222;
+	    background-repeat: no-repeat;
+        background-position: -300px -100px
+        }
 
+        .container {
+	    margin-top: 100px;
+	    margin-bottom: 100px;
+        }
 
+        .container .title{
+            font-weight:bold;
+            font-size: 1.75rem;
+	        margin-bottom: 0.3rem;
+            color:#ffffff;}
+
+        
+        .container p{
+            font-size: 1.25rem;
+	        margin-bottom: 0.7rem;
+            color: #ffffff7f;}
+
+        .container span{
+            color: #d45161;
+        }
+
+        .container .bottom{
+            color: #ffffff7f;
+            font-size: 1.15rem;
+        }
+
+        #fetchdata{
+            font-size: 1.15rem;
+	        font-weight: 600;
+	        border-radius: 1rem;
+	        border: none;
+            background-color: #d45161;	        
+            margin-top: 1rem;
+            margin-bottom: 1.15rem;
+            
+        }
 
 
 
     </style> 
 </head>
 
-<body>
+<body class="<?php echo $isDark ? '' : 'body-light'; ?>">
+    <main class="container"> 
     <div id="filter">
 
-        <p>Having trouble booking tickets online for the first time? <br> No problem, we've got you covered.
-            Here you will be able to track all your recent purchases!
-        <p> From traveling <span> tickets </span> to <span> concerts </span> and <span> movies </span>, get your latest info here </p>
+        <p class="title">Having trouble booking tickets online for the first time?</p><br>
+        <p><span> No problem, we've got you covered. </span>
+            Here you will be able to track all your recent purchases!</p>
+        <p class="bottom"> From traveling <span> tickets </span> to <span> concerts </span> and <span> movies </span>, get your latest info here </p>
+       
         <select id="fetchdata">
             <option value="" disabled="" selected="">Take a look at your tickets</option>
             <option value="Movie">Movie</option>
@@ -45,20 +88,22 @@
         </select>
     </div>
 
-    <div class="container">
-        <table>
-            <thead>
-                <tr>
-                    <td>Ticket ID</td>
-                    <td>Creator ID</td>
-                    <td>Ticket type</td>
-                    <td>Title</td>
-                    <td>Date</td>
-                    <td>Time Start</td>
-                    <td>Time End</td>
-                    <td>Location</td>
-                    <td>Description</td>
-                    <td>Image</td>
+    <div class="table-responsive">
+        <table class="table table-hover table-borderless table-light">
+            <thead class="table-dark">
+                <tr class="rows" >
+                    <div class="d-flex align-items-center">
+                    <td scope="col" class="table-secondary">Ticket ID</td>
+                    <td scope="col" class="table-secondary">Creator ID</td>
+                    <td scope="col" class="table-secondary">Ticket type</td>
+                    <td scope="col" class="table-secondary">Title</td>
+                    <td scope="col" class="table-secondary">Date</td>
+                    <td scope="col" class="table-secondary">Time Start</td>
+                    <td scope="col" class="table-secondary">Time End</td>
+                    <td scope="col" class="table-secondary">Location</td>
+                    <td scope="col" class="table-secondary">Description</td>
+                    <td scope="col" class="table-secondary">Image</td>
+                    </div>
                 </tr>
 
             </thead>
@@ -89,6 +134,7 @@
         </table>
         
     </div>
+    </main>
 
     <script>
         $(document).ready(function(){
