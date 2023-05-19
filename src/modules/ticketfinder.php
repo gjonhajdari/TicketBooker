@@ -8,8 +8,8 @@ if (isset($_POST['submit'])) {
 }
 
 
-    $sql = "SELECT `option`, `date`, `location` FROM `ticket` WHERE `option` =  '$type' AND `date`  like '$date' 
-            AND `location` like '%$place%'";
+    $sql = "SELECT `option`, `date`, `location` FROM `ticket` WHERE `option` =  '$type' AND `date`  = 'date' 
+            AND `location` = '$place'";
 
     $result = mysqli_query($conn, $sql);
 
