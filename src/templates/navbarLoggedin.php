@@ -18,6 +18,7 @@ if (session_status() == PHP_SESSION_NONE) {
 			<a href="index.php" class="link">Home</a>
 			<a href="about.php" class="link">About</a>
 			<a href="contact.php" class="link">Contact</a>
+			<a href="FAQ.php" class="link">FAQ</a>
 		</div>
 		<div class="right">
 			<img id="profile-picture" src="assets/images/profiles/profile-picture-<?php echo $_SESSION["avatar"]; ?>.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
