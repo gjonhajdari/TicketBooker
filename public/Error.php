@@ -78,7 +78,7 @@ if ($_SESSION['id']) {
            Opps! Page not found. 
         </p>
         <p id="text2">
-            The page you are looking for doesn't exist or might've been removed
+            The ticket you are looking for doesn't exist or might've been removed
         </p>
     </div>
 
