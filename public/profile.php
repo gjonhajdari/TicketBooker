@@ -2,6 +2,13 @@
 
 session_start();
 
+if (!isset($_SESSION["login"]) || !$_SESSION["login"]) {
+    // Redirect to sign-in page
+    header("Location: login.php");
+    exit();
+}
+
+
 $isDark = true;
 $isLoggedIn = true;
 $avatar = 10;
@@ -28,7 +35,7 @@ $title = 'Dua Lipa';
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel='icon' type='image/x-icon' href='assets/icons/favicon.svg'>
 	<?php
-		if ($_SESSION["dark_mode"] == "null") {
+		if (isset($_SESSION["dark_mode"]) && ($_SESSION["dark_mode"] == "null")){
 			echo "<link rel='stylesheet' href='css/palette-light.css'>";
 	} else {
 		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
@@ -52,9 +59,27 @@ $title = 'Dua Lipa';
 	<main class="container">
 
 		<div class="top">
+
 			<h1>Welcome back, <?php echo $_SESSION["name"]; ?></h1>
 			<p>Take a look at all your tickets.</p>
+	
+
+			<div class='bottom'>
+			
+		
+			 <button class="btn <?php echo (isset($_SESSION["login"]) && $_SESSION["login"]) ? 
+			 					(isset($_SESSION["dark_mode"]) && ($_SESSION["dark_mode"] == "null") ? 
+								'' : 'btn-dark') : 'btn-dark'; ?>">
+					
+				Your tickets
+				<?php echo file_get_contents('assets/icons/arrow.svg') ?>
+			</button>
+
+			</div>
+			
 		</div>
+
+
 
 		<div class="tabs row g-4">
 			<label class="tab col-md-6 col-lg-3">
