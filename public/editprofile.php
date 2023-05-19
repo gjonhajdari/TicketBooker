@@ -25,8 +25,8 @@ $userType = 'BUSINESS';
 <html lang="en">
 
 <head>
-		<link rel='stylesheet' href='css/palette-light.css' id='light-theme'>"
-		<link rel='stylesheet' href='css/palette-dark.css' id='dark-theme'>"
+		<link rel='stylesheet' href='css/palette-light.css' id='light-theme'>
+		<link rel='stylesheet' href='css/palette-dark.css' id='dark-theme'>
 <?php
 		if ($_SESSION["dark_mode"] == "null") {
 			echo "<link rel='stylesheet' href='css/palette-light.css'>";

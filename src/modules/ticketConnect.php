@@ -1,31 +1,76 @@
-<?php
-include_once ('db.php');
+<style>	#button:hover, #button1:hover, #button2:hover {
+		transform: translateY(-5px);
+		}
+		.alert {
+ 		 padding: 0.75rem 1.25rem;
+ 		 margin-bottom: 1rem;
+  		border: 1px solid transparent;
+  		border-radius: 0.25rem;
+  		width: 100%;
+  		margin-right: auto;
+		}
 
-if(isset($_POST['submit'])){
-    $option = $_POST['option'];
-    $name = $_POST['name'];
-    $date =$_POST['date'];
-    $time = $_POST['time'];
-    $location = $_POST['location'];
+		.alert-success {
+  		color: #155724;
+  		background-color: #d4edda;
+  		border-color: #c3e6cb;
+		}
+
+		.alert-danger {
+  		color: #721c24;
+  		background-color: #f8d7da;
+ 		border-color: #f5c6cb;
+		}
+	</style>
+		#button, #button1, #button2 {
+		padding: 1rem 2rem;
+		font-size: 1.25rem;
+		border: none;
+		border-radius: 1rem;
+		width: 100%;
+		background-color: var(--accent);
+		font-weight: 600;
+		cursor: pointer;
+		transition: 300ms;
+		color: var(--background);
+		margin-top: 30px;
+		}
+
+	
+
+<?php 
+require_once("db.php");
+if (isset($_POST['submit']) && $_SESSION["login"] == true) {
+    $what = $_POST['what'];
+    $location = $_POST['where'];
+    $date = $_POST['when_date'];
+    $time = $_POST['when_time'];
+    $event_title = $_POST['title'];
     $description = $_POST['description'];
-    $imagename = $_FILES['image']['name'];
-    $imagetmpname = $_FILES['image']['tmp_name'];
-    $folder ='../../public/assets/images/';
 
-    move_uploaded_file($imagetmpname,$folder.$imagename);
+	$currentDate = date('Y-m-d');
+    if ($date < $currentDate) {
+        echo "<div class='alert alert-danger w-50 p-3'>Invalid date. Please select a current or future date.</div>";
+    } else {
+	$sql = "INSERT INTO ticket (`option`, location, date, time, event_title, description) 
+	VALUES (?, ?, ?, ?, ?, ?)";
+ 
+	$stm = mysqli_stmt_init($conn);
+    if (mysqli_stmt_prepare($stm, $sql)) {
+        mysqli_stmt_bind_param($stm, "ssssss", $what, $location, $date, $time, $event_title, $description);
+        if (mysqli_stmt_execute($stm)) {
+            mysqli_stmt_close($stm);
+            mysqli_close($conn);
+            echo '<script>window.location.href = "../../../TicketBooker/public/createTicket.php";</script>';
+            exit;
+        } else {
+            die("Error executing the statement: " . mysqli_error($conn));
+        }
+    } else {
+        die("Error preparing the statement: " . mysqli_error($conn));
+    }
+  }
 }
-
-
-$sql = "INSERT INTO `ticket`(`option`,`name`,`date`,`time`,`location`,`description`,`image`)
-		VALUES('$option','$name','$date','$time','$location','$description','$imagename')";
-
-$result = mysqli_query($conn, $sql);
-if ($result) {
-	echo "Registred successfully";
-} else {
-	die(mysqli_error($conn));
-}
-
 mysqli_close($conn);
 
 ?>

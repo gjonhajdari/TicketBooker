@@ -12,34 +12,6 @@ $isDark = true;
 $isLoggedIn = true;
 $avatar = 10;
 
-
-
-if (isset($_POST['submit']) && $_SESSION["login"] == true) {
-    $what = $_POST['what'];
-    $location = $_POST['where'];
-    $date = $_POST['when_date'];
-    $time = $_POST['when_time'];
-    $event_title = $_POST['title'];
-    $description = $_POST['description'];
-	$sql = "INSERT INTO ticket (`option`, location, date, time, event_title, description) 
-	VALUES (?, ?, ?, ?, ?, ?)";
-    
-	$stm = mysqli_stmt_init($conn);
-    if (mysqli_stmt_prepare($stm, $sql)) {
-        mysqli_stmt_bind_param($stm, "ssssss", $what, $location, $date, $time, $event_title, $description);
-        if (mysqli_stmt_execute($stm)) {
-            mysqli_stmt_close($stm);
-            mysqli_close($conn);
-            header('Location: createTicket.php');
-            exit;
-        } else {
-            die("Error executing the statement: " . mysqli_error($conn));
-        }
-    } else {
-        die("Error preparing the statement: " . mysqli_error($conn));
-    }
-}
-mysqli_close($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,7 +47,7 @@ mysqli_close($conn);
 	<div class="container">
         <div class="content">
             <h1 class="header">Create a Ticket</h1>
-
+			<?php include "../src/modules/ticketConnect.php"; ?> 
             <form action="" method="POST" class="inputs">
                 <div class="input-field">
                     <p class="description">Type and location</p>
