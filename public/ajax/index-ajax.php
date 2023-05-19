@@ -77,7 +77,7 @@ session_start();
 
 <div class="top">
 			<h1 id="title"><bold>Welcome back, <?php echo  $_SESSION["name"]; ?></bold></h1>
-			<p>Take a look at all the <span class="accent"> new tickets </span>saved in your Database.</p>
+			<p>Take a look at your history of <span class="accent"> tickets </span>saved in your Database.</p>
 		</div>
     <table class="table table-striped table-hover table-light" >
         <thead class="thead-light">
