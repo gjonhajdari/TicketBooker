@@ -1,0 +1,15 @@
+.container{ 
+    display: flex;
+    }
+
+.container img{
+    width:110px;
+    height: 110px;
+}
+.containerimage{
+    float:right;
+    margin-top:13px;
+    width:40px;
+    margin-left: 350px;
+}
+
