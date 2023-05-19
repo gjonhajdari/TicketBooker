@@ -12,18 +12,19 @@ body {
 
 .top {
 	display: flex;
+	float: left;
 	flex-direction: column;
 	gap: 15px;
 	margin-bottom: 70px;
 }
  
 .btn {
+	margin-left: 50%;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 	gap: 20px;
 	padding: 1rem 4rem;
-	font-size: 1.25rem;
+	font-size: 1.15rem;
 	font-weight: 600;
 	border-radius: 1rem;
 	border: none;
@@ -32,6 +33,10 @@ body {
 	margin-top: 2rem;
 	cursor: pointer;
 	transition: 300ms;
+}
+
+.topandbottom{
+	display: inline-block;
 }
 
 .top h1 {
