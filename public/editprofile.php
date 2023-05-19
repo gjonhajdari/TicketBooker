@@ -1,6 +1,15 @@
 <?php
 
 session_start();
+
+
+if (!isset($_SESSION["login"]) || !$_SESSION["login"]) {
+    // Redirect to sign-in page
+    header("Location: login.php");
+    exit();
+}
+
+
 $isDark = true;
 $isChecked = false;
 $avatar = 10;

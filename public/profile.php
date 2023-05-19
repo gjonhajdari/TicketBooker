@@ -2,6 +2,13 @@
 
 session_start();
 
+if (!isset($_SESSION["login"]) || !$_SESSION["login"]) {
+    // Redirect to sign-in page
+    header("Location: login.php");
+    exit();
+}
+
+
 $isDark = true;
 $isLoggedIn = true;
 $avatar = 10;
@@ -15,15 +22,7 @@ $type = 'Concert';
 $title = 'Dua Lipa';
 
 ?>
-<?php
-session_start();
 
-if (!isset($_SESSION["login"]) || !$_SESSION["login"]) {
-    // Redirect to sign-in page
-    header("Location: login.php");
-    exit();
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
