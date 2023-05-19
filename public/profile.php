@@ -86,10 +86,22 @@ $title = 'Dua Lipa';
 			//	echo "Cannot access database!";
 		     //	}	?>
 
+			<?php
+			//include '../src/modules/db.php';
+
+			//if (isset($_SESSION["user_type"]) == 'BUSINESS') {
+ 			// redirect to indes-ajax
+ 			// header("Location: /TicketBooker/public/ajax/index-ajax.php");
+  			// exit();
+			//}
+			?>
+			
+
+
 			<script>
 				function funct() { 
-					location.replace("/TicketBooker/public/ajax/index-ajax.php");
-				 }
+				location.replace("/TicketBooker/public/ajax/index-ajax.php");
+				}
 	
 			</script>	
 

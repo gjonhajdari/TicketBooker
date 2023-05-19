@@ -21,18 +21,16 @@ body {
 .btn {
 	margin-left: 50%;
 	display: flex;
-	align-items: center;
-	gap: 20px;
+	gap: 10px;
 	padding: 1rem 4rem;
 	font-size: 1.15rem;
-	font-weight: 600;
+	font-weight: 400;
 	border-radius: 1rem;
 	border: none;
 	color: var(--background);
 	background-color: var(--accent);
 	margin-top: 2rem;
 	cursor: pointer;
-	transition: 300ms;
 }
 
 .topandbottom{
