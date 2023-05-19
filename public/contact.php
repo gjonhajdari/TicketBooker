@@ -103,8 +103,8 @@ mysqli_close($conn);
 			<form action="#" method="POST">
 				<div class="inputs <?php echo $isDark ? '' : 'border-light'; ?>">
 					<div class="info">
-						<input type="text" name="name" id="name" required="required" placeholder="Full name" class="input">
-						<input type="email" name="email" id="email" required="required" placeholder="Email address" class="input">
+					<input type="text" name="name" class="input" value="<?php echo $_SESSION["name"]; ?>">
+					<input type="text" class="input" name="email" value="<?php echo $_SESSION["email"]; ?>">
 					</div>
 					<textarea name="message"  id="message" placeholder="Your message" cols="30" rows="10"></textarea>
 				</div>
