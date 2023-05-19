@@ -149,11 +149,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
             $user_type = $_POST['user_type'];
 			$checkbox = $_POST['checkbox'];
             $sql = "INSERT INTO user (user_type, name, email, password, checkbox) VALUES ( ?, ?,?, ? ,?)";
-            $statemant = mysqli_stmt_init($conn);
-            $prepareStatemant = mysqli_stmt_prepare($statemant,$sql);
+            $statement = mysqli_stmt_init($conn);
+            $prepareStatemant = mysqli_stmt_prepare($statement,$sql);
             if ($prepareStatemant) {
-                mysqli_stmt_bind_param($statemant,"sssss", $user_type,$name, $email, $hashed_password, $checkbox);
-                mysqli_stmt_execute($statemant);
+                mysqli_stmt_bind_param($statement,"sssss", $user_type,$name, $email, $hashed_password, $checkbox);
+                mysqli_stmt_execute($statement);
                 echo "<div class='alert alert-success w-50 p-3'>You are registered successfully.</div>";
 				header('location: login.php');
             }else{

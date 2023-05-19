@@ -10,21 +10,39 @@ if (!isset($_SESSION["login"]) || !$_SESSION["login"]) {
 $isDark = true;
 $isLoggedIn = true;
 $avatar = 10;
-$full_name = 'Gjon Hajdari';
-$userType = 'BUSINESS';
 
-$dbhost = 'localhost:3307';
-$dbbuser = 'root';
-$dbpass = '';
-$db = 'ticketbooker';
 
-$conn = mysqli_connect($dbhost, $dbbuser, $dbpass, $db);
-if ($conn->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
+
+include_once('../src/modules/db.php');
+
+if (isset($_POST['submit']) && $_SESSION["login"] == true) {
+    $what = $_POST['what'];
+    $location = $_POST['where'];
+    $date = $_POST['when_date'];
+    $time = $_POST['when_time'];
+    $event_title = $_POST['title'];
+    $description = $_POST['description'];
+
+    $sql = "INSERT INTO `ticket` (`what`, `location`, `date`, `time`, `event_title`, `description`) 
+            VALUES (?, ?, ?, ?, ?, ?)";
+    
+    $stm = mysqli_stmt_init($conn);
+    if (mysqli_stmt_prepare($stm, $sql)) {
+        mysqli_stmt_bind_param($stm, "ssssss", $what, $location, $date, $time, $event_title, $description);
+        if (mysqli_stmt_execute($stm)) {
+            mysqli_stmt_close($stm);
+            mysqli_close($conn);
+            header('Location: createTicket.php');
+            exit;
+        } else {
+            die("Error executing the statement: " . mysqli_error($conn));
+        }
+    } else {
+        die("Error preparing the statement: " . mysqli_error($conn));
+    }
 }
-
+mysqli_close($conn);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,7 +79,7 @@ if ($conn->connect_error) {
 		<div class="content">
 			<h1 class="header">Create a ticket</h1>
 
-			<form action="../src/modules/createFunction.php" class="inputs">
+			<form action="" class="inputs">
 				<div class="input-field">
 					<p class="description">Type and location</p>
 					<div class="selectors <?php echo $_SESSION["dark_mode"]!="null" ? '' : 'border-light'; ?>">
@@ -85,8 +103,8 @@ if ($conn->connect_error) {
 				<div class="input-field">
 					<p class="description">Date and time</p>
 					<div class="selectors <?php echo $_SESSION["dark_mode"]!="null" ? '' : 'border-light'; ?>">
-						<input type="date" name="when-date" id="select-when">
-						<input type="time" name="when-time" id="select-when">
+						<input type="date" name="when_date" id="select-when">
+						<input type="time" name="when_time" id="select-when">
 					</div>
 				</div>
 
