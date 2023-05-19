@@ -326,46 +326,6 @@ $(document).ready(function() {
 
   </div>
     
-  
-
-
-
-  
-   
-  <?php
-  // require_once('../src/modules/db.php');
-  
-  // $sql = "SELECT * FROM questions";
-  // $result = mysqli_query($conn, $sql);
-  
-  // // Loop through the results and display each question and answer
-  // if (mysqli_num_rows($result) > 0) {
-  // while ($row = mysqli_fetch_assoc($result)) {
-  // echo "<div class='question'>";
-  // echo "<h3>" . $row['question'] . "</h3>";
-  
-  // // Display the answer if it exists
-  // if ($row['answer']) {
-  // echo "<div class='answer'>";
-  // echo "<p>" . $row['answer'] . "</p>";
-  // echo "</div>";
-  // }
-  
-  // echo "</div>";
-  // }
-  // } else {
-  // echo "No questions found.";
-  // }
-  
-  // Close the statement
-  // mysqli_stmt_close($stmt);
-  // mysqli_close($conn);
-  // Show a success message to the user
-  // echo "Your question has been submitted. Thank you!";
-  
-  ?>
-
-
   <?php include "../src/templates/footer.php"; ?>
 
 </body>

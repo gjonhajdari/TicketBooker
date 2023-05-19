@@ -1,15 +1,85 @@
-.container{ 
+
+.container{
     display: flex;
-    }
-
-.container img{
-    width:110px;
-    height: 110px;
-}
-.containerimage{
-    float:right;
-    margin-top:13px;
-    width:40px;
-    margin-left: 350px;
+    flex-direction: column;
+    margin:100px;
+    margin-left:350px;
 }
 
+.containerimg img{
+    width:100px;
+    height:100px
+}
+.containertext{
+    margin-top:20px;
+}
+.containertext #text1 {
+    font-size:2.2rem;
+}
+
+.containertext #text2{
+    margin-top:10px;
+    color:gray;
+}
+
+.containerbuttons{
+    margin-top:40px;
+}
+
+.backbutton{
+    display: flex;
+    align-items:center;
+    border-radius:7px;
+    gap:15px;
+    width:135px;
+    height:40px;
+    padding:10px;
+    color:white;
+    background-color:#333333;
+    margin-bottom:15px;
+    border-style:hidden;
+    font-size: 1.1rem;
+}
+
+.backbuttonimg img{
+    rotate: 180deg;
+    color:white;
+    width:25px;
+}
+
+.backbutton:hover{
+    transform: scale(1.1);
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.backbutton:active{
+    transform: scale(1);
+}
+
+.homebutton{
+    display:flex;
+    gap:15px;
+    width:260px;
+    align-items:center;
+    height:38px;
+    border-radius:8px;
+    background-color:#d45161;
+    border-style:hidden;
+    font-size: 1.1rem;;
+    
+}
+
+.homebuttonimg{
+    margin-left:12px;
+}
+
+.homebutton:hover{
+    transform: scale(1.1);
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.homebutton:active{
+    transform: scale(1);
+}

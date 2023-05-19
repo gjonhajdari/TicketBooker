@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
         header("Location: ../../public/find.php");
         echo "The variables exist in the database.";
     } else {
-    header("Location: error.php ");
+    header("Location: ../../public/error.php ");
     }
 
 ?>

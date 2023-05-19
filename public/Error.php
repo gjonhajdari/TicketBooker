@@ -19,14 +19,20 @@ if ($_SESSION['id']) {
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
+  <style>
+    a{
+      text-decoration: none;
+    }
+    a:visited {
+    color: inherit;
+    }
+    </style>
+  <!-- Navigation bar -->
+  <?php include "../src/templates/navbarLoggedin.php"; ?>
 
-<!-- Navigation bar -->
-<?php include "../src/templates/navbarLoggedin.php"; ?>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="Bootstrap" href="Bootstrap">
@@ -40,7 +46,6 @@ if ($_SESSION['id']) {
   ?>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/general.css">
-  <link rel="stylesheet" href="css/createTicket.css">
   <link rel="stylesheet" href="css/error.css">
   <script src="https://kit.fontawesome.com/26e97bbe8d.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
@@ -48,30 +53,87 @@ if ($_SESSION['id']) {
   <script src="js/bootstrap.min.js"></script>
   <script src="js/app.js"></script>
 
-
-
-
-
-
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="containerimage">
-            <img src="assets/icons/notfound.svg" alt="">
-        <div class="secondcontainer">
+<script>
+    $(document).ready(function(){
+        $('.backbutton').click(function(){
+            var previouspage=document.referrer;
+            window.location.href=previouspage;
+        })
+    })
 
-        <p class="secondcontainerp1">
-            Opps! Page not found.
-            <p class="secondcontainerp2">
-                The page you are looking for doesn't exist or might've been removed
-            </p>
+</script>
+    <div class="container">
+
+    <div class="containerimg">
+    <img src="assets/icons/notfound.svg" alt="">
+
+    </div>
+
+    <div class="containertext"> 
+        <p id="text1"> 
+           Opps! Page not found. 
         </p>
-        </div>
-        <div>
-        
-        </div>
+        <p id="text2">
+            The page you are looking for doesn't exist or might've been removed
+        </p>
+    </div>
+
+    <div class="containerbuttons">
+        <button class="backbutton" >
+            <div class="backbuttonimg">
+                <img src="assets/icons/arrow.svg" alt="">
+            </div>
+         
+            <div>
+                Go back 
+            </div>
+        </button>
+
+        <button class="homebutton">
+            <div class="homebuttonimg">
+                <img src="assets/icons/home.svg" alt="">
+            </div>
+            <div>
+            <a href="index.php"> Jump to the home page</a>
+            </div>
+        </button>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -81,5 +143,7 @@ if ($_SESSION['id']) {
 
 
     </div>
+
+
 
 </body>
