@@ -19,7 +19,6 @@ if ($_SESSION['id']) {
 }
 
 
-
 ?>
 
 <!DOCTYPE html>
@@ -59,9 +58,9 @@ if ($_SESSION['id']) {
 			<div class="filters">
 				<p class="name">Filters</p>
 				<div class="labels <?php echo $_SESSION["dark_mode"]!="null" ? '' : 'border-light'; ?>">
-					<p class="label"> <?php echo $type ?> </p>
-					<p class="label"> <?php echo $date ?> </p>
-					<p class="label"> <?php echo $place ?> </p>
+					<p class="label"> <?php echo  $_SESSION["option"]; ?> </p>
+					<p class="label"> <?php echo  $_SESSION["date"]; ?> </p>
+					<p class="label"> <?php echo  $_SESSION["location"] ?> </p>
 				</div>
 			</div>
 		</div>

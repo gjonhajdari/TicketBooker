@@ -1,22 +1,20 @@
 <?php
-require('../src/modules/db.php');
+include_once('db.php');
 
-if (isset($_POST['userId']) && isset($_POST['ticketId'])) {
-    $userId = $_POST['userId'];
-    $ticketId = $_POST['ticketId'];
+$tid = $_POST['tid'] ?? '';
+$id = $_POST['id'] ?? '';
 
-    // Insert the user_id and ticket_id into the user_tickets table
-    $query = "INSERT INTO user_tickets (user_id, ticket_id) VALUES ('$userId', '$ticketId')";
-    $result = mysqli_query($conn, $query);
+// Perform the database insertion
+$sql = "INSERT INTO user_tickets (ticket_id,user_id) VALUES ('$tid', '$id')";
 
-    if ($result) {
-        echo "Ticket added successfully.";
-    } else {
-        echo "Error occurred while adding the ticket: " . mysqli_error($conn);
-    }
+if (mysqli_query($conn, $sql)) {
+    // Database insertion successful
+    echo "Ticket added successfully.";
 } else {
-    echo "User ID or Ticket ID not provided.";
+    // Error occurred during database insertion
+    echo "Error: " . mysqli_error($conn);
 }
 
-mysqli_close($conn);
+?>
+
 ?>

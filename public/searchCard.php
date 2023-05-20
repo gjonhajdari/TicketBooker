@@ -1,13 +1,16 @@
-
-<head>
-	<script src="https://kit.fontawesome.com/26e97bbe8d.js" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-	<script src="js/app.js"></script>
-</head>
-
-
 <?php
 	require('../src/modules/db.php');
+    if ($_SESSION['id']) {
+        $id = $_SESSION['id'];
+        $sql = "SELECT * FROM `user` WHERE id = '$id'";
+        $result = mysqli_query($conn, $sql);
+        $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        $user_type = $user['user_type'];
+        $isLoggedIn = true;
+    } else {
+        $isDark = true;
+        $isLoggedIn = false;
+    }
     $query = "SELECT * FROM ticket";
     $result = mysqli_query($conn, $query);
     $counter = mysqli_num_rows($result);
@@ -39,30 +42,41 @@
             
                 <div class="card-bottom">
                     <p class="type"><?php echo $row['option']?></p>
-                    <button class="card-button" data-ticket-id="<?php echo $row['tid']; ?>" >Add  </button>
+                    <button  class="card-button">Add </a> </button>
                 </div>
             </div>
         </div>
     <?php
     }
+
+
     ?>
     <script>
-    $(document).ready(function() {
-    $('.card-button').click(function() {
-        var userId = $(this).data('user-id');
-        var ticketId = $(this).data('ticket-id');
+$(document).ready(function() {
+  // Handle the button click event
+  $(".card-button").click(function() {
+    // Get the ticket ID (tid) and user ID (id)
+    var tid = "<?php echo $_SESSION['tid']; ?>";
+    var id = "<?php echo $_SESSION['id']; ?>";
 
-        $.ajax({
-            url: '../src/modules/addticket.php',
-            method: 'POST',
-            data: { userId: userId, ticketId: ticketId },
-            success: function(response) {
-                console.log(response);
-            },
-            error: function() {
-                console.log('Error occurred during AJAX request.');
-            }
-        });
+    // Make the AJAX request
+    $.ajax({
+      url: "../src/modules/addticket.php", 
+      method: "POST",
+      data: {
+        tid: tid,
+        id: id
+      },
+      success: function(response) {
+        console.log(response);
+      },
+      error: function(xhr, status, error) {
+        console.error(error);
+      }
     });
+  });
 });
-    </script>
+</script>
+
+
+
