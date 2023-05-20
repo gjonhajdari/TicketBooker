@@ -69,6 +69,30 @@ if(isset($_POST['request'])){
         ?>
     </tbody>   
 </table>
+
+<button id="butoni" onclick="goBack()">Go back to Profile</button>
+
+    <script>
+        
+        function goBack(){
+            location.replace("/TicketBooker/public/profile.php");
+        }
+    </script>    
+
+    <style>
+        #butoni{
+            font-size: 1.15rem;
+	        font-weight: 600;
+	        border-radius: 1rem;
+	        border: none;
+            background-color: #d45161;	        
+            margin-top: 1rem;
+            padding:6px;
+            margin-bottom: 1.15rem;
+        }
+
+    </style>    
+
 <?php 
 
 ?>
