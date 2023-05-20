@@ -1,99 +1,85 @@
-<?php
-session_start();
-include_once('../src/modules/db.php');
+<style>
+		#button, #button1, #button2 {
+		padding: 1rem 2rem;
+		font-size: 1.25rem;
+		border: none;
+		border-radius: 1rem;
+		width: 100%;
+		background-color: var(--accent);
+		font-weight: 600;
+		cursor: pointer;
+		transition: 300ms;
+		color: var(--background);
+		margin-top: 30px;
+		}
 
-if (!isset($_SESSION["login"]) || !$_SESSION["login"]) {
-    // Redirect to sign-in page
-    header("Location: login.php");
-    exit();
+		#button:hover, #button1:hover, #button2:hover {
+		transform: translateY(-5px);
+		}
+		.alert {
+ 		 padding: 0.75rem 1.25rem;
+ 		 margin-bottom: 1rem;
+  		border: 1px solid transparent;
+  		border-radius: 0.25rem;
+  		width: 100%;
+  		margin-right: auto;
+		}
+
+		.alert-success {
+  		color: #155724;
+  		background-color: #d4edda;
+  		border-color: #c3e6cb;
+		}
+
+		.alert-danger {
+  		color: #721c24;
+  		background-color: #f8d7da;
+ 		border-color: #f5c6cb;
+		}
+	</style>
+
+<?php
+require_once("db.php");
+
+if (isset($_POST['submit']) && $_SESSION["login"] == true) {
+    $what = $_POST['what'];
+    $location = $_POST['where'];
+    $date = $_POST['when_date'];
+    $time = $_POST['when_time'];
+    $event_title = $_POST['title'];
+    $description = $_POST['description'];
+
+    // Check if any of the fields are empty
+    if (empty($what) || empty($location) || empty($date) || empty($time) || empty($event_title) || empty($description)) {
+        echo "<div class='alert alert-danger w-50 p-3'>Please fill in all the required fields.</div>";
+    } else {
+        $currentDate = date('Y-m-d');
+        $currentTime = date('H:i');
+        $selectedDateTime = $date . ' ' . $time;
+
+        if ($date < $currentDate || ($date == $currentDate && $time < $currentTime)) {
+            echo "<div class='alert alert-danger w-50 p-3'>Invalid date or time. Please select a future date and time.</div>";
+        } else {
+            $sql = "INSERT INTO ticket (`option`, location, date, time, event_title, description) 
+            VALUES (?, ?, ?, ?, ?, ?)";
+         
+            $stm = mysqli_stmt_init($conn);
+            if (mysqli_stmt_prepare($stm, $sql)) {
+                mysqli_stmt_bind_param($stm, "ssssss", $what, $location, $date, $time, $event_title, $description);
+                if (mysqli_stmt_execute($stm)) {
+                    mysqli_stmt_close($stm);
+                    mysqli_close($conn);
+                    echo '<script>window.location.href = "../../../TicketBooker/public/createTicket.php";</script>';
+                    exit;
+                } else {
+                    die("Error executing the statement: " . mysqli_error($conn));
+                }
+            } else {
+                die("Error preparing the statement: " . mysqli_error($conn));
+            }
+        }
+    }
 }
 
-$isDark = true;
-$isLoggedIn = true;
-$avatar = 10;
-
+mysqli_close($conn);
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<title>Create a Ticket</title>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel='icon' type='image/x-icon' href='assets/icons/favicon.svg'>
-	<?php
-	if ($_SESSION["dark_mode"] == "null") {
-		echo "<link rel='stylesheet' href='css/palette-light.css'>";
-	} else {
-		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
-	}
-	?>
-	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
-	<link rel="stylesheet" href="css/general.css">
-	<link rel="stylesheet" href="css/createTicket.css">
-	<script src="https://kit.fontawesome.com/26e97bbe8d.js" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.6.3.min.js"
-		integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-	<script src="js/app.js"></script>
-</head>
-
-<body>
-
-	<!-- Navigation bar -->
-	<?php include "../src/templates/navbarLoggedin.php" ?>
-
-	<!-- Main content -->
-	<div class="container">
-        <div class="content">
-            <h1 class="header">Create a Ticket</h1>
-			<?php include "../src/modules/ticketConnect.php"; ?> 
-            <form action="" method="POST" class="inputs">
-                <div class="input-field">
-                    <p class="description">Type and location</p>
-                    <div class="selectors <?php echo $_SESSION["dark_mode"] != "null" ? '' : 'border-light'; ?>">
-                        <select name="what" id="select-what">
-                            <option value="Movie">Movie</option>
-                            <option value="Travel">Travel</option>
-                            <option value="Concert">Concert</option>
-                        </select>
-                        <select name="where" id="select-where">
-                            <option value="prishtine">Prishtinë</option>
-                            <option value="mitrovice">Mitrovicë</option>
-                            <option value="peje">Pejë</option>
-                            <option value="prizren">Prizren</option>
-                            <option value="ferizaj">Ferizaj</option>
-                            <option value="gjilan">Gjilan</option>
-                            <option value="gjakove">Gjakovë</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="input-field">
-                    <p class="description">Date and time</p>
-                    <div class="selectors <?php echo $_SESSION["dark_mode"] != "null" ? '' : 'border-light'; ?>">
-                        <input type="date" name="when_date" id="select-when">
-                        <input type="time" name="when_time" id="select-when">
-                    </div>
-                </div>
-
-                <div class="input-field <?php echo $_SESSION["dark_mode"] != "null" ? '' : 'border-light'; ?>">
-                    <p class="description">Event title</p>
-                    <input type="text" name="title" placeholder="Title">
-                </div>
-
-                <div class="input-field <?php echo $_SESSION["dark_mode"] != "null" ? '' : 'border-light'; ?>">
-                    <p class="description">Event description</p>
-                    <textarea name="description" cols="30" rows="12" placeholder="Description"></textarea>
-                </div>
-
-                <input type="submit" id="button" name="submit" value="Create ticket">
-            </form>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <?php include "../src/templates/footer.php" ?>
-</body>
-
-</html>
