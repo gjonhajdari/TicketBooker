@@ -12,29 +12,32 @@ body {
 
 .top {
 	display: flex;
-	float: left;
 	flex-direction: column;
 	gap: 15px;
 	margin-bottom: 70px;
 }
+
+
+.topbottom{
+	display: flex;
+	justify-content: space-between;
+}
  
 .btn {
-	margin-left: 50%;
 	display: flex;
-	gap: 10px;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
 	padding: 1rem 4rem;
-	font-size: 1.15rem;
-	font-weight: 400;
+	font-size: 1.25rem;
+	font-weight: 600;
 	border-radius: 1rem;
 	border: none;
 	color: var(--background);
 	background-color: var(--accent);
 	margin-top: 2rem;
 	cursor: pointer;
-}
-
-.topandbottom{
-	display: inline-block;
+	transition: 300ms;
 }
 
 .top h1 {

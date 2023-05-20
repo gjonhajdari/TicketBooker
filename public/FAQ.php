@@ -110,8 +110,8 @@ $(document).ready(function() {
     </div>
   </div>
     <div class="questiondropdown">
-        TicketBooker is the first ever website in Kosovo where the citizens of Kosovo can book tickets all around Kosovo, starting from traveling
-        tickets to movies and concerts!
+        TicketBooker is a page that alows you to buy tickets from any concert,travel,movie that is avaliable in Kosovo!
+
     </div>
 
 
@@ -120,7 +120,7 @@ $(document).ready(function() {
     <div class="questionoverlayer">
       <div class="questionholder">
         <p class="textparagraph">
-          What kind of tickets can I buy?
+          What kind of questions can i buy?
         </p>
         
       </div>
@@ -132,7 +132,7 @@ $(document).ready(function() {
     </div>
   </div>
     <div class="questiondropdown">
-       We offer tickets from any concert, travel, movie that is avaliable in Kosovo.
+       you can buy tickets  from any concert,travel,movie that is avaliable in Kosovo.
        If you have any other ideas that can help and make the page better, you can contact 
        us at the contact forum!
 
@@ -156,8 +156,9 @@ $(document).ready(function() {
     </div>
   </div>
     <div class="questiondropdown">
-        Yes, at TicketBooker we have a return policy where you may return your tickets to us for a full refund. 
-        You can return the tickets within 30 days after your purchase! 
+        Yes there is a return policy that alows you to return any ticket that you have bought 
+        in the last week that you have changed your mind on.
+        Otherwise you cannot.
 
     </div>
 
@@ -167,7 +168,7 @@ $(document).ready(function() {
     <div class="questionoverlayer">
       <div class="questionholder">
         <p class="textparagraph">
-          Can I type any price that I want on the tickets I am selling?
+          Can i type any price that i want on the tickets im selling?
         </p>
         
       </div>
@@ -180,7 +181,7 @@ $(document).ready(function() {
   </div>
     <div class="questiondropdown">
       Yes you technically can, but if the price is way above the market price of that ticket it will get taken down 
-      and with a few warnings of ticket overpricing it may cause an account ban!  
+      and with a few warnings of ticket overpricing may cause an account ban.  
 
     </div>
 
@@ -190,7 +191,7 @@ $(document).ready(function() {
     <div class="questionoverlayer">
       <div class="questionholder">
         <p class="textparagraph">
-          How much tickets can I create and sell at the same time?
+          How much tickets can i create and sell at the same time?
         </p>
         
       </div>
@@ -202,8 +203,8 @@ $(document).ready(function() {
     </div>
   </div>
     <div class="questiondropdown">
-        You can create as many tickets as you want and sell them at the same time if you want to, 
-        we don't prefer it because this might cause database problems!
+        You can create as many tickets as you want and sell them at the same time if you want to,
+        we dont prefer it because there might be some database problems.
     </div>
 
 
@@ -212,7 +213,7 @@ $(document).ready(function() {
     <div class="questionoverlayer">
       <div class="questionholder">
         <p class="textparagraph">
-          Which type of tickets are created the most ?
+          Which type of tickets are  created the most ?
         </p>
         
       </div>
@@ -225,7 +226,7 @@ $(document).ready(function() {
   </div>
     <div class="questiondropdown">
       Our users mostly create and sell movie and travel tickets, 
-      but that doesnt mean concert tickets aren't sold just not as much as the others. 
+      but that doesnt mean concert tickets arent sold just not as much as the other two. 
     </div>
 
     <div class="questionblock">
@@ -233,7 +234,7 @@ $(document).ready(function() {
     <div class="questionoverlayer">
       <div class="questionholder">
         <p class="textparagraph">
-          Do costumers get any discounts from buying more than 2-3 tickets?
+          Do costumers get any disscounts from buying more than 2-3 tickets?
         </p>
         
       </div>
@@ -246,7 +247,7 @@ $(document).ready(function() {
   </div>
     <div class="questiondropdown">
         Yes our loyal costumers get 10% or more discount depending
-        on how many tickets they have bought in the past year or so.
+         on how many tickets they have bought in the past year or so.
 
     </div>
 

@@ -1,10 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION["login"]) || !$_SESSION["login"]) {
-    // Redirect to sign-in page
-    header("Location: ../login.php");
-    exit();
-}
+
 
 ?>
 
@@ -81,7 +77,7 @@ if (!isset($_SESSION["login"]) || !$_SESSION["login"]) {
 
 <div class="top">
 			<h1 id="title"><bold>Welcome back, <?php echo  $_SESSION["name"]; ?></bold></h1>
-			<p>Take a look at your history of <span class="accent"> tickets </span>saved in your Database.</p>
+			<p>Take a look at all the <span class="accent"> new tickets </span>saved in your Database.</p>
 		</div>
     <table class="table table-striped table-hover table-light" >
         <thead class="thead-light">
@@ -93,7 +89,6 @@ if (!isset($_SESSION["login"]) || !$_SESSION["login"]) {
             <th scope="col" class="table-secondary">Time</th>
             <th scope="col" class="table-secondary">Location</th>
             <th scope="col" class="table-secondary">Description</th>
-            <th scope="col" class="table-secondary">Image</th>
         </tr>
         </thead>
         <tbody id="mydata">

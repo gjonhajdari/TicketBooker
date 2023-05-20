@@ -50,6 +50,7 @@
 				</h2>
 			</div>	
 			<?php include "../src/modules/signupConnect.php"; ?>
+
 			<form action="" method="POST" class="<?php echo $isDark ? '' : 'border-light'; ?>">
 
 				<div class="user-type">

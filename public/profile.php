@@ -24,8 +24,6 @@ $title = 'Dua Lipa';
 ?>
 
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,59 +57,30 @@ $title = 'Dua Lipa';
 	<?php include "../src/templates/navbarLoggedin.php"; ?>
 
 	<main class="container">
+		<div class="topbottom">
 
-	<div class="topandbottom">
-		<div class="top">
-
-			<h1>Welcome back, <?php echo $_SESSION["name"]; ?></h1>
+			<div class="top">
+				
+				<h1>Welcome back, <?php echo $_SESSION["name"]; ?></h1>
 			<p>Take a look at all your tickets.</p>
 	
-
+			</div>
 			<div class='bottom'>
 			
 		
-			 <input type="submit" id="submit" onclick="funct()" class="btn  <?php echo (isset($_SESSION["login"]) && $_SESSION["login"]) ? 
+			 <button class="btn <?php echo (isset($_SESSION["login"]) && $_SESSION["login"]) ? 
 			 					(isset($_SESSION["dark_mode"]) && ($_SESSION["dark_mode"] == "null") ? 
-								'' : 'btn-dark') : 'btn-dark'; ?>" onclick="check">
+								'' : 'btn-dark') : 'btn-dark'; ?>">
+					
+				 Your tickets 
 				<?php echo file_get_contents('assets/icons/arrow.svg') ?>
-				
-			</input>
-
-			<?php 
-			//require_once('../src/modules/db.php');
-			//if(($_SESSION['user_type']== "BUSINESS")){
-			//	 include "link href='./public/ajax/index-ajax.php'>";
-				 
-		    //	} else {
-			//	echo "Cannot access database!";
-		     //	}	?>
-
-			<?php
-			//include '../src/modules/db.php';
-
-			//if (isset($_SESSION["user_type"]) == 'BUSINESS') {
- 			// redirect to indes-ajax
- 			// header("Location: /TicketBooker/public/ajax/index-ajax.php");
-  			// exit();
-			//}
-			?>
-			
-
-
-			<script>
-				function funct() { 
-				location.replace("/TicketBooker/public/ajax/index-ajax.php");
-				}
-	
-			</script>	
-
-			
+			</button> 
 
 			</div>
 			
 		</div>
-	</div>
 
+			
 
 		<div class="tabs row g-4">
 			<label class="tab col-md-6 col-lg-3">

@@ -3,12 +3,13 @@
     $query = "SELECT * FROM ticket";
     $result = mysqli_query($conn, $query);
     $counter = mysqli_num_rows($result);
+
     $_SESSION["counter"] = $counter;
     while ($row = mysqli_fetch_assoc($result)) {
     ?>
         <div class="col-md-6 col-lg-4">
             <div class="card <?php echo $_SESSION["dark_mode"]!="null" ? '' : 'card-light'; ?>">
-                <h1 class="card-title"><?php echo $row['name']?></h1>
+                <h1 class="card-title"><?php echo $row['event_title']?></h1>
             
                 <div class="card-body">
                     <div class="date <?php echo $_SESSION["dark_mode"]!="null" ? '' : 'icon-light'; ?>">

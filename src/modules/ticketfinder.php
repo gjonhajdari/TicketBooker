@@ -1,6 +1,8 @@
 <?php
 include_once ('db.php');
-
+$type='';
+$date = '';
+$place = '';
 if (isset($_POST['submit'])) {
     $type = $_POST['type'] ?? '';
     $date = $_POST['when'] ?? '';
