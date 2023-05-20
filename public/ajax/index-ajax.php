@@ -89,7 +89,6 @@ session_start();
             <th scope="col" class="table-secondary">Time</th>
             <th scope="col" class="table-secondary">Location</th>
             <th scope="col" class="table-secondary">Description</th>
-            <th scope="col" class="table-secondary">Image</th>
         </tr>
         </thead>
         <tbody id="mydata">

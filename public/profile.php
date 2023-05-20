@@ -72,9 +72,9 @@ $title = 'Dua Lipa';
 			 					(isset($_SESSION["dark_mode"]) && ($_SESSION["dark_mode"] == "null") ? 
 								'' : 'btn-dark') : 'btn-dark'; ?>">
 					
-				Your tickets
+				 Your tickets 
 				<?php echo file_get_contents('assets/icons/arrow.svg') ?>
-			</button>
+			</button> 
 
 			</div>
 			
