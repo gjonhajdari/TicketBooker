@@ -17,6 +17,10 @@ body {
 	margin-bottom: 70px;
 }
 
+.bottom{
+	flex-direction:column;
+	margin-bottom:70px;
+}
 
 .topbottom{
 	display: flex;
@@ -25,19 +29,17 @@ body {
  
 .btn {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 20px;
+	gap: 2px;
 	padding: 1rem 4rem;
-	font-size: 1.25rem;
-	font-weight: 600;
+	font-size: 1.10rem;
+	font-weight: 300;
 	border-radius: 1rem;
 	border: none;
 	color: var(--background);
 	background-color: var(--accent);
-	margin-top: 2rem;
 	cursor: pointer;
-	transition: 300ms;
+	margin-right:50px;
+	margin-top:15px;
 }
 
 .top h1 {
