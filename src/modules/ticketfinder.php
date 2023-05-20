@@ -26,10 +26,10 @@ if ($result) {
             $date = $row['date'];
             $location = $row['location'];
 
-            header('Location: ../public/find.php');
+            header('Location: ../../public/find.php');
         }
     } else {
-        echo "No results found.";
+        header('Location: ../../public/error.php');
     }
 } else {
     echo "Error: " . mysqli_error($conn);
