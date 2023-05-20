@@ -1,5 +1,6 @@
 <?php
 include '../src/modules/db.php';
+
 session_start();
 
 if ($_SESSION['id']) {
@@ -16,6 +17,10 @@ if ($_SESSION['id']) {
 	$isDark = true;
 	$isLoggedIn = false;
 }
+
+$_SESSION['search_results'];
+
+
 
 ?>
 
@@ -56,9 +61,9 @@ if ($_SESSION['id']) {
 			<div class="filters">
 				<p class="name">Filters</p>
 				<div class="labels <?php echo $_SESSION["dark_mode"]!="null" ? '' : 'border-light'; ?>">
-					<p class="label">Movie</p>
-					<p class="label">23/12/2022</p>
-					<p class="label">Prishtinë</p>
+					<p class="label"> <?php echo $type ?> </p>
+					<p class="label"> <?php echo $date ?> </p>
+					<p class="label"> <?php echo $place ?> </p>
 				</div>
 			</div>
 		</div>
