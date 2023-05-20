@@ -1,3 +1,11 @@
+
+<head>
+	<script src="https://kit.fontawesome.com/26e97bbe8d.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+	<script src="js/app.js"></script>
+</head>
+
+
 <?php
 	require('../src/modules/db.php');
     $query = "SELECT * FROM ticket";
@@ -31,10 +39,30 @@
             
                 <div class="card-bottom">
                     <p class="type"><?php echo $row['option']?></p>
-                    <button class="card-button">Add</button>
+                    <button class="card-button" data-ticket-id="<?php echo $row['tid']; ?>" >Add  </button>
                 </div>
             </div>
         </div>
     <?php
     }
     ?>
+    <script>
+    $(document).ready(function() {
+    $('.card-button').click(function() {
+        var userId = $(this).data('user-id');
+        var ticketId = $(this).data('ticket-id');
+
+        $.ajax({
+            url: '../src/modules/addticket.php',
+            method: 'POST',
+            data: { userId: userId, ticketId: ticketId },
+            success: function(response) {
+                console.log(response);
+            },
+            error: function() {
+                console.log('Error occurred during AJAX request.');
+            }
+        });
+    });
+});
+    </script>

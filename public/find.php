@@ -18,8 +18,6 @@ if ($_SESSION['id']) {
 	$isLoggedIn = false;
 }
 
-$_SESSION['search_results'];
-
 
 
 ?>
