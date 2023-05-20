@@ -20,10 +20,10 @@ print_r($results);
 <tr>
     <td><?php echo $data['tid']; ?></td>
     <td><?php echo $data['option']; ?></td>
-    <td><?php echo $data['event_title']; ?></td>
+    <td><?php echo $data['location']; ?></td>
     <td><?php echo $data['date']; ?></td>
     <td><?php echo $data['time']; ?></td>
-    <td><?php echo $data['location']; ?></td>
+    <td><?php echo $data['event_title']; ?></td>
     <td><?php echo $data['description']; ?></td>
 </tr>
     

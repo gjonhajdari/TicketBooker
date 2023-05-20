@@ -84,10 +84,10 @@ session_start();
         <tr class="rows">
             <th scope="col" class="table-secondary">Ticket ID</th>
             <th scope="col" class="table-secondary">Option</th>
-            <th scope="col" class="table-secondary">Name</th>
+            <th scope="col" class="table-secondary">Location</th>
             <th scope="col" class="table-secondary">Date</th>
             <th scope="col" class="table-secondary">Time</th>
-            <th scope="col" class="table-secondary">Location</th>
+            <th scope="col" class="table-secondary">Event Title</th>
             <th scope="col" class="table-secondary">Description</th>
         </tr>
         </thead>
