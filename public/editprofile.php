@@ -25,8 +25,8 @@ $userType = 'BUSINESS';
 <html lang="en">
 
 <head>
-		<link rel='stylesheet' href='css/palette-light.css' id='light-theme'>"
-		<link rel='stylesheet' href='css/palette-dark.css' id='dark-theme'>"
+		<link rel='stylesheet' href='css/palette-light.css' id='light-theme'>
+		<link rel='stylesheet' href='css/palette-dark.css' id='dark-theme'>
 <?php
 		if ($_SESSION["dark_mode"] == "null") {
 			echo "<link rel='stylesheet' href='css/palette-light.css'>";
@@ -106,7 +106,7 @@ $userType = 'BUSINESS';
 			<form method="POST" enctype="multipart/form-data">
 				<div class="field">
 					<div class="field-name">
-					<?php include "changeavatar.php"; ?>
+					<?php include "../src/modules/changeavatar.php"; ?>
 						<h1>Avatar</h1>
 					</div>
 					<div class="avatars">
@@ -138,7 +138,7 @@ $userType = 'BUSINESS';
 						<h1>User info</h1>
 					</div>
 					<div class="inputs">
-					<?php include "changeusername.php"; ?>
+					<?php include "../src/modules/changeusername.php"; ?>
 						<div class="input-field">
 							<label>Username</label>
 							<input type="text" class="input" value="<?php echo $_SESSION["name"]; ?>">
@@ -165,7 +165,7 @@ $userType = 'BUSINESS';
 					</div>
 					<div class="inputs">
 						<div class="input-field">
-						<?php include "changepassword.php"; ?>
+						<?php include "../src/modules/changepassword.php"; ?>
 							<label>Old password</label>
 							<input type="password" class="input" name="oldpassword">
 						</div>
