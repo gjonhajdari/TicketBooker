@@ -57,13 +57,14 @@ $title = 'Dua Lipa';
 	<?php include "../src/templates/navbarLoggedin.php"; ?>
 
 	<main class="container">
+		<div class="topbottom">
 
-		<div class="top">
-
-			<h1>Welcome back, <?php echo $_SESSION["name"]; ?></h1>
+			<div class="top">
+				
+				<h1>Welcome back, <?php echo $_SESSION["name"]; ?></h1>
 			<p>Take a look at all your tickets.</p>
 	
-
+			</div>
 			<div class='bottom'>
 			
 		
@@ -79,7 +80,7 @@ $title = 'Dua Lipa';
 			
 		</div>
 
-
+			
 
 		<div class="tabs row g-4">
 			<label class="tab col-md-6 col-lg-3">

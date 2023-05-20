@@ -16,6 +16,12 @@ body {
 	gap: 15px;
 	margin-bottom: 70px;
 }
+
+
+.topbottom{
+	display: flex;
+	justify-content: space-between;
+}
  
 .btn {
 	display: flex;

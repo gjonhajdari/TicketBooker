@@ -29,8 +29,6 @@ if ($_SESSION['id']) {
     color: inherit;
     }
     </style>
-  <!-- Navigation bar -->
-  <?php include "../src/templates/navbarLoggedin.php"; ?>
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -56,6 +54,8 @@ if ($_SESSION['id']) {
 </head>
 
 <body>
+   <!-- Navigation bar -->
+   <?php include "../src/templates/navbarLoggedin.php"; ?>
 
 <script>
     $(document).ready(function(){
@@ -101,6 +101,8 @@ if ($_SESSION['id']) {
             <a href="index.php"> Jump to the home page</a>
             </div>
         </button>
+        <!-- Footer -->
+		<?php include('../src/templates/footer.php'); ?>
 
     </div>
 
