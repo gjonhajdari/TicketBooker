@@ -1,85 +1,83 @@
+.container {
+    margin-top: 100px;
+}
 
-.container{
+.container .image svg {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
+}
+
+.container .text {
     display: flex;
     flex-direction: column;
-    margin:100px;
-    margin-left:350px;
+    gap: 15px;
+    margin-bottom: 60px;
 }
 
-.containerimg img{
-    width:100px;
-    height:100px
-}
-.containertext{
-    margin-top:20px;
-}
-.containertext #text1 {
-    font-size:2.2rem;
+.container .text h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
-.containertext #text2{
-    margin-top:10px;
-    color:gray;
+.container .text p {
+    color: var(--text-secondary);
+    font-size: 1.15rem;
 }
 
-.containerbuttons{
-    margin-top:40px;
-}
-
-.backbutton{
+.container .buttons {
     display: flex;
-    align-items:center;
-    border-radius:7px;
-    gap:15px;
-    width:135px;
-    height:40px;
-    padding:10px;
-    color:white;
-    background-color:#333333;
-    margin-bottom:15px;
-    border-style:hidden;
-    font-size: 1.1rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
 }
 
-.backbuttonimg img{
-    rotate: 180deg;
-    color:white;
-    width:25px;
-}
-
-.backbutton:hover{
-    transform: scale(1.1);
-    transition: 300ms;
+.container .buttons button, .buttons a {
+    align-self: flex-start;
+    padding: 10px 20px;
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
     cursor: pointer;
-}
-
-.backbutton:active{
-    transform: scale(1);
-}
-
-.homebutton{
-    display:flex;
-    gap:15px;
-    width:260px;
-    align-items:center;
-    height:38px;
-    border-radius:8px;
-    background-color:#d45161;
-    border-style:hidden;
-    font-size: 1.1rem;;
-    
-}
-
-.homebuttonimg{
-    margin-left:12px;
-}
-
-.homebutton:hover{
-    transform: scale(1.1);
     transition: 300ms;
-    cursor: pointer;
 }
 
-.homebutton:active{
-    transform: scale(1);
+.buttons button:hover, .buttons a:hover {
+    transform: scale(1.05);
+}
+
+.buttons #back {
+    background-color: var(--foreground);
+    color: var(--text-primary);
+}
+
+.buttons #back svg {
+    transform: scale(-1, 1);
+    height: 15px;
+}
+
+.buttons #back svg path {
+    fill: var(--text-primary);
+}
+
+.buttons #home {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+.border-light #home svg path#circle {
+    fill: var(--accent);
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        transform: scale(0.9);
+    }
 }

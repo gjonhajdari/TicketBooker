@@ -1,151 +1,79 @@
-<?php
-include '../src/modules/db.php';
-session_start();
+<?php 
+    include_once('../src/modules/db.php');
+    session_start();
 
-if ($_SESSION['id']) {
-	$id = $_SESSION['id'];
-	$sql = "SELECT * FROM `user` WHERE id = '$id'";
-	$result = mysqli_query($conn, $sql);
-	$user = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	$isDark = $user['dark_mode'];
-	$avatar = $user['avatar'];
-	$full_name = $user['name'];
-	$user_type = $user['user_type'];
-	$isLoggedIn = true;
-} else {
-	$isDark = true;
-	$isLoggedIn = false;
-}
-
+    if ($_SESSION['login']) {
+        $id = $_SESSION['id'];
+        $sql = "SELECT * FROM `user` WHERE id = '$id'";
+        $result = mysqli_query($conn, $sql);
+        $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        $isDark = $user['dark_mode'];
+        $avatar = $user['avatar'];
+        $full_name = $user['name'];
+        $user_type = $user['user_type'];
+    } else {
+        $isDark = false;
+    }
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <style>
-    a{
-      text-decoration: none;
-    }
-    a:visited {
-    color: inherit;
-    }
-    </style>
-
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="Bootstrap" href="Bootstrap">
-  <title>FAQ</title>
-  <?php
-  if ($_SESSION["dark_mode"] == "null") {
-    echo "<link rel='stylesheet' href='css/palette-light.css'>";
-  } else {
-    echo "<link rel='stylesheet' href='css/palette-dark.css'>";
-  }
-  ?>
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/general.css">
-  <link rel="stylesheet" href="css/error.css">
-  <script src="https://kit.fontawesome.com/26e97bbe8d.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/app.js"></script>
-
+    <title>404 Page Not Found</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php 
+        if ($isDark) {
+            echo "<link rel='stylesheet' href='css/palette-dark.css'>";
+        } else {
+            echo "<link rel='stylesheet' href='css/palette-light.css'>";
+        }
+    ?>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/general.css">
+	<link rel="stylesheet" href="css/error.css">
+	<script src="https://kit.fontawesome.com/26e97bbe8d.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+	<script src="js/app.js"></script>
 </head>
 
 <body>
-   <!-- Navigation bar -->
-   <?php include "../src/templates/navbarLoggedin.php"; ?>
 
-<script>
-    $(document).ready(function(){
-        $('.backbutton').click(function(){
-            var previouspage=document.referrer;
-            window.location.href=previouspage;
-        })
-    })
+    <!-- Navigation bar -->
+    <?php ($_SESSION["login"]) ? include '../src/templates/navbarLoggedin.php' : include '../src/templates/navbar.php'; ?>
 
-</script>
     <div class="container">
-
-    <div class="containerimg">
-    <img src="assets/icons/notfound.svg" alt="">
-
-    </div>
-
-    <div class="containertext"> 
-        <p id="text1"> 
-           Opps! Page not found. 
-        </p>
-        <p id="text2">
-            The ticket you are looking for doesn't exist or might've been removed
-        </p>
-    </div>
-
-    <div class="containerbuttons">
-        <button class="backbutton" >
-            <div class="backbuttonimg">
-                <img src="assets/icons/arrow.svg" alt="">
-            </div>
-         
-            <div>
-                Go back 
-            </div>
-        </button>
-
-        <button class="homebutton">
-            <div class="homebuttonimg">
-                <img src="assets/icons/home.svg" alt="">
-            </div>
-            <div>
-            <a href="index.php"> Jump to the home page</a>
-            </div>
-        </button>
-        <!-- Footer -->
-		<?php include('../src/templates/footer.php'); ?>
-
+        <div class="image">
+            <?php echo file_get_contents('assets/icons/notfound.svg'); ?>
+        </div>
+        <div class="text">
+            <h1>Opps! Page not found.</h1>
+            <p>The page you are looking for doesn't exist or might've been removed</p>
+        </div>
+        <div class="buttons <?php echo $_SESSION['dark_mode'] ? '' : 'border-light'; ?>">
+            <button id="back">
+                <?php echo file_get_contents('assets/icons/arrow.svg'); ?>
+                Go back
+            </button>
+            <a href="index.php" id="home">
+                <?php echo file_get_contents('assets/icons/home.svg'); ?>
+                Jump to the home page
+            </a>
+        </div>
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-
-
+    <script>
+        $(document).ready(function() {
+            $('#back').click(function() {
+                const previouspage = document.referrer;
+                window.location.href = previouspage;
+            })
+        })
+    </script>
 
 </body>
+
+</html>

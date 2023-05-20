@@ -17,7 +17,7 @@ body {
 	color: var(--text-primary);
 }
 
-.border-light input:not([type="password"]), .border-light textarea, .border-light select, .border-light .label, .content.border-light {
+.border-light input:not([type="password"]), .border-light textarea, .border-light select, .border-light .label, .content.border-light, .border-light #back {
 	border: 1px solid var(--border) !important;
 }
 
