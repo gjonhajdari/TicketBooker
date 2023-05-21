@@ -1,26 +1,25 @@
 <?php
+
 // deleteticket.php
 
-session_start();
 
-if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["itemId"]) && isset($_SESSION['id'])) {
-    $itemId = $_POST["ticketId"];
-    $userId = $_SESSION['id'];
-    
-    require_once('../src/modules/db.php');
-    
-    
-    $deleteQuery = "DELETE FROM user_tickets WHERE ticket_id = '$itemId' AND user_id = '$userId'";
-    
-    
-    if ($deleteSuccessful) {
+include_once('db.php');
 
-        echo "Ticket and associated user deleted successfully";
+$ttid = $_POST['ttid'] ?? '';
+$tid = $_POST['tid'] ?? '';
 
-    } else {
+// Perform the database deletion
+$deleteQuery = "DELETE FROM user_ticket WHERE ticket_id = '$ttid' AND user_id = '$tid'";
 
-        echo "Error deleting the ticket and associated user";
+$deleteResult = mysqli_query($conn, $deleteQuery);
 
-    }
+if ($deleteResult) {
+    echo "Ticket and associated user deleted successfully";
+} else {
+    echo "Error deleting the ticket and associated user: " . mysqli_error($conn);
 }
+
+mysqli_close($conn);
+
 ?>
+
