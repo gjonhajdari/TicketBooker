@@ -41,7 +41,7 @@ if ($result) {
         echo '<script>window.location.href = "../public/find.php";</script>'; 
          exit;
     } else {
-        echo '<script>window.location.href = "../public/find.php";</script>'; 
+        echo '<script>window.location.href = "../public/error.php";</script>'; 
         exit;
     }
 } else {
