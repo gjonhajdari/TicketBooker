@@ -111,7 +111,6 @@ if ($_SESSION['id']) {
 			<input type="submit" name="find" value="Find tickets" id="find">
 		</form>
 	</div>
-
 	<!-- Footer -->
 	<?php include('../src/templates/footer.php') ?>
 
