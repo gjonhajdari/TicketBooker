@@ -81,13 +81,13 @@ if(isset($_POST['request'])){
 
     <style>
         #butoni{
-            font-size: 1.15rem;
-	        font-weight: 600;
+            font-size: 1.10rem;
+	        font-weight: 500;
 	        border-radius: 1rem;
 	        border: none;
             background-color: #d45161;	        
             margin-top: 1rem;
-            padding:6px;
+            padding:8px;
             margin-bottom: 1.15rem;
         }
 

@@ -68,21 +68,28 @@ $title = 'Dua Lipa';
 			<div class='bottom'>
 			
 		
-			 <button class="btn <?php echo (isset($_SESSION["login"]) && $_SESSION["login"]) ? 
+			 <button input type="submit" onclick="funct()" class="btn <?php echo (isset($_SESSION["login"]) && $_SESSION["login"]) ? 
 			 					(isset($_SESSION["dark_mode"]) && ($_SESSION["dark_mode"] == "null") ? 
 								'' : 'btn-dark') : 'btn-dark'; ?>">
 					
-				 History 
+			    <a href ="<php echo $link ?>"> History  </a>
 			</button> 
-			<?php
 
-			if(isset($_SESSION['username'])){
-				
+			<?php 
 
+			require_once('../src/modules/db.php');
+			$user_type = "BUSINESS";
+
+			if($user_type){
+				$link = "/TicketBooker/public/ajax/index-ajax.php";
+			}
+			else{
+				$link = "/TicketBooker/public/ajax/fetchdata.php";
 			}
 			
+		
 			?>
-
+			
 
 			</div>
 			

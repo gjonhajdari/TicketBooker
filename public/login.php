@@ -96,10 +96,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 				header('location:index.php');
 				die();
 			}
-		}else{
+		}else {
 			echo "<div class='alert alert-danger '>Email or Password do not match</div>";
 		}
-	
+		
 };
 
 mysqli_close($conn);

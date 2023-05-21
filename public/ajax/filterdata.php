@@ -68,7 +68,7 @@
             margin-top: 1rem;
             padding:6px;
             margin-bottom: 1.15rem;
-
+            cursor:pointer;
         }
 
 
