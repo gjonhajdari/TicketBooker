@@ -90,14 +90,14 @@ if ($_SESSION['id']) {
 		</div>
 		<form action="" method="POST" class="modal-search">
 			<div class="options <?php echo isset($_SESSION["dark_mode"]) && $_SESSION["dark_mode"] !== "null" ? '' : 'border-light'; ?>">
-				<select name="type1" id="select-what">
+				<select name="type" id="select-what">
 					<option value="" disabled selected>Type</option>
 					<option value="Movie">Movie</option>
 					<option value="Travel">Travel</option>
 					<option value="Concert">Concert</option>
 				</select>
-				<input type="date" name="when1" id="select-when">
-				<select name="location1" id="select-where">
+				<input type="date" name="when" id="select-when">
+				<select name="location" id="select-where">
 					<option value="" disabled selected>Location</option>
 					<option value="prishtine">Prishtinë</option>
 					<option value="mitrovice">Mitrovicë</option>
