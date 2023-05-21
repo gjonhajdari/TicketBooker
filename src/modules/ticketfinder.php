@@ -4,6 +4,7 @@ include_once('db.php');
 $type = $_POST['type'] ?? ''; 
 $date = $_POST['date'] ?? ''; 
 $location = $_POST['location']?? ''; 
+$tid='';
 
 $date = trim($date); // Removes any whitespaces
 $formattedDate = date("Y-m-d", strtotime($date)); // Formats the date as 'YYYY-MM-DD'
@@ -18,7 +19,7 @@ if (empty($date) || empty($type) ||empty($location)) {
     echo "<div class='alert alert-danger w-50 p-3'>Please fill all the fields</div>";
 } else{
 
-$sql = "SELECT `tid`,`option`, `date`, `location`, `event_title` FROM `ticket` WHERE `option` = '$type' AND `date` = '$date' AND `location` = '$location'";
+$sql = "SELECT `tid`,`option`, `date`, `location`, `event_title` FROM `ticket` WHERE `tid`='$tid' AND `option` = '$type' AND `date` = '$date' AND `location` = '$location'";
 
 $result = mysqli_query($conn, $sql);
 

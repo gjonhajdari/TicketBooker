@@ -29,6 +29,7 @@
         <div class="col-md-6 col-lg-4">
             <div class="card <?php echo $isDark ? '' : 'card-light'; ?>">
                 <div class="card-body">
+				<h1 class="card-title"><?php echo $_SESSION['event_title']?></h1>
                     <div class="date <?php echo $isDark ? '' : 'icon-light'; ?>">
                         <?php echo file_get_contents('assets/icons/calendar.svg') ?>
                         <div class="info">
@@ -48,7 +49,7 @@
 
                 <div class="card-bottom">
             <p class="type"><?php echo $type; ?></p>
-            <button class="trash" onclick="deleteItem(<?php echo $itemId; ?>)">
+			<button class="trash"> 
                 <?php echo file_get_contents('assets/icons/trash.svg') ?>
             </button>
         </div>
@@ -57,11 +58,3 @@
         <?php
     }
 ?>
-<script>
-    function deleteItem(itemId) {
-        var confirmDelete = confirm("Are you sure you want to delete this item?");
-        if (confirmDelete) {
-            console.log("Item with ID " + itemId + " deleted successfully.");
-        }
-    }
-</script>

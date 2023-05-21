@@ -144,7 +144,9 @@ $title = 'Dua Lipa';
 
 		<div class="tickets row g-4">
 			<?php
+				
 					include "../src/templates/profileCard.php";
+					 
 			?>
 		</div>
 

@@ -11,7 +11,7 @@
         $isDark = true;
         $isLoggedIn = false;
     }
-    $query = "SELECT `tid`, `event_title`, `option`, `date`, `location` FROM `ticket` WHERE `option` = '" . $_SESSION["option"] . "' AND `date` = '" . $_SESSION["date"] . "' AND `location` = '" . $_SESSION["location"] . "'";
+    $query = "SELECT `tid`, `event_title`, `option`, `date`, `location` FROM `ticket` WHERE  `option` = '" . $_SESSION["option"] . "' AND `date` = '" . $_SESSION["date"] . "' AND `location` = '" . $_SESSION["location"] . "' ";
     $result = mysqli_query($conn, $query);
     $counter = mysqli_num_rows($result);
 
