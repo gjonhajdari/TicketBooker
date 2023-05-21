@@ -14,8 +14,8 @@ $formattedDate = date("Y-m-d", strtotime($date)); // Formats the date as 'YYYY-M
 // }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-if (empty($date)) {
-    echo "<div class='alert alert-danger w-50 p-3'>Invalid date</div>";
+if (empty($date) || empty($type) ||empty($location)) {
+    echo "<div class='alert alert-danger w-50 p-3'>Please fill all the fields</div>";
 } else{
 
 $sql = "SELECT `tid`,`option`, `date`, `location` FROM `ticket` WHERE `option` = '$type' AND `date` = '$date' AND `location` = '$location'";
