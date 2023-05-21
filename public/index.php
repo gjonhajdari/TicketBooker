@@ -32,10 +32,10 @@ $full_name = 'Gjon Hajdari';
 </head>
 
 <body class="<?php echo $isDark ? '' : 'body-light'; ?>">
-	<form action="../src/modules/ticketfinder.php" method="POST" enctype="multipart/form-data">
+	<form action="" method="POST" enctype="multipart/form-data">
 		<!-- Navigation Bar -->
 		<?php (isset($_SESSION["login"]) && $_SESSION["login"] == true)  ?  include "../src/templates/navbarLoggedin.php" : include "../src/templates/navbar.php";   ?>
-
+		
 		<!-- Main content -->
 		<main>
 			<div class="content">
@@ -46,7 +46,7 @@ $full_name = 'Gjon Hajdari';
 
 				<div class="options">
 					<p>What, when, where?</p>
-
+					<?php include "../src/modules/ticketfinder.php" ?>
 			  		<div class="selectors <?php if (isset($_SESSION['login']) &&   $_SESSION['login']) 
 			  				                   echo ($_SESSION["dark_mode"] != "null") ? '' : 'border-light'; 
 											   else echo ''; ?>">
@@ -71,7 +71,7 @@ $full_name = 'Gjon Hajdari';
 					</div>
 				</div>
 
-				<button class="btn <?php echo (isset($_SESSION["login"]) && $_SESSION["login"]) ? ($_SESSION["dark_mode"] == "null" ? '' : 'btn-dark') : 'btn-dark'; ?>">
+				<button class="btn" name="submit" <?php echo (isset($_SESSION["login"]) && $_SESSION["login"]) ? ($_SESSION["dark_mode"] == "null" ? '' : 'btn-dark') : 'btn-dark'; ?>">
 					Find tickets
 					<?php echo file_get_contents('assets/icons/arrow.svg'); ?>
 				</button>
