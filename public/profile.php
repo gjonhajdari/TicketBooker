@@ -97,41 +97,10 @@ $title = 'Dua Lipa';
 						<?php echo file_get_contents("assets/icons/all.svg") ?>
 						<p>All tickets</p>
 					</div>	
-					<p><?php echo $count; ?></p>
+					<p><?php  echo isset($_SESSION["counter"]) ? $_SESSION["counter"] : 0; ?></p>
 				</div>
 			</label>
-			<label class="tab col-md-6 col-lg-3">
-				<input type="radio" name="type" value="travel">
-				<div class="content <?php echo $isDark ? '' : 'border-light'; ?>">
-					<div class="left">
-						<?php echo file_get_contents("assets/icons/travel.svg") ?>
-						<p>Travel</p>
-					</div>	
-					<p><?php echo $count; ?></p>
-				</div>
-			</label>
-			<label class="tab col-md-6 col-lg-3">
-				<input type="radio" name="type" value="movie">
-				<div class="content <?php echo $isDark ? '' : 'border-light'; ?>">
-					<div class="left">
-						<?php echo file_get_contents("assets/icons/movie.svg") ?>
-						<p>Movies</p>
-					</div>	
-					<p><?php echo $count; ?></p>
-				</div>
-			</label>
-			<label class="tab col-md-6 col-lg-3">
-				<input type="radio" name="type" value="concert">
-				<div class="content <?php echo $isDark ? '' : 'border-light'; ?>">
-					<div class="left">
-						<?php echo file_get_contents("assets/icons/concert.svg") ?>
-						<p>Concerts</p>
-					</div>	
-					<p><?php echo $count; ?></p>
-				</div>
-			</label>
-		</div>
-
+			
 		<hr class="divider">
 
 		<div class="tickets row g-4">

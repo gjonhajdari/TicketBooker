@@ -5,8 +5,8 @@ $date = $_POST['date'] ?? '';
 $location = $_POST['location']?? ''; 
 $tid='';
 
-$date = trim($date); // Removes any whitespaces
-$formattedDate = date("Y-m-d", strtotime($date)); // Formats the date as 'YYYY-MM-DD'
+$date = trim($date); 
+$formattedDate = date("Y-m-d", strtotime($date)); 
 
 
 

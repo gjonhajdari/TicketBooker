@@ -13,7 +13,7 @@
     }
 
     // Get the user's tickets
-    $query = "SELECT ut.ticket_id, t.date, t.time, t.location, t.event_title
+    $query = "SELECT ut.ticket_id, t.date, t.time, t.location, t.event_title,t.option
               FROM user_ticket ut 
               INNER JOIN ticket t ON ut.ticket_id = t.tid 
               WHERE ut.user_id = '$id'";
@@ -24,7 +24,8 @@
         $date = $row['date'];
         $time = $row['time'];
         $location = $row['location'];
-        $event_title = $row['event_title']
+        $event_title = $row['event_title'];
+        $option = $row['option'];
 
         ?>
         <div class="col-md-6 col-lg-4">
@@ -49,7 +50,7 @@
                 <hr>
 
                 <div class="card-bottom">
-            <p class="type"><?php echo $type; ?></p>
+            <p class="type"><?php echo $option; ?></p>
 			<button class="trash"> 
                 <?php echo file_get_contents('assets/icons/trash.svg') ?>
             </button>
