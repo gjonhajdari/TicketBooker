@@ -10,15 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel='icon' type='image/x-icon' href='../assets/icons/favicon.svg'>
 	<?php
-		if (($_SESSION["login"]==true) && ($_SESSION['dark_mode'] != "null")) {
-			echo "<link rel='stylesheet' href='css/palette-dark.css'>";
-		} else if(($_SESSION["login"]==true) && ($_SESSION['dark_mode'] == "null")){
-			echo "<link rel='stylesheet' href='css/palette-light.css'>";
-		}else{
-			echo "<link rel='stylesheet' href='css/palette-dark.css'>";
-		}
+	if (isset($_SESSION["login"]) && ($_SESSION["login"] == true) && isset($_SESSION['dark_mode']) && ($_SESSION['dark_mode'] != "null")) {
+		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
+	} else if (isset($_SESSION["login"]) && ($_SESSION["login"] == true) && isset($_SESSION['dark_mode']) && ($_SESSION['dark_mode'] == "null")) {
+		echo "<link rel='stylesheet' href='css/palette-light.css'>";
+	} else {
+		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
+	}
 	?>
-
 	<link rel="stylesheet" href="/public/ajax/index-ajax.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"> </script>
@@ -109,7 +108,7 @@
             <tbody>
             <?php
 
-             $query = "SELECT * FROM tickets";
+             $query = "SELECT * FROM ticket";
              $r = mysqli_query($conn, $query);
              while($row = mysqli_fetch_assoc($r)){
              ?>   
