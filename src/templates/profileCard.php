@@ -13,7 +13,7 @@
     }
 
     // Get the user's tickets
-    $query = "SELECT ut.ticket_id, t.date, t.time, t.location 
+    $query = "SELECT ut.ticket_id, t.date, t.time, t.location, t.event_title
               FROM user_ticket ut 
               INNER JOIN ticket t ON ut.ticket_id = t.tid 
               WHERE ut.user_id = '$id'";
@@ -24,12 +24,13 @@
         $date = $row['date'];
         $time = $row['time'];
         $location = $row['location'];
+        $event_title = $row['event_title']
 
         ?>
         <div class="col-md-6 col-lg-4">
             <div class="card <?php echo $isDark ? '' : 'card-light'; ?>">
                 <div class="card-body">
-				<h1 class="card-title"><?php echo $_SESSION['event_title']?></h1>
+				<h1 class="card-title"><?php echo $event_title?></h1>
                     <div class="date <?php echo $isDark ? '' : 'icon-light'; ?>">
                         <?php echo file_get_contents('assets/icons/calendar.svg') ?>
                         <div class="info">
