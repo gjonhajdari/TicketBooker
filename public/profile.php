@@ -89,7 +89,7 @@ $title = 'Dua Lipa';
 			
 		
 			?>
-			
+
 
 			</div>
 			
@@ -144,9 +144,7 @@ $title = 'Dua Lipa';
 
 		<div class="tickets row g-4">
 			<?php
-				for ($i = 0; $i < 6; $i++) {
 					include "../src/templates/profileCard.php";
-				}
 			?>
 		</div>
 
