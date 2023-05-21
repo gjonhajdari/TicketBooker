@@ -6,7 +6,7 @@ include("configdata.php");
 if(isset($_POST['request'])){
 
     $request = $_POST['request'];
-    $query = "SELECT * FROM ticket WHERE `option` = '$request' ";
+    $query = "SELECT * FROM ticket t INNER JOIN `user_ticket` us on t.tid = us.ticket_id WHERE `option` = '$request'";
     $result = mysqli_query($conn, $query);
     $count = mysqli_num_rows($result);
 }
