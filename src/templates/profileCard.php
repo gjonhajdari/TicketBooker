@@ -59,3 +59,30 @@
         <?php
     }
 ?>
+<script>
+$(document).ready(function() {
+  // Handle the button click event
+  $(".trash").click(function() {
+    // Get the ticket ID (tid) and user ID (id)
+    var ttid = "<?php echo $_SESSION['tid']; ?>";
+    var tid = "<?php echo $_SESSION['id']; ?>";
+
+    // Make the AJAX request
+    $.ajax({
+      url: "../src/modules/deleteticket.php", 
+      method: "POST",
+      data: {
+        ttid: ttid,
+        tid: tid
+      },
+      success: function(response) {
+        console.log(response);
+      },
+      error: function(xhr, status, error) {
+        console.error(error);
+      }
+    });
+  });
+});
+</script>
+
