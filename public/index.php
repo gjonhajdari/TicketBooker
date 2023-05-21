@@ -51,14 +51,14 @@ $full_name = 'Gjon Hajdari';
 			  				                   echo ($_SESSION["dark_mode"] != "null") ? '' : 'border-light'; 
 											   else echo ''; ?>">
 
-						<select name="type" id="select-what">
+						<select name="type" id="select-what" required>
 							<option value="" disabled selected>Type</option>
 							<option value="Movie">Movie</option>
 							<option value="Travel">Travel</option>
 							<option value="Concert">Concert</option>
 						</select>
-						<input type="date" name="date" id="select-when" >
-						<select name="location" id="select-where">
+						<input type="date" name="date" id="select-when" required>
+						<select name="location" id="select-where" required>
 							<option value="" disabled selected>Location</option>
 							<option value="prishtine">Prishtinë</option>
 							<option value="mitrovice">Mitrovicë</option>
@@ -76,6 +76,7 @@ $full_name = 'Gjon Hajdari';
 					<?php echo file_get_contents('assets/icons/arrow.svg'); ?>
 				</button>
 			</div>
+			
 			<img src="assets/images/tickets.png" alt="Tickets" id="tickets" height="500">
 		</main>
 

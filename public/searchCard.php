@@ -38,8 +38,8 @@
                     </div>
                 </div>
 
+                
                 <hr>
-            
                 <div class="card-bottom">
                     <p class="type"><?php echo $row['option']?></p>
                     <button  class="card-button">Add </a> </button>
