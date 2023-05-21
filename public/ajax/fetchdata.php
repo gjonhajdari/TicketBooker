@@ -6,7 +6,7 @@ include("configdata.php");
 if(isset($_POST['request'])){
 
     $request = $_POST['request'];
-    $query = "SELECT * FROM ticket WHERE option = '$request' ";
+    $query = "SELECT * FROM tickets WHERE option = '$request' ";
     $result = mysqli_query($conn, $query);
     $count = mysqli_num_rows($result);
 }
