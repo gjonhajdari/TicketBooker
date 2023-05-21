@@ -49,8 +49,8 @@
             <?php echo file_get_contents('assets/icons/notfound.svg'); ?>
         </div>
         <div class="text">
-            <h1>Opps! Page not found.</h1>
-            <p>The page you are looking for doesn't exist or might've been removed</p>
+            <h1>Opps! There are no tickets.</h1>
+            <p>There are no tickets with the information you requested</p>
         </div>
         <div class="buttons <?php echo $_SESSION['dark_mode'] ? '' : 'border-light'; ?>">
             <button id="back">
