@@ -37,11 +37,10 @@
 	    margin-top: 100px;
 	    margin-bottom: 100px;
         }
-
-        .container .title{
+        .container #title{
             font-weight:bold;
-            font-size: 1.75rem;
-	        margin-bottom: 0.3rem;
+            font-size: 2.75rem;
+	        margin-bottom: 1.10rem;
             color:#ffffff;}
 
         
@@ -79,9 +78,8 @@
     <main class="container"> 
     <div id="filter">
 
-        <p class="title">Having trouble booking tickets online for the first time?</p><br>
-        <p><span> No problem, we've got you covered. </span>
-            Here you will be able to track all your recent purchases!</p>
+        <h1 id="title"><bold>Welcome back, <?php echo  $_SESSION["name"]; ?></bold></h1>       
+        <p> Here you will be able to track all your recent purchases!</p>
         <p class="bottom"> From traveling <span> tickets </span> to <span> concerts </span> and <span> movies </span>, get your latest info here </p>
        
         <select id="fetchdata">

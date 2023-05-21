@@ -68,7 +68,7 @@ $title = 'Dua Lipa';
 			<div class='bottom'>
 			
 		
-			 <button input type="submit" onclick=" location.href='../src/modules/profilehistory.php' " class="btn <?php echo (isset($_SESSION["login"]) && $_SESSION["login"]) ? 
+			 <button id="btn" input type="submit" onclick="funct()" class="btn <?php echo (isset($_SESSION["login"]) && $_SESSION["login"]) ? 
 			 					(isset($_SESSION["dark_mode"]) && ($_SESSION["dark_mode"] == "null") ? 
 								'' : 'btn-dark') : 'btn-dark'; ?>">
 					 History
@@ -76,11 +76,9 @@ $title = 'Dua Lipa';
 				</button> 
 
 				<script>
-					$(document).ready({
-
-					})
-
-
+					function funct(){
+							location.replace('../public/ajax/filterdata.php');
+						}
 				</script> 
 			
 
