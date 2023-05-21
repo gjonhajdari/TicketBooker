@@ -25,7 +25,6 @@
         $time = $row['time'];
         $location = $row['location'];
 
-        // Display the ticket information
         ?>
         <div class="col-12 col-12 col-md-6 col-lg-4">
             <div class="card <?php echo $isDark ? '' : 'card-light'; ?>">
@@ -62,7 +61,6 @@
     function deleteItem(itemId) {
         var confirmDelete = confirm("Are you sure you want to delete this item?");
         if (confirmDelete) {
-            // Perform the deletion logic here
             console.log("Item with ID " + itemId + " deleted successfully.");
         }
     }
