@@ -27,7 +27,7 @@
 
         // Display the ticket information
         ?>
-        <div class="col-12 col-12 col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4">
             <div class="card <?php echo $isDark ? '' : 'card-light'; ?>">
                 <div class="card-body">
                     <div class="date <?php echo $isDark ? '' : 'icon-light'; ?>">

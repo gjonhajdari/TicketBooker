@@ -18,7 +18,7 @@ if (empty($date) || empty($type) ||empty($location)) {
     echo "<div class='alert alert-danger w-50 p-3'>Please fill all the fields</div>";
 } else{
 
-$sql = "SELECT `tid`,`option`, `date`, `location` FROM `ticket` WHERE `option` = '$type' AND `date` = '$date' AND `location` = '$location'";
+$sql = "SELECT `tid`,`option`, `date`, `location`, `event_title` FROM `ticket` WHERE `option` = '$type' AND `date` = '$date' AND `location` = '$location'";
 
 $result = mysqli_query($conn, $sql);
 
@@ -31,12 +31,13 @@ if ($result) {
             $option = $row['option'];
             $date = $row['date'];
             $location = $row['location'];
-
+            $event_title = $row['event_title'];
            
             $_SESSION["tid"] = $tid;
             $_SESSION["option"] = $option;
             $_SESSION["date"] = $date;
             $_SESSION["location"] = $location;
+            $_SESSION['event_title'] = $event_title;
         }
         echo '<script>window.location.href = "../public/find.php";</script>'; 
          exit;
