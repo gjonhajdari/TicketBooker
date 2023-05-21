@@ -49,7 +49,7 @@ if (isset($_POST['submit']) && $_SESSION["login"] == true) {
     $event_title = $_POST['title'];
     $description = $_POST['description'];
 
-    // Check if any of the fields are empty
+    // Check if any of the fields are emptyz
     if (empty($what) || empty($location) || empty($date) || empty($time) || empty($event_title) || empty($description)) {
         echo "<div class='alert alert-danger w-50 p-3'>Please fill in all the required fields.</div>";
     } else {
@@ -69,7 +69,7 @@ if (isset($_POST['submit']) && $_SESSION["login"] == true) {
                 if (mysqli_stmt_execute($stm)) {
                     mysqli_stmt_close($stm);
                     mysqli_close($conn);
-                    echo '<script>window.location.href = "../../../TicketBooker/public/createTicket.php";</script>';
+                    echo '<script>window.location.href = "../public/createTicket.php";</script>';
                     exit;
                 } else {
                     die("Error executing the statement: " . mysqli_error($conn));

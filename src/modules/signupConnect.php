@@ -1,27 +1,3 @@
-<style>
-	.alert {
-  padding: 0.75rem 1.25rem;
-  margin-bottom: 1rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  width: 100%;
-  
-  margin-right: auto;
-}
-
-.alert-success {
-  color: #155724;
-  background-color: #d4edda;
-  border-color: #c3e6cb;
-}
-
-.alert-danger {
-  color: #721c24;
-  background-color: #f8d7da;
-  border-color: #f5c6cb;
-}
-</style>
-
 <?php 
 		use PHPMailer\PHPMailer\PHPMailer;
 
@@ -48,15 +24,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 			
 			//echo "<div class='alert alert-danger w-50 p-3'>All fields are required</div>";
              array_push($errors,"All fields are required");
-           }
+           }else {
            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             array_push($errors, "Email is not valid");
            }
            if (strlen($password)<8) {
             array_push($errors,"Password must be at least 8 charactes long");
            }
-		   if ($email!==$email_confirm) {
-            array_push($errors,"Password does not match");
+		      if ($email!==$email_confirm) {
+            array_push($errors,"Emails do not match");
            }
            if ($password!==$password_confirm) {
             array_push($errors,"Password does not match");
@@ -68,6 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
            if ($rowCount>0) {
             array_push($errors,"Email already exists!");
            }
+          }
            if (count($errors)>0) {
             foreach ($errors as  $error) {
                 echo "<div class='alert alert-danger w-50 p-3'>$error</div>";
@@ -112,3 +89,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'  &&  isset($_POST['submit'])) {
 	}	  
  mysqli_close($conn);
 ?>
+
+<style>
+	.alert {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  width: 100%;
+  
+  margin-right: auto;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+</style>

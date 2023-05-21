@@ -1,5 +1,16 @@
 <?php
 	require('../src/modules/db.php');
+    if ($_SESSION['id']) {
+        $id = $_SESSION['id'];
+        $sql = "SELECT * FROM `user` WHERE id = '$id'";
+        $result = mysqli_query($conn, $sql);
+        $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        $user_type = $user['user_type'];
+        $isLoggedIn = true;
+    } else {
+        $isDark = true;
+        $isLoggedIn = false;
+    }
     $query = "SELECT * FROM ticket";
     $result = mysqli_query($conn, $query);
     $counter = mysqli_num_rows($result);
@@ -31,10 +42,41 @@
             
                 <div class="card-bottom">
                     <p class="type"><?php echo $row['option']?></p>
-                    <button class="card-button">Add</button>
+                    <button  class="card-button">Add </a> </button>
                 </div>
             </div>
         </div>
     <?php
     }
+
+
     ?>
+    <script>
+$(document).ready(function() {
+  // Handle the button click event
+  $(".card-button").click(function() {
+    // Get the ticket ID (tid) and user ID (id)
+    var tid = "<?php echo $_SESSION['tid']; ?>";
+    var id = "<?php echo $_SESSION['id']; ?>";
+
+    // Make the AJAX request
+    $.ajax({
+      url: "../src/modules/addticket.php", 
+      method: "POST",
+      data: {
+        tid: tid,
+        id: id
+      },
+      success: function(response) {
+        console.log(response);
+      },
+      error: function(xhr, status, error) {
+        console.error(error);
+      }
+    });
+  });
+});
+</script>
+
+
+
