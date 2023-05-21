@@ -48,10 +48,22 @@
                 <hr>
 
                 <div class="card-bottom">
-                    <p class="type">Ticket ID: <?php echo $ticketId; ?></p>
-                </div>
+            <p class="type"><?php echo $type; ?></p>
+            <button class="trash" onclick="deleteItem(<?php echo $itemId; ?>)">
+                <?php echo file_get_contents('assets/icons/trash.svg') ?>
+            </button>
+        </div>
             </div>
         </div>
         <?php
     }
 ?>
+<script>
+    function deleteItem(itemId) {
+        var confirmDelete = confirm("Are you sure you want to delete this item?");
+        if (confirmDelete) {
+            // Perform the deletion logic here
+            console.log("Item with ID " + itemId + " deleted successfully.");
+        }
+    }
+</script>
