@@ -5,7 +5,7 @@ $tid = $_POST['tid'] ?? '';
 $id = $_POST['id'] ?? '';
 
 // Perform the database insertion
-$sql = "INSERT INTO user_tickets (ticket_id,user_id) VALUES ('$tid', '$id')";
+$sql = "INSERT INTO user_ticket (ticket_id,user_id) VALUES ('$tid', '$id')";
 
 if (mysqli_query($conn, $sql)) {
     // Database insertion successful
