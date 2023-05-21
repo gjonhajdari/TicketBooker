@@ -57,7 +57,7 @@ $full_name = 'Gjon Hajdari';
 							<option value="Travel">Travel</option>
 							<option value="Concert">Concert</option>
 						</select>
-						<input type="date" name="when" id="select-when" >
+						<input type="date" name="date" id="select-when" >
 						<select name="location" id="select-where">
 							<option value="" disabled selected>Location</option>
 							<option value="prishtine">Prishtinë</option>

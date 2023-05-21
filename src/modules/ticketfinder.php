@@ -2,7 +2,7 @@
 include_once('db.php');
 
 $type = $_POST['type'] ?? ''; 
-$date = $_POST['when'] ?? ''; 
+$date = $_POST['date'] ?? ''; 
 $location = $_POST['location']?? ''; 
 
 $date = trim($date); // Removes any whitespaces
@@ -35,7 +35,7 @@ if ($result) {
            
             $_SESSION["tid"] = $tid;
             $_SESSION["option"] = $option;
-            $_SESSION["date"] ;
+            $_SESSION["date"] = $date;
             $_SESSION["location"] = $location;
         }
         echo '<script>window.location.href = "../public/find.php";</script>'; 

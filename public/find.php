@@ -31,10 +31,10 @@ if ($_SESSION['id']) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel='icon' type='image/x-icon' href='assets/icons/favicon.svg'>
 	<?php
-	if ($isDark) {
-		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
-	} else {
+	if ($_SESSION["dark_mode"] == "null") {
 		echo "<link rel='stylesheet' href='css/palette-light.css'>";
+	} else {
+		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
 	}
 	?>
 	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
