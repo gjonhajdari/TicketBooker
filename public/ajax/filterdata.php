@@ -105,27 +105,7 @@
                 </tr>
 
             </thead>
-            <tbody>
-            <?php
-
-             $query = "SELECT * FROM ticket";
-             $r = mysqli_query($conn, $query);
-             while($row = mysqli_fetch_assoc($r)){
-             ?>   
-             <tr>
-             <td scope="col" class="table-secondary">Ticket ID</td>
-             <td scope="col" class="table-secondary">Option</td>
-             <td scope="col" class="table-secondary">Location</td>
-             <td scope="col" class="table-secondary">Date</td>
-             <td scope="col" class="table-secondary">Time</td>
-             <td scope="col" class="table-secondary">Event Title</td>
-             <td scope="col" class="table-secondary">Description</td>
-             </tr>
-             <?php
-             }
-             ?>
-
-            </tbody>
+            
         </table>
         
     </div>
