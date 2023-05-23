@@ -3,7 +3,7 @@ $dark_mode = '';
     include_once('../src/modules/db.php');
     session_start();
 
-    if ($_SESSION['login']) {
+    if (isset($_SESSION['login']) && $_SESSION['login']== true) {
         $id = $_SESSION['id'];
         $sql = "SELECT * FROM `user` WHERE id = '$id'";
         $result = mysqli_query($conn, $sql);
@@ -26,7 +26,7 @@ $dark_mode = '';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
-	if ($_SESSION["login"] && $_SESSION["login"]==true && $_SESSION["dark_mode"] == "null") {
+	if (isset($_SESSION["login"]) && $_SESSION["login"]==true && $_SESSION["dark_mode"] == "null") {
 		echo "<link rel='stylesheet' href='css/palette-light.css'>";
 	} else {
 		echo "<link rel='stylesheet' href='css/palette-dark.css'>";

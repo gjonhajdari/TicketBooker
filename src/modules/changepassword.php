@@ -15,10 +15,11 @@
 					$stmt->execute();
 					$result = $stmt->get_result();
 					$user = $result->fetch_assoc();
-	
+					
 					if (empty($oldpassword) || empty($confirmpassword) || empty($newpassword)) {
 						array_push($errors, "All fields are required");
-					}else if(strlen($newpassword) < 8) {
+					}else {
+						if(strlen($newpassword) < 8) {
 						array_push($errors, "Password must be at least 8 characters long");
 					}else if($oldpassword === $newpassword){
 						array_push($errors, "Old password and new password cannot be the same");
@@ -35,6 +36,8 @@
 					// Old password is incorrect
 					array_push($errors, "You provided the wrong password");
 				}
+			}
+
 		if (count($errors) > 0) {
 			foreach ($errors as $error) {
 				echo "<div class='alert alert-danger w-50 p-3'>$error</div>";

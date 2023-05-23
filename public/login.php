@@ -1,3 +1,4 @@
+
 <?php 
 
 session_start();
@@ -51,6 +52,8 @@ $isDark = true; ?>
 
 <body>
 
+	<!-- Navigation Bar -->
+	<?php include "../src/templates/navbar.php"; ?>
 
 	<!-- Main content -->
 	<div class="main">
@@ -66,57 +69,10 @@ $isDark = true; ?>
 			</div>
 			<?php
 
-require_once('../src/modules/db.php');
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
-	$conn or die("Connection failed: ".mysqli_connect_error());
-	
-		$email = $_POST['email'];
-		$password = $_POST['password'];
-
-		$sql = "SELECT * FROM `user` WHERE email = '$email'";
-		$result = mysqli_query($conn, $sql);
-
-		$user = mysqli_fetch_array($result, MYSQLI_ASSOC);
-		if ($user) {
-			if (password_verify($password, $user["password"])) {
-				$_SESSION["user"] = "yes";
-				$_SESSION["login"] = true;
-				$_SESSION["id"] = $user["id"];
-				$_SESSION["user_type"] = $user["user_type"];
-				$_SESSION["name"] = $user["name"];
-				$_SESSION["email"] = $user["email"];
-				$_SESSION["password"] = $user["password"];
-				$_SESSION["checkbox"] = $user["checkbox"];
-				$_SESSION["avatar"] = $user["avatar"];
-				$_SESSION["dark_mode"] = $user["dark_mode"];
-
-				if(!empty($_POST['checkbox'])){
-					$chackbox = $_POST['checkbox'];
-
-					// cookie
-					setcookie('email', $email,time()+60*60*24*21);
-					setcookie('password', $password,time()+60*60*24*21);
-				}
-				else {
-					// expire cookie
-					setcookie('email',$email, 30);
-					setcookie('password',$password, 30);
-				}
-				include "fetchtickets.php";
-				header('location:index.php');
-				die();
-			}
-		}else {
-			echo "<div class='alert alert-danger '>Email or Password do not match</div>";
-		}
-		
-};
-
-mysqli_close($conn);
 
 ?>
-			<!-- // ../src/modules/loginConnection.php	 -->
+			<?php include "../src/modules/loginConnect.php"?>	
 			<form action="login.php" method="POST" class="<?php echo $isDark ? '' : 'border-light'; ?>">
 				<input type="email" name="email" required="required" placeholder="Email address" class="input"
 				required value = "<?php if(isset($_COOKIE['email'])){echo $_COOKIE['email'];}; ?>">
@@ -129,7 +85,7 @@ mysqli_close($conn);
 				</div>
 			
 				<div id="checkbox">
-					<input type="checkbox" name="checkbox" id="check" > Remember me
+					<input type="checkbox" name="checkbox" id="check" name = "remember_checkbox"> Remember me
 					
 				</div>
 	          <input type="submit" name="submit" id="button"  class="btn" value="Login">
@@ -144,3 +100,4 @@ mysqli_close($conn);
 </body>
 
 </html>
+

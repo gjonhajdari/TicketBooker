@@ -97,7 +97,7 @@ $title = 'Dua Lipa';
 						<?php echo file_get_contents("assets/icons/all.svg") ?>
 						<p>All tickets</p>
 					</div>	
-					<p><?php  echo isset($_SESSION["counter"]) ? $_SESSION["counter"] : 0; ?></p>
+					
 				</div>
 			</label>
 			

@@ -44,6 +44,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
                 $_SESSION["checkbox"] = $user["checkbox"];
                 $_SESSION["avatar"] = $user["avatar"];
                 $_SESSION["dark_mode"] = $user["dark_mode"];
+                if(!empty($_POST['checkbox'])){
+					$chackbox = $_POST['checkbox'];
+
+					// cookie
+					setcookie('email', $email,time()+60*60*24*21);
+					setcookie('password', $password,time()+60*60*24*21);
+				}
+				else {
+					// expire cookie
+					setcookie('email',$email, 30);
+					setcookie('password',$password, 30);
+				}
                 include "fetchtickets.php";
                 header('location:index.php');
                 die();

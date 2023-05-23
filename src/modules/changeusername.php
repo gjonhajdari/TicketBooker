@@ -12,11 +12,12 @@
 					$stmt->bind_param('s', $_SESSION["email"]);
 					$stmt->execute();
 					$result = $stmt->get_result();
-					$user = $result->fetch_assoc();
-	
-					if (empty($oldusername)) {
+					$user = $result->fetch_assoc();	
+					if (empty($newusername)) {
 						array_push($errors, "Change Username field is required to change your username");
-					}else if($oldusername === $newusername){
+					}else 
+					{
+						if($oldusername === $newusername){
 						array_push($errors, "Old username and new username cannot be the same");
 					}else{
 						$stmt = $conn->prepare("UPDATE `user` SET name = ? WHERE id = ?");
@@ -24,7 +25,7 @@
 						$stmt->execute();
 						echo "<div class='alert alert-success w-50 p-3'>Username changed successfully</div>";
 					}
-					
+				}
 				
 		        if (count($errors) > 0) {
 			foreach ($errors as $error) {

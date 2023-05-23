@@ -1,6 +1,8 @@
-<?php
-	require('../src/modules/db.php');
-    if ($_SESSION['id']) {
+   
+    <?php
+    require('../src/modules/db.php');
+    
+    if (isset($_SESSION['id'])) {
         $id = $_SESSION['id'];
         $sql = "SELECT * FROM `user` WHERE id = '$id'";
         $result = mysqli_query($conn, $sql);
@@ -11,29 +13,35 @@
         $isDark = true;
         $isLoggedIn = false;
     }
-    $query = "SELECT `tid`, `event_title`, `option`, `date`, `location` FROM `ticket` WHERE  `option` = '" . $_SESSION["option"] . "' AND `date` = '" . $_SESSION["date"] . "' AND `location` = '" . $_SESSION["location"] . "' ";
-    $result = mysqli_query($conn, $query);
-    $counter = mysqli_num_rows($result);
+    if(isset($_SESSION["option"]) && isset($_SESSION["date"]) && isset($_SESSION["location"]) ){
 
-    $_SESSION["counter"] = $counter;
+      $query = "SELECT `tid`, `event_title`, `option`, `date`, `location` FROM `ticket` WHERE  `option` = '" . $_SESSION["option"] . "' AND `date` = '" . $_SESSION["date"] . "' AND `location` = '" . $_SESSION["location"] . "' ";
+      $result = mysqli_query($conn, $query);
+      $counter = mysqli_num_rows($result);
+      $_SESSION["counter"] = $counter;
+    }
+    else{
+      
+    }
+    
     while ($row = mysqli_fetch_assoc($result)) {
-    ?>
-        <div class="col-md-6 col-lg-4">
-            <div class="card <?php echo $_SESSION["dark_mode"]!="null" ? '' : 'card-light'; ?>">
-                <h1 class="card-title"><?php echo $row['event_title']?></h1>
-            
-                <div class="card-body">
-                    <div class="date <?php echo $_SESSION["dark_mode"]!="null" ? '' : 'icon-light'; ?>">
-                        <?php echo file_get_contents('assets/icons/calendar.svg') ?>
-                        <div class="info">
-                            <p class="primary">Date</p>
-                            <p class="secondary"><?php echo $row['date']?></p>
-                        </div>
-                    </div>
-                    <div class="location <?php echo $_SESSION["dark_mode"]!="null" ? '' : 'icon-light'; ?>">
-                        <?php echo file_get_contents('assets/icons/location.svg') ?>
-                        <div class="info">
-                            <p class="primary"><?php echo $row['location']?></p>
+      ?>
+      <div class="col-md-6 col-lg-4">
+          <div class="card <?php echo isset($_SESSION["dark_mode"]) && $_SESSION["dark_mode"] != "null" ? '' : 'card-light'; ?>">
+              <h1 class="card-title"><?php echo isset($row['event_title']) ? $row['event_title'] : ''; ?></h1>
+  
+              <div class="card-body">
+                  <div class="date <?php echo isset($_SESSION["dark_mode"]) && $_SESSION["dark_mode"] != "null" ? '' : 'icon-light'; ?>">
+                      <?php echo file_get_contents('assets/icons/calendar.svg'); ?>
+                      <div class="info">
+                          <p class="primary">Date</p>
+                          <p class="secondary"><?php echo isset($row['date']) ? $row['date'] : ''; ?></p>
+                      </div>
+                  </div>
+                  <div class="location <?php echo isset($_SESSION["dark_mode"]) && $_SESSION["dark_mode"] != "null" ? '' : 'icon-light'; ?>">
+                      <?php echo file_get_contents('assets/icons/location.svg'); ?>
+                      <div class="info">
+                            <p class="primary"><?php echo isset($row['location']) ? $row['location'] : ''; ?></p>
                         </div>
                     </div>
                 </div>
@@ -41,7 +49,7 @@
                 
                 <hr>
                 <div class="card-bottom">
-                    <p class="type"><?php echo $row['option']?></p>
+                    <p class="type"><?php echo isset($row['option']) ? $row['option'] : '';?></p>
                     <button  class="card-button">Add </a> </button>
                 </div>
             </div>
