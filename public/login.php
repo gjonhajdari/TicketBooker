@@ -51,8 +51,6 @@ $isDark = true; ?>
 
 <body>
 
-	<!-- Navigation Bar -->
-	<?php include "../src/templates/navbar.php"; ?>
 
 	<!-- Main content -->
 	<div class="main">
@@ -92,6 +90,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 				$_SESSION["checkbox"] = $user["checkbox"];
 				$_SESSION["avatar"] = $user["avatar"];
 				$_SESSION["dark_mode"] = $user["dark_mode"];
+
+				if(!empty($_POST['checkbox'])){
+					$chackbox = $_POST['checkbox'];
+
+					// cookie
+					setcookie('email', $email,time()+60*60*24*21);
+					setcookie('password', $password,time()+60*60*24*21);
+				}
+				else {
+					// expire cookie
+					setcookie('email',$email, 30);
+					setcookie('password',$password, 30);
+				}
 				include "fetchtickets.php";
 				header('location:index.php');
 				die();
@@ -107,16 +118,18 @@ mysqli_close($conn);
 ?>
 			<!-- // ../src/modules/loginConnection.php	 -->
 			<form action="login.php" method="POST" class="<?php echo $isDark ? '' : 'border-light'; ?>">
-				<input type="email" name="email" required="required" placeholder="Email address" class="input">
+				<input type="email" name="email" required="required" placeholder="Email address" class="input"
+				required value = "<?php if(isset($_COOKIE['email'])){echo $_COOKIE['email'];}; ?>">
 	
 				<div class="password">
-					<input type="password" name="password" required="required" placeholder="Password" class="input" id="passwordInput1">
+					<input type="password" name="password" required="required" placeholder="Password" class="input" id="passwordInput1"
+					required value = "<?php if(isset($_COOKIE['password'])){echo $_COOKIE['password'];}; ?>">
 					<i class="fa-solid fa-eye-slash toggle-visibility" id="toggle-visibility-1"></i>
 					<!-- <span><i class="fa-solid fa-eye" id="eye" onclick="myfunction()"></i></span>  -->
 				</div>
 			
 				<div id="checkbox">
-					<input type="checkbox" name="checkbox" id="check" name = "remember_checkbox"> Remember me
+					<input type="checkbox" name="checkbox" id="check" > Remember me
 					
 				</div>
 	          <input type="submit" name="submit" id="button"  class="btn" value="Login">
