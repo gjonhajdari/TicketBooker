@@ -75,10 +75,19 @@ $full_name = 'Gjon Hajdari';
 					Find tickets
 					<?php echo file_get_contents('assets/icons/arrow.svg'); ?>
 				</button>
-			</div>
+				<br>
+				<div>
 			
+				<button class="alltickets" name="submit" <?php echo (isset($_SESSION["login"]) && $_SESSION["login"]) ? ($_SESSION["dark_mode"] == "null" ? '' : 'btn-dark') : 'btn-dark'; ?>">
+					 All tickets
+					<?php echo file_get_contents('assets/icons/arrow.svg'); ?>
+				</button>
+			</div>	
+			</div>
+		
 			<img src="assets/images/tickets.png" alt="Tickets" id="tickets" height="500">
 		</main>
+		
 
 		<!-- Footer -->
 		<?php include('../src/templates/footer.php'); ?>
