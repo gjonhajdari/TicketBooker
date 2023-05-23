@@ -1,4 +1,5 @@
-<?php 
+<?php
+$dark_mode = '';
     include_once('../src/modules/db.php');
     session_start();
 
@@ -25,7 +26,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
-	if ($_SESSION["dark_mode"] == "null") {
+	if ($_SESSION["login"] && $_SESSION["login"]==true && $_SESSION["dark_mode"] == "null") {
 		echo "<link rel='stylesheet' href='css/palette-light.css'>";
 	} else {
 		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
@@ -50,9 +51,11 @@
         </div>
         <div class="text">
             <h1>Opps! There are no tickets.</h1>
-            <p>There are no tickets with the information you requested</p>
+            <p>There are no tickets with the information you requested or you are not logged in!</p>
         </div>
-        <div class="buttons <?php echo $_SESSION['dark_mode'] ? '' : 'border-light'; ?>">
+        <div class="buttons <?php if ($_SESSION["login"] && $_SESSION["login"] == true) {
+            echo $_SESSION['dark_mode'] ? '' : 'border-light';
+        } ?>">
             <button id="back">
                 <?php echo file_get_contents('assets/icons/arrow.svg'); ?>
                 Go back

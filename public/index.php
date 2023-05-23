@@ -23,6 +23,7 @@ $full_name = 'Gjon Hajdari';
 	} else {
 		echo "<link rel='stylesheet' href='css/palette-dark.css'>";
 	}
+	
 	?>
 	<link rel="stylesheet" href="css/general.css">
 	<link rel="stylesheet" href="css/index.css">
@@ -71,17 +72,13 @@ $full_name = 'Gjon Hajdari';
 					</div>
 				</div>
 
-				<button class="btn" name="submit" <?php echo (isset($_SESSION["login"]) && $_SESSION["login"]) ? ($_SESSION["dark_mode"] == "null" ? '' : 'btn-dark') : 'btn-dark'; ?>">
+				<button class="btn" id="findTicketsbtn" name="submit" <?php echo (isset($_SESSION["login"]) && $_SESSION["login"]) ? ($_SESSION["dark_mode"] == "null" ? '' : 'btn-dark') : 'btn-dark'; ?>">
 					Find tickets
 					<?php echo file_get_contents('assets/icons/arrow.svg'); ?>
 				</button>
 				<br>
 				<div>
 			
-				<button class="alltickets" name="submit" <?php echo (isset($_SESSION["login"]) && $_SESSION["login"]) ? ($_SESSION["dark_mode"] == "null" ? '' : 'btn-dark') : 'btn-dark'; ?>">
-					 All tickets
-					<?php echo file_get_contents('assets/icons/arrow.svg'); ?>
-				</button>
 			</div>	
 			</div>
 		
@@ -95,3 +92,14 @@ $full_name = 'Gjon Hajdari';
 </body>
 
 </html>
+<script>
+document.getElementById("findTicketsBtn").addEventListener("click", function() {
+    <?php
+    // Check if the user is logged in
+    if (!isset($_SESSION["login"]) || !$_SESSION["login"]) {
+        // User is not logged in, redirect to error.php
+        echo 'window.location.href = "error.php";';
+    }
+    ?>
+});
+</script>
